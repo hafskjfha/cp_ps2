@@ -1,0 +1,348 @@
+{
+  "passed": true,
+  "tests_run": 2,
+  "runtime_sec": 3.1237086000619456,
+  "failures": [],
+  "measurements": {
+    "artifacts": [
+      {
+        "variant": "b3",
+        "source_sha256": "37d9ec110e42b069fb600ae91ceff3c5913da4b2d8a20feaad9e31b2bcadb38d",
+        "valid": true,
+        "errors": [],
+        "review_flags": [],
+        "imports": [
+          "heapq",
+          "math",
+          "random",
+          "sys"
+        ],
+        "sha256": "f9337eb270f010e9f40df5202f76a923e44e91c61cdce66b027e6485128ff088",
+        "source_bytes": 87946,
+        "reads_stdin": true
+      },
+      {
+        "variant": "b12",
+        "source_sha256": "45fdb4e91d0f4a1d93be1c925f3bf8f505c495260fd213e4e6ab8f50e40b8b53",
+        "valid": true,
+        "errors": [],
+        "review_flags": [],
+        "imports": [
+          "heapq",
+          "math",
+          "random",
+          "sys"
+        ],
+        "sha256": "8fe295892f4e3a91a80430ffc5b7b30f111fe91ba3e350e5d480434ba04aaf7e",
+        "source_bytes": 87947,
+        "reads_stdin": true
+      },
+      {
+        "variant": "b30",
+        "source_sha256": "a85f0ed8b9b5bc05dcc963597b66a9070e415d1452664e139bff99be56a9c42f",
+        "valid": true,
+        "errors": [],
+        "review_flags": [],
+        "imports": [
+          "heapq",
+          "math",
+          "random",
+          "sys"
+        ],
+        "sha256": "6f83118b6c7a62f2fadb5feb2904e9167416fcb2f98115bf023a653730a47acd",
+        "source_bytes": 87923,
+        "reads_stdin": true
+      },
+      {
+        "variant": "cycles",
+        "source_sha256": "61684e486bc432d0ae85682f5f08b4a83f6beaf7aae17a5e761cf1442dfa6146",
+        "valid": true,
+        "errors": [],
+        "review_flags": [],
+        "imports": [
+          "heapq",
+          "math",
+          "random",
+          "sys"
+        ],
+        "sha256": "4f6476b9c1ec9e681504452d268fbf77bcb4c9269fb59e7fc264c3afa24f5eaa",
+        "source_bytes": 88186,
+        "reads_stdin": true
+      }
+    ],
+    "instrumented_wrapper_cases": [
+      {
+        "variant": "b3",
+        "n": 3,
+        "d": 2,
+        "c": 2,
+        "k": 1,
+        "parent_score": 5,
+        "final_score": 5,
+        "operations": 1,
+        "route_calls": []
+      },
+      {
+        "variant": "b3",
+        "n": 3,
+        "d": 3,
+        "c": 6,
+        "k": 2,
+        "parent_score": 2,
+        "final_score": 2,
+        "operations": 2,
+        "route_calls": []
+      },
+      {
+        "variant": "b3",
+        "n": 4,
+        "d": 3,
+        "c": 6,
+        "k": 15,
+        "parent_score": 2,
+        "final_score": 10,
+        "operations": 14,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 3,
+            "remaining": 13,
+            "added": 12
+          }
+        ]
+      },
+      {
+        "variant": "b3",
+        "n": 4,
+        "d": 2,
+        "c": 3,
+        "k": 24,
+        "parent_score": 5,
+        "final_score": 15,
+        "operations": 17,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 3,
+            "remaining": 13,
+            "added": 6
+          }
+        ]
+      },
+      {
+        "variant": "b12",
+        "n": 3,
+        "d": 2,
+        "c": 2,
+        "k": 1,
+        "parent_score": 3,
+        "final_score": 3,
+        "operations": 1,
+        "route_calls": []
+      },
+      {
+        "variant": "b12",
+        "n": 3,
+        "d": 3,
+        "c": 6,
+        "k": 2,
+        "parent_score": 0,
+        "final_score": 0,
+        "operations": 2,
+        "route_calls": []
+      },
+      {
+        "variant": "b12",
+        "n": 4,
+        "d": 3,
+        "c": 6,
+        "k": 15,
+        "parent_score": 2,
+        "final_score": 9,
+        "operations": 9,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 12,
+            "remaining": 6,
+            "added": 0
+          }
+        ]
+      },
+      {
+        "variant": "b12",
+        "n": 4,
+        "d": 2,
+        "c": 3,
+        "k": 24,
+        "parent_score": 3,
+        "final_score": 15,
+        "operations": 16,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 12,
+            "remaining": 14,
+            "added": 6
+          }
+        ]
+      },
+      {
+        "variant": "b30",
+        "n": 3,
+        "d": 2,
+        "c": 2,
+        "k": 1,
+        "parent_score": 4,
+        "final_score": 4,
+        "operations": 1,
+        "route_calls": []
+      },
+      {
+        "variant": "b30",
+        "n": 3,
+        "d": 3,
+        "c": 6,
+        "k": 2,
+        "parent_score": 1,
+        "final_score": 1,
+        "operations": 2,
+        "route_calls": []
+      },
+      {
+        "variant": "b30",
+        "n": 4,
+        "d": 3,
+        "c": 6,
+        "k": 15,
+        "parent_score": 2,
+        "final_score": 9,
+        "operations": 12,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 30,
+            "remaining": 3,
+            "added": 0
+          }
+        ]
+      },
+      {
+        "variant": "b30",
+        "n": 4,
+        "d": 2,
+        "c": 3,
+        "k": 24,
+        "parent_score": 1,
+        "final_score": 15,
+        "operations": 19,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 30,
+            "remaining": 17,
+            "added": 12
+          }
+        ]
+      },
+      {
+        "variant": "cycles",
+        "n": 3,
+        "d": 2,
+        "c": 2,
+        "k": 1,
+        "parent_score": 5,
+        "final_score": 5,
+        "operations": 1,
+        "route_calls": []
+      },
+      {
+        "variant": "cycles",
+        "n": 3,
+        "d": 3,
+        "c": 6,
+        "k": 2,
+        "parent_score": 2,
+        "final_score": 2,
+        "operations": 2,
+        "route_calls": []
+      },
+      {
+        "variant": "cycles",
+        "n": 4,
+        "d": 3,
+        "c": 6,
+        "k": 15,
+        "parent_score": 4,
+        "final_score": 8,
+        "operations": 9,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 30,
+            "remaining": 6,
+            "added": 0
+          },
+          {
+            "powers": [
+              3
+            ],
+            "cap": 1,
+            "remaining": 6,
+            "added": 0
+          }
+        ]
+      },
+      {
+        "variant": "cycles",
+        "n": 4,
+        "d": 2,
+        "c": 3,
+        "k": 24,
+        "parent_score": 5,
+        "final_score": 13,
+        "operations": 22,
+        "route_calls": [
+          {
+            "powers": [
+              3
+            ],
+            "cap": 30,
+            "remaining": 14,
+            "added": 0
+          },
+          {
+            "powers": [
+              6
+            ],
+            "cap": 1,
+            "remaining": 14,
+            "added": 12
+          }
+        ]
+      }
+    ],
+    "reviewed_helper_ast_identity": {
+      "cancel_inverse_pairs": true,
+      "best_insertion": true,
+      "deletion_deltas": true,
+      "temporal_repair": true,
+      "route_patterns": true,
+      "route_tail": true
+    }
+  }
+}

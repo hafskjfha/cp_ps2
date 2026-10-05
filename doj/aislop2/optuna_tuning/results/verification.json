@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-30",
+  "optuna_version": "5.0.0",
+  "trials": 13,
+  "completed": 12,
+  "pruned": 1,
+  "training": {
+    "trial": 5,
+    "training_avg_score": 844715.1,
+    "training_total_score": 16894302,
+    "training_evaluations": 20,
+    "suite": "smoke",
+    "solver_params": {
+      "iterations": 3766,
+      "start_temp": 0.6113456432807501,
+      "end_temp": 0.01056999731031065,
+      "replace_weight": 4.0,
+      "insert_weight": 2.361728490361166,
+      "delete_weight": 0.1029947642423729,
+      "swap_weight": 0.5718611028948221,
+      "local_probability": 0.6492723591803375,
+      "local_radius": 2,
+      "tail_bias": 2.8986966839349
+    },
+    "seeds": [
+      0
+    ],
+    "export_seed": 0,
+    "solver_sha256": "79c925ac9cf29e6ead1fe9f275c0de2cd0acbfc4197ecc6f1a84af16dcfc26b0",
+    "validation_status": "passed",
+    "candidate": "best_candidate.py",
+    "stable_evidence": "last_validation.json"
+  },
+  "stable_checkpoints": [
+    {
+      "id": "0",
+      "total_score": "228305971",
+      "avg_score": "713456.159375",
+      "runtime_sec": "40.6133407993475",
+      "max_runtime_sec": "0.4114771999884397",
+      "description": "Initial greedy baseline (SA iterations=0)",
+      "file": "C:\\dev\\ps\\doj\\aislop2\\optuna_tuning\\runs\\smoke_demo\\verified\\checkpoints\\best_000_initial.py",
+      "solver_sha256": "e78d6aedd8b2f5c9aa322ccb248287c60abe41f72fef5a9fd61e7d2bc30ab2c7",
+      "manifest_sha256": "bd30204d28266a4d8c69f0dc028eec2ca8ac605d8e9f3f198fd1176f0ff506ac",
+      "report_dir": "C:\\dev\\ps\\doj\\aislop2\\optuna_tuning\\runs\\smoke_demo\\verified\\qualifications\\20260930T043242_e78d6aedd8b2_9f7eea45"
+    },
+    {
+      "id": "1",
+      "total_score": "236948550",
+      "avg_score": "740464.21875",
+      "runtime_sec": "37.70781039923895",
+      "max_runtime_sec": "0.4613907999591902",
+      "description": "Default simulated annealing (3000 iterations)",
+      "file": "C:\\dev\\ps\\doj\\aislop2\\optuna_tuning\\runs\\smoke_demo\\verified\\checkpoints\\best_001_236948550.py",
+      "solver_sha256": "e876fb27d75795b1dd7880ac6aaf3fa2b8a5e045a0dc1db38b486070a60c8ea4",
+      "manifest_sha256": "bd30204d28266a4d8c69f0dc028eec2ca8ac605d8e9f3f198fd1176f0ff506ac",
+      "report_dir": "C:\\dev\\ps\\doj\\aislop2\\optuna_tuning\\runs\\smoke_demo\\verified\\qualifications\\20260930T043401_e876fb27d757_fc207173"
+    },
+    {
+      "id": "2",
+      "total_score": "240667550",
+      "avg_score": "752086.09375",
+      "runtime_sec": "60.67683450167533",
+      "max_runtime_sec": "0.5487581000197679",
+      "description": "Optuna trial 5",
+      "file": "C:\\dev\\ps\\doj\\aislop2\\optuna_tuning\\runs\\smoke_demo\\verified\\checkpoints\\best_002_240667550.py",
+      "solver_sha256": "79c925ac9cf29e6ead1fe9f275c0de2cd0acbfc4197ecc6f1a84af16dcfc26b0",
+      "manifest_sha256": "bd30204d28266a4d8c69f0dc028eec2ca8ac605d8e9f3f198fd1176f0ff506ac",
+      "report_dir": "C:\\dev\\ps\\doj\\aislop2\\optuna_tuning\\runs\\smoke_demo\\verified\\qualifications\\20260930T043545_79c925ac9cf2_517741df"
+    }
+  ],
+  "global_best_unchanged": "submissions/best_056_255006286.py",
+  "global_best_score": 255006286,
+  "tests": {
+    "new_passed": 30,
+    "full_passed": 294,
+    "full_discovery_errors": [
+      "tools.test_regret_cached27",
+      "tools.test_regret_rebuild",
+      "tools.test_regret_variants"
+    ]
+  }
+}

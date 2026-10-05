@@ -1,0 +1,1 @@
+[n],b,c=[sorted(map(int,i.split()))for i in open(0)];print('NYOE S'[all(map(int.__lt__,b,c[-n//2:]))::2])

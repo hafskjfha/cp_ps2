@@ -1,0 +1,12 @@
+{
+  "parent": "submissions/best_034_251734381.py",
+  "candidate": "solvers/experiments/pool_all_fast.py",
+  "solver_sha256": "87341a360f3fa1eb151c42c2611a99f914fe3649af2856af69056a7cd24c6c57",
+  "same_manifest": true,
+  "cases": 320,
+  "all_valid": true,
+  "output_hash_differences": [],
+  "total_score": 251734381,
+  "max_runtime_sec": 3.287336300010793,
+  "passed": true
+}

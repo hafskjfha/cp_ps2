@@ -1,0 +1,20 @@
+{
+  "valid": true,
+  "errors": [],
+  "review_flags": [],
+  "imports": [
+    "heapq",
+    "itertools",
+    "math",
+    "random",
+    "sys"
+  ],
+  "sha256": "e03c2ed010f2c651846cd0705966edc995bd4787f66f1f613d7b7d02bd794248",
+  "source_bytes": 28702,
+  "packed_source": {
+    "codec": "lzma/base85",
+    "decoded_bytes": 157561,
+    "decoded_sha256": "9014d2e90c99450c577ada845b673dd552efa33f9e0f8c68b8c22ec77867da0e"
+  },
+  "reads_stdin": true
+}

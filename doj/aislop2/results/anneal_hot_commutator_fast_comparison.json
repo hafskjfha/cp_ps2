@@ -1,0 +1,16 @@
+{
+  "solver": "solvers\\experiments\\anneal_hot_commutator_fast.py",
+  "solver_sha256": "9855190845d15a2584f7d86fad6c38401a0dccb4c55ea9a25dc36d0c98eba947",
+  "total_score": 251807645,
+  "delta_over_hot": 5917,
+  "matches_per_case_max": true,
+  "hash_differences_from_per_case_selected_parent": [],
+  "wins_over_hot": [
+    {
+      "id": "case_173",
+      "delta_over_hot": 5917
+    }
+  ],
+  "max_runtime_sec": 3.497931699967012,
+  "runtime_sec": 302.4476048006909
+}

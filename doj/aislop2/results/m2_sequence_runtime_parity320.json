@@ -1,0 +1,2251 @@
+{
+  "solver": "C:\\dev\\ps\\doj\\aislop2\\solvers\\experiments\\m2_sequence_runtime_csa.py",
+  "solver_sha256": "2a69875f9a49f1180eac82f2abb22fc9f04259489c6375d706e4fee7805c42e8",
+  "diagnostic_only": true,
+  "cases": 320,
+  "total_score": 254652429,
+  "max_runtime_sec": 3.706796700018458,
+  "total_runtime_sec": 369.3726486994419,
+  "results": [
+    {
+      "id": "case_000",
+      "matches": 7,
+      "score": 777777,
+      "output_sha256": "790bd2ff9cf878be9db47215d4ed52709a1cac747a6ed3acbb02dd405c17ca48",
+      "runtime_sec": 0.11352649994660169
+    },
+    {
+      "id": "case_001",
+      "matches": 703,
+      "score": 781111,
+      "output_sha256": "a972024a42981bc29b88eca4b62142b866a9ffbfe47f7de69d21298f4dbeb243",
+      "runtime_sec": 3.4600694000255316
+    },
+    {
+      "id": "case_002",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "e22da9d79c40687254c47c4e5b995d9b7d78c912db1659bc5bdd9e631eedf455",
+      "runtime_sec": 0.12859479989856482
+    },
+    {
+      "id": "case_003",
+      "matches": 723,
+      "score": 803333,
+      "output_sha256": "0b5a66269fbc7c87e37bc53652f2109d7b09fdfb4bcc62172dbd4d1abfc58e94",
+      "runtime_sec": 0.1632431000471115
+    },
+    {
+      "id": "case_004",
+      "matches": 77,
+      "score": 950617,
+      "output_sha256": "7beb7b9fa377152e329279d37f8ebb2f382eb8f249f2c297671828dc650e2649",
+      "runtime_sec": 0.1679961000336334
+    },
+    {
+      "id": "case_005",
+      "matches": 189,
+      "score": 840000,
+      "output_sha256": "76ad8c00f1a8343ec385fe8be0bddbad571579969f7849157950753e3b5d2e9b",
+      "runtime_sec": 3.0325112000573426
+    },
+    {
+      "id": "case_006",
+      "matches": 271,
+      "score": 937716,
+      "output_sha256": "43056aab898e6891411f9930376bfc083e9cc8f32dc030d01dcb651e59912f7f",
+      "runtime_sec": 1.6370522000361234
+    },
+    {
+      "id": "case_007",
+      "matches": 648,
+      "score": 720000,
+      "output_sha256": "ad176b129d5dd8655cef8ce471062e759e8fcc10ed90aa0089685fc9c4538031",
+      "runtime_sec": 3.706796700018458
+    },
+    {
+      "id": "case_008",
+      "matches": 127,
+      "score": 881944,
+      "output_sha256": "d7e615e57d36c34c795b26dbbb657c2581a600a82362127c8b707eb43e70f016",
+      "runtime_sec": 0.8800484000239521
+    },
+    {
+      "id": "case_009",
+      "matches": 386,
+      "score": 965000,
+      "output_sha256": "85103b92ad2d40adb4f274fee705e94875bb7bf501362b0799e582c290ae84e0",
+      "runtime_sec": 0.4309811999555677
+    },
+    {
+      "id": "case_010",
+      "matches": 47,
+      "score": 959183,
+      "output_sha256": "9d6132f16a3b02357d0b04a74bd5981243e391068233f2de8c818e1265fa07f0",
+      "runtime_sec": 0.12660499999765307
+    },
+    {
+      "id": "case_011",
+      "matches": 566,
+      "score": 982638,
+      "output_sha256": "129d0f5bdf5e3b805b1c50c13f97dfe62352163c254ae5af4613261be30cd341",
+      "runtime_sec": 0.41633669997099787
+    },
+    {
+      "id": "case_012",
+      "matches": 117,
+      "score": 966942,
+      "output_sha256": "eec882685a58495c58ca4bad46e9dde5e892e6b25a87e8d5d6bf49d7082cec08",
+      "runtime_sec": 0.6707524000667036
+    },
+    {
+      "id": "case_013",
+      "matches": 774,
+      "score": 987244,
+      "output_sha256": "d23fb21046a9a41db31b007f405537f86b86d10986072c82f603d22c5312c8ab",
+      "runtime_sec": 2.11811859998852
+    },
+    {
+      "id": "case_014",
+      "matches": 256,
+      "score": 1000000,
+      "output_sha256": "e9cdbcbe0c8f613fedc7d6ff0a284274a08122d5ba6fa6456bfff151a08ef019",
+      "runtime_sec": 1.25189290009439
+    },
+    {
+      "id": "case_015",
+      "matches": 602,
+      "score": 963200,
+      "output_sha256": "712544aa04d34db2a6a92bf5b6aaf9f8e0ec6109095183d7fbb6d860bd0d3c67",
+      "runtime_sec": 2.856560599990189
+    },
+    {
+      "id": "case_016",
+      "matches": 63,
+      "score": 984375,
+      "output_sha256": "e5349f1c6009144a9478321c5111189da117e2d2edee2db6b095d7996a0fcfd9",
+      "runtime_sec": 3.2895652999868616
+    },
+    {
+      "id": "case_017",
+      "matches": 521,
+      "score": 984877,
+      "output_sha256": "1e5a03528ce8016526787939810c399af256dd65601dc328cbbb320066b08c18",
+      "runtime_sec": 0.3159835999831557
+    },
+    {
+      "id": "case_018",
+      "matches": 711,
+      "score": 790000,
+      "output_sha256": "378ed2688e4b285bd77f4406afe3c32a4fbbff71699fe3d3b30e4c47ec9f121e",
+      "runtime_sec": 3.2033876999048516
+    },
+    {
+      "id": "case_019",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "3f7feca296e0a85e368e05442f8a373fdbbdd2140867bce88da1eb4618138c2b",
+      "runtime_sec": 0.12879469990730286
+    },
+    {
+      "id": "case_020",
+      "matches": 14,
+      "score": 875000,
+      "output_sha256": "a076b2f70d69e239fcb6488ac9ef6838de65b9cea5662c6376e326dccab82a04",
+      "runtime_sec": 0.14610210002865642
+    },
+    {
+      "id": "case_021",
+      "matches": 160,
+      "score": 711111,
+      "output_sha256": "ac2bf143a9d178d17b241a8a502aeb09b3ff75df9fec81525c270c828aabeb35",
+      "runtime_sec": 1.031106899958104
+    },
+    {
+      "id": "case_022",
+      "matches": 428,
+      "score": 970521,
+      "output_sha256": "24db1367630dc4293ae11af51be554db565a4bf0d89f8d4eafcc244b946d5475",
+      "runtime_sec": 1.7797522000037134
+    },
+    {
+      "id": "case_023",
+      "matches": 306,
+      "score": 452662,
+      "output_sha256": "e0be5c00ac0ba38fe2eb976dfac531f2e69607cab75f395d6c03c12137a01121",
+      "runtime_sec": 2.0846430000383407
+    },
+    {
+      "id": "case_024",
+      "matches": 36,
+      "score": 1000000,
+      "output_sha256": "7c484995214a7ca0d8d1ca2ed440e303e8b0bc066f28bf818d17de67150f99e5",
+      "runtime_sec": 0.4948906999779865
+    },
+    {
+      "id": "case_025",
+      "matches": 223,
+      "score": 991111,
+      "output_sha256": "f1034bf49dbdf99ee5196acdd6fafab85b196e8c1c3c85e4da0a59c80535e74e",
+      "runtime_sec": 0.14624869998078793
+    },
+    {
+      "id": "case_026",
+      "matches": 361,
+      "score": 1000000,
+      "output_sha256": "09ecaffead0a206eeec54fe25500575de8d19016fa656b0fa959c90c7bcbf644",
+      "runtime_sec": 1.907487599994056
+    },
+    {
+      "id": "case_027",
+      "matches": 595,
+      "score": 758928,
+      "output_sha256": "2cbd083f316e14c138a06227891578b7f4dc781b8a63752d384274458aa544de",
+      "runtime_sec": 1.6563979999627918
+    },
+    {
+      "id": "case_028",
+      "matches": 25,
+      "score": 1000000,
+      "output_sha256": "b793e8e25b409f6afe27f71aa93e42bc39ecceabc9aaaacebe6442f36cf3c1b5",
+      "runtime_sec": 0.1515769000397995
+    },
+    {
+      "id": "case_029",
+      "matches": 121,
+      "score": 1000000,
+      "output_sha256": "180118778dbcfcdc44a25d2ea88bf71b8c1af2dd56b26ca8f1644f5d512fd478",
+      "runtime_sec": 2.8656327000353485
+    },
+    {
+      "id": "case_030",
+      "matches": 484,
+      "score": 1000000,
+      "output_sha256": "4977f58659ab4e8d86501fcc4ac59b0470c13ba03b3c216b34ffbc6ecab0c62b",
+      "runtime_sec": 0.20849910005927086
+    },
+    {
+      "id": "case_031",
+      "matches": 572,
+      "score": 993055,
+      "output_sha256": "26055ec8097871027ce61fe8b8cddb968e9d341b6ed874949e5d1e167249d172",
+      "runtime_sec": 0.7481715000467375
+    },
+    {
+      "id": "case_032",
+      "matches": 27,
+      "score": 750000,
+      "output_sha256": "fa4d2ceaf667acf3b89235c0832e89bc97d408fe72b549dd80cd76af22033112",
+      "runtime_sec": 1.1781226999592036
+    },
+    {
+      "id": "case_033",
+      "matches": 20,
+      "score": 312500,
+      "output_sha256": "58870ba058a5c6b0c75d5aa361a3fd66b8bacae1372deab2111570a4bdeebaec",
+      "runtime_sec": 0.16376719996333122
+    },
+    {
+      "id": "case_034",
+      "matches": 172,
+      "score": 355371,
+      "output_sha256": "ec20d9e9e3de2a4b1733a05e0159cb95650f73b58a1cc242d7885445e834507a",
+      "runtime_sec": 0.14833710005041212
+    },
+    {
+      "id": "case_035",
+      "matches": 811,
+      "score": 901111,
+      "output_sha256": "a70c93a415e77179834ad70ef5c3e3aa94e2dd1ba9e488e5e0f0d8fc37b8ed17",
+      "runtime_sec": 1.9320879000006244
+    },
+    {
+      "id": "case_036",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "9eb306aa64698b8c392e9db9a68dbf97ea369206b0c147e656b3e346ea85e804",
+      "runtime_sec": 0.1293870999943465
+    },
+    {
+      "id": "case_037",
+      "matches": 34,
+      "score": 531250,
+      "output_sha256": "7d0acd794b89f892f87e536a54155a20c927bc4576bedee95a24975289013151",
+      "runtime_sec": 1.9942505999933928
+    },
+    {
+      "id": "case_038",
+      "matches": 463,
+      "score": 956611,
+      "output_sha256": "05dcfc300801d524d6b6c06a2121fb8917c21fed9fb8ac77127121b49317841a",
+      "runtime_sec": 1.3060153999831527
+    },
+    {
+      "id": "case_039",
+      "matches": 576,
+      "score": 1000000,
+      "output_sha256": "2a8cb7f81405f351b859d4b77f1c897a1e3c4c8bede6ab474695bcb3e8c9d41b",
+      "runtime_sec": 0.24174329999368638
+    },
+    {
+      "id": "case_040",
+      "matches": 11,
+      "score": 687500,
+      "output_sha256": "f6e4d1f8221b0b641a5f56c3c7637a254d6d6f72dd99dab1f300e6704a0c6ddb",
+      "runtime_sec": 0.11790579999797046
+    },
+    {
+      "id": "case_041",
+      "matches": 114,
+      "score": 942148,
+      "output_sha256": "653b7b4ace3ac710866bd531be97dd4afb8835cb4b087941b327d17c8f89cd56",
+      "runtime_sec": 2.6050430999603122
+    },
+    {
+      "id": "case_042",
+      "matches": 280,
+      "score": 775623,
+      "output_sha256": "bd0925ca6bb68af86f5e8566530c2c62dc48be83b2e8b7d1a3287ed7425db996",
+      "runtime_sec": 3.2909258999861777
+    },
+    {
+      "id": "case_043",
+      "matches": 534,
+      "score": 789940,
+      "output_sha256": "c850b921585a7b7558de301f95bdea10fd091c88f92c70289a4a0945da5c7717",
+      "runtime_sec": 2.920748099917546
+    },
+    {
+      "id": "case_044",
+      "matches": 12,
+      "score": 750000,
+      "output_sha256": "7e9312aee1d9ec986b72f63d3217556e14808f22ed98b28c00d2308b99e8445a",
+      "runtime_sec": 0.25114940002094954
+    },
+    {
+      "id": "case_045",
+      "matches": 121,
+      "score": 1000000,
+      "output_sha256": "fe51f37ea4d297b2a4256eaba903301559f2e43db073350f9c7b640df215ea05",
+      "runtime_sec": 0.1397175999591127
+    },
+    {
+      "id": "case_046",
+      "matches": 525,
+      "score": 992438,
+      "output_sha256": "b7e4d7f4366fbace31374122baec4a5e0fc984b033fa414e80ef0fde2bf4d436",
+      "runtime_sec": 2.947165200021118
+    },
+    {
+      "id": "case_047",
+      "matches": 524,
+      "score": 909722,
+      "output_sha256": "6e000632086197cc1e0db424faded6f468f8370ab327ecbad10ba77b0a6ebb9a",
+      "runtime_sec": 2.921381799969822
+    },
+    {
+      "id": "case_048",
+      "matches": 13,
+      "score": 361111,
+      "output_sha256": "fba0fe9aae9e15a5816b2320fc037d0f74ed05c82cd81a27518d2173be69390a",
+      "runtime_sec": 0.12366799998562783
+    },
+    {
+      "id": "case_049",
+      "matches": 115,
+      "score": 950413,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.1341887000016868
+    },
+    {
+      "id": "case_050",
+      "matches": 130,
+      "score": 294784,
+      "output_sha256": "867facb9a9328187e7654e1172d95067d7b6524452426c5f199207c29d34ab08",
+      "runtime_sec": 1.117780499975197
+    },
+    {
+      "id": "case_051",
+      "matches": 702,
+      "score": 962962,
+      "output_sha256": "ac4c1db64cdb1b01f79b4974c1d465043b306ce5cfdc2fa5c4836108fcbd8750",
+      "runtime_sec": 0.1486999000189826
+    },
+    {
+      "id": "case_052",
+      "matches": 12,
+      "score": 750000,
+      "output_sha256": "f710a55bcce5fb93879ad93686330c929faa28ca51d5b87354b44e914487901f",
+      "runtime_sec": 0.4519281000830233
+    },
+    {
+      "id": "case_053",
+      "matches": 126,
+      "score": 745562,
+      "output_sha256": "2da357f3da98b1b0a122e28b95d1bbe4e49239f8700b67e6a6b19e5b950d6e66",
+      "runtime_sec": 1.2757727999705821
+    },
+    {
+      "id": "case_054",
+      "matches": 152,
+      "score": 593750,
+      "output_sha256": "824974a9c2c96b8d11f8e36756a25cd84b2398509326e0b5b8fc02ec70ce5a82",
+      "runtime_sec": 1.2442827000049874
+    },
+    {
+      "id": "case_055",
+      "matches": 549,
+      "score": 953125,
+      "output_sha256": "e24fae8a60f26b583550ea71fd4d2111632c351a4558dc53e020cf2fb632e468",
+      "runtime_sec": 1.8127045000437647
+    },
+    {
+      "id": "case_056",
+      "matches": 35,
+      "score": 972222,
+      "output_sha256": "f704e219dac2b7de863a231b3a88e29bdf5375ab23f86810dc5305fe359c5f0d",
+      "runtime_sec": 3.593186100013554
+    },
+    {
+      "id": "case_057",
+      "matches": 98,
+      "score": 980000,
+      "output_sha256": "da342ae48f8f54a82a4d074f46f1fa72fac3174ed0d1befd396e7cb1e4a81b5e",
+      "runtime_sec": 1.1923219000454992
+    },
+    {
+      "id": "case_058",
+      "matches": 235,
+      "score": 725308,
+      "output_sha256": "67902136b74835f9eecfbf9a72b965dc5c143eec1ede73ccdd8f1bf4a4746891",
+      "runtime_sec": 1.4999131999211386
+    },
+    {
+      "id": "case_059",
+      "matches": 595,
+      "score": 952000,
+      "output_sha256": "40eca5260ecd107fafb5f62066b00e2c897ee64bef7d3f1e160ccdf2b1d201fd",
+      "runtime_sec": 1.3629681000020355
+    },
+    {
+      "id": "case_060",
+      "matches": 12,
+      "score": 750000,
+      "output_sha256": "14acadd07ada5e5dce247ddbc04849725b4895acb9ed4a549d340fd5c97c8945",
+      "runtime_sec": 0.6151247000088915
+    },
+    {
+      "id": "case_061",
+      "matches": 51,
+      "score": 354166,
+      "output_sha256": "4d5ac5bc18b3a2aebcfcc14e9c5cbdee16387a89e3fefee57b0c6dd31067a8db",
+      "runtime_sec": 0.17935320001561195
+    },
+    {
+      "id": "case_062",
+      "matches": 317,
+      "score": 978395,
+      "output_sha256": "ba722a6e8663012390d69709ff49963b9fe1a278e7beef14b4b21c3a538edab0",
+      "runtime_sec": 2.960108599974774
+    },
+    {
+      "id": "case_063",
+      "matches": 550,
+      "score": 754458,
+      "output_sha256": "d50e154d39804c101da91d1a6a31f62945ad89ce3af196d92791079dfb08bd6a",
+      "runtime_sec": 2.539138499996625
+    },
+    {
+      "id": "case_064",
+      "matches": 7,
+      "score": 777777,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.11034609994385391
+    },
+    {
+      "id": "case_065",
+      "matches": 41,
+      "score": 338842,
+      "output_sha256": "3fadc7579ea1fad9ec0f8c532f622280279269698ea3511fe4981001ed7ba44d",
+      "runtime_sec": 0.11319260008167475
+    },
+    {
+      "id": "case_066",
+      "matches": 174,
+      "score": 359504,
+      "output_sha256": "aa21461bfd25e014c4c787ac43f94f80e51db0223597ebee02c32e7e83c910dd",
+      "runtime_sec": 0.6489007999189198
+    },
+    {
+      "id": "case_067",
+      "matches": 118,
+      "score": 204861,
+      "output_sha256": "4e8bed306ee167bd9b95ef81f20a9d88562c3412a724f7c142866944c30bd7f3",
+      "runtime_sec": 1.2173483999213204
+    },
+    {
+      "id": "case_068",
+      "matches": 15,
+      "score": 937500,
+      "output_sha256": "f136ba1706c5475c06c9c153a72866a644b3a73084edf7d1c7c4ebce2c8534d1",
+      "runtime_sec": 0.1121340999379754
+    },
+    {
+      "id": "case_069",
+      "matches": 121,
+      "score": 1000000,
+      "output_sha256": "52f0fe06744dddd62c0c26a57b5a862dd6dd712a7419e78854dba5db43142956",
+      "runtime_sec": 0.12247639999259263
+    },
+    {
+      "id": "case_070",
+      "matches": 236,
+      "score": 590000,
+      "output_sha256": "a3bcc2ba71d45c911493206292d09124229bfb8a229f7343353130d73aea135b",
+      "runtime_sec": 1.170237599988468
+    },
+    {
+      "id": "case_071",
+      "matches": 664,
+      "score": 910836,
+      "output_sha256": "b75a7357539d33381c8a87e65f44042fdb99905f52e264636f3822cbb89eb22f",
+      "runtime_sec": 1.6001247999956831
+    },
+    {
+      "id": "case_072",
+      "matches": 46,
+      "score": 938775,
+      "output_sha256": "eb9e493cdf546ff811f5b261f459c5ef62f543f68580e7e65916e4888dd2ba3e",
+      "runtime_sec": 0.38725559995509684
+    },
+    {
+      "id": "case_073",
+      "matches": 166,
+      "score": 982248,
+      "output_sha256": "174fd60b3708c0b699fb7b8235485c1726c89f8eeb3abba562ea67871c55f9b0",
+      "runtime_sec": 0.312122100032866
+    },
+    {
+      "id": "case_074",
+      "matches": 480,
+      "score": 991735,
+      "output_sha256": "018a4ed205cf78e95852e44dcabc6a64ba5edcda1c3481b725d8321cd2ccf857",
+      "runtime_sec": 1.4686385000823066
+    },
+    {
+      "id": "case_075",
+      "matches": 569,
+      "score": 987847,
+      "output_sha256": "c8503cddd378bd95dade57fd6f743ee132feba52d5b52fcc9015bc0c0bca5869",
+      "runtime_sec": 2.570029200054705
+    },
+    {
+      "id": "case_076",
+      "matches": 25,
+      "score": 1000000,
+      "output_sha256": "7656f5cab5b96ece12eb3d9c76c00d2762b0603e2fd7bd8275be34cdb2fee8b5",
+      "runtime_sec": 0.16875680000521243
+    },
+    {
+      "id": "case_077",
+      "matches": 121,
+      "score": 1000000,
+      "output_sha256": "b732929569f1767328aeb42262959ab72b87c1d2e0553ed417d7dc361784424a",
+      "runtime_sec": 0.1256675999611616
+    },
+    {
+      "id": "case_078",
+      "matches": 359,
+      "score": 994459,
+      "output_sha256": "44ffd327f7565f27d4603c7b8be63135541736be91658d14985ca3872e8cdc9c",
+      "runtime_sec": 1.9647311000153422
+    },
+    {
+      "id": "case_079",
+      "matches": 663,
+      "score": 736666,
+      "output_sha256": "24377f59181650bc14512fb876347d1b2afbc69892bb8332bac416eecc49d7bf",
+      "runtime_sec": 2.850809199968353
+    },
+    {
+      "id": "case_080",
+      "matches": 36,
+      "score": 734693,
+      "output_sha256": "23763bec988d0cbb18afa10710bcdcd1c044fd7b7e411cdd642311d2fd172f6a",
+      "runtime_sec": 0.8117753999540582
+    },
+    {
+      "id": "case_081",
+      "matches": 63,
+      "score": 984375,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.1515097999945283
+    },
+    {
+      "id": "case_082",
+      "matches": 279,
+      "score": 527410,
+      "output_sha256": "5a58df8d180aee10f29705006a25ff43c023415d4a11403d0c9f027d24f400a6",
+      "runtime_sec": 0.13756380008999258
+    },
+    {
+      "id": "case_083",
+      "matches": 600,
+      "score": 960000,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.8936603999463841
+    },
+    {
+      "id": "case_084",
+      "matches": 14,
+      "score": 875000,
+      "output_sha256": "9d31fa33536f689c0ff2b6c29b8e3346d27bf611bdaf40483efb3a7c15c1c2ec",
+      "runtime_sec": 0.11458559997845441
+    },
+    {
+      "id": "case_085",
+      "matches": 63,
+      "score": 984375,
+      "output_sha256": "7098fcbe937c10a43f60b5038df8974846c1b7a891d8baed0b19813783a6902d",
+      "runtime_sec": 2.276914400048554
+    },
+    {
+      "id": "case_086",
+      "matches": 214,
+      "score": 660493,
+      "output_sha256": "5dd6b702cfe9476b25b6e00701e6325b5b480978e3cc70dd71e75bf7d25e2ba8",
+      "runtime_sec": 1.3251918000169098
+    },
+    {
+      "id": "case_087",
+      "matches": 227,
+      "score": 363200,
+      "output_sha256": "0c17b037a3ed5b88bb2bc391fdcd81c2190e273611afa55aaac89a1a35f6bbe9",
+      "runtime_sec": 1.4733736999332905
+    },
+    {
+      "id": "case_088",
+      "matches": 2,
+      "score": 222222,
+      "output_sha256": "9251534ab80fb745b02a083a3d9174b1ab944998fa8f91ba9cf887e7ed007e77",
+      "runtime_sec": 0.11407490004785359
+    },
+    {
+      "id": "case_089",
+      "matches": 119,
+      "score": 983471,
+      "output_sha256": "f9ce50412c7c7aef96452bf598dcc7e06897a8929756dcb5e51deadf841eeb47",
+      "runtime_sec": 2.818889799993485
+    },
+    {
+      "id": "case_090",
+      "matches": 249,
+      "score": 972656,
+      "output_sha256": "2c3fe64d5ed5f20d7ef3ccec74e59eee7a22ea8d036781ba73df023f13150747",
+      "runtime_sec": 1.1482640000758693
+    },
+    {
+      "id": "case_091",
+      "matches": 409,
+      "score": 654400,
+      "output_sha256": "7a4bb17218cfa5324df4e56269d001f2e711de28cf4ec80cad6886371094a5c0",
+      "runtime_sec": 1.9345426000654697
+    },
+    {
+      "id": "case_092",
+      "matches": 27,
+      "score": 750000,
+      "output_sha256": "d4920807e3baf1723e0dd129321f544473fff0ca88aea148b5bd7456aed7e3f5",
+      "runtime_sec": 0.1327397000277415
+    },
+    {
+      "id": "case_093",
+      "matches": 169,
+      "score": 1000000,
+      "output_sha256": "eac84d3b1185ec199da2746f33483b87b6b5cf84880aadf6133703b8fcd54386",
+      "runtime_sec": 0.15912830003071576
+    },
+    {
+      "id": "case_094",
+      "matches": 256,
+      "score": 1000000,
+      "output_sha256": "6640983bb0797c4e8c1ff1ae71ecd051931c38dc5c02133430fe42225101346a",
+      "runtime_sec": 0.1574112999951467
+    },
+    {
+      "id": "case_095",
+      "matches": 413,
+      "score": 660800,
+      "output_sha256": "b644df7ad92c1bff36b04ade979fabde472fd71e29afc80a3910cd21d8bdffd0",
+      "runtime_sec": 2.0710003999993205
+    },
+    {
+      "id": "case_096",
+      "matches": 44,
+      "score": 897959,
+      "output_sha256": "3bb2b15ab7a3aecd52fb69297e308932ccd2688a942b2d8f25dee0f0d3f7e1c4",
+      "runtime_sec": 0.12097439996432513
+    },
+    {
+      "id": "case_097",
+      "matches": 108,
+      "score": 892561,
+      "output_sha256": "6b95ac00d034a7a06a943e6904d2fdf420589736a2bd1c9b76939f540de7bc5b",
+      "runtime_sec": 0.1185527000343427
+    },
+    {
+      "id": "case_098",
+      "matches": 96,
+      "score": 375000,
+      "output_sha256": "274c92ac37b685ec9af2197170ceebf27a990f0a54b583d26bf08343c752199c",
+      "runtime_sec": 0.11948549991939217
+    },
+    {
+      "id": "case_099",
+      "matches": 255,
+      "score": 283333,
+      "output_sha256": "a5f547b6abb47c93c4f3dde18f42afdea111a90e583af497ca5afd0440db332e",
+      "runtime_sec": 1.3219341000076383
+    },
+    {
+      "id": "case_100",
+      "matches": 25,
+      "score": 1000000,
+      "output_sha256": "dcd5a896026e81877708ba4c62227d014373d113842526664de3eee715494fa3",
+      "runtime_sec": 0.1402170000365004
+    },
+    {
+      "id": "case_101",
+      "matches": 105,
+      "score": 466666,
+      "output_sha256": "9e7d95e98b9960fa7a4fa3fbab58106c41b4ac947e0d8a4f1b6b62527f6c6caf",
+      "runtime_sec": 0.24324670003261417
+    },
+    {
+      "id": "case_102",
+      "matches": 178,
+      "score": 493074,
+      "output_sha256": "cf71dac8f1d8d7ebcc0910e7a83e5e20240cea9854e854bd833382a4ecae8e0f",
+      "runtime_sec": 1.0751070999540389
+    },
+    {
+      "id": "case_103",
+      "matches": 518,
+      "score": 615933,
+      "output_sha256": "1a2b7d39be681f3fdd9978b21dfffcebd9283d8b0041079cf93f0fba32a96178",
+      "runtime_sec": 1.7220870000310242
+    },
+    {
+      "id": "case_104",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "69f08f6e7d02077649725010bdc586fbdc4ff5b0f473722c0a5ad201033860c9",
+      "runtime_sec": 0.12121849996037781
+    },
+    {
+      "id": "case_105",
+      "matches": 61,
+      "score": 953125,
+      "output_sha256": "ac205b9690a2b068ddcc6c2d1ea1d3f939164e7fdedba8807f83f3242200e0e5",
+      "runtime_sec": 0.12437640002463013
+    },
+    {
+      "id": "case_106",
+      "matches": 320,
+      "score": 987654,
+      "output_sha256": "a2098b1c611a8699823641be5d4550eb03b318fde61eabbaf2428aac645d4b44",
+      "runtime_sec": 2.17777039995417
+    },
+    {
+      "id": "case_107",
+      "matches": 350,
+      "score": 446428,
+      "output_sha256": "46449c4f14e77c894076dedfb73f5009b1279cc6b9e4e98d54314f2d495e795a",
+      "runtime_sec": 1.8598027999978513
+    },
+    {
+      "id": "case_108",
+      "matches": 26,
+      "score": 722222,
+      "output_sha256": "6ed16c7a7c51d9b8def9f6e67798119a92379f38fa0ca0a6923d5c4928d93579",
+      "runtime_sec": 0.12683470000047237
+    },
+    {
+      "id": "case_109",
+      "matches": 144,
+      "score": 1000000,
+      "output_sha256": "b5ffdb3abeedef6f9decc8a673ab38f334efefdef14a91f15be77d32f97a214e",
+      "runtime_sec": 0.133856900036335
+    },
+    {
+      "id": "case_110",
+      "matches": 324,
+      "score": 1000000,
+      "output_sha256": "7ea49e03510817b7804435caa9bd966870a93d5936c363dbf874bdb804df0575",
+      "runtime_sec": 0.18305629992391914
+    },
+    {
+      "id": "case_111",
+      "matches": 675,
+      "score": 998520,
+      "output_sha256": "c59542acb3a30f5c1936887d164ecab8cb1cf77d8947d57a35d09a7e56362bf1",
+      "runtime_sec": 0.22209499997552484
+    },
+    {
+      "id": "case_112",
+      "matches": 3,
+      "score": 333333,
+      "output_sha256": "39b6bfc0f06ca5dc302cd524cc2301ad6dcbe2bf565b89f11a6eb29599a87384",
+      "runtime_sec": 0.11958119994960725
+    },
+    {
+      "id": "case_113",
+      "matches": 191,
+      "score": 848888,
+      "output_sha256": "876f8d1f7bfeff9bb3513de70919959a628f2c19f9d084caf675f07a41c61ad2",
+      "runtime_sec": 0.12528699997346848
+    },
+    {
+      "id": "case_114",
+      "matches": 91,
+      "score": 227500,
+      "output_sha256": "5db5603a4c7cd16907f3a4cc6ac6728afb3aa48e28d1dff263fc552045ae7e66",
+      "runtime_sec": 1.7151750000193715
+    },
+    {
+      "id": "case_115",
+      "matches": 101,
+      "score": 175347,
+      "output_sha256": "41ef85d2b7359331c08e95d05991ef4970f7418c0e203091b17d06296d63355f",
+      "runtime_sec": 0.15292180003598332
+    },
+    {
+      "id": "case_116",
+      "matches": 8,
+      "score": 888888,
+      "output_sha256": "5ff1ece0450e286b0271d69ce9b4da114ec3b15433e66dd42ed9f4aa1c33fa53",
+      "runtime_sec": 0.138142199954018
+    },
+    {
+      "id": "case_117",
+      "matches": 121,
+      "score": 715976,
+      "output_sha256": "27f1a2e6c2383bd7cb5c08cdf2615fa5fdb129402caef785c783f30ef6622667",
+      "runtime_sec": 2.3302879000548273
+    },
+    {
+      "id": "case_118",
+      "matches": 452,
+      "score": 933884,
+      "output_sha256": "483e84197428f2f9b230f2589925f08d0402abe1a2e653fbb11f1c9d6095fd77",
+      "runtime_sec": 1.347639499930665
+    },
+    {
+      "id": "case_119",
+      "matches": 841,
+      "score": 1000000,
+      "output_sha256": "ada96a999065f13a52b1d44d977b8bd6c1c2222a980feb05f59c95ea9ef92d4a",
+      "runtime_sec": 0.25693449995014817
+    },
+    {
+      "id": "case_120",
+      "matches": 7,
+      "score": 437500,
+      "output_sha256": "19226423908dbcbac51bbb7b4d65ea852ab3fdf840ee2b37e307886561d30844",
+      "runtime_sec": 0.11101510003209114
+    },
+    {
+      "id": "case_121",
+      "matches": 144,
+      "score": 1000000,
+      "output_sha256": "5214c96e37cdde4db2be58023c713bee75c736fd1c73366c8890d01d741c22b7",
+      "runtime_sec": 0.12649599998258054
+    },
+    {
+      "id": "case_122",
+      "matches": 247,
+      "score": 854671,
+      "output_sha256": "77c8732e89acfa5a149c513433a33c1c86c71d3807b47c24e6615347657311a1",
+      "runtime_sec": 2.3830372999655083
+    },
+    {
+      "id": "case_123",
+      "matches": 768,
+      "score": 979591,
+      "output_sha256": "0d1deceba409682abcfaf4b31a597f9d8d7febb8bf7bd5a07258aa59d66fc6a3",
+      "runtime_sec": 1.8359368999954313
+    },
+    {
+      "id": "case_124",
+      "matches": 6,
+      "score": 375000,
+      "output_sha256": "0f5f5d8c40069a0bce0b3ac2dee59450370b8594a973b4c4a087f04322840152",
+      "runtime_sec": 0.11709099996369332
+    },
+    {
+      "id": "case_125",
+      "matches": 157,
+      "score": 928994,
+      "output_sha256": "38c94e86719009eaee0be513b0479c91a68efec3ffd7e29ecd869e93deaa3d4d",
+      "runtime_sec": 1.4823378999717534
+    },
+    {
+      "id": "case_126",
+      "matches": 441,
+      "score": 1000000,
+      "output_sha256": "619497f65ef9166ec37b7f5d2e71508cd70a4af2dfc90d355f385f761bda6847",
+      "runtime_sec": 0.8460909000132233
+    },
+    {
+      "id": "case_127",
+      "matches": 608,
+      "score": 972800,
+      "output_sha256": "6e6a3eb8551d6858cf3c755411b0db3066dfe3e305e8686cd6ddc8789e19a636",
+      "runtime_sec": 2.2314535999903455
+    },
+    {
+      "id": "case_128",
+      "matches": 15,
+      "score": 416666,
+      "output_sha256": "171ca9364eb79561c411db512a48e3610fe53e5cc1cacfb3565ba8b217a169de",
+      "runtime_sec": 0.11616790003608912
+    },
+    {
+      "id": "case_129",
+      "matches": 23,
+      "score": 230000,
+      "output_sha256": "56a25ea5a3b9a7940dec4eeb5004a5b4b5cbf4b4dbf4bccbcbce9661ebd08d2c",
+      "runtime_sec": 0.1419133999152109
+    },
+    {
+      "id": "case_130",
+      "matches": 431,
+      "score": 814744,
+      "output_sha256": "6aab095c93b91b8211ead22383d5c7296f7b8729bd6fc533bb2dc95088e7c9cf",
+      "runtime_sec": 0.7404283999931067
+    },
+    {
+      "id": "case_131",
+      "matches": 531,
+      "score": 921875,
+      "output_sha256": "eb2e4dec48a6c02f7263dff45bbb8bdef1fd67d6f0f3675d69532d274fd4edeb",
+      "runtime_sec": 1.423722799983807
+    },
+    {
+      "id": "case_132",
+      "matches": 5,
+      "score": 200000,
+      "output_sha256": "9251534ab80fb745b02a083a3d9174b1ab944998fa8f91ba9cf887e7ed007e77",
+      "runtime_sec": 0.10343050002120435
+    },
+    {
+      "id": "case_133",
+      "matches": 79,
+      "score": 975308,
+      "output_sha256": "513da47a41f28d5b34db4b1a8eddbc6fcd7c1e5781eb1bddfd2d16801efe827a",
+      "runtime_sec": 1.210487600066699
+    },
+    {
+      "id": "case_134",
+      "matches": 324,
+      "score": 1000000,
+      "output_sha256": "e2af6763d262ce60aa8d0cf873349b20021e79e367980d2e54727380fcd8acb4",
+      "runtime_sec": 0.15240469994023442
+    },
+    {
+      "id": "case_135",
+      "matches": 561,
+      "score": 973958,
+      "output_sha256": "d7024bb4bbf22ccb815339255f4116a7cce42fa93c3a64753888b8a4fb16fc60",
+      "runtime_sec": 1.3180067000212148
+    },
+    {
+      "id": "case_136",
+      "matches": 18,
+      "score": 720000,
+      "output_sha256": "dd8e8d1df8e538b5ed549be2c3c5d4d49f67de3b5820a01a9206a75165a7ede6",
+      "runtime_sec": 0.1569516999879852
+    },
+    {
+      "id": "case_137",
+      "matches": 162,
+      "score": 826530,
+      "output_sha256": "8436f05058d24eb79007141717937fd4800831aa48075733661d265da627325a",
+      "runtime_sec": 2.0657856999896467
+    },
+    {
+      "id": "case_138",
+      "matches": 307,
+      "score": 634297,
+      "output_sha256": "3541772d67531ac1b22e9d36268d53f3cc51a36b56ca6227df5fcd53a70a8ce0",
+      "runtime_sec": 1.5949891000054777
+    },
+    {
+      "id": "case_139",
+      "matches": 711,
+      "score": 975308,
+      "output_sha256": "0fbe986e5c6b8a2ed3e36a12754f7ce87bdc5e42491573513f721da234e87319",
+      "runtime_sec": 2.40964750002604
+    },
+    {
+      "id": "case_140",
+      "matches": 8,
+      "score": 888888,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.11331210006028414
+    },
+    {
+      "id": "case_141",
+      "matches": 99,
+      "score": 990000,
+      "output_sha256": "a36e3ae261e8fbe7d624c9ad2a99475370cc749c7ba24eab9e94a416fefb9c25",
+      "runtime_sec": 0.18214829999487847
+    },
+    {
+      "id": "case_142",
+      "matches": 333,
+      "score": 755102,
+      "output_sha256": "19c420296de0a16deefba7c81b4a1213140f7f620888823cbb975beb97b174d3",
+      "runtime_sec": 2.760225799982436
+    },
+    {
+      "id": "case_143",
+      "matches": 526,
+      "score": 913194,
+      "output_sha256": "7db22f9d19de69a5cfbd35b67b09ac37ab8b810169b3cc164b895893aca6e20f",
+      "runtime_sec": 2.485430800006725
+    },
+    {
+      "id": "case_144",
+      "matches": 35,
+      "score": 972222,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 1.8598276999546215
+    },
+    {
+      "id": "case_145",
+      "matches": 49,
+      "score": 604938,
+      "output_sha256": "fe86af5ba7ff42667e70ae4422d369b67a8a31715a713cb0814a690bdd774aff",
+      "runtime_sec": 2.22948290000204
+    },
+    {
+      "id": "case_146",
+      "matches": 213,
+      "score": 590027,
+      "output_sha256": "cd7c77af2093803118e935b669d45495a49b749569afe1842861209a59484933",
+      "runtime_sec": 1.5182149999309331
+    },
+    {
+      "id": "case_147",
+      "matches": 149,
+      "score": 258680,
+      "output_sha256": "00e3497cd8e5069ed058934c950771995561c175730b18c212d085354e31e1fc",
+      "runtime_sec": 0.1403089000377804
+    },
+    {
+      "id": "case_148",
+      "matches": 25,
+      "score": 1000000,
+      "output_sha256": "d9a0623eb9325245798ac55c2f2f97076f09273a07160fe9ca99458f39c8022f",
+      "runtime_sec": 1.1976261000381783
+    },
+    {
+      "id": "case_149",
+      "matches": 144,
+      "score": 1000000,
+      "output_sha256": "6e3311e178ac4b22e8303aa94e1bf22f5170e413d2206b7f6664a9318cc6ab05",
+      "runtime_sec": 0.2263807998970151
+    },
+    {
+      "id": "case_150",
+      "matches": 439,
+      "score": 995464,
+      "output_sha256": "229c0377746dbf459cd0d00ca2f6788eff48ac4a8590e4ca37bf4352060c01e5",
+      "runtime_sec": 1.4019785999553278
+    },
+    {
+      "id": "case_151",
+      "matches": 579,
+      "score": 926400,
+      "output_sha256": "d10b4dacfb96da791fb4fa199d6fa637c3e02cb68e51bdb3b8909a32d7bc3074",
+      "runtime_sec": 1.3764523999998346
+    },
+    {
+      "id": "case_152",
+      "matches": 22,
+      "score": 880000,
+      "output_sha256": "543d8a55ccc4e50b6a544293ec3b07eb529647f21e65e334f60b41fad6fde246",
+      "runtime_sec": 2.7700695999665186
+    },
+    {
+      "id": "case_153",
+      "matches": 99,
+      "score": 990000,
+      "output_sha256": "16e169913ae8dec7844cebe7f406a66960873c0eabc285afba984e6684f90ef0",
+      "runtime_sec": 0.24295380001422018
+    },
+    {
+      "id": "case_154",
+      "matches": 251,
+      "score": 569160,
+      "output_sha256": "3068a3243df6101bb01dc7b4996508c6ef62d786c643cdead7fc1bbc2a68bd47",
+      "runtime_sec": 2.0457588999997824
+    },
+    {
+      "id": "case_155",
+      "matches": 719,
+      "score": 986282,
+      "output_sha256": "8f5a2c01fcd854f2fc87bb7775d4c874327fc818c078fcc73e3271efe534049c",
+      "runtime_sec": 1.7495025000534952
+    },
+    {
+      "id": "case_156",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "aa053cd7d38d00d6169ebe6dc0bec6429689c14f10037c3802aee8cd5927601c",
+      "runtime_sec": 1.7337807998992503
+    },
+    {
+      "id": "case_157",
+      "matches": 225,
+      "score": 1000000,
+      "output_sha256": "8bd4d6628e34d54712276b2e885442a30f4f22f860da0496ac500d0c0e45b1b1",
+      "runtime_sec": 0.18582230003084987
+    },
+    {
+      "id": "case_158",
+      "matches": 230,
+      "score": 898437,
+      "output_sha256": "f09bbb0906d80bac273a2a024c74e7a7bb896d6f79eac82376c3d440ff77ded4",
+      "runtime_sec": 3.6767340999795124
+    },
+    {
+      "id": "case_159",
+      "matches": 636,
+      "score": 940828,
+      "output_sha256": "9f8af20e11d8529817aa66200daba4ccf00ce4d84d594ebd0254b4c40e6716f5",
+      "runtime_sec": 2.5060305999359116
+    },
+    {
+      "id": "case_160",
+      "matches": 13,
+      "score": 812500,
+      "output_sha256": "bc0ef55cb1cc7c7dc857df84462d0777c3de5b727cff250537ef6c35f30badec",
+      "runtime_sec": 1.208413299988024
+    },
+    {
+      "id": "case_161",
+      "matches": 42,
+      "score": 214285,
+      "output_sha256": "0b393b3426de9628a6b94951eeae828aceadb6385a7536f2137fa59275ac46cf",
+      "runtime_sec": 0.13164129992946982
+    },
+    {
+      "id": "case_162",
+      "matches": 255,
+      "score": 882352,
+      "output_sha256": "9855c9fa7583e15c5719e355433a85f3e975ae78cb565270d83906ea42e1db62",
+      "runtime_sec": 1.0332459999481216
+    },
+    {
+      "id": "case_163",
+      "matches": 224,
+      "score": 285714,
+      "output_sha256": "2b686dc1ea2db139df91844934c7a1716526bb10e9c3de7aae50dd586658274e",
+      "runtime_sec": 1.6581670999294147
+    },
+    {
+      "id": "case_164",
+      "matches": 44,
+      "score": 897959,
+      "output_sha256": "8fc8bd82548b7776113ad1c1c2b24dafbdf208d61bcdaf1cf3a240e506f95f2d",
+      "runtime_sec": 0.14252190000843257
+    },
+    {
+      "id": "case_165",
+      "matches": 223,
+      "score": 991111,
+      "output_sha256": "9d13fa74a4e5a636f54274140aaa713f308c708619b02102f79170e46158cddf",
+      "runtime_sec": 0.1845234000356868
+    },
+    {
+      "id": "case_166",
+      "matches": 310,
+      "score": 956790,
+      "output_sha256": "e2215e8775ce43ee4b4c8651f8749c6e0741ed9abadd9266d535ceb7fa87f8db",
+      "runtime_sec": 1.2557145999744534
+    },
+    {
+      "id": "case_167",
+      "matches": 557,
+      "score": 967013,
+      "output_sha256": "5cede17df5673ed031ea2b3f72e3baedf25028ec746e7a021212fec7566c36f4",
+      "runtime_sec": 1.7275726000079885
+    },
+    {
+      "id": "case_168",
+      "matches": 35,
+      "score": 972222,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 2.9765822999179363
+    },
+    {
+      "id": "case_169",
+      "matches": 210,
+      "score": 933333,
+      "output_sha256": "f993634f2c72d9879abc57e0c33090c8aa6b06e5d6c520bf82e0457dfbdc6e3f",
+      "runtime_sec": 1.6076939000049606
+    },
+    {
+      "id": "case_170",
+      "matches": 256,
+      "score": 1000000,
+      "output_sha256": "25a60e374cac69e5a506adb68537517d1e59813c6ac01e34920073b2813b7479",
+      "runtime_sec": 1.3220063999760896
+    },
+    {
+      "id": "case_171",
+      "matches": 726,
+      "score": 995884,
+      "output_sha256": "b82e3828098aaecf821cb1f7c5711f1440c159ddcbfb6be29782d55c613e437c",
+      "runtime_sec": 0.2978468000655994
+    },
+    {
+      "id": "case_172",
+      "matches": 13,
+      "score": 812500,
+      "output_sha256": "6f0b85dc2e2135429f6d5ced67fe10a8e062b5b85d84adc240afb9b079152341",
+      "runtime_sec": 0.11196710006333888
+    },
+    {
+      "id": "case_173",
+      "matches": 166,
+      "score": 982248,
+      "output_sha256": "d50b34e6a37d3beaf0dabf69b1453a1260fe2aadde34aa8ca4e26c06d4e329f5",
+      "runtime_sec": 3.5144496000139043
+    },
+    {
+      "id": "case_174",
+      "matches": 364,
+      "score": 910000,
+      "output_sha256": "bc248c7185b2c599dcdf22035b53d2e1254107c94c43a1bd84787f63259527fd",
+      "runtime_sec": 2.7010966999223456
+    },
+    {
+      "id": "case_175",
+      "matches": 659,
+      "score": 974852,
+      "output_sha256": "157b2667a04fcfd509cc16e4b9c762ecad70d47155a9408386564f438fbac18f",
+      "runtime_sec": 1.8244883000152186
+    },
+    {
+      "id": "case_176",
+      "matches": 2,
+      "score": 222222,
+      "output_sha256": "9251534ab80fb745b02a083a3d9174b1ab944998fa8f91ba9cf887e7ed007e77",
+      "runtime_sec": 0.11560999997891486
+    },
+    {
+      "id": "case_177",
+      "matches": 64,
+      "score": 1000000,
+      "output_sha256": "260fb61f8d04b61723216a0a032dd89095e50aecfd583efb0291dd8660b79984",
+      "runtime_sec": 0.12322690000291914
+    },
+    {
+      "id": "case_178",
+      "matches": 62,
+      "score": 242187,
+      "output_sha256": "083a426067eba3222540a6d4e011d7cfb095d9cb6f0f6cd0a85dbb2ded1d2661",
+      "runtime_sec": 1.2587899001082405
+    },
+    {
+      "id": "case_179",
+      "matches": 154,
+      "score": 183115,
+      "output_sha256": "9188480dfe136683a92dcc0f93df2bdf767d1f811b664c29fa889b041622abf4",
+      "runtime_sec": 0.15421220008283854
+    },
+    {
+      "id": "case_180",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "4cdce26bab2d34137f6fc4053ba1f2e8cf02049520f484e90efb3892d0c6d071",
+      "runtime_sec": 1.0780075999209657
+    },
+    {
+      "id": "case_181",
+      "matches": 167,
+      "score": 988165,
+      "output_sha256": "702fd8f489f24ccd748540efc6f01f6ec5a029ee9afd58426a6e04feca418b4e",
+      "runtime_sec": 0.19581960001960397
+    },
+    {
+      "id": "case_182",
+      "matches": 149,
+      "score": 459876,
+      "output_sha256": "5cd96f77a2dae6c5a9b63c66b3c6d92d4724001c125a02e5ae3457396c3a3f12",
+      "runtime_sec": 1.7321999999694526
+    },
+    {
+      "id": "case_183",
+      "matches": 545,
+      "score": 946180,
+      "output_sha256": "c5b5ab6261b3cc0bfccda1adbae3240d9a09c00c720861c1a45d4e1823ed651e",
+      "runtime_sec": 1.8430743999779224
+    },
+    {
+      "id": "case_184",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "f1108a2b503ef2dd7801a00fe3100d892c967b67b2b622f2f06515de7d3b308e",
+      "runtime_sec": 0.11475639999844134
+    },
+    {
+      "id": "case_185",
+      "matches": 120,
+      "score": 991735,
+      "output_sha256": "875c21065d4761ba994f87be8b5b7e38923e03d869b03830f580b64e0a87c68c",
+      "runtime_sec": 2.9718209001002833
+    },
+    {
+      "id": "case_186",
+      "matches": 256,
+      "score": 709141,
+      "output_sha256": "27c6ba52bb4997bb6c6ec4a5f9396ef90abbe07850cf0f82b7041fee17fda249",
+      "runtime_sec": 2.678379900055006
+    },
+    {
+      "id": "case_187",
+      "matches": 729,
+      "score": 1000000,
+      "output_sha256": "e77517dab48381cd87b001bac4bcb4a44bb5a7c3313bd3bbf60b86557d5c0962",
+      "runtime_sec": 1.2594269999535754
+    },
+    {
+      "id": "case_188",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "370c16336e65a02fe86e4b43f27e247985b728e041ba479de8a9c5a035c67967",
+      "runtime_sec": 0.12502859998494387
+    },
+    {
+      "id": "case_189",
+      "matches": 151,
+      "score": 893491,
+      "output_sha256": "052196ceb7727fdef3623326f65a1ff6272ff4cafa109cd26669ae503cf4338b",
+      "runtime_sec": 1.58020240010228
+    },
+    {
+      "id": "case_190",
+      "matches": 319,
+      "score": 984567,
+      "output_sha256": "819c79a416edfe148ba1d2c568864976c842d8a069c3079311845402f6c9d6ee",
+      "runtime_sec": 0.9596204999834299
+    },
+    {
+      "id": "case_191",
+      "matches": 570,
+      "score": 989583,
+      "output_sha256": "dce4f629b5fac5531bc023aa4debd7fb3c5f15af25eb5d2436f683419151912c",
+      "runtime_sec": 2.3381778000621125
+    },
+    {
+      "id": "case_192",
+      "matches": 4,
+      "score": 444444,
+      "output_sha256": "c50a569aed234bc7d347135a2c35d6dafd3366e86552f66e451bed482a5cbe60",
+      "runtime_sec": 0.11851399997249246
+    },
+    {
+      "id": "case_193",
+      "matches": 135,
+      "score": 600000,
+      "output_sha256": "992465414748900efa9281fd95415a709f8ce8dc63a6d44128bed83c672cd6c0",
+      "runtime_sec": 1.9213322999421507
+    },
+    {
+      "id": "case_194",
+      "matches": 160,
+      "score": 400000,
+      "output_sha256": "f00277c2fdb4a63c3b6859d5c624fb0d19cad4debf1632cdd0c0a8646bc67928",
+      "runtime_sec": 0.9655058999778703
+    },
+    {
+      "id": "case_195",
+      "matches": 134,
+      "score": 183813,
+      "output_sha256": "a20692dda3a83343b78d891f4ae703c3f890372c2f215bf39acf3fd52c491c6d",
+      "runtime_sec": 1.026181900058873
+    },
+    {
+      "id": "case_196",
+      "matches": 8,
+      "score": 500000,
+      "output_sha256": "97a82db48d08b27b4b8aeb317f792477d8d18835714141d380a5378cceb9c824",
+      "runtime_sec": 0.10822030005510896
+    },
+    {
+      "id": "case_197",
+      "matches": 58,
+      "score": 906250,
+      "output_sha256": "2157a9361908ac72712617e5f91acac988f7df19649fc7ad99dbc02f96b78c7a",
+      "runtime_sec": 0.2772110999794677
+    },
+    {
+      "id": "case_198",
+      "matches": 252,
+      "score": 984375,
+      "output_sha256": "e48377da611ac86b96eedce189eb6917f14d236e783531bab43ecf02fb0a8544",
+      "runtime_sec": 0.15183290001004934
+    },
+    {
+      "id": "case_199",
+      "matches": 212,
+      "score": 368055,
+      "output_sha256": "77513daee8b827f603c32fd1e88f3978ed5f1f28d77d0a4d5f93c604a42b83a9",
+      "runtime_sec": 1.4763635999988765
+    },
+    {
+      "id": "case_200",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "2a8ca99dcdd8db8b4322ab6a49fb5d94f4669e52355a301bbdd5d0f92168ba1b",
+      "runtime_sec": 0.1173909999197349
+    },
+    {
+      "id": "case_201",
+      "matches": 112,
+      "score": 777777,
+      "output_sha256": "e844b3f1a83e01522b783f493f6ee5c128bb272aa8c4fccacb3bc18c0531598e",
+      "runtime_sec": 2.559899599989876
+    },
+    {
+      "id": "case_202",
+      "matches": 246,
+      "score": 960937,
+      "output_sha256": "b6f4e40fa5f2ce4df1894d7e3cb3fed53056b5573abe2c30f3e8e01d00ffac1a",
+      "runtime_sec": 1.2947866999311373
+    },
+    {
+      "id": "case_203",
+      "matches": 508,
+      "score": 647959,
+      "output_sha256": "b5346f4a4b4e06663e810234f46e4754d14c0e3affcd9d58baa056643ccc72d8",
+      "runtime_sec": 2.5704398000380024
+    },
+    {
+      "id": "case_204",
+      "matches": 47,
+      "score": 959183,
+      "output_sha256": "b204b0e888467be79b5160e4838ffb1a164781c0a54a2a19b9140dbeffa42602",
+      "runtime_sec": 0.12090850004460663
+    },
+    {
+      "id": "case_205",
+      "matches": 194,
+      "score": 862222,
+      "output_sha256": "51c1cddf66b82b5f3e7868062db5f89905e1f606aaef10386e6270389353c781",
+      "runtime_sec": 3.352844599983655
+    },
+    {
+      "id": "case_206",
+      "matches": 481,
+      "score": 993801,
+      "output_sha256": "828f4cff65509d719f6d8c85966feef2183ece69f3d9bc44137dc11ea2227346",
+      "runtime_sec": 1.8900797000387684
+    },
+    {
+      "id": "case_207",
+      "matches": 723,
+      "score": 991769,
+      "output_sha256": "c56300500580e745ed4208cd9e0786ade83332ae94bd9622d34cc5dfda1ba939",
+      "runtime_sec": 2.301279400009662
+    },
+    {
+      "id": "case_208",
+      "matches": 16,
+      "score": 444444,
+      "output_sha256": "cb011ff61ba1264474fdc40028229e271897362bbd1e1ef337a8a423d7d52bf7",
+      "runtime_sec": 0.13341780006885529
+    },
+    {
+      "id": "case_209",
+      "matches": 146,
+      "score": 863905,
+      "output_sha256": "2b652cbba3d07efa2ff78d518d9e622ac89929e31d8e3788a0475939c4f3d8c7",
+      "runtime_sec": 0.12732969992794096
+    },
+    {
+      "id": "case_210",
+      "matches": 529,
+      "score": 1000000,
+      "output_sha256": "7aaf94b5c982d391cc5138c0bf8ed8365aa72415655db9a1d418ce8be669394b",
+      "runtime_sec": 0.21258190006483346
+    },
+    {
+      "id": "case_211",
+      "matches": 710,
+      "score": 844233,
+      "output_sha256": "48022f15b04eae5357b752ca55a0039488d9c059050f93a25b52779d2a0a7fde",
+      "runtime_sec": 0.1500653000548482
+    },
+    {
+      "id": "case_212",
+      "matches": 48,
+      "score": 979591,
+      "output_sha256": "3f83665d065762a06decdb25682b074b6045de687166825f0efe8c53df6d0c11",
+      "runtime_sec": 1.6173122000182047
+    },
+    {
+      "id": "case_213",
+      "matches": 121,
+      "score": 617346,
+      "output_sha256": "176834d7c55fae3b727487f0c5cc7e7650c1fa51c44b9920857e221fed999d89",
+      "runtime_sec": 2.270717700012028
+    },
+    {
+      "id": "case_214",
+      "matches": 354,
+      "score": 980609,
+      "output_sha256": "0ba86529cc5520a3eedecfc2d42db8ab4e0165c448bc7264712fcdbea247a6b7",
+      "runtime_sec": 1.2687739999964833
+    },
+    {
+      "id": "case_215",
+      "matches": 625,
+      "score": 1000000,
+      "output_sha256": "004e85bc8dec312d9816e14b1bf405518ac6455a3f24d2563d83d0c975d8d5fd",
+      "runtime_sec": 0.22910819994285703
+    },
+    {
+      "id": "case_216",
+      "matches": 10,
+      "score": 625000,
+      "output_sha256": "ed0bdb05b888beaa79e7f61c7afe07eeeddd7f6fa3cb4991230425647f476c9b",
+      "runtime_sec": 0.1173545999918133
+    },
+    {
+      "id": "case_217",
+      "matches": 64,
+      "score": 1000000,
+      "output_sha256": "f611831197ca798fafb6ae46f9501a9b9a62ae855c849646ec231084daccd766",
+      "runtime_sec": 0.1195585000095889
+    },
+    {
+      "id": "case_218",
+      "matches": 396,
+      "score": 990000,
+      "output_sha256": "5d8cde0f3411fcd90a3dad6f522887ec26545092cfc55e61e7a4adca24554db7",
+      "runtime_sec": 0.17141930002253503
+    },
+    {
+      "id": "case_219",
+      "matches": 275,
+      "score": 406804,
+      "output_sha256": "86088f3bc0d9c11cd9d6445287a5d9c72dcc3c23aaf9423fe69c9f9b40c303ee",
+      "runtime_sec": 1.9441864000400528
+    },
+    {
+      "id": "case_220",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "cf8c97042214bc2799891a553455de2e72db09f3d05223ba2cb1b8d1a4093649",
+      "runtime_sec": 0.11610290000680834
+    },
+    {
+      "id": "case_221",
+      "matches": 168,
+      "score": 994082,
+      "output_sha256": "0317b462ccffb4fdbc1bef3a0d887345564255fccd638e4397564913f34a36b0",
+      "runtime_sec": 3.0760440999874845
+    },
+    {
+      "id": "case_222",
+      "matches": 289,
+      "score": 1000000,
+      "output_sha256": "e9857a8980788c5e4a00776f513a96eb49d527b43094e39cb77a2ca97bd21889",
+      "runtime_sec": 0.2571538999909535
+    },
+    {
+      "id": "case_223",
+      "matches": 692,
+      "score": 882653,
+      "output_sha256": "5d99221d7dba423ec24d98d7a52fa5361911fcad42a35ddf4ea7dd7d3b8ef8b4",
+      "runtime_sec": 2.915984900086187
+    },
+    {
+      "id": "case_224",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "477a63d78c2f707e57f85bc62ffd75ac11e490650f54cb083b656bcaf7aef482",
+      "runtime_sec": 0.11707130004651845
+    },
+    {
+      "id": "case_225",
+      "matches": 44,
+      "score": 440000,
+      "output_sha256": "85bf3ae8889e81d9d174afbe9b442e651db9cc48fe966190a8e45298b205c3ad",
+      "runtime_sec": 2.724017900065519
+    },
+    {
+      "id": "case_226",
+      "matches": 72,
+      "score": 180000,
+      "output_sha256": "8d37c302aa56670dba9301d38281d127c5bd82b3cdf72f9b8c30ed38bcfc10b5",
+      "runtime_sec": 0.15368849993683398
+    },
+    {
+      "id": "case_227",
+      "matches": 208,
+      "score": 332800,
+      "output_sha256": "288d3f468bea6f7979ec4cf0cdde87c1a8409b8b06aed3d16beed530e621ec4f",
+      "runtime_sec": 0.15284709993284196
+    },
+    {
+      "id": "case_228",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "80fe37419272dd9c085ab221380e79978ed17be85c097b01c3e0c9244dc4cb18",
+      "runtime_sec": 0.14028849999886006
+    },
+    {
+      "id": "case_229",
+      "matches": 78,
+      "score": 644628,
+      "output_sha256": "9e3bcef3616bd6e1dcf3b4835960bd63d3b4697b53a2b7e4ff4ed9dd5cc6a996",
+      "runtime_sec": 1.4043809999711812
+    },
+    {
+      "id": "case_230",
+      "matches": 294,
+      "score": 907407,
+      "output_sha256": "9da4c3eab537feb2e38dbe410c510d47ff5ddeacb76d57943bf24f4335d8f848",
+      "runtime_sec": 1.2784422000404447
+    },
+    {
+      "id": "case_231",
+      "matches": 802,
+      "score": 891111,
+      "output_sha256": "dc690f03c607fd32a4d1e6db09091755744d25806810a01bef389703a3c2917e",
+      "runtime_sec": 2.335675899987109
+    },
+    {
+      "id": "case_232",
+      "matches": 10,
+      "score": 277777,
+      "output_sha256": "3a098d1960512ca51093572ae82481f45b86d64531a74b0da4b8199bca87bc54",
+      "runtime_sec": 0.1418875000672415
+    },
+    {
+      "id": "case_233",
+      "matches": 49,
+      "score": 765625,
+      "output_sha256": "3e72753d0fb9e1e003a10b91eb9b8ce74b04297b4a4e8acfca5d79917c87c4c8",
+      "runtime_sec": 2.6460096000228077
+    },
+    {
+      "id": "case_234",
+      "matches": 397,
+      "score": 820247,
+      "output_sha256": "7c39137d9155ad116fe2a8aa601e70a73e907b6aac47496e98c7eabba582ff78",
+      "runtime_sec": 2.0778074000263587
+    },
+    {
+      "id": "case_235",
+      "matches": 570,
+      "score": 989583,
+      "output_sha256": "fb3219df0482b3b99733cd2acc4cb383ac7f2ace7a7840b4ad12484d6a28a219",
+      "runtime_sec": 2.102582099963911
+    },
+    {
+      "id": "case_236",
+      "matches": 36,
+      "score": 1000000,
+      "output_sha256": "b30c97f0880c830c5979a813937bab2c8d9aa1326f57462c9e8f98721b5ed1c7",
+      "runtime_sec": 0.1966856000944972
+    },
+    {
+      "id": "case_237",
+      "matches": 64,
+      "score": 1000000,
+      "output_sha256": "5bcc5bd0481578d2a764a01ebb2035fb73e282339fe1e12ecf74289c97837981",
+      "runtime_sec": 0.16857660003006458
+    },
+    {
+      "id": "case_238",
+      "matches": 276,
+      "score": 955017,
+      "output_sha256": "9fe8b6b953b6391709271030f845b7a91fa331b2148d302694b83ee1d0e743ca",
+      "runtime_sec": 0.8077439999906346
+    },
+    {
+      "id": "case_239",
+      "matches": 595,
+      "score": 880177,
+      "output_sha256": "c473defd046ee4f193cb988d7cb443509b2702235b260d29c4d6f0112aebb2b1",
+      "runtime_sec": 2.124655299936421
+    },
+    {
+      "id": "case_240",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "3164e8f5eba083b287512277f136f5fe80891996148b0f2a18943e9330599e2f",
+      "runtime_sec": 0.15287410002201796
+    },
+    {
+      "id": "case_241",
+      "matches": 89,
+      "score": 618055,
+      "output_sha256": "36a3f0ffb98fd8d9025708ad07a9a9d12d50bfbfd7cc07a4ae4a24f9317e7736",
+      "runtime_sec": 2.805550300050527
+    },
+    {
+      "id": "case_242",
+      "matches": 63,
+      "score": 194444,
+      "output_sha256": "e6bf81237cfc6bddfaea5644a66e21883dc193d91d354f2e065ef19c12020d16",
+      "runtime_sec": 1.2762218000134453
+    },
+    {
+      "id": "case_243",
+      "matches": 672,
+      "score": 857142,
+      "output_sha256": "5400583736218c9a5e61b564db1fca29b22b52ffd5b20b1d6fa274615f65ef3b",
+      "runtime_sec": 0.7707147999899462
+    },
+    {
+      "id": "case_244",
+      "matches": 11,
+      "score": 687500,
+      "output_sha256": "162ba48768901eef2034ec571bb5c89004b879585a7451847ecd523f096a8723",
+      "runtime_sec": 0.2075876999879256
+    },
+    {
+      "id": "case_245",
+      "matches": 59,
+      "score": 349112,
+      "output_sha256": "f53de167d2b986979c14e35df37ddf080e09a14cc0ff962863fc7c91580c3eae",
+      "runtime_sec": 1.3160322000039741
+    },
+    {
+      "id": "case_246",
+      "matches": 262,
+      "score": 808641,
+      "output_sha256": "f2cdee9247276673f42295913148772715289c66f58a9f8fcde7a6939c8a52e1",
+      "runtime_sec": 1.6046115999342874
+    },
+    {
+      "id": "case_247",
+      "matches": 321,
+      "score": 381688,
+      "output_sha256": "beb469d4154ff89387370fc1151e1c4cc52388319028b047c2d2bedfd52b1c9c",
+      "runtime_sec": 2.184108500019647
+    },
+    {
+      "id": "case_248",
+      "matches": 9,
+      "score": 562500,
+      "output_sha256": "22a7a36891b04529f599a1879f2ea3c8cbe8fd6d90cd1999e237bc0dc535e5f2",
+      "runtime_sec": 0.13333770004101098
+    },
+    {
+      "id": "case_249",
+      "matches": 64,
+      "score": 1000000,
+      "output_sha256": "d88ea2edb28cffc40c70c7fc1ffd23518cea79b78add8db974ba37be267460ee",
+      "runtime_sec": 0.5468856999650598
+    },
+    {
+      "id": "case_250",
+      "matches": 324,
+      "score": 1000000,
+      "output_sha256": "1e0a9e523f476ac64410ef72c353e8ef9bc064f3b15acc32ce70f98fa44adada",
+      "runtime_sec": 1.5791328999912366
+    },
+    {
+      "id": "case_251",
+      "matches": 694,
+      "score": 771111,
+      "output_sha256": "f9beb53fcceff70001d56c354aec3f54c4bdac608b61241d30748aafecb1a884",
+      "runtime_sec": 1.9652957000071183
+    },
+    {
+      "id": "case_252",
+      "matches": 8,
+      "score": 888888,
+      "output_sha256": "9251534ab80fb745b02a083a3d9174b1ab944998fa8f91ba9cf887e7ed007e77",
+      "runtime_sec": 0.11353450000751764
+    },
+    {
+      "id": "case_253",
+      "matches": 141,
+      "score": 979166,
+      "output_sha256": "19a807129b1aa13a6ac847edda6f9c1ebd90985532cfb9ffd0b0ac4bb2fc2c3a",
+      "runtime_sec": 0.6216650999849662
+    },
+    {
+      "id": "case_254",
+      "matches": 118,
+      "score": 326869,
+      "output_sha256": "23b8b57f86e279320c0a3435b9108403a8c1d64840e3a54a3606d9fc0ca06866",
+      "runtime_sec": 0.3099730999674648
+    },
+    {
+      "id": "case_255",
+      "matches": 550,
+      "score": 954861,
+      "output_sha256": "2c216b91a7c07fcb2a4a093d327bfad6a6aeee866f49901d11b7e10c6f18fdf9",
+      "runtime_sec": 2.655728599987924
+    },
+    {
+      "id": "case_256",
+      "matches": 22,
+      "score": 880000,
+      "output_sha256": "defb4e9e5e8dc68810f1747536f840d19f6ffbefd3d517620870b7336386aac9",
+      "runtime_sec": 0.14587170002050698
+    },
+    {
+      "id": "case_257",
+      "matches": 31,
+      "score": 484375,
+      "output_sha256": "3eabcf8bd1e94d7d09449078627f1d6e1b3983e5b1853dddc99e06743e6dce20",
+      "runtime_sec": 0.13301320001482964
+    },
+    {
+      "id": "case_258",
+      "matches": 268,
+      "score": 827160,
+      "output_sha256": "28fc2ad8a03be35cc96dfc0b630d39ff734dc5b1fb23970516cab6e57b672633",
+      "runtime_sec": 0.6651768999872729
+    },
+    {
+      "id": "case_259",
+      "matches": 501,
+      "score": 869791,
+      "output_sha256": "7bec7cc0c4584cf8ea986f16ddb65d5ef509a5b1f3cec27637786488c5249896",
+      "runtime_sec": 1.4900514000328258
+    },
+    {
+      "id": "case_260",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "9d5441bef1e4955177d8e59853baaa187a13c8f899cc911534ed90232001367f",
+      "runtime_sec": 0.12252820003777742
+    },
+    {
+      "id": "case_261",
+      "matches": 169,
+      "score": 862244,
+      "output_sha256": "4ab6427ca33fca921604787f6eb8f1ef3863713a0ebae9bb04bfd9a7aed5f7eb",
+      "runtime_sec": 2.3464737000176683
+    },
+    {
+      "id": "case_262",
+      "matches": 400,
+      "score": 1000000,
+      "output_sha256": "5853003876893d59595f271877b22e088c590ffd13ae96c6a9f630246190950f",
+      "runtime_sec": 0.7362814999651164
+    },
+    {
+      "id": "case_263",
+      "matches": 289,
+      "score": 462400,
+      "output_sha256": "94df8756154a594163ce5c516eedf5ebe0c5e01a778f63bc5aab099079ea7a94",
+      "runtime_sec": 1.4110290999524295
+    },
+    {
+      "id": "case_264",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "a38041b5e2da536a444ebb6853f1c3ae1ca1bca17079e2f2ae9d020d97e562d7",
+      "runtime_sec": 0.10879650001879781
+    },
+    {
+      "id": "case_265",
+      "matches": 78,
+      "score": 962962,
+      "output_sha256": "13b7abc31030d3ff9e79621c598862934c7deb56c07438467995d1c3cc193a58",
+      "runtime_sec": 1.2074183999793604
+    },
+    {
+      "id": "case_266",
+      "matches": 241,
+      "score": 546485,
+      "output_sha256": "dcc45cdcd9a1e2340fb9a883b91a3e1fdf89d65655902aa4d39150d6477ca629",
+      "runtime_sec": 1.286334199947305
+    },
+    {
+      "id": "case_267",
+      "matches": 524,
+      "score": 623067,
+      "output_sha256": "7ccfdd1b852c5fbe179d84888ae4e7bbda6dbe7d5d168841e390bd4f26281029",
+      "runtime_sec": 2.188750399975106
+    },
+    {
+      "id": "case_268",
+      "matches": 49,
+      "score": 1000000,
+      "output_sha256": "b391a2ef0726afb5508ed77b2a23da5b8bd8bc4ac5081690d12e53c5ce538bb5",
+      "runtime_sec": 0.6447134999325499
+    },
+    {
+      "id": "case_269",
+      "matches": 192,
+      "score": 979591,
+      "output_sha256": "9f38174ddc4dd64725b72df7c0e0ab6cb5004df46baa5a1b694734611bf01298",
+      "runtime_sec": 0.20051409990992397
+    },
+    {
+      "id": "case_270",
+      "matches": 341,
+      "score": 852500,
+      "output_sha256": "b300453184cf0838b85088d443aff6561f7c75b222fa0dcd117ce226f3eba9c9",
+      "runtime_sec": 2.6981176999397576
+    },
+    {
+      "id": "case_271",
+      "matches": 606,
+      "score": 969600,
+      "output_sha256": "263ef381b4c26829f66f9d44316992b62f2e8edf0619d67f4effc27b7adae67b",
+      "runtime_sec": 2.099839699920267
+    },
+    {
+      "id": "case_272",
+      "matches": 6,
+      "score": 666666,
+      "output_sha256": "7580e771a1dc0867f6d08b41edff52be6d7fabe4082f2849b20fea00d71ee016",
+      "runtime_sec": 0.10987549996934831
+    },
+    {
+      "id": "case_273",
+      "matches": 69,
+      "score": 851851,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.12813079997431487
+    },
+    {
+      "id": "case_274",
+      "matches": 333,
+      "score": 922437,
+      "output_sha256": "d715c11486f2afc8b9682c20ddaaa2c52d7892a7e658669b5c24ecda80f45483",
+      "runtime_sec": 1.7038544999668375
+    },
+    {
+      "id": "case_275",
+      "matches": 629,
+      "score": 862825,
+      "output_sha256": "60182def3bf69e40df83c64621f6f8a52f1d25d61f2761f1b13d0db695528a9b",
+      "runtime_sec": 1.5924652999965474
+    },
+    {
+      "id": "case_276",
+      "matches": 31,
+      "score": 632653,
+      "output_sha256": "4c029468ac3875189ec409e4fd09a308683cc53e12f11c5b2f5c6ca85ac16298",
+      "runtime_sec": 2.121505699935369
+    },
+    {
+      "id": "case_277",
+      "matches": 80,
+      "score": 800000,
+      "output_sha256": "42bd50d26a1e4af6002c37a63b5a62e9ea79ad136a6c99c35d43be8b04ce9363",
+      "runtime_sec": 2.0662975000450388
+    },
+    {
+      "id": "case_278",
+      "matches": 285,
+      "score": 588842,
+      "output_sha256": "33fcce7dbb2e1152f00b45e76fca8a0a926a370a69f36f075e5e5c76fa375eea",
+      "runtime_sec": 1.142490900005214
+    },
+    {
+      "id": "case_279",
+      "matches": 737,
+      "score": 940051,
+      "output_sha256": "4625972232d04f725dc69e1c50059d5e5b1e2e8e14f025a20d3164d5734cd23b",
+      "runtime_sec": 1.7662936999695376
+    },
+    {
+      "id": "case_280",
+      "matches": 48,
+      "score": 979591,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.12473380006849766
+    },
+    {
+      "id": "case_281",
+      "matches": 61,
+      "score": 953125,
+      "output_sha256": "ec7663531297523e3b4cbab35bd885c428b2b5959fd569327202c501932f0ded",
+      "runtime_sec": 0.12643800000660121
+    },
+    {
+      "id": "case_282",
+      "matches": 252,
+      "score": 984375,
+      "output_sha256": "c0a204f318530d341a7d21fb5fc649e9457442b9b22bfe1a88b81a91613493bc",
+      "runtime_sec": 0.1864509000442922
+    },
+    {
+      "id": "case_283",
+      "matches": 580,
+      "score": 795610,
+      "output_sha256": "4f0f471bbeaf8e70c0d119c338ad403e585a4851e82c6a32ec3e0ac37ed0f253",
+      "runtime_sec": 3.0820452000480145
+    },
+    {
+      "id": "case_284",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "929086e92bfc93ab0d08adac43b29b9a7a123e1523dc924f71f76806a599d5b4",
+      "runtime_sec": 0.6369196999585256
+    },
+    {
+      "id": "case_285",
+      "matches": 144,
+      "score": 1000000,
+      "output_sha256": "e40cdfd0eb43058d1c1d4b0b5c8f04bb02a5f50db7e527351989b44fb69056ff",
+      "runtime_sec": 0.1474229000741616
+    },
+    {
+      "id": "case_286",
+      "matches": 358,
+      "score": 991689,
+      "output_sha256": "3cab48b550d2c1bf2e452efb7a231e01c62d6c2d5ad8ec90f21fd6392494ea47",
+      "runtime_sec": 2.1591394999995828
+    },
+    {
+      "id": "case_287",
+      "matches": 650,
+      "score": 891632,
+      "output_sha256": "2c180d7507fb804a350a6b9669f50324bf3d8ae43c95584224788a2d699b1b64",
+      "runtime_sec": 2.402951900032349
+    },
+    {
+      "id": "case_288",
+      "matches": 25,
+      "score": 694444,
+      "output_sha256": "70a4ce2820cdec1d8d1a8dfe2d874509045b62512ceb5a41918ec9ac11923e87",
+      "runtime_sec": 0.5491893000435084
+    },
+    {
+      "id": "case_289",
+      "matches": 65,
+      "score": 537190,
+      "output_sha256": "2ff34e7031e38ad3c467f4a6296c4f5b46173828305d04f2040519df35569a6d",
+      "runtime_sec": 1.9518955000676215
+    },
+    {
+      "id": "case_290",
+      "matches": 107,
+      "score": 202268,
+      "output_sha256": "a2048f35bb6652f48de23c9c6868abd72a80cbb8c7afa17a530baa274ecc597d",
+      "runtime_sec": 0.9421469999942929
+    },
+    {
+      "id": "case_291",
+      "matches": 148,
+      "score": 236800,
+      "output_sha256": "411354077132944e617131d928ebf1439fe17928c59b79065fbb4aeca3de6bb2",
+      "runtime_sec": 1.6040362999774516
+    },
+    {
+      "id": "case_292",
+      "matches": 25,
+      "score": 1000000,
+      "output_sha256": "f8144cdd32a7ca221f0d40c99381cb80531e8e8709815ac0195cbf3f4a0479ad",
+      "runtime_sec": 0.21332289988640696
+    },
+    {
+      "id": "case_293",
+      "matches": 144,
+      "score": 1000000,
+      "output_sha256": "a2bd12bb1c30f20abcf0c11de1efb41ba2bace3c06daacf8dfdc0a79fc92f679",
+      "runtime_sec": 1.3878089000936598
+    },
+    {
+      "id": "case_294",
+      "matches": 152,
+      "score": 380000,
+      "output_sha256": "bee181763b8b1a480467186643376da29fb92516b6d62a5188b22799c6cac1b7",
+      "runtime_sec": 1.4931263000471517
+    },
+    {
+      "id": "case_295",
+      "matches": 179,
+      "score": 310763,
+      "output_sha256": "42d8b323b58345469af67e6d783221fedd994113abfc8d9f3c046c2b3afa9110",
+      "runtime_sec": 1.3147873999550939
+    },
+    {
+      "id": "case_296",
+      "matches": 16,
+      "score": 1000000,
+      "output_sha256": "19018473447005dfadca5321c1556d3ca022f03d4a60fd7c274c6e20f61bb67d",
+      "runtime_sec": 1.3107931999256834
+    },
+    {
+      "id": "case_297",
+      "matches": 99,
+      "score": 818181,
+      "output_sha256": "49808a7eee75d46bd6c8a16a77871e02a90bd9d238fe40d56ddfd3c25f831b55",
+      "runtime_sec": 0.13663990003988147
+    },
+    {
+      "id": "case_298",
+      "matches": 322,
+      "score": 993827,
+      "output_sha256": "006421e622966d11336ac32ecc9855d897bda5b7e53fb38ed411376b4dd78f09",
+      "runtime_sec": 2.3396162000717595
+    },
+    {
+      "id": "case_299",
+      "matches": 562,
+      "score": 975694,
+      "output_sha256": "c1ff1195daea20d7a018a3adba5b32faf8244c0525e3894eec550907b472ec60",
+      "runtime_sec": 2.1106062000617385
+    },
+    {
+      "id": "case_300",
+      "matches": 49,
+      "score": 1000000,
+      "output_sha256": "b1a989f1d18b4af3d0e72fe56ceef569d94954c2b1176721933f41bc964a45ff",
+      "runtime_sec": 0.5158218999858946
+    },
+    {
+      "id": "case_301",
+      "matches": 100,
+      "score": 1000000,
+      "output_sha256": "560d8265b4f7fb366423e6048950f2b50ba2454201309e18f8ac5a906d8dbeb4",
+      "runtime_sec": 0.11711789993569255
+    },
+    {
+      "id": "case_302",
+      "matches": 263,
+      "score": 543388,
+      "output_sha256": "bc80145b654fc8a501fad36ce67dccd61cd8c701a330f09a5a4db2268d2549b1",
+      "runtime_sec": 0.9320478000445291
+    },
+    {
+      "id": "case_303",
+      "matches": 528,
+      "score": 673469,
+      "output_sha256": "3947f54193bfb50998124af832c455169b5afa8cf6cb07a49ee79653039d72c9",
+      "runtime_sec": 2.3648592999670655
+    },
+    {
+      "id": "case_304",
+      "matches": 10,
+      "score": 625000,
+      "output_sha256": "9251534ab80fb745b02a083a3d9174b1ab944998fa8f91ba9cf887e7ed007e77",
+      "runtime_sec": 0.11028469994198531
+    },
+    {
+      "id": "case_305",
+      "matches": 33,
+      "score": 330000,
+      "output_sha256": "a9a0d12ccace44aeabefac8d54772a7fb31af158d58572354a002b4004104977",
+      "runtime_sec": 0.12074299994856119
+    },
+    {
+      "id": "case_306",
+      "matches": 82,
+      "score": 227146,
+      "output_sha256": "64a394d07155c4a634ea2ebc34850c882c3a8cec39da07a46f3fb81a5c909bd8",
+      "runtime_sec": 1.6974982999963686
+    },
+    {
+      "id": "case_307",
+      "matches": 616,
+      "score": 911242,
+      "output_sha256": "545260fbecb0b90fff48cfb3a1013041461a8130cd822a3a87d92ee6a73dfecd",
+      "runtime_sec": 1.2031858999980614
+    },
+    {
+      "id": "case_308",
+      "matches": 22,
+      "score": 611111,
+      "output_sha256": "2acb08464fd800b065fe2784dcfbe36ff46f5c0266f9a405461df2ad972b0a0f",
+      "runtime_sec": 3.5866763000376523
+    },
+    {
+      "id": "case_309",
+      "matches": 83,
+      "score": 830000,
+      "output_sha256": "03c7ecd3ccfde16404dcc5f8df71c127272de80ae07aaad416ce0eee937be644",
+      "runtime_sec": 2.0231554999481887
+    },
+    {
+      "id": "case_310",
+      "matches": 256,
+      "score": 1000000,
+      "output_sha256": "d2f10ff26724b152456b77561f6183123a80842ab4cb3bc097931e9c3b16b3c1",
+      "runtime_sec": 1.0473770999815315
+    },
+    {
+      "id": "case_311",
+      "matches": 218,
+      "score": 348800,
+      "output_sha256": "b45c481ffaf40150b6858025c6480b8d9c82e5e15d5c3ba6a2615d583dae2da2",
+      "runtime_sec": 1.8203501000534743
+    },
+    {
+      "id": "case_312",
+      "matches": 9,
+      "score": 1000000,
+      "output_sha256": "8a757bba957f4129fd03f6214cb7aa4dabc26b5fb39d9797686dbf1c64526a44",
+      "runtime_sec": 0.11891760001890361
+    },
+    {
+      "id": "case_313",
+      "matches": 192,
+      "score": 979591,
+      "output_sha256": "f001fde9604e9edd81c8e3c7199128de41be78bbd77ad0595eb06af05c557c0a",
+      "runtime_sec": 2.1316198999993503
+    },
+    {
+      "id": "case_314",
+      "matches": 253,
+      "score": 988281,
+      "output_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "runtime_sec": 0.13530329999048263
+    },
+    {
+      "id": "case_315",
+      "matches": 576,
+      "score": 1000000,
+      "output_sha256": "b39c0c2401ec683d39c9748219cc399e254af394b8daef90b604b02260f42bea",
+      "runtime_sec": 1.0117963999509811
+    },
+    {
+      "id": "case_316",
+      "matches": 15,
+      "score": 937500,
+      "output_sha256": "ecb5fe7eb6aa63ddacffeb57d2e2a7ad886c9c1b5e32ea31836e971621d76e27",
+      "runtime_sec": 0.13741660001687706
+    },
+    {
+      "id": "case_317",
+      "matches": 64,
+      "score": 1000000,
+      "output_sha256": "aa63c113d045f4cec51be097372d9284960cbec42e04906f3433858930f91e2d",
+      "runtime_sec": 1.6168345001060516
+    },
+    {
+      "id": "case_318",
+      "matches": 244,
+      "score": 953125,
+      "output_sha256": "eecf9c405f481be20068047fe1ec7f9de915786eae1aa929904446cfb3a9709b",
+      "runtime_sec": 0.6774769999319687
+    },
+    {
+      "id": "case_319",
+      "matches": 778,
+      "score": 992346,
+      "output_sha256": "b3aa97e5580a2d2d5a963acaa66548526396471c3f45517003299ee8d363dc15",
+      "runtime_sec": 2.1588353000115603
+    }
+  ]
+}

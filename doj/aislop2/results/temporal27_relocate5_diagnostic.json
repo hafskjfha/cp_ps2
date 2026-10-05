@@ -1,0 +1,1698 @@
+{
+  "diagnostic_only": true,
+  "cases": 211,
+  "score_delta": 150046,
+  "wins": 32,
+  "losses": 0,
+  "max_runtime_sec": 0.46502040000632405,
+  "results": [
+    {
+      "id": "case_000",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0002473000204190612,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_001",
+      "delta": 2222,
+      "matches_delta": 2,
+      "runtime_sec": 0.202406800002791,
+      "canceled": 0,
+      "operations": 180
+    },
+    {
+      "id": "case_003",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.013978800037875772,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_005",
+      "delta": 13333,
+      "matches_delta": 3,
+      "runtime_sec": 0.11849449994042516,
+      "canceled": 0,
+      "operations": 98
+    },
+    {
+      "id": "case_006",
+      "delta": 3460,
+      "matches_delta": 1,
+      "runtime_sec": 0.03568969992920756,
+      "canceled": 0,
+      "operations": 90
+    },
+    {
+      "id": "case_007",
+      "delta": 6667,
+      "matches_delta": 6,
+      "runtime_sec": 0.46502040000632405,
+      "canceled": 0,
+      "operations": 180
+    },
+    {
+      "id": "case_008",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009881999925710261,
+      "canceled": 10,
+      "operations": 70
+    },
+    {
+      "id": "case_012",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0067517999559640884,
+      "canceled": 14,
+      "operations": 56
+    },
+    {
+      "id": "case_013",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.044699399964883924,
+      "canceled": 98,
+      "operations": 8
+    },
+    {
+      "id": "case_014",
+      "delta": 3906,
+      "matches_delta": 1,
+      "runtime_sec": 0.03500790009275079,
+      "canceled": 22,
+      "operations": 99
+    },
+    {
+      "id": "case_015",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0650419999146834,
+      "canceled": 0,
+      "operations": 160
+    },
+    {
+      "id": "case_016",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0019194000633433461,
+      "canceled": 4,
+      "operations": 4
+    },
+    {
+      "id": "case_018",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.05542349989991635,
+      "canceled": 0,
+      "operations": 180
+    },
+    {
+      "id": "case_021",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.007827499997802079,
+      "canceled": 0,
+      "operations": 24
+    },
+    {
+      "id": "case_022",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02253919991198927,
+      "canceled": 6,
+      "operations": 13
+    },
+    {
+      "id": "case_023",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04133789998013526,
+      "canceled": 0,
+      "operations": 29
+    },
+    {
+      "id": "case_026",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.025215100031346083,
+      "canceled": 16,
+      "operations": 51
+    },
+    {
+      "id": "case_027",
+      "delta": 1275,
+      "matches_delta": 1,
+      "runtime_sec": 0.06843510002363473,
+      "canceled": 0,
+      "operations": 60
+    },
+    {
+      "id": "case_029",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0016434000572189689,
+      "canceled": 62,
+      "operations": 0
+    },
+    {
+      "id": "case_032",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0009926999919116497,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_033",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0008703999919816852,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_034",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.010449000052176416,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_035",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.026177700026892126,
+      "canceled": 2,
+      "operations": 2
+    },
+    {
+      "id": "case_037",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0018443000735715032,
+      "canceled": 0,
+      "operations": 8
+    },
+    {
+      "id": "case_038",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.018270400003530085,
+      "canceled": 0,
+      "operations": 33
+    },
+    {
+      "id": "case_041",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.013224499998614192,
+      "canceled": 12,
+      "operations": 51
+    },
+    {
+      "id": "case_042",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03821469994727522,
+      "canceled": 4,
+      "operations": 94
+    },
+    {
+      "id": "case_043",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.05512040003668517,
+      "canceled": 0,
+      "operations": 88
+    },
+    {
+      "id": "case_046",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.05001289991196245,
+      "canceled": 34,
+      "operations": 117
+    },
+    {
+      "id": "case_047",
+      "delta": 3473,
+      "matches_delta": 2,
+      "runtime_sec": 0.18076560006011277,
+      "canceled": 0,
+      "operations": 158
+    },
+    {
+      "id": "case_048",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0008087999885901809,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_049",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0005859000375494361,
+      "canceled": 0,
+      "operations": 0
+    },
+    {
+      "id": "case_050",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.011474099941551685,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_051",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.016008400009013712,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_053",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.005323700024746358,
+      "canceled": 0,
+      "operations": 12
+    },
+    {
+      "id": "case_054",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.007755399914458394,
+      "canceled": 0,
+      "operations": 14
+    },
+    {
+      "id": "case_055",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.003995999926701188,
+      "canceled": 20,
+      "operations": 0
+    },
+    {
+      "id": "case_056",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01034909998998046,
+      "canceled": 18,
+      "operations": 44
+    },
+    {
+      "id": "case_057",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00471160002052784,
+      "canceled": 16,
+      "operations": 22
+    },
+    {
+      "id": "case_058",
+      "delta": 9260,
+      "matches_delta": 3,
+      "runtime_sec": 0.04986769997049123,
+      "canceled": 0,
+      "operations": 73
+    },
+    {
+      "id": "case_059",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.023633399978280067,
+      "canceled": 0,
+      "operations": 40
+    },
+    {
+      "id": "case_062",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.017437899950891733,
+      "canceled": 72,
+      "operations": 22
+    },
+    {
+      "id": "case_063",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.041947699966840446,
+      "canceled": 0,
+      "operations": 145
+    },
+    {
+      "id": "case_064",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 7.760000880807638e-05,
+      "canceled": 0,
+      "operations": 0
+    },
+    {
+      "id": "case_065",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0009972999105229974,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_066",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009938000002875924,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_067",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01580279995687306,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_070",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.015923600061796606,
+      "canceled": 0,
+      "operations": 9
+    },
+    {
+      "id": "case_071",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02637840004172176,
+      "canceled": 0,
+      "operations": 20
+    },
+    {
+      "id": "case_074",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.023110799957066774,
+      "canceled": 0,
+      "operations": 83
+    },
+    {
+      "id": "case_075",
+      "delta": 3472,
+      "matches_delta": 2,
+      "runtime_sec": 0.12333870003931224,
+      "canceled": 0,
+      "operations": 93
+    },
+    {
+      "id": "case_078",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02324030001182109,
+      "canceled": 42,
+      "operations": 50
+    },
+    {
+      "id": "case_079",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.05321680009365082,
+      "canceled": 0,
+      "operations": 155
+    },
+    {
+      "id": "case_080",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0009313999908044934,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_081",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0002704999642446637,
+      "canceled": 0,
+      "operations": 0
+    },
+    {
+      "id": "case_082",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.007614600006490946,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_083",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.005557500058785081,
+      "canceled": 2,
+      "operations": 0
+    },
+    {
+      "id": "case_085",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00026830006390810013,
+      "canceled": 4,
+      "operations": 0
+    },
+    {
+      "id": "case_086",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.011927599902264774,
+      "canceled": 0,
+      "operations": 25
+    },
+    {
+      "id": "case_087",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.024066200014203787,
+      "canceled": 0,
+      "operations": 32
+    },
+    {
+      "id": "case_089",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0005868000444024801,
+      "canceled": 54,
+      "operations": 0
+    },
+    {
+      "id": "case_090",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.012196200084872544,
+      "canceled": 0,
+      "operations": 66
+    },
+    {
+      "id": "case_091",
+      "delta": 1600,
+      "matches_delta": 1,
+      "runtime_sec": 0.058963999967090786,
+      "canceled": 0,
+      "operations": 89
+    },
+    {
+      "id": "case_095",
+      "delta": 1600,
+      "matches_delta": 1,
+      "runtime_sec": 0.06769149994943291,
+      "canceled": 0,
+      "operations": 117
+    },
+    {
+      "id": "case_096",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0006259999936446548,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_097",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00134830002207309,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_098",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004266300005838275,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_099",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03143939992878586,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_102",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01289569993969053,
+      "canceled": 0,
+      "operations": 27
+    },
+    {
+      "id": "case_103",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04013500001747161,
+      "canceled": 0,
+      "operations": 28
+    },
+    {
+      "id": "case_106",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01647679996676743,
+      "canceled": 52,
+      "operations": 20
+    },
+    {
+      "id": "case_107",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03795610007364303,
+      "canceled": 0,
+      "operations": 36
+    },
+    {
+      "id": "case_112",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 8.60999571159482e-05,
+      "canceled": 2,
+      "operations": 0
+    },
+    {
+      "id": "case_113",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0019805999472737312,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_114",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.016774100018665195,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_115",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009159000008367002,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_117",
+      "delta": 5917,
+      "matches_delta": 1,
+      "runtime_sec": 0.023061999934725463,
+      "canceled": 0,
+      "operations": 30
+    },
+    {
+      "id": "case_118",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.017083400045521557,
+      "canceled": 0,
+      "operations": 24
+    },
+    {
+      "id": "case_122",
+      "delta": 6921,
+      "matches_delta": 2,
+      "runtime_sec": 0.07654640008695424,
+      "canceled": 0,
+      "operations": 69
+    },
+    {
+      "id": "case_123",
+      "delta": 1275,
+      "matches_delta": 1,
+      "runtime_sec": 0.07569600001443177,
+      "canceled": 0,
+      "operations": 70
+    },
+    {
+      "id": "case_125",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.013734599924646318,
+      "canceled": 6,
+      "operations": 108
+    },
+    {
+      "id": "case_126",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03408320003654808,
+      "canceled": 52,
+      "operations": 64
+    },
+    {
+      "id": "case_127",
+      "delta": 3200,
+      "matches_delta": 2,
+      "runtime_sec": 0.11006540001835674,
+      "canceled": 4,
+      "operations": 103
+    },
+    {
+      "id": "case_128",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0016472999705001712,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_129",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0011380999349057674,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_130",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.013419199967756867,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_131",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02559780003502965,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_133",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.003390899975784123,
+      "canceled": 14,
+      "operations": 4
+    },
+    {
+      "id": "case_135",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02078400005120784,
+      "canceled": 0,
+      "operations": 14
+    },
+    {
+      "id": "case_137",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.022520900005474687,
+      "canceled": 6,
+      "operations": 67
+    },
+    {
+      "id": "case_138",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02409660001285374,
+      "canceled": 0,
+      "operations": 59
+    },
+    {
+      "id": "case_139",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.06232490006368607,
+      "canceled": 6,
+      "operations": 58
+    },
+    {
+      "id": "case_142",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04773450002539903,
+      "canceled": 0,
+      "operations": 112
+    },
+    {
+      "id": "case_143",
+      "delta": 1736,
+      "matches_delta": 1,
+      "runtime_sec": 0.13219279993791133,
+      "canceled": 0,
+      "operations": 156
+    },
+    {
+      "id": "case_144",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0002445999998599291,
+      "canceled": 2,
+      "operations": 0
+    },
+    {
+      "id": "case_145",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.002490500104613602,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_146",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.015524199930951,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_147",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01660849992185831,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_148",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.002078099991194904,
+      "canceled": 0,
+      "operations": 11
+    },
+    {
+      "id": "case_150",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.021959400037303567,
+      "canceled": 0,
+      "operations": 33
+    },
+    {
+      "id": "case_151",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.026078199967741966,
+      "canceled": 0,
+      "operations": 18
+    },
+    {
+      "id": "case_152",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0033346000127494335,
+      "canceled": 12,
+      "operations": 12
+    },
+    {
+      "id": "case_154",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.031673000077717006,
+      "canceled": 0,
+      "operations": 45
+    },
+    {
+      "id": "case_155",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.033741199993528426,
+      "canceled": 0,
+      "operations": 72
+    },
+    {
+      "id": "case_156",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.012601800030097365,
+      "canceled": 54,
+      "operations": 66
+    },
+    {
+      "id": "case_158",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.030655400012619793,
+      "canceled": 72,
+      "operations": 77
+    },
+    {
+      "id": "case_159",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.07063820003531873,
+      "canceled": 0,
+      "operations": 137
+    },
+    {
+      "id": "case_160",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0007879999466240406,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_161",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.002793499967083335,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_162",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00909109995700419,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_163",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.030723800067789853,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_166",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.011123999953269958,
+      "canceled": 0,
+      "operations": 27
+    },
+    {
+      "id": "case_167",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004356699995696545,
+      "canceled": 16,
+      "operations": 0
+    },
+    {
+      "id": "case_168",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00027920003049075603,
+      "canceled": 28,
+      "operations": 0
+    },
+    {
+      "id": "case_169",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.012531300075352192,
+      "canceled": 0,
+      "operations": 68
+    },
+    {
+      "id": "case_170",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009844899992458522,
+      "canceled": 0,
+      "operations": 40
+    },
+    {
+      "id": "case_173",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.022704500006511807,
+      "canceled": 44,
+      "operations": 90
+    },
+    {
+      "id": "case_174",
+      "delta": 20000,
+      "matches_delta": 8,
+      "runtime_sec": 0.22274429991375655,
+      "canceled": 8,
+      "operations": 103
+    },
+    {
+      "id": "case_175",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03191669995430857,
+      "canceled": 86,
+      "operations": 4
+    },
+    {
+      "id": "case_178",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00648500001989305,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_179",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.017471599974669516,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_180",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0026422999799251556,
+      "canceled": 2,
+      "operations": 15
+    },
+    {
+      "id": "case_182",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.011727200006134808,
+      "canceled": 0,
+      "operations": 7
+    },
+    {
+      "id": "case_183",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.027921599918045104,
+      "canceled": 0,
+      "operations": 23
+    },
+    {
+      "id": "case_185",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0006594000151380897,
+      "canceled": 48,
+      "operations": 0
+    },
+    {
+      "id": "case_186",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03148730006068945,
+      "canceled": 0,
+      "operations": 84
+    },
+    {
+      "id": "case_187",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04064899997320026,
+      "canceled": 20,
+      "operations": 31
+    },
+    {
+      "id": "case_191",
+      "delta": 1736,
+      "matches_delta": 1,
+      "runtime_sec": 0.06827350007370114,
+      "canceled": 2,
+      "operations": 169
+    },
+    {
+      "id": "case_192",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00045359996147453785,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_193",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.005397400003857911,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_194",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009376300033181906,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_195",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.022473899996839464,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_199",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.025192199973389506,
+      "canceled": 0,
+      "operations": 34
+    },
+    {
+      "id": "case_201",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.016790600027889013,
+      "canceled": 0,
+      "operations": 55
+    },
+    {
+      "id": "case_202",
+      "delta": 3906,
+      "matches_delta": 1,
+      "runtime_sec": 0.02683009998872876,
+      "canceled": 0,
+      "operations": 75
+    },
+    {
+      "id": "case_203",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.05381329997908324,
+      "canceled": 0,
+      "operations": 57
+    },
+    {
+      "id": "case_205",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02893119992222637,
+      "canceled": 68,
+      "operations": 79
+    },
+    {
+      "id": "case_206",
+      "delta": 2066,
+      "matches_delta": 1,
+      "runtime_sec": 0.05877580004744232,
+      "canceled": 54,
+      "operations": 42
+    },
+    {
+      "id": "case_207",
+      "delta": 2743,
+      "matches_delta": 2,
+      "runtime_sec": 0.0757306000450626,
+      "canceled": 0,
+      "operations": 133
+    },
+    {
+      "id": "case_209",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0021603000350296497,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_211",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.014832200016826391,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_212",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004863600013777614,
+      "canceled": 0,
+      "operations": 19
+    },
+    {
+      "id": "case_213",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.006006499985232949,
+      "canceled": 0,
+      "operations": 6
+    },
+    {
+      "id": "case_214",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02383009996265173,
+      "canceled": 0,
+      "operations": 18
+    },
+    {
+      "id": "case_219",
+      "delta": 1479,
+      "matches_delta": 1,
+      "runtime_sec": 0.13505190005525947,
+      "canceled": 0,
+      "operations": 49
+    },
+    {
+      "id": "case_221",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.010912899975664914,
+      "canceled": 104,
+      "operations": 8
+    },
+    {
+      "id": "case_223",
+      "delta": 1276,
+      "matches_delta": 1,
+      "runtime_sec": 0.14043680008035153,
+      "canceled": 0,
+      "operations": 179
+    },
+    {
+      "id": "case_225",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004238100023940206,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_226",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.005842800019308925,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_227",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00954009999986738,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_229",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004629200091585517,
+      "canceled": 0,
+      "operations": 20
+    },
+    {
+      "id": "case_230",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009401999996043742,
+      "canceled": 0,
+      "operations": 18
+    },
+    {
+      "id": "case_231",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0470929000293836,
+      "canceled": 0,
+      "operations": 14
+    },
+    {
+      "id": "case_233",
+      "delta": 15625,
+      "matches_delta": 1,
+      "runtime_sec": 0.01843539997935295,
+      "canceled": 10,
+      "operations": 33
+    },
+    {
+      "id": "case_234",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.030536699923686683,
+      "canceled": 0,
+      "operations": 99
+    },
+    {
+      "id": "case_235",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02810589992441237,
+      "canceled": 22,
+      "operations": 66
+    },
+    {
+      "id": "case_238",
+      "delta": 3460,
+      "matches_delta": 1,
+      "runtime_sec": 0.0181866999482736,
+      "canceled": 4,
+      "operations": 104
+    },
+    {
+      "id": "case_239",
+      "delta": 5917,
+      "matches_delta": 4,
+      "runtime_sec": 0.1056261999765411,
+      "canceled": 0,
+      "operations": 104
+    },
+    {
+      "id": "case_241",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0032118000090122223,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_242",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.007331199944019318,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_243",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01939590007532388,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_245",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004794199950993061,
+      "canceled": 0,
+      "operations": 10
+    },
+    {
+      "id": "case_246",
+      "delta": 3087,
+      "matches_delta": 1,
+      "runtime_sec": 0.03201720002107322,
+      "canceled": 0,
+      "operations": 23
+    },
+    {
+      "id": "case_247",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.048142599989660084,
+      "canceled": 0,
+      "operations": 29
+    },
+    {
+      "id": "case_250",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.017698700074106455,
+      "canceled": 6,
+      "operations": 79
+    },
+    {
+      "id": "case_251",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04767250001896173,
+      "canceled": 0,
+      "operations": 70
+    },
+    {
+      "id": "case_255",
+      "delta": 10417,
+      "matches_delta": 6,
+      "runtime_sec": 0.24879630003124475,
+      "canceled": 66,
+      "operations": 87
+    },
+    {
+      "id": "case_257",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0016052999999374151,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_258",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.008579000015743077,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_259",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02694910007994622,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_261",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01230910001322627,
+      "canceled": 0,
+      "operations": 31
+    },
+    {
+      "id": "case_262",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.022826400003395975,
+      "canceled": 0,
+      "operations": 19
+    },
+    {
+      "id": "case_263",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.023984100087545812,
+      "canceled": 0,
+      "operations": 19
+    },
+    {
+      "id": "case_265",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009683200041763484,
+      "canceled": 32,
+      "operations": 41
+    },
+    {
+      "id": "case_266",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.021216500084847212,
+      "canceled": 0,
+      "operations": 56
+    },
+    {
+      "id": "case_267",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04749610007274896,
+      "canceled": 0,
+      "operations": 95
+    },
+    {
+      "id": "case_270",
+      "delta": 5000,
+      "matches_delta": 2,
+      "runtime_sec": 0.1272919001057744,
+      "canceled": 0,
+      "operations": 127
+    },
+    {
+      "id": "case_271",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.032317299977876246,
+      "canceled": 28,
+      "operations": 116
+    },
+    {
+      "id": "case_272",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00016689999029040337,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_273",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00036810000892728567,
+      "canceled": 0,
+      "operations": 0
+    },
+    {
+      "id": "case_274",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01654219999909401,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_275",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.032270099967718124,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_276",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.002154999994672835,
+      "canceled": 0,
+      "operations": 9
+    },
+    {
+      "id": "case_277",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.007686599972657859,
+      "canceled": 0,
+      "operations": 26
+    },
+    {
+      "id": "case_278",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.02027590002398938,
+      "canceled": 0,
+      "operations": 30
+    },
+    {
+      "id": "case_279",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.006209300016053021,
+      "canceled": 6,
+      "operations": 0
+    },
+    {
+      "id": "case_283",
+      "delta": 1371,
+      "matches_delta": 1,
+      "runtime_sec": 0.1309756999835372,
+      "canceled": 0,
+      "operations": 93
+    },
+    {
+      "id": "case_286",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.021859099972061813,
+      "canceled": 0,
+      "operations": 137
+    },
+    {
+      "id": "case_287",
+      "delta": 1371,
+      "matches_delta": 1,
+      "runtime_sec": 0.11836009996477515,
+      "canceled": 0,
+      "operations": 112
+    },
+    {
+      "id": "case_288",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0006475000409409404,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_289",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0021782000549137592,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_290",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.014883199939504266,
+      "canceled": 0,
+      "operations": 3
+    },
+    {
+      "id": "case_291",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.022041399963200092,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_293",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.005935700028203428,
+      "canceled": 20,
+      "operations": 12
+    },
+    {
+      "id": "case_294",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.017398900003172457,
+      "canceled": 0,
+      "operations": 13
+    },
+    {
+      "id": "case_295",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.021451800013892353,
+      "canceled": 0,
+      "operations": 8
+    },
+    {
+      "id": "case_296",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0057064000284299254,
+      "canceled": 28,
+      "operations": 40
+    },
+    {
+      "id": "case_298",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0025595000479370356,
+      "canceled": 50,
+      "operations": 0
+    },
+    {
+      "id": "case_299",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.004417999996803701,
+      "canceled": 44,
+      "operations": 0
+    },
+    {
+      "id": "case_303",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.049725200049579144,
+      "canceled": 0,
+      "operations": 113
+    },
+    {
+      "id": "case_304",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.00017499993555247784,
+      "canceled": 0,
+      "operations": 1
+    },
+    {
+      "id": "case_305",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.000978600000962615,
+      "canceled": 0,
+      "operations": 2
+    },
+    {
+      "id": "case_306",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.011176100000739098,
+      "canceled": 0,
+      "operations": 4
+    },
+    {
+      "id": "case_307",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.022871799999848008,
+      "canceled": 0,
+      "operations": 5
+    },
+    {
+      "id": "case_308",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.0018405999289825559,
+      "canceled": 0,
+      "operations": 8
+    },
+    {
+      "id": "case_309",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.007913900073617697,
+      "canceled": 0,
+      "operations": 28
+    },
+    {
+      "id": "case_310",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.009878100012429059,
+      "canceled": 0,
+      "operations": 6
+    },
+    {
+      "id": "case_311",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.03318949998356402,
+      "canceled": 0,
+      "operations": 7
+    },
+    {
+      "id": "case_315",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.04285289999097586,
+      "canceled": 2,
+      "operations": 67
+    },
+    {
+      "id": "case_317",
+      "delta": 0,
+      "matches_delta": 0,
+      "runtime_sec": 0.01135210006032139,
+      "canceled": 26,
+      "operations": 47
+    },
+    {
+      "id": "case_319",
+      "delta": 1275,
+      "matches_delta": 1,
+      "runtime_sec": 0.09829029999673367,
+      "canceled": 132,
+      "operations": 25
+    }
+  ]
+}

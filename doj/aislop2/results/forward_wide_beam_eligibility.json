@@ -1,0 +1,234 @@
+{
+  "parent": "best_034_251734381.py (same N10..12 behavior as late_beam_four_fast)",
+  "cases": [
+    {
+      "id": "case_029",
+      "n": 11,
+      "c": 6,
+      "k": 104,
+      "operations": 68,
+      "missing": 9,
+      "inventory_bound": 121,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": true
+    },
+    {
+      "id": "case_041",
+      "n": 11,
+      "c": 4,
+      "k": 73,
+      "operations": 62,
+      "missing": 14,
+      "inventory_bound": 121,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_049",
+      "n": 11,
+      "c": 5,
+      "k": 1,
+      "operations": 0,
+      "missing": 6,
+      "inventory_bound": 119,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": true
+    },
+    {
+      "id": "case_061",
+      "n": 12,
+      "c": 6,
+      "k": 136,
+      "operations": 52,
+      "missing": 93,
+      "inventory_bound": 51,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_065",
+      "n": 11,
+      "c": 4,
+      "k": 1,
+      "operations": 1,
+      "missing": 80,
+      "inventory_bound": 73,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_077",
+      "n": 11,
+      "c": 2,
+      "k": 171,
+      "operations": 18,
+      "missing": 0,
+      "inventory_bound": 121,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_089",
+      "n": 11,
+      "c": 5,
+      "k": 85,
+      "operations": 62,
+      "missing": 6,
+      "inventory_bound": 119,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": true
+    },
+    {
+      "id": "case_097",
+      "n": 11,
+      "c": 5,
+      "k": 2,
+      "operations": 2,
+      "missing": 13,
+      "inventory_bound": 117,
+      "suites": [
+        "dev",
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_141",
+      "n": 10,
+      "c": 6,
+      "k": 169,
+      "operations": 23,
+      "missing": 1,
+      "inventory_bound": 99,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_149",
+      "n": 12,
+      "c": 3,
+      "k": 33,
+      "operations": 32,
+      "missing": 0,
+      "inventory_bound": 144,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_185",
+      "n": 11,
+      "c": 4,
+      "k": 82,
+      "operations": 52,
+      "missing": 4,
+      "inventory_bound": 121,
+      "suites": [
+        "stable"
+      ],
+      "eligible": true
+    },
+    {
+      "id": "case_201",
+      "n": 12,
+      "c": 6,
+      "k": 56,
+      "operations": 55,
+      "missing": 40,
+      "inventory_bound": 133,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_225",
+      "n": 10,
+      "c": 4,
+      "k": 5,
+      "operations": 5,
+      "missing": 56,
+      "inventory_bound": 63,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_277",
+      "n": 10,
+      "c": 6,
+      "k": 27,
+      "operations": 27,
+      "missing": 25,
+      "inventory_bound": 100,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_285",
+      "n": 12,
+      "c": 2,
+      "k": 156,
+      "operations": 15,
+      "missing": 0,
+      "inventory_bound": 144,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_293",
+      "n": 12,
+      "c": 2,
+      "k": 32,
+      "operations": 32,
+      "missing": 1,
+      "inventory_bound": 144,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    },
+    {
+      "id": "case_309",
+      "n": 10,
+      "c": 4,
+      "k": 32,
+      "operations": 30,
+      "missing": 18,
+      "inventory_bound": 93,
+      "suites": [
+        "stable"
+      ],
+      "eligible": false
+    }
+  ]
+}

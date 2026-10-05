@@ -1,0 +1,12 @@
+{
+  "parent": "submissions\\best_038_251809034.py",
+  "parent_sha256": "34b1d86af939ebb59a4a54ea4d4a60d3ae5752b55139b323e0514b1dfe486e34",
+  "solver": "solvers\\experiments\\anneal_lowk_packed_beam.py",
+  "solver_sha256": "28b52b988b07f9bb19e7f3df478a8c578b21e61c04bc55b7c5af380684594b51",
+  "eligibility": "N>=10 and 4<=K<=8",
+  "beam_width": "min(96,100000//num_actions)",
+  "maximum_enumerations": "num_actions+(K-1)*width*num_actions <=703364",
+  "cleanup_passes": 2,
+  "path_encoding": "little-endian uint16 action IDs",
+  "parent_retention": "strict actual match improvement only"
+}

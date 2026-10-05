@@ -1,0 +1,42 @@
+[
+  {
+    "id": "case_001",
+    "m2_sequence_runtime_csa": 3.5390485000098124,
+    "m2_sequence_runtime_final": 3.777416899916716
+  },
+  {
+    "id": "case_007",
+    "m2_sequence_runtime_csa": 3.994864800013602,
+    "m2_sequence_runtime_final": 3.784025099943392
+  },
+  {
+    "id": "case_041",
+    "m2_sequence_runtime_csa": 2.8720754000823945,
+    "m2_sequence_runtime_final": 2.740267400047742
+  },
+  {
+    "id": "case_075",
+    "m2_sequence_runtime_csa": 2.711971399956383,
+    "m2_sequence_runtime_final": 2.5697525000432506
+  },
+  {
+    "id": "case_137",
+    "m2_sequence_runtime_csa": 2.3523664999520406,
+    "m2_sequence_runtime_final": 2.304419200052507
+  },
+  {
+    "id": "case_173",
+    "m2_sequence_runtime_csa": 3.579081599949859,
+    "m2_sequence_runtime_final": 3.5130302999168634
+  },
+  {
+    "id": "case_201",
+    "m2_sequence_runtime_csa": 2.904984400025569,
+    "m2_sequence_runtime_final": 2.6113034000154585
+  },
+  {
+    "id": "case_313",
+    "m2_sequence_runtime_csa": 2.151235199999064,
+    "m2_sequence_runtime_final": 2.1317624000366777
+  }
+]

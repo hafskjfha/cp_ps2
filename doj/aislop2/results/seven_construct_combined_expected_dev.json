@@ -1,0 +1,611 @@
+{
+  "diagnostic_prediction_only": true,
+  "not_measured_combined": true,
+  "total_score": 81293813,
+  "total_delta": 272695,
+  "wins": 17,
+  "losses": 3,
+  "disjoint_changed_domains_verified": true,
+  "cases": [
+    {
+      "id": "case_000",
+      "score": 777777,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_001",
+      "score": 781111,
+      "delta": 17778,
+      "source": "cluster"
+    },
+    {
+      "id": "case_002",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_003",
+      "score": 803333,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_004",
+      "score": 950617,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_005",
+      "score": 840000,
+      "delta": 35556,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_006",
+      "score": 937716,
+      "delta": 13841,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_007",
+      "score": 720000,
+      "delta": 55556,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_008",
+      "score": 881944,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_009",
+      "score": 965000,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_010",
+      "score": 959183,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_011",
+      "score": 982638,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_012",
+      "score": 966942,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_013",
+      "score": 987244,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_014",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_015",
+      "score": 963200,
+      "delta": 4800,
+      "source": "cluster"
+    },
+    {
+      "id": "case_016",
+      "score": 984375,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_017",
+      "score": 984877,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_018",
+      "score": 790000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_019",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_020",
+      "score": 875000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_021",
+      "score": 711111,
+      "delta": 4445,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_022",
+      "score": 970521,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_023",
+      "score": 452662,
+      "delta": 1479,
+      "source": "cluster"
+    },
+    {
+      "id": "case_024",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_025",
+      "score": 991111,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_026",
+      "score": 1000000,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_027",
+      "score": 758928,
+      "delta": -3827,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_028",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_029",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_030",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_031",
+      "score": 993055,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_032",
+      "score": 750000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_033",
+      "score": 312500,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_034",
+      "score": 355371,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_035",
+      "score": 901111,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_036",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_037",
+      "score": 531250,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_038",
+      "score": 956611,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_039",
+      "score": 1000000,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_040",
+      "score": 687500,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_041",
+      "score": 942148,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_042",
+      "score": 775623,
+      "delta": 2770,
+      "source": "cluster"
+    },
+    {
+      "id": "case_043",
+      "score": 789940,
+      "delta": 0,
+      "source": "cluster"
+    },
+    {
+      "id": "case_044",
+      "score": 750000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_045",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_046",
+      "score": 992438,
+      "delta": 17013,
+      "source": "cluster"
+    },
+    {
+      "id": "case_047",
+      "score": 909722,
+      "delta": 32986,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_048",
+      "score": 361111,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_049",
+      "score": 950413,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_050",
+      "score": 294784,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_051",
+      "score": 962962,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_052",
+      "score": 750000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_053",
+      "score": 745562,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_054",
+      "score": 593750,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_055",
+      "score": 953125,
+      "delta": 3473,
+      "source": "cluster"
+    },
+    {
+      "id": "case_056",
+      "score": 972222,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_057",
+      "score": 980000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_058",
+      "score": 725308,
+      "delta": 30864,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_059",
+      "score": 952000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_060",
+      "score": 750000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_061",
+      "score": 354166,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_062",
+      "score": 978395,
+      "delta": -6172,
+      "source": "cluster"
+    },
+    {
+      "id": "case_063",
+      "score": 754458,
+      "delta": 30179,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_064",
+      "score": 777777,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_065",
+      "score": 338842,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_066",
+      "score": 359504,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_067",
+      "score": 204861,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_068",
+      "score": 937500,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_069",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_070",
+      "score": 590000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_071",
+      "score": 910836,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_072",
+      "score": 938775,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_073",
+      "score": 982248,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_074",
+      "score": 991735,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_075",
+      "score": 987847,
+      "delta": -3472,
+      "source": "cluster"
+    },
+    {
+      "id": "case_076",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_077",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_078",
+      "score": 994459,
+      "delta": 5540,
+      "source": "cluster"
+    },
+    {
+      "id": "case_079",
+      "score": 736666,
+      "delta": 5555,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_080",
+      "score": 734693,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_081",
+      "score": 984375,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_082",
+      "score": 527410,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_083",
+      "score": 960000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_084",
+      "score": 875000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_085",
+      "score": 984375,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_086",
+      "score": 660493,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_087",
+      "score": 363200,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_088",
+      "score": 222222,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_089",
+      "score": 983471,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_090",
+      "score": 972656,
+      "delta": 19531,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_091",
+      "score": 654400,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_092",
+      "score": 750000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_093",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_094",
+      "score": 1000000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_095",
+      "score": 660800,
+      "delta": 4800,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_096",
+      "score": 897959,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_097",
+      "score": 892561,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_098",
+      "score": 375000,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    },
+    {
+      "id": "case_099",
+      "score": 283333,
+      "delta": 0,
+      "source": "reverse-or-parent"
+    }
+  ]
+}

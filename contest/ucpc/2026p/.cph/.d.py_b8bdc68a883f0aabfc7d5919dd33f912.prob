@@ -1,0 +1,1 @@
+{"name":"Local: d","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\ucpc\\2026p\\d.py","tests":[{"id":1782537917037,"input":"4\n1 2 3 4","output":"2"},{"id":1782537924763,"input":"8\n3 3 3 3 3 3 3 3","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\ucpc\\2026p\\d.py","group":"local","local":true}

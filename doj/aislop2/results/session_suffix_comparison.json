@@ -1,0 +1,38 @@
+{
+  "parent": "solvers\\experiments\\i1_block_beam.py",
+  "candidate": "solvers\\experiments\\session_suffix.py",
+  "delta": 14955,
+  "average_delta": {
+    "d": {
+      "2": 76.525,
+      "3": 16.9437
+    },
+    "c": {
+      "2": 0.0,
+      "3": 72.0923,
+      "4": 22.4754,
+      "5": 62.0,
+      "6": 75.6364
+    },
+    "n_bucket": {
+      "10-19": 92.9714,
+      "20-30": 44.7672,
+      "3-9": 0.0
+    },
+    "k_bucket": {
+      "1-10": 0.0,
+      "11-60": 89.9247,
+      "61-180": 48.1168
+    },
+    "family": {
+      "checkerboard": 0.0,
+      "local_adversarial": 0.0,
+      "near_target": 0.0,
+      "nearly_uniform": 35.1538,
+      "random": 132.7,
+      "reachable": 206.9,
+      "repeated_stamp": 0.0,
+      "stripes": 0.0
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "solvers/experiments/late_beam_four_fast.py",
+  "parent_stable_score": 251765631,
+  "solver": "solvers/experiments/pool_commutator_append.py",
+  "solver_sha256": "0f98fc940dc3283dd15ab0b8a8bb0f3f7955285354dbc9fc1ec1e9688aa6d68a",
+  "eligible_stable_cases": 11,
+  "smoke_score_delta": 0,
+  "dev_score_delta": 0,
+  "remaining_eligible_score_delta": 5917,
+  "targeted_wins": [
+    {
+      "id": "case_173",
+      "score_delta": 5917,
+      "match_delta": 1
+    }
+  ],
+  "full_stable_status": "passed",
+  "full_score": 251771548,
+  "full_score_delta": 5917,
+  "full_wins": 1,
+  "full_losses": 0,
+  "changed_cases": [
+    {
+      "id": "case_173",
+      "score_delta": 5917,
+      "match_delta": 1
+    }
+  ],
+  "max_runtime_sec": 3.252201499999501,
+  "unchanged_output_hashes": 319,
+  "readiness_passed": true,
+  "readiness_cases": 38,
+  "readiness_max_runtime_sec": 3.0877753999084234
+}

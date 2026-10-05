@@ -1,0 +1,16 @@
+{
+  "diagnostic_only": true,
+  "helper": "solvers\\experiments\\million_anneal_objective_frozen.py",
+  "sha256": "9ee1949a0f66fb3e7e14e54286bd957b232ab76bb8c57727c4775e4581c43e22",
+  "bytes": 1478,
+  "fresh_random_frozen_parity_and_canonical_checks": 30,
+  "global_sequence_snapshot_differential_checks": 1500,
+  "stable_beam24_delta": 52045,
+  "stable_beam24_wins": 12,
+  "stable_beam24_losses": 0,
+  "gated_stable_beam24_delta": 48712,
+  "gate_skip": "n >= 24 and d == 3 and k >= 120",
+  "gated_max_incremental_runtime_sec": 0.33701129991095513,
+  "canonical_report": "results/million_anneal_stable_objective_8_0_320_p3.json",
+  "qualified_submission": false
+}

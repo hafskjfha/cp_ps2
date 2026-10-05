@@ -1,0 +1,20 @@
+[
+  {
+    "id": "case_001",
+    "m2_sequence_runtime_csa": 3.46875,
+    "m2_sequence_runtime_weighted": 3.453125,
+    "m2_sequence_runtime_final": 3.265625
+  },
+  {
+    "id": "case_007",
+    "m2_sequence_runtime_csa": 3.625,
+    "m2_sequence_runtime_weighted": 3.6875,
+    "m2_sequence_runtime_final": 3.5
+  },
+  {
+    "id": "case_201",
+    "m2_sequence_runtime_csa": 2.5625,
+    "m2_sequence_runtime_weighted": 2.5625,
+    "m2_sequence_runtime_final": 2.40625
+  }
+]

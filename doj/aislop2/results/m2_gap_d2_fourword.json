@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "n": 3,
+      "d": 2,
+      "states": 204,
+      "minimum_support": 6,
+      "found": [],
+      "runtime": 0.011435699998401105
+    },
+    {
+      "n": 4,
+      "d": 2,
+      "states": 1179,
+      "minimum_support": 6,
+      "found": [],
+      "runtime": 0.49373190000187606
+    }
+  ]
+}

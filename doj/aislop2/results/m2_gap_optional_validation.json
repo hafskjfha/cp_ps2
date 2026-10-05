@@ -1,0 +1,588 @@
+{
+  "cases": 72,
+  "six_gain_checks": 72,
+  "paired_gain_checks": 72,
+  "valid_outputs": 144,
+  "runtime": 3.7368400000268593,
+  "packed_bytes": 36159,
+  "packed_sha256": "1f114e7785523978704c484cf945ed782190ae2d4ba17d1f2a1bfc2566f72061",
+  "source_sha256": "b046aa2a14805e91e0592c566c365ec0d94f2e1d51d07ba32e7384ccf870fec0",
+  "results": [
+    {
+      "n": 5,
+      "c": 2,
+      "k": 6,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 10,
+      "six_operations": 0,
+      "paired_operations": 8,
+      "states": 5223
+    },
+    {
+      "n": 12,
+      "c": 5,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 6,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 2,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 18,
+      "six_operations": 0,
+      "paired_operations": 10,
+      "states": 2849
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 8,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 12,
+      "c": 6,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 2,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 3,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 16,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 12,
+      "c": 2,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 3,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 4,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 14,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 12,
+      "c": 3,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 18,
+      "c": 4,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 5,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 12,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 8,
+      "states": 1755
+    },
+    {
+      "n": 12,
+      "c": 4,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 5,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 6,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 2,
+      "k": 10,
+      "six_operations": 0,
+      "paired_operations": 10,
+      "states": 2177
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 8,
+      "states": 9997
+    },
+    {
+      "n": 12,
+      "c": 5,
+      "k": 16,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 6,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 2,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 8,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 2016
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 8,
+      "states": 296
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 12,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 12,
+      "c": 6,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 2,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 3,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 6,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 10,
+      "six_operations": 0,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 12,
+      "c": 2,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 3,
+      "k": 14,
+      "six_operations": 0,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 4,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 18,
+      "six_operations": 0,
+      "paired_operations": 10,
+      "states": 2653
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 12,
+      "c": 3,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 4,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 5,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 16,
+      "six_operations": 0,
+      "paired_operations": 10,
+      "states": 3568
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 12,
+      "c": 4,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 5,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 6,
+      "k": 12,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 2,
+      "k": 14,
+      "six_operations": 0,
+      "paired_operations": 10,
+      "states": 2350
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 8,
+      "states": 51
+    },
+    {
+      "n": 12,
+      "c": 5,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 0
+    },
+    {
+      "n": 18,
+      "c": 6,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 2,
+      "k": 10,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 12,
+      "six_operations": 0,
+      "paired_operations": 10,
+      "states": 2527
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 14,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 16,
+      "six_operations": 6,
+      "paired_operations": 8,
+      "states": 24781
+    },
+    {
+      "n": 12,
+      "c": 6,
+      "k": 18,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    },
+    {
+      "n": 18,
+      "c": 2,
+      "k": 6,
+      "six_operations": 6,
+      "paired_operations": 6,
+      "states": 0
+    },
+    {
+      "n": 30,
+      "c": 3,
+      "k": 8,
+      "six_operations": 6,
+      "paired_operations": 0,
+      "states": 35001
+    }
+  ]
+}

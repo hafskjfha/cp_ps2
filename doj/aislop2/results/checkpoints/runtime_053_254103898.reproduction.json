@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "compared_cases": 320,
+  "same_scores": 320,
+  "same_outputs": 319,
+  "source_sha256": "dd865b4ea01fe859fe7c820a9a1b5201b7213cd3da29ba186cea4bc9ebf318ac",
+  "old_source_sha256": "0629d2b4e63e2772a4f06795041e115ea9b2b62bbc5536e9c21f5661de9bb7fa",
+  "total_score": 254103898
+}

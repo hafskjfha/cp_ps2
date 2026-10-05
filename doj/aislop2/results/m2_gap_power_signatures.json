@@ -1,0 +1,2152 @@
+{
+  "rows": [
+    {
+      "d": 2,
+      "power": 1,
+      "minimum_support": 8,
+      "signatures": [
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 5,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 4,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 2,
+      "minimum_support": 6,
+      "signatures": [
+        {
+          "grid": 4,
+          "stamp": 2,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 5,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 4,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 3,
+      "minimum_support": 4,
+      "signatures": [
+        {
+          "grid": 2,
+          "stamp": 2,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 40,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 4,
+      "minimum_support": 6,
+      "signatures": [
+        {
+          "grid": 4,
+          "stamp": 2,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 5,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 4,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 5,
+      "minimum_support": 3,
+      "signatures": [
+        {
+          "grid": 2,
+          "stamp": 1,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 6,
+      "minimum_support": 5,
+      "signatures": [
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 40,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 7,
+      "minimum_support": 8,
+      "signatures": [
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 5,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 4,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 8,
+      "minimum_support": 6,
+      "signatures": [
+        {
+          "grid": 4,
+          "stamp": 2,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 5,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 4,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 9,
+      "minimum_support": 4,
+      "signatures": [
+        {
+          "grid": 2,
+          "stamp": 2,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 40,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 10,
+      "minimum_support": 3,
+      "signatures": [
+        {
+          "grid": 2,
+          "stamp": 1,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 2,
+          "count": 32,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 11,
+      "minimum_support": 8,
+      "signatures": [
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 5,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 4,
+          "count": 24,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 2,
+      "power": 12,
+      "minimum_support": 5,
+      "signatures": [
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 40,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 1,
+      "minimum_support": 16,
+      "signatures": [
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 32,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 13,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 24,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 15,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 64,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 17,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 2,
+      "minimum_support": 9,
+      "signatures": [
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 5,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 13,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 7,
+          "count": 16,
+          "example": [
+            1,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 15,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 48,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 17,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 3,
+      "minimum_support": 4,
+      "signatures": [
+        {
+          "grid": 2,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 64,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 9,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 7,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 4,
+      "minimum_support": 9,
+      "signatures": [
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 5,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 13,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 7,
+          "count": 16,
+          "example": [
+            1,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 15,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 48,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 17,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 5,
+      "minimum_support": 9,
+      "signatures": [
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 4,
+          "count": 16,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 5,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 5,
+          "count": 48,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 6,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 7,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 16,
+          "example": [
+            1,
+            -2,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 6,
+      "minimum_support": 5,
+      "signatures": [
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 64,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 9,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 7,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 7,
+      "minimum_support": 14,
+      "signatures": [
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 9,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 24,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 15,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 64,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 17,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 8,
+      "minimum_support": 9,
+      "signatures": [
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 5,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 13,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 7,
+          "count": 16,
+          "example": [
+            1,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 15,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 48,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 17,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 9,
+      "minimum_support": 4,
+      "signatures": [
+        {
+          "grid": 2,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 4,
+          "stamp": 4,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 64,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 9,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 7,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 10,
+      "minimum_support": 9,
+      "signatures": [
+        {
+          "grid": 6,
+          "stamp": 3,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 4,
+          "count": 16,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 5,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 5,
+          "count": 56,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 6,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 7,
+          "count": 40,
+          "example": [
+            1,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 11,
+      "minimum_support": 16,
+      "signatures": [
+        {
+          "grid": 8,
+          "stamp": 8,
+          "count": 12,
+          "example": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 32,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 13,
+          "stamp": 8,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 8,
+          "count": 24,
+          "example": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 14,
+          "stamp": 9,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 15,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 8,
+          "count": 8,
+          "example": [
+            2,
+            -2,
+            0,
+            2
+          ]
+        },
+        {
+          "grid": 16,
+          "stamp": 9,
+          "count": 64,
+          "example": [
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 17,
+          "stamp": 9,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "power": 12,
+      "minimum_support": 5,
+      "signatures": [
+        {
+          "grid": 3,
+          "stamp": 2,
+          "count": 24,
+          "example": [
+            2,
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 6,
+          "stamp": 4,
+          "count": 80,
+          "example": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 7,
+          "stamp": 5,
+          "count": 16,
+          "example": [
+            1,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "grid": 9,
+          "stamp": 6,
+          "count": 8,
+          "example": [
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 10,
+          "stamp": 7,
+          "count": 8,
+          "example": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "grid": 12,
+          "stamp": 9,
+          "count": 8,
+          "example": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

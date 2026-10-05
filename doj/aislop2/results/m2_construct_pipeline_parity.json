@@ -1,0 +1,89 @@
+{
+  "helper_checks": [
+    {
+      "n": 3,
+      "d": 2,
+      "c": 2,
+      "k": 1,
+      "matches": 6
+    },
+    {
+      "n": 3,
+      "d": 3,
+      "c": 6,
+      "k": 3,
+      "matches": 4
+    },
+    {
+      "n": 4,
+      "d": 2,
+      "c": 3,
+      "k": 5,
+      "matches": 14
+    },
+    {
+      "n": 6,
+      "d": 3,
+      "c": 6,
+      "k": 8,
+      "matches": 24
+    },
+    {
+      "n": 10,
+      "d": 2,
+      "c": 6,
+      "k": 12,
+      "matches": 49
+    },
+    {
+      "n": 10,
+      "d": 3,
+      "c": 2,
+      "k": 12,
+      "matches": 91
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 6,
+      "k": 8,
+      "matches": 188
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 8,
+      "matches": 176
+    }
+  ],
+  "standalone_checks": [
+    {
+      "id": "case_004",
+      "matches": 77,
+      "runtime_sec": 0.21430470002815127,
+      "stdout_sha256": "7beb7b9fa377152e329279d37f8ebb2f382eb8f249f2c297671828dc650e2649"
+    },
+    {
+      "id": "case_041",
+      "matches": 116,
+      "runtime_sec": 2.3814755000639707,
+      "stdout_sha256": "80cce8cc1173085ae2503b38b9ceba18d0e22487717d81bd4a01d213d04afd50"
+    },
+    {
+      "id": "case_091",
+      "matches": 408,
+      "runtime_sec": 2.4162216000258923,
+      "stdout_sha256": "7b2705f0a343cb128433de61d12f6eedf6d0bd679c1f913dd05ff64c3c33f67f"
+    },
+    {
+      "id": "case_103",
+      "matches": 517,
+      "runtime_sec": 1.8576019000029191,
+      "stdout_sha256": "324f94f3d81c0fd37d7a640aefd3df14b356042bb7e47dfd177291ef76d3eb84"
+    }
+  ],
+  "all_operations_equal": true,
+  "source_sha256": "ef4676b7f5bddf658fc8d1a0a9849cf654250d8e0f16c8d2e73e6710f6c707e5",
+  "wrapper_sha256": "e2e06580b4e57753d4d8061d2827c65e9fd2edba984200ad631881296d76aae9"
+}

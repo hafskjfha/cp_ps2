@@ -1,0 +1,26 @@
+         1508532 function calls (1508487 primitive calls) in 2.239 seconds
+
+   Ordered by: internal time
+   List reduced from 195 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    63881    0.675    0.000    0.675    0.000 <string>:26(apply)
+        1    0.267    0.267    2.238    2.238 <string>:1(seven_backward_construct)
+    11371    0.235    0.000    0.369    0.000 <string>:64(choices)
+    63493    0.227    0.000    0.441    0.000 <string>:54(best)
+    74864    0.217    0.000    0.217    0.000 <string>:42(scorefield)
+     7712    0.126    0.000    0.126    0.000 solvers/experiments/m2_sequence_runtime_final.py:4110(m2_local_apply)
+     6094    0.057    0.000    0.072    0.000 solvers/experiments/m2_sequence_runtime_final.py:4042(m2_csa_best)
+   105755    0.049    0.000    0.082    0.000 C:\msys64\ucrt64\lib\python3.12\random.py:242(_randbelow_with_getrandbits)
+   158427    0.036    0.000    0.036    0.000 {method 'append' of 'list' objects}
+   177555    0.033    0.000    0.033    0.000 {method 'bit_length' of 'int' objects}
+    77448    0.031    0.000    0.101    0.000 C:\msys64\ucrt64\lib\python3.12\random.py:291(randrange)
+      180    0.025    0.000    0.038    0.000 {method 'sort' of 'list' objects}
+        1    0.023    0.023    0.023    0.023 <string>:7(__init__)
+    65595    0.022    0.000    0.022    0.000 {built-in method builtins.max}
+   148872    0.016    0.000    0.016    0.000 {method 'getrandbits' of '_random.Random' objects}
+    63787    0.016    0.000    0.016    0.000 {method 'random' of '_random.Random' objects}
+    10156    0.016    0.000    0.028    0.000 {built-in method builtins.sum}
+    63790    0.016    0.000    0.016    0.000 {method 'add' of 'set' objects}
+
+

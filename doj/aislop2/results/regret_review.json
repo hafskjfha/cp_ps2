@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "tests_run": 6,
+  "runtime_sec": 1.7706574999028817,
+  "failures": [],
+  "measurements": {
+    "source": "C:\\dev\\ps\\doj\\aislop2\\solvers\\experiments\\regret_wildcard_final_source.py",
+    "core_equivalence": {
+      "state_and_weighted_transitions": 400,
+      "productive_escape_trials": 15
+    },
+    "backward_constraints": {
+      "records": 240,
+      "successful_and_violated_witnesses": 480
+    },
+    "artifact": {
+      "valid": true,
+      "errors": [],
+      "review_flags": [],
+      "imports": [
+        "math",
+        "random",
+        "sys"
+      ],
+      "sha256": "4dcefdc9e47b50d87a45e14f8c642bfa68118119fcc205412521ef99dfdfde64",
+      "source_bytes": 10010,
+      "packed_source": {
+        "codec": "lzma/latin1",
+        "decoded_bytes": 30990,
+        "decoded_sha256": "83e1fd6224f3682be2bc0d62a1b6cfc4b57ba657a680b3ea6059c381fb65a455"
+      },
+      "reads_stdin": true
+    },
+    "source_sha256": "07bf81cbf7aebf6918ec54fa685f7723d2e496dcb2b2396aa9b36589594ea415",
+    "wrapper_source": "def solve_without_regret_wildcard(n, d, c, k, grid, target, stamp):\n    reference = solve_route_parent(n, d, c, k, grid[:], target, stamp[:])\n    if k <= 2:\n        return reference\n    indices, _, ops, _, _ = build(n, d, target)\n    side = n - d + 1\n    sequence = cancel_inverse_pairs([(x * side + y) * 4 + r for x, y, r in reference])\n    initial = grid + stamp\n    sequence = temporal_repair(n, d, k, initial, target, list(zip(indices, ops)), sequence, 8, 5)\n    final = initial[:]\n    for aid in sequence:\n        seq_transition(final, n * n, indices[aid])\n    candidate = [ops[aid] for aid in sequence]\n    if sum((a == b for a, b in zip(final, target))) >= color_bound(initial, target):\n        return candidate\n    rounds = min(12, max(3, 3000 // (n * n)))\n    for powers, cap in [((3,), rounds)] + [(tuple([power]), 1) for power in [6, 6, 9, 5, 12, 3, 6, 9, 12]]:\n        if k - len(candidate) < 2 * min(powers):\n            continue\n        tail = route_tail(n, d, final[:n * n], target, final[n * n:], k - len(candidate), powers, cap)\n        candidate.extend(tail)\n        for x, y, r in tail:\n            seq_transition(final, n * n, indices[(x * side + y) * 4 + r])\n    return candidate",
+    "independent_bfs": {
+      "cases": 40,
+      "colors": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "budgets": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "meeting_cache_inventory": {
+      "reachable_budgets": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "fixtures": 4,
+      "inventory_rejected": true
+    },
+    "suffix_budget": {
+      "tried_lengths": [
+        10,
+        8,
+        6,
+        2,
+        0
+      ],
+      "later_cut_success_length": 9,
+      "parent_floor_preserved": true
+    }
+  }
+}

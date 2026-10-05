@@ -1,0 +1,487 @@
+{
+  "random_cases": 60,
+  "runtime": 0.43789540010038763,
+  "solver_sha256": "3757f5c973dffee61f90c3736660a632ccc4b8f1eeab2879c3c5131e333417e9",
+  "results": [
+    {
+      "n": 5,
+      "c": 2,
+      "k": 12,
+      "operations": 0,
+      "matches": 25,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 14,
+      "operations": 12,
+      "matches": 35,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 4,
+      "k": 16,
+      "operations": 12,
+      "matches": 48,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 18,
+      "operations": 0,
+      "matches": 64,
+      "states": 29947
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 20,
+      "operations": 18,
+      "matches": 25,
+      "states": 6400
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 22,
+      "operations": 14,
+      "matches": 36,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 3,
+      "k": 24,
+      "operations": 14,
+      "matches": 49,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 26,
+      "operations": 14,
+      "matches": 63,
+      "states": 8800
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 28,
+      "operations": 16,
+      "matches": 23,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 30,
+      "operations": 14,
+      "matches": 36,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 2,
+      "k": 32,
+      "operations": 12,
+      "matches": 49,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 34,
+      "operations": 12,
+      "matches": 63,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 12,
+      "operations": 0,
+      "matches": 24,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 14,
+      "operations": 0,
+      "matches": 34,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 6,
+      "k": 16,
+      "operations": 12,
+      "matches": 47,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 18,
+      "operations": 12,
+      "matches": 64,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 20,
+      "operations": 16,
+      "matches": 24,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 22,
+      "operations": 12,
+      "matches": 34,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 5,
+      "k": 24,
+      "operations": 14,
+      "matches": 49,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 26,
+      "operations": 0,
+      "matches": 62,
+      "states": 29947
+    },
+    {
+      "n": 5,
+      "c": 2,
+      "k": 28,
+      "operations": 12,
+      "matches": 25,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 30,
+      "operations": 14,
+      "matches": 36,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 4,
+      "k": 32,
+      "operations": 14,
+      "matches": 49,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 34,
+      "operations": 14,
+      "matches": 63,
+      "states": 8800
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 12,
+      "operations": 0,
+      "matches": 24,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 14,
+      "operations": 12,
+      "matches": 35,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 3,
+      "k": 16,
+      "operations": 14,
+      "matches": 48,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 18,
+      "operations": 12,
+      "matches": 64,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 20,
+      "operations": 16,
+      "matches": 24,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 22,
+      "operations": 14,
+      "matches": 34,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 2,
+      "k": 24,
+      "operations": 0,
+      "matches": 49,
+      "states": 30002
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 26,
+      "operations": 12,
+      "matches": 64,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 28,
+      "operations": 16,
+      "matches": 23,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 30,
+      "operations": 16,
+      "matches": 36,
+      "states": 13556
+    },
+    {
+      "n": 7,
+      "c": 6,
+      "k": 32,
+      "operations": 14,
+      "matches": 49,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 34,
+      "operations": 12,
+      "matches": 63,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 12,
+      "operations": 0,
+      "matches": 24,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 14,
+      "operations": 14,
+      "matches": 35,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 5,
+      "k": 16,
+      "operations": 14,
+      "matches": 47,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 18,
+      "operations": 0,
+      "matches": 64,
+      "states": 29947
+    },
+    {
+      "n": 5,
+      "c": 2,
+      "k": 20,
+      "operations": 16,
+      "matches": 25,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 22,
+      "operations": 12,
+      "matches": 35,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 4,
+      "k": 24,
+      "operations": 14,
+      "matches": 49,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 26,
+      "operations": 12,
+      "matches": 63,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 28,
+      "operations": 16,
+      "matches": 24,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 30,
+      "operations": 14,
+      "matches": 36,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 3,
+      "k": 32,
+      "operations": 12,
+      "matches": 48,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 34,
+      "operations": 12,
+      "matches": 62,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 12,
+      "operations": 0,
+      "matches": 25,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 14,
+      "operations": 12,
+      "matches": 35,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 2,
+      "k": 16,
+      "operations": 12,
+      "matches": 49,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 18,
+      "operations": 14,
+      "matches": 64,
+      "states": 8800
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 20,
+      "operations": 14,
+      "matches": 24,
+      "states": 204
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 22,
+      "operations": 12,
+      "matches": 34,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 6,
+      "k": 24,
+      "operations": 14,
+      "matches": 49,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 26,
+      "operations": 12,
+      "matches": 63,
+      "states": 256
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 28,
+      "operations": 16,
+      "matches": 23,
+      "states": 1668
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 30,
+      "operations": 14,
+      "matches": 36,
+      "states": 1428
+    },
+    {
+      "n": 7,
+      "c": 5,
+      "k": 32,
+      "operations": 14,
+      "matches": 48,
+      "states": 4228
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 34,
+      "operations": 14,
+      "matches": 63,
+      "states": 8800
+    }
+  ]
+}

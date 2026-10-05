@@ -1,0 +1,2182 @@
+[
+  {
+    "width": 8,
+    "depth": 4,
+    "budget": 100000,
+    "cases": 100,
+    "delta": 0,
+    "runtime_sec": 4.558770399191417,
+    "max_runtime_sec": 0.3728437999961898,
+    "wins": [],
+    "results": [
+      {
+        "id": "case_000",
+        "matches": 7,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.700043402612209e-06
+      },
+      {
+        "id": "case_001",
+        "matches": 671,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.27812009991612285
+      },
+      {
+        "id": "case_002",
+        "matches": 9,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.630000330507755e-05
+      },
+      {
+        "id": "case_003",
+        "matches": 723,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.100008375942707e-06
+      },
+      {
+        "id": "case_004",
+        "matches": 77,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0003744999412447214
+      },
+      {
+        "id": "case_005",
+        "matches": 177,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.03263989998959005
+      },
+      {
+        "id": "case_006",
+        "matches": 263,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.03139489993918687
+      },
+      {
+        "id": "case_007",
+        "matches": 588,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1996563000138849
+      },
+      {
+        "id": "case_008",
+        "matches": 127,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007227000314742327
+      },
+      {
+        "id": "case_009",
+        "matches": 386,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0029833000153303146
+      },
+      {
+        "id": "case_010",
+        "matches": 47,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00022350007202476263
+      },
+      {
+        "id": "case_011",
+        "matches": 566,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.005102899973280728
+      },
+      {
+        "id": "case_012",
+        "matches": 117,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007286999607458711
+      },
+      {
+        "id": "case_013",
+        "matches": 773,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.15700239990837872
+      },
+      {
+        "id": "case_014",
+        "matches": 256,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0015604998916387558
+      },
+      {
+        "id": "case_015",
+        "matches": 587,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.12398909998591989
+      },
+      {
+        "id": "case_016",
+        "matches": 63,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0095370999770239
+      },
+      {
+        "id": "case_017",
+        "matches": 521,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0034041000762954354
+      },
+      {
+        "id": "case_018",
+        "matches": 691,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1811580000212416
+      },
+      {
+        "id": "case_019",
+        "matches": 16,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 6.770004983991385e-05
+      },
+      {
+        "id": "case_020",
+        "matches": 14,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 6.989995017647743e-05
+      },
+      {
+        "id": "case_021",
+        "matches": 159,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.024835599935613573
+      },
+      {
+        "id": "case_022",
+        "matches": 428,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.06920109991915524
+      },
+      {
+        "id": "case_023",
+        "matches": 305,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1199742000317201
+      },
+      {
+        "id": "case_024",
+        "matches": 36,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0001805999781936407
+      },
+      {
+        "id": "case_025",
+        "matches": 223,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0013485000235959888
+      },
+      {
+        "id": "case_026",
+        "matches": 360,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.05031730001792312
+      },
+      {
+        "id": "case_027",
+        "matches": 597,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1453273999504745
+      },
+      {
+        "id": "case_028",
+        "matches": 25,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00012790004257112741
+      },
+      {
+        "id": "case_029",
+        "matches": 118,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.015615400043316185
+      },
+      {
+        "id": "case_030",
+        "matches": 484,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.004872299963608384
+      },
+      {
+        "id": "case_031",
+        "matches": 572,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.003751999931409955
+      },
+      {
+        "id": "case_032",
+        "matches": 27,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.600012183189392e-06
+      },
+      {
+        "id": "case_033",
+        "matches": 20,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.00000761449337e-06
+      },
+      {
+        "id": "case_034",
+        "matches": 172,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 9.00006853044033e-07
+      },
+      {
+        "id": "case_035",
+        "matches": 811,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.18391819996759295
+      },
+      {
+        "id": "case_036",
+        "matches": 16,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 7.899990305304527e-05
+      },
+      {
+        "id": "case_037",
+        "matches": 33,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.005807700101286173
+      },
+      {
+        "id": "case_038",
+        "matches": 462,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.05616169993299991
+      },
+      {
+        "id": "case_039",
+        "matches": 576,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.005674599902704358
+      },
+      {
+        "id": "case_040",
+        "matches": 11,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 7.499998901039362e-05
+      },
+      {
+        "id": "case_041",
+        "matches": 114,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.015040699974633753
+      },
+      {
+        "id": "case_042",
+        "matches": 267,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.054202500032261014
+      },
+      {
+        "id": "case_043",
+        "matches": 513,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1280810999451205
+      },
+      {
+        "id": "case_044",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 9.520002640783787e-05
+      },
+      {
+        "id": "case_045",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0006213999586179852
+      },
+      {
+        "id": "case_046",
+        "matches": 516,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.08572350000031292
+      },
+      {
+        "id": "case_047",
+        "matches": 505,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.10217929992359132
+      },
+      {
+        "id": "case_048",
+        "matches": 13,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.800021320581436e-06
+      },
+      {
+        "id": "case_049",
+        "matches": 115,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.00000761449337e-06
+      },
+      {
+        "id": "case_050",
+        "matches": 130,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.06191299995407462
+      },
+      {
+        "id": "case_051",
+        "matches": 702,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.900022082030773e-06
+      },
+      {
+        "id": "case_052",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00012320000678300858
+      },
+      {
+        "id": "case_053",
+        "matches": 126,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.016997899976558983
+      },
+      {
+        "id": "case_054",
+        "matches": 152,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.031237200018949807
+      },
+      {
+        "id": "case_055",
+        "matches": 547,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.10148599999956787
+      },
+      {
+        "id": "case_056",
+        "matches": 35,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.009344900026917458
+      },
+      {
+        "id": "case_057",
+        "matches": 96,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.01109150005504489
+      },
+      {
+        "id": "case_058",
+        "matches": 225,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.04955260001588613
+      },
+      {
+        "id": "case_059",
+        "matches": 594,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.08261589996982366
+      },
+      {
+        "id": "case_060",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 9.670003782957792e-05
+      },
+      {
+        "id": "case_061",
+        "matches": 51,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0008632000535726547
+      },
+      {
+        "id": "case_062",
+        "matches": 315,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.052608199999667704
+      },
+      {
+        "id": "case_063",
+        "matches": 526,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.15913339995313436
+      },
+      {
+        "id": "case_064",
+        "matches": 7,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.00003807246685e-06
+      },
+      {
+        "id": "case_065",
+        "matches": 41,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.00002284348011e-06
+      },
+      {
+        "id": "case_066",
+        "matches": 174,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.00003045797348e-06
+      },
+      {
+        "id": "case_067",
+        "matches": 118,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1301009999588132
+      },
+      {
+        "id": "case_068",
+        "matches": 15,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00010849989484995604
+      },
+      {
+        "id": "case_069",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.000664199935272336
+      },
+      {
+        "id": "case_070",
+        "matches": 235,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.07296250003855675
+      },
+      {
+        "id": "case_071",
+        "matches": 663,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.13711439992766827
+      },
+      {
+        "id": "case_072",
+        "matches": 46,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00030890002381056547
+      },
+      {
+        "id": "case_073",
+        "matches": 166,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0012743000406771898
+      },
+      {
+        "id": "case_074",
+        "matches": 479,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.11223349999636412
+      },
+      {
+        "id": "case_075",
+        "matches": 565,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.12850400002207607
+      },
+      {
+        "id": "case_076",
+        "matches": 25,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00012780004180967808
+      },
+      {
+        "id": "case_077",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007070000283420086
+      },
+      {
+        "id": "case_078",
+        "matches": 355,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0863143999595195
+      },
+      {
+        "id": "case_079",
+        "matches": 658,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.3728437999961898
+      },
+      {
+        "id": "case_080",
+        "matches": 36,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.999914042651653e-06
+      },
+      {
+        "id": "case_081",
+        "matches": 63,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.00000761449337e-06
+      },
+      {
+        "id": "case_082",
+        "matches": 279,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.500011421740055e-06
+      },
+      {
+        "id": "case_083",
+        "matches": 600,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.600012183189392e-06
+      },
+      {
+        "id": "case_084",
+        "matches": 14,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00010489998385310173
+      },
+      {
+        "id": "case_085",
+        "matches": 62,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.01980310003273189
+      },
+      {
+        "id": "case_086",
+        "matches": 211,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.04530640004668385
+      },
+      {
+        "id": "case_087",
+        "matches": 225,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.16719980002380908
+      },
+      {
+        "id": "case_088",
+        "matches": 2,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 7.949990686029196e-05
+      },
+      {
+        "id": "case_089",
+        "matches": 117,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.025860999943688512
+      },
+      {
+        "id": "case_090",
+        "matches": 244,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0392180000199005
+      },
+      {
+        "id": "case_091",
+        "matches": 397,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.16597139998339117
+      },
+      {
+        "id": "case_092",
+        "matches": 27,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00021590001415461302
+      },
+      {
+        "id": "case_093",
+        "matches": 169,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0009991000406444073
+      },
+      {
+        "id": "case_094",
+        "matches": 256,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0014416000340133905
+      },
+      {
+        "id": "case_095",
+        "matches": 410,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1266857999144122
+      },
+      {
+        "id": "case_096",
+        "matches": 44,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.799920134246349e-06
+      },
+      {
+        "id": "case_097",
+        "matches": 108,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.400018274784088e-06
+      },
+      {
+        "id": "case_098",
+        "matches": 96,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.300017513334751e-06
+      },
+      {
+        "id": "case_099",
+        "matches": 255,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.24351519998162985
+      }
+    ]
+  },
+  {
+    "width": 6,
+    "depth": 6,
+    "budget": 120000,
+    "cases": 100,
+    "delta": 3086,
+    "runtime_sec": 8.15086659998633,
+    "max_runtime_sec": 0.6035226000240073,
+    "wins": [
+      {
+        "id": "case_086",
+        "matches": 212,
+        "delta": 1,
+        "score_delta": 3086,
+        "runtime_sec": 0.08912560006137937
+      }
+    ],
+    "results": [
+      {
+        "id": "case_000",
+        "matches": 7,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.700043402612209e-06
+      },
+      {
+        "id": "case_001",
+        "matches": 671,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.26809890009462833
+      },
+      {
+        "id": "case_002",
+        "matches": 9,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.250005051493645e-05
+      },
+      {
+        "id": "case_003",
+        "matches": 723,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.200009137392044e-06
+      },
+      {
+        "id": "case_004",
+        "matches": 77,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0004124999977648258
+      },
+      {
+        "id": "case_005",
+        "matches": 177,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.043899200041778386
+      },
+      {
+        "id": "case_006",
+        "matches": 263,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0845293999882415
+      },
+      {
+        "id": "case_007",
+        "matches": 588,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.6035226000240073
+      },
+      {
+        "id": "case_008",
+        "matches": 127,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0012969999806955457
+      },
+      {
+        "id": "case_009",
+        "matches": 386,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0036817999789491296
+      },
+      {
+        "id": "case_010",
+        "matches": 47,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00024889991618692875
+      },
+      {
+        "id": "case_011",
+        "matches": 566,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.01493299996946007
+      },
+      {
+        "id": "case_012",
+        "matches": 117,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007089999271556735
+      },
+      {
+        "id": "case_013",
+        "matches": 773,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.4089609000366181
+      },
+      {
+        "id": "case_014",
+        "matches": 256,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.005313899950124323
+      },
+      {
+        "id": "case_015",
+        "matches": 587,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2865148999262601
+      },
+      {
+        "id": "case_016",
+        "matches": 63,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.03437020001001656
+      },
+      {
+        "id": "case_017",
+        "matches": 521,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.009014600072987378
+      },
+      {
+        "id": "case_018",
+        "matches": 691,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.38068649999331683
+      },
+      {
+        "id": "case_019",
+        "matches": 16,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00010360009036958218
+      },
+      {
+        "id": "case_020",
+        "matches": 14,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 8.9599983766675e-05
+      },
+      {
+        "id": "case_021",
+        "matches": 159,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.03337780002038926
+      },
+      {
+        "id": "case_022",
+        "matches": 428,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.12880259996745735
+      },
+      {
+        "id": "case_023",
+        "matches": 305,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2706627999432385
+      },
+      {
+        "id": "case_024",
+        "matches": 36,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00017800007481127977
+      },
+      {
+        "id": "case_025",
+        "matches": 223,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0012919999426230788
+      },
+      {
+        "id": "case_026",
+        "matches": 360,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.09038149996194988
+      },
+      {
+        "id": "case_027",
+        "matches": 597,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.21128689998295158
+      },
+      {
+        "id": "case_028",
+        "matches": 25,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0001341000897809863
+      },
+      {
+        "id": "case_029",
+        "matches": 118,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.02524049999192357
+      },
+      {
+        "id": "case_030",
+        "matches": 484,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.004047099966555834
+      },
+      {
+        "id": "case_031",
+        "matches": 572,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.004507799982093275
+      },
+      {
+        "id": "case_032",
+        "matches": 27,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.200016751885414e-06
+      },
+      {
+        "id": "case_033",
+        "matches": 20,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 9.00006853044033e-07
+      },
+      {
+        "id": "case_034",
+        "matches": 172,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 8.00006091594696e-07
+      },
+      {
+        "id": "case_035",
+        "matches": 811,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2528923999052495
+      },
+      {
+        "id": "case_036",
+        "matches": 16,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0001849000109359622
+      },
+      {
+        "id": "case_037",
+        "matches": 33,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.011151199927553535
+      },
+      {
+        "id": "case_038",
+        "matches": 462,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.15251080004964024
+      },
+      {
+        "id": "case_039",
+        "matches": 576,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.015767799923196435
+      },
+      {
+        "id": "case_040",
+        "matches": 11,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0002253000857308507
+      },
+      {
+        "id": "case_041",
+        "matches": 114,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.04809529997874051
+      },
+      {
+        "id": "case_042",
+        "matches": 267,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.12032400001771748
+      },
+      {
+        "id": "case_043",
+        "matches": 513,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.17657340003643185
+      },
+      {
+        "id": "case_044",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 9.360001422464848e-05
+      },
+      {
+        "id": "case_045",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007207000162452459
+      },
+      {
+        "id": "case_046",
+        "matches": 516,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.10742789995856583
+      },
+      {
+        "id": "case_047",
+        "matches": 505,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1255820000078529
+      },
+      {
+        "id": "case_048",
+        "matches": 13,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.400041118264198e-06
+      },
+      {
+        "id": "case_049",
+        "matches": 115,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.800021320581436e-06
+      },
+      {
+        "id": "case_050",
+        "matches": 130,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0685576000250876
+      },
+      {
+        "id": "case_051",
+        "matches": 702,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.400041118264198e-06
+      },
+      {
+        "id": "case_052",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00010229996405541897
+      },
+      {
+        "id": "case_053",
+        "matches": 126,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.027078299899585545
+      },
+      {
+        "id": "case_054",
+        "matches": 152,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.05230710003525019
+      },
+      {
+        "id": "case_055",
+        "matches": 547,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.22375859995372593
+      },
+      {
+        "id": "case_056",
+        "matches": 35,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.02621229994110763
+      },
+      {
+        "id": "case_057",
+        "matches": 96,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.027688999893143773
+      },
+      {
+        "id": "case_058",
+        "matches": 225,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1109388000331819
+      },
+      {
+        "id": "case_059",
+        "matches": 594,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2783095999620855
+      },
+      {
+        "id": "case_060",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00026480003725737333
+      },
+      {
+        "id": "case_061",
+        "matches": 51,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.002345200045965612
+      },
+      {
+        "id": "case_062",
+        "matches": 315,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1323319999501109
+      },
+      {
+        "id": "case_063",
+        "matches": 526,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.4028080999851227
+      },
+      {
+        "id": "case_064",
+        "matches": 7,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 6.500049494206905e-06
+      },
+      {
+        "id": "case_065",
+        "matches": 41,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.100031219422817e-06
+      },
+      {
+        "id": "case_066",
+        "matches": 174,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 8.600065484642982e-06
+      },
+      {
+        "id": "case_067",
+        "matches": 118,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.18199359998106956
+      },
+      {
+        "id": "case_068",
+        "matches": 15,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0002050000475719571
+      },
+      {
+        "id": "case_069",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.004354999982751906
+      },
+      {
+        "id": "case_070",
+        "matches": 235,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.17546449997462332
+      },
+      {
+        "id": "case_071",
+        "matches": 663,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.3413404000457376
+      },
+      {
+        "id": "case_072",
+        "matches": 46,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0015774000203236938
+      },
+      {
+        "id": "case_073",
+        "matches": 166,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0029504999984055758
+      },
+      {
+        "id": "case_074",
+        "matches": 479,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.17473460000474006
+      },
+      {
+        "id": "case_075",
+        "matches": 565,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1835113000124693
+      },
+      {
+        "id": "case_076",
+        "matches": 25,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0003974999999627471
+      },
+      {
+        "id": "case_077",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0009474999969825149
+      },
+      {
+        "id": "case_078",
+        "matches": 355,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.11167899996507913
+      },
+      {
+        "id": "case_079",
+        "matches": 658,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.40771940001286566
+      },
+      {
+        "id": "case_080",
+        "matches": 36,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 6.4999330788850784e-06
+      },
+      {
+        "id": "case_081",
+        "matches": 63,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 6.200047209858894e-06
+      },
+      {
+        "id": "case_082",
+        "matches": 279,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 7.900060154497623e-06
+      },
+      {
+        "id": "case_083",
+        "matches": 600,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.699926987290382e-06
+      },
+      {
+        "id": "case_084",
+        "matches": 14,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0003160999622195959
+      },
+      {
+        "id": "case_085",
+        "matches": 62,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.039718299987725914
+      },
+      {
+        "id": "case_086",
+        "matches": 212,
+        "delta": 1,
+        "score_delta": 3086,
+        "runtime_sec": 0.08912560006137937
+      },
+      {
+        "id": "case_087",
+        "matches": 225,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.18682649999391288
+      },
+      {
+        "id": "case_088",
+        "matches": 2,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00014020001981407404
+      },
+      {
+        "id": "case_089",
+        "matches": 117,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.023870700038969517
+      },
+      {
+        "id": "case_090",
+        "matches": 244,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.055042200023308396
+      },
+      {
+        "id": "case_091",
+        "matches": 397,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.3342458000406623
+      },
+      {
+        "id": "case_092",
+        "matches": 27,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00038460001815110445
+      },
+      {
+        "id": "case_093",
+        "matches": 169,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0017488999292254448
+      },
+      {
+        "id": "case_094",
+        "matches": 256,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.002540700021199882
+      },
+      {
+        "id": "case_095",
+        "matches": 410,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.22912099992390722
+      },
+      {
+        "id": "case_096",
+        "matches": 44,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 5.799927748739719e-06
+      },
+      {
+        "id": "case_097",
+        "matches": 108,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.100015990436077e-06
+      },
+      {
+        "id": "case_098",
+        "matches": 96,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.9000144675374031e-06
+      },
+      {
+        "id": "case_099",
+        "matches": 255,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.32022750005126
+      }
+    ]
+  },
+  {
+    "width": 4,
+    "depth": 10,
+    "budget": 120000,
+    "cases": 100,
+    "delta": 8279,
+    "runtime_sec": 9.064942399505526,
+    "max_runtime_sec": 0.5655983999604359,
+    "wins": [
+      {
+        "id": "case_001",
+        "matches": 672,
+        "delta": 1,
+        "score_delta": 1111,
+        "runtime_sec": 0.5655983999604359
+      },
+      {
+        "id": "case_015",
+        "matches": 588,
+        "delta": 1,
+        "score_delta": 1600,
+        "runtime_sec": 0.2784369000000879
+      },
+      {
+        "id": "case_018",
+        "matches": 692,
+        "delta": 1,
+        "score_delta": 1111,
+        "runtime_sec": 0.44380770006682724
+      },
+      {
+        "id": "case_071",
+        "matches": 664,
+        "delta": 1,
+        "score_delta": 1371,
+        "runtime_sec": 0.2078167999861762
+      },
+      {
+        "id": "case_086",
+        "matches": 212,
+        "delta": 1,
+        "score_delta": 3086,
+        "runtime_sec": 0.1030506999231875
+      }
+    ],
+    "results": [
+      {
+        "id": "case_000",
+        "matches": 7,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 7.2999391704797745e-06
+      },
+      {
+        "id": "case_001",
+        "matches": 672,
+        "delta": 1,
+        "score_delta": 1111,
+        "runtime_sec": 0.5655983999604359
+      },
+      {
+        "id": "case_002",
+        "matches": 9,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 6.210000719875097e-05
+      },
+      {
+        "id": "case_003",
+        "matches": 723,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.100008375942707e-06
+      },
+      {
+        "id": "case_004",
+        "matches": 77,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00048349995631724596
+      },
+      {
+        "id": "case_005",
+        "matches": 177,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.08497959992382675
+      },
+      {
+        "id": "case_006",
+        "matches": 263,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.09609200002159923
+      },
+      {
+        "id": "case_007",
+        "matches": 588,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.520474899909459
+      },
+      {
+        "id": "case_008",
+        "matches": 127,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0010367000941187143
+      },
+      {
+        "id": "case_009",
+        "matches": 386,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.004394899937324226
+      },
+      {
+        "id": "case_010",
+        "matches": 47,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00023640005383640528
+      },
+      {
+        "id": "case_011",
+        "matches": 566,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0067683999659493566
+      },
+      {
+        "id": "case_012",
+        "matches": 117,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007992999162524939
+      },
+      {
+        "id": "case_013",
+        "matches": 773,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.4970888999523595
+      },
+      {
+        "id": "case_014",
+        "matches": 256,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0016075000166893005
+      },
+      {
+        "id": "case_015",
+        "matches": 588,
+        "delta": 1,
+        "score_delta": 1600,
+        "runtime_sec": 0.2784369000000879
+      },
+      {
+        "id": "case_016",
+        "matches": 63,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.018906999961473048
+      },
+      {
+        "id": "case_017",
+        "matches": 521,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0045804999535903335
+      },
+      {
+        "id": "case_018",
+        "matches": 692,
+        "delta": 1,
+        "score_delta": 1111,
+        "runtime_sec": 0.44380770006682724
+      },
+      {
+        "id": "case_019",
+        "matches": 16,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0002389999572187662
+      },
+      {
+        "id": "case_020",
+        "matches": 14,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00017380004283040762
+      },
+      {
+        "id": "case_021",
+        "matches": 159,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.09730719996150583
+      },
+      {
+        "id": "case_022",
+        "matches": 428,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.26127230003476143
+      },
+      {
+        "id": "case_023",
+        "matches": 305,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.40881079994142056
+      },
+      {
+        "id": "case_024",
+        "matches": 36,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00021950004156678915
+      },
+      {
+        "id": "case_025",
+        "matches": 223,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0018590000690892339
+      },
+      {
+        "id": "case_026",
+        "matches": 360,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.14066450006794184
+      },
+      {
+        "id": "case_027",
+        "matches": 597,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.45657609996851534
+      },
+      {
+        "id": "case_028",
+        "matches": 25,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00016220007091760635
+      },
+      {
+        "id": "case_029",
+        "matches": 118,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.04302749992348254
+      },
+      {
+        "id": "case_030",
+        "matches": 484,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.004016999970190227
+      },
+      {
+        "id": "case_031",
+        "matches": 572,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.010439699981361628
+      },
+      {
+        "id": "case_032",
+        "matches": 27,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.500034265220165e-06
+      },
+      {
+        "id": "case_033",
+        "matches": 20,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.1999079510569572e-06
+      },
+      {
+        "id": "case_034",
+        "matches": 172,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.400025889277458e-06
+      },
+      {
+        "id": "case_035",
+        "matches": 811,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.24312280002050102
+      },
+      {
+        "id": "case_036",
+        "matches": 16,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00016900000628083944
+      },
+      {
+        "id": "case_037",
+        "matches": 33,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0164694000268355
+      },
+      {
+        "id": "case_038",
+        "matches": 462,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.1538419999415055
+      },
+      {
+        "id": "case_039",
+        "matches": 576,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.024754300015047193
+      },
+      {
+        "id": "case_040",
+        "matches": 11,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0002598999999463558
+      },
+      {
+        "id": "case_041",
+        "matches": 114,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0686694000614807
+      },
+      {
+        "id": "case_042",
+        "matches": 267,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.17922269995324314
+      },
+      {
+        "id": "case_043",
+        "matches": 513,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.30763920000754297
+      },
+      {
+        "id": "case_044",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.000250800047069788
+      },
+      {
+        "id": "case_045",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0014287999365478754
+      },
+      {
+        "id": "case_046",
+        "matches": 516,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.19653920002747327
+      },
+      {
+        "id": "case_047",
+        "matches": 505,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2912460999796167
+      },
+      {
+        "id": "case_048",
+        "matches": 13,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.100031219422817e-06
+      },
+      {
+        "id": "case_049",
+        "matches": 115,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 1.100008375942707e-06
+      },
+      {
+        "id": "case_050",
+        "matches": 130,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.06209239992313087
+      },
+      {
+        "id": "case_051",
+        "matches": 702,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 8.09994526207447e-06
+      },
+      {
+        "id": "case_052",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0001425000373274088
+      },
+      {
+        "id": "case_053",
+        "matches": 126,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.05506839998997748
+      },
+      {
+        "id": "case_054",
+        "matches": 152,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.06915590004064143
+      },
+      {
+        "id": "case_055",
+        "matches": 547,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2253406000090763
+      },
+      {
+        "id": "case_056",
+        "matches": 35,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.009335200069472194
+      },
+      {
+        "id": "case_057",
+        "matches": 96,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.022024699952453375
+      },
+      {
+        "id": "case_058",
+        "matches": 225,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.07583009998779744
+      },
+      {
+        "id": "case_059",
+        "matches": 594,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.32334710005670786
+      },
+      {
+        "id": "case_060",
+        "matches": 12,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00012420001439750195
+      },
+      {
+        "id": "case_061",
+        "matches": 51,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0012082000030204654
+      },
+      {
+        "id": "case_062",
+        "matches": 315,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.12279199995100498
+      },
+      {
+        "id": "case_063",
+        "matches": 526,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.3038699000608176
+      },
+      {
+        "id": "case_064",
+        "matches": 7,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.200031980872154e-06
+      },
+      {
+        "id": "case_065",
+        "matches": 41,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.800021320581436e-06
+      },
+      {
+        "id": "case_066",
+        "matches": 174,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.400025889277458e-06
+      },
+      {
+        "id": "case_067",
+        "matches": 118,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.06902299995999783
+      },
+      {
+        "id": "case_068",
+        "matches": 15,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 8.619995787739754e-05
+      },
+      {
+        "id": "case_069",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0007390000391751528
+      },
+      {
+        "id": "case_070",
+        "matches": 235,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.09106549993157387
+      },
+      {
+        "id": "case_071",
+        "matches": 664,
+        "delta": 1,
+        "score_delta": 1371,
+        "runtime_sec": 0.2078167999861762
+      },
+      {
+        "id": "case_072",
+        "matches": 46,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0003268999280408025
+      },
+      {
+        "id": "case_073",
+        "matches": 166,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0010730000212788582
+      },
+      {
+        "id": "case_074",
+        "matches": 479,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.13113580003846437
+      },
+      {
+        "id": "case_075",
+        "matches": 565,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.19084789999760687
+      },
+      {
+        "id": "case_076",
+        "matches": 25,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0004138000076636672
+      },
+      {
+        "id": "case_077",
+        "matches": 121,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0008782000513747334
+      },
+      {
+        "id": "case_078",
+        "matches": 355,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.08948249998502433
+      },
+      {
+        "id": "case_079",
+        "matches": 658,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.35400439996737987
+      },
+      {
+        "id": "case_080",
+        "matches": 36,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.500026650726795e-06
+      },
+      {
+        "id": "case_081",
+        "matches": 63,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 3.0999071896076202e-06
+      },
+      {
+        "id": "case_082",
+        "matches": 279,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.500019036233425e-06
+      },
+      {
+        "id": "case_083",
+        "matches": 600,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.300017513334751e-06
+      },
+      {
+        "id": "case_084",
+        "matches": 14,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0001023000804707408
+      },
+      {
+        "id": "case_085",
+        "matches": 62,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.016332800034433603
+      },
+      {
+        "id": "case_086",
+        "matches": 212,
+        "delta": 1,
+        "score_delta": 3086,
+        "runtime_sec": 0.1030506999231875
+      },
+      {
+        "id": "case_087",
+        "matches": 225,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.23425580002367496
+      },
+      {
+        "id": "case_088",
+        "matches": 2,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.000152900000102818
+      },
+      {
+        "id": "case_089",
+        "matches": 117,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0632937999907881
+      },
+      {
+        "id": "case_090",
+        "matches": 244,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.056237900047563016
+      },
+      {
+        "id": "case_091",
+        "matches": 397,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.2325363999698311
+      },
+      {
+        "id": "case_092",
+        "matches": 27,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0002612998941913247
+      },
+      {
+        "id": "case_093",
+        "matches": 169,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.0013520000502467155
+      },
+      {
+        "id": "case_094",
+        "matches": 256,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.00295559992082417
+      },
+      {
+        "id": "case_095",
+        "matches": 410,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.26737390004564077
+      },
+      {
+        "id": "case_096",
+        "matches": 44,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 4.799920134246349e-06
+      },
+      {
+        "id": "case_097",
+        "matches": 108,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.7999049052596092e-06
+      },
+      {
+        "id": "case_098",
+        "matches": 96,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 2.900022082030773e-06
+      },
+      {
+        "id": "case_099",
+        "matches": 255,
+        "delta": 0,
+        "score_delta": 0,
+        "runtime_sec": 0.24601080000866205
+      }
+    ]
+  }
+]

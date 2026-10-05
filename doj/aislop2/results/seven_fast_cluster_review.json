@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "scope": "Independent static and lightweight canonical review; no runtime certification or full-suite measurement",
+  "sources": [
+    {
+      "path": "solvers\\experiments\\seven_construct_combined_readable.py",
+      "sha256": "b43cff8984091c59d0371831acf7ece385db68dcff9ece774e56fd75f47938de",
+      "bytes": 161396
+    },
+    {
+      "path": "solvers\\experiments\\seven_construct_fast_readable.py",
+      "sha256": "7ea3212ba79e2c09f3b4b39b77e26d52533df450d1e3e054c3c33f338997a3be",
+      "bytes": 162874
+    },
+    {
+      "path": "solvers\\experiments\\seven_construct_fast_bytearray_readable.py",
+      "sha256": "db33ee57d94a85e7ddbceb916e1cd7e23b12aeda8fe050b80fc9c5f44326f9d4",
+      "bytes": 162956
+    }
+  ],
+  "entire_normalized_module_ast_equal": true,
+  "configurations": [
+    [
+      3,
+      2,
+      2
+    ],
+    [
+      3,
+      2,
+      6
+    ],
+    [
+      3,
+      3,
+      2
+    ],
+    [
+      3,
+      3,
+      6
+    ],
+    [
+      4,
+      3,
+      2
+    ],
+    [
+      4,
+      3,
+      6
+    ],
+    [
+      7,
+      2,
+      2
+    ],
+    [
+      7,
+      2,
+      6
+    ],
+    [
+      7,
+      3,
+      2
+    ],
+    [
+      7,
+      3,
+      6
+    ],
+    [
+      17,
+      3,
+      2
+    ],
+    [
+      17,
+      3,
+      6
+    ],
+    [
+      30,
+      2,
+      2
+    ],
+    [
+      30,
+      2,
+      6
+    ],
+    [
+      30,
+      3,
+      2
+    ],
+    [
+      30,
+      3,
+      6
+    ]
+  ],
+  "canonical_transitions": 384,
+  "choice_and_rng_state_equivalence": 384,
+  "clone_isolation_checks": 768,
+  "unchanged_unused_cache_checks": 768,
+  "poisoned_cache_cluster_parity": [
+    {
+      "n": 3,
+      "d": 2,
+      "c": 3,
+      "k": 4,
+      "width": 3,
+      "matches": 9,
+      "operations": 4
+    },
+    {
+      "n": 4,
+      "d": 3,
+      "c": 6,
+      "k": 5,
+      "width": 4,
+      "matches": 8,
+      "operations": 3
+    },
+    {
+      "n": 7,
+      "d": 3,
+      "c": 4,
+      "k": 6,
+      "width": 4,
+      "matches": 31,
+      "operations": 6
+    },
+    {
+      "n": 17,
+      "d": 3,
+      "c": 3,
+      "k": 3,
+      "width": 2,
+      "matches": 120,
+      "operations": 3
+    }
+  ],
+  "findings": [],
+  "runtime_sec": 0.9179238999495283,
+  "edge_transitions_and_geometry_cache_replacement": 64,
+  "error_plane_values_verified_through": 9,
+  "source_hashes_rechecked": true
+}

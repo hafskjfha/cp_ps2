@@ -1,0 +1,488 @@
+{
+  "passed": true,
+  "seed": 988201,
+  "determinism_cases": 15,
+  "canonical_cases": [
+    {
+      "n": 3,
+      "d": 3,
+      "c": 2,
+      "k": 180,
+      "baseline_matches": 7,
+      "matches": 7
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 116,
+      "matches": 123
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 2,
+      "k": 30,
+      "baseline_matches": 70,
+      "matches": 89
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 2,
+      "k": 5,
+      "baseline_matches": 448,
+      "matches": 448
+    },
+    {
+      "n": 7,
+      "d": 2,
+      "c": 2,
+      "k": 30,
+      "baseline_matches": 34,
+      "matches": 43
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 230,
+      "matches": 240
+    },
+    {
+      "n": 3,
+      "d": 3,
+      "c": 3,
+      "k": 30,
+      "baseline_matches": 5,
+      "matches": 5
+    },
+    {
+      "n": 4,
+      "d": 3,
+      "c": 5,
+      "k": 12,
+      "baseline_matches": 3,
+      "matches": 8
+    },
+    {
+      "n": 7,
+      "d": 3,
+      "c": 2,
+      "k": 12,
+      "baseline_matches": 21,
+      "matches": 32
+    },
+    {
+      "n": 3,
+      "d": 3,
+      "c": 2,
+      "k": 80,
+      "baseline_matches": 5,
+      "matches": 7
+    },
+    {
+      "n": 7,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 10,
+      "matches": 19
+    },
+    {
+      "n": 3,
+      "d": 2,
+      "c": 6,
+      "k": 2,
+      "baseline_matches": 1,
+      "matches": 1
+    },
+    {
+      "n": 3,
+      "d": 2,
+      "c": 2,
+      "k": 1,
+      "baseline_matches": 6,
+      "matches": 6
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 110,
+      "matches": 116
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 109,
+      "matches": 114
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 4,
+      "k": 5,
+      "baseline_matches": 236,
+      "matches": 236
+    },
+    {
+      "n": 4,
+      "d": 2,
+      "c": 3,
+      "k": 180,
+      "baseline_matches": 3,
+      "matches": 16
+    },
+    {
+      "n": 20,
+      "d": 3,
+      "c": 5,
+      "k": 12,
+      "baseline_matches": 90,
+      "matches": 106
+    },
+    {
+      "n": 12,
+      "d": 3,
+      "c": 2,
+      "k": 30,
+      "baseline_matches": 64,
+      "matches": 99
+    },
+    {
+      "n": 20,
+      "d": 3,
+      "c": 5,
+      "k": 12,
+      "baseline_matches": 71,
+      "matches": 86
+    },
+    {
+      "n": 7,
+      "d": 2,
+      "c": 6,
+      "k": 80,
+      "baseline_matches": 7,
+      "matches": 33
+    },
+    {
+      "n": 3,
+      "d": 3,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 4,
+      "matches": 4
+    },
+    {
+      "n": 7,
+      "d": 2,
+      "c": 5,
+      "k": 30,
+      "baseline_matches": 9,
+      "matches": 30
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 4,
+      "k": 80,
+      "baseline_matches": 29,
+      "matches": 85
+    },
+    {
+      "n": 20,
+      "d": 3,
+      "c": 5,
+      "k": 180,
+      "baseline_matches": 81,
+      "matches": 245
+    },
+    {
+      "n": 12,
+      "d": 3,
+      "c": 3,
+      "k": 180,
+      "baseline_matches": 45,
+      "matches": 138
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 2,
+      "k": 180,
+      "baseline_matches": 75,
+      "matches": 144
+    },
+    {
+      "n": 12,
+      "d": 3,
+      "c": 5,
+      "k": 80,
+      "baseline_matches": 30,
+      "matches": 98
+    },
+    {
+      "n": 7,
+      "d": 2,
+      "c": 5,
+      "k": 5,
+      "baseline_matches": 9,
+      "matches": 9
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 6,
+      "k": 180,
+      "baseline_matches": 149,
+      "matches": 312
+    },
+    {
+      "n": 4,
+      "d": 2,
+      "c": 6,
+      "k": 12,
+      "baseline_matches": 3,
+      "matches": 8
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 6,
+      "k": 1,
+      "baseline_matches": 153,
+      "matches": 153
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 4,
+      "k": 1,
+      "baseline_matches": 212,
+      "matches": 212
+    },
+    {
+      "n": 4,
+      "d": 2,
+      "c": 6,
+      "k": 12,
+      "baseline_matches": 0,
+      "matches": 7
+    },
+    {
+      "n": 4,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 2,
+      "matches": 9
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 5,
+      "k": 12,
+      "baseline_matches": 191,
+      "matches": 206
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 2,
+      "k": 80,
+      "baseline_matches": 197,
+      "matches": 261
+    },
+    {
+      "n": 7,
+      "d": 3,
+      "c": 2,
+      "k": 180,
+      "baseline_matches": 28,
+      "matches": 49
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 4,
+      "k": 12,
+      "baseline_matches": 93,
+      "matches": 103
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 5,
+      "k": 5,
+      "baseline_matches": 26,
+      "matches": 26
+    },
+    {
+      "n": 7,
+      "d": 3,
+      "c": 6,
+      "k": 5,
+      "baseline_matches": 15,
+      "matches": 15
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 5,
+      "k": 12,
+      "baseline_matches": 28,
+      "matches": 34
+    },
+    {
+      "n": 3,
+      "d": 2,
+      "c": 5,
+      "k": 80,
+      "baseline_matches": 4,
+      "matches": 7
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 3,
+      "k": 5,
+      "baseline_matches": 308,
+      "matches": 308
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 2,
+      "k": 180,
+      "baseline_matches": 435,
+      "matches": 610
+    },
+    {
+      "n": 20,
+      "d": 3,
+      "c": 4,
+      "k": 5,
+      "baseline_matches": 89,
+      "matches": 89
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 4,
+      "k": 30,
+      "baseline_matches": 222,
+      "matches": 266
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 4,
+      "k": 80,
+      "baseline_matches": 223,
+      "matches": 326
+    },
+    {
+      "n": 20,
+      "d": 3,
+      "c": 4,
+      "k": 30,
+      "baseline_matches": 98,
+      "matches": 138
+    },
+    {
+      "n": 12,
+      "d": 3,
+      "c": 2,
+      "k": 1,
+      "baseline_matches": 60,
+      "matches": 60
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 3,
+      "k": 5,
+      "baseline_matches": 49,
+      "matches": 49
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 5,
+      "baseline_matches": 166,
+      "matches": 166
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 3,
+      "k": 2,
+      "baseline_matches": 48,
+      "matches": 48
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 6,
+      "k": 180,
+      "baseline_matches": 52,
+      "matches": 188
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 5,
+      "k": 5,
+      "baseline_matches": 178,
+      "matches": 178
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 3,
+      "k": 180,
+      "baseline_matches": 305,
+      "matches": 510
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 30,
+      "baseline_matches": 173,
+      "matches": 208
+    },
+    {
+      "n": 7,
+      "d": 2,
+      "c": 4,
+      "k": 2,
+      "baseline_matches": 17,
+      "matches": 17
+    },
+    {
+      "n": 20,
+      "d": 3,
+      "c": 5,
+      "k": 2,
+      "baseline_matches": 76,
+      "matches": 76
+    },
+    {
+      "n": 20,
+      "d": 2,
+      "c": 2,
+      "k": 30,
+      "baseline_matches": 218,
+      "matches": 245
+    }
+  ],
+  "runtime_sec": 4.398046200047247
+}

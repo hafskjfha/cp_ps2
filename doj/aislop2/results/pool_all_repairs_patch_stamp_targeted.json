@@ -1,0 +1,53 @@
+{
+  "solver": "C:\\dev\\ps\\doj\\aislop2\\solvers\\experiments\\pool_all_repairs_patch_stamp.py",
+  "solver_sha256": "83150fbf9b981f6118493cf479d4fcc0108c56b84f44d449bc328be783d578da",
+  "parent": "solvers/experiments/forward_all_repairs.py",
+  "parent_score": 251862073,
+  "manifest_sha256": "bd30204d28266a4d8c69f0dc028eec2ca8ac605d8e9f3f198fd1176f0ff506ac",
+  "smoke_valid": true,
+  "smoke_score_delta": 0,
+  "smoke_max_runtime_sec": 3.167640700004995,
+  "results": [
+    {
+      "id": "case_173",
+      "family": "repeated_stamp",
+      "n": 13,
+      "d": 3,
+      "c": 3,
+      "k": 159,
+      "valid": true,
+      "score": 958579,
+      "matches": 162,
+      "total_cells": 169,
+      "input_sha256": "3602c82396bb1599d9bf7d231c975bfafcac740cc5440758e4f767921d591fc2",
+      "runtime_sec": 3.058292799978517,
+      "operations": 140,
+      "output_bytes": 1021,
+      "output_sha256": "733fc67f2f2c27653b9d5e843106cd5ccb0b2f439afff90df942b3f2c5e6dce2",
+      "score_delta": 5917,
+      "match_delta": 1
+    },
+    {
+      "id": "case_265",
+      "family": "repeated_stamp",
+      "n": 9,
+      "d": 3,
+      "c": 3,
+      "k": 90,
+      "valid": true,
+      "score": 962962,
+      "matches": 78,
+      "total_cells": 81,
+      "input_sha256": "06b2c5c724a9882babdd83e746899b7bc547f5436dfb4b5ed47d4d2a45e390d3",
+      "runtime_sec": 4.162445700028911,
+      "operations": 81,
+      "output_bytes": 571,
+      "output_sha256": "94d1d1a2091c27f1424d9ac92e6f2a92fbcab20552f87b88ec59bd9ffffe4398",
+      "score_delta": 12345,
+      "match_delta": 1
+    }
+  ],
+  "passed": true,
+  "score_delta": 18262,
+  "max_runtime_sec": 4.162445700028911
+}

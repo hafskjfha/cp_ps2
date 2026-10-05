@@ -1,0 +1,17 @@
+{
+  "id": "case_265",
+  "family": "repeated_stamp",
+  "n": 9,
+  "d": 3,
+  "c": 3,
+  "k": 90,
+  "valid": true,
+  "score": 962962,
+  "matches": 78,
+  "total_cells": 81,
+  "input_sha256": "06b2c5c724a9882babdd83e746899b7bc547f5436dfb4b5ed47d4d2a45e390d3",
+  "runtime_sec": 2.077990699908696,
+  "operations": 72,
+  "output_bytes": 508,
+  "output_sha256": "13b7abc31030d3ff9e79621c598862934c7deb56c07438467995d1c3cc193a58"
+}

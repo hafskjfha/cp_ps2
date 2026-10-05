@@ -1,0 +1,4111 @@
+import random
+import heapq
+import sys
+RUNS = 12
+NEUTRAL = True
+
+def color_bound(initial, target):
+    available, needed = ([0] * 6, [0] * 6)
+    for value in initial:
+        available[value] += 1
+    for value in target:
+        needed[value] += 1
+    return sum((min(a, b) for a, b in zip(available, needed)))
+
+def build(n, d, target):
+    rotations = []
+    for r in range(4):
+        rotations.append([p * n + q for u in range(d) for v in range(d) for p, q in [((u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u))[r]]])
+    indices, codes, operations = ([], [], [])
+    coverage = [[] for _ in range(n * n)]
+    patches = []
+    for x in range(n - d + 1):
+        for y in range(n - d + 1):
+            patch = len(patches)
+            positions = [x * n + y + v for v in rotations[0]]
+            patches.append(positions)
+            for pos in positions:
+                coverage[pos].append(patch)
+            for r in range(4):
+                action = tuple((x * n + y + v for v in rotations[r]))
+                indices.append(action)
+                codes.append(sum((1 << 6 * j + target[pos] for j, pos in enumerate(action))))
+                operations.append((x, y, r))
+    return (indices, codes, operations, coverage, patches)
+
+def transition(grid, stamp, indices):
+    for j, pos in enumerate(indices):
+        stamp[j], grid[pos] = (grid[pos], stamp[j])
+
+def solve_plateau(n, d, c, k, initial, target, start_stamp):
+    _is = sum((a == b for a, b in zip(initial, target)))
+    limit = color_bound(initial + start_stamp, target)
+    if _is == limit:
+        return []
+    best_score, answer = (_is, [])
+    seed = 917351
+    for value in initial + target + start_stamp:
+        seed = (seed ^ value) * 1000003 & 4294967295
+    rng = random.Random(seed)
+    order = list(range(4 * (n - d + 1) ** 2))
+    for run in range(RUNS):
+        if run:
+            rng.shuffle(order)
+        state = State(n, d, c, initial[:], target, start_stamp[:], order[:])
+        score, path = (_is, [])
+        seen = set()
+        for step in range(k):
+            seen.add(tuple(state.stamp))
+            gain, candidates = state.best_candidates()
+            if gain < 0 or (gain == 0 and (not NEUTRAL or run == 0)):
+                break
+            chosen = -1
+            while candidates:
+                bit = candidates & -candidates
+                action = state.order[bit.bit_length() - 1]
+                if gain > 0 or tuple((state.grid[p] for p in state.actions[action][0])) not in seen:
+                    chosen = action
+                    break
+                candidates ^= bit
+            if chosen < 0:
+                break
+            if gain > 0:
+                seen.clear()
+            state.apply(chosen)
+            score += gain
+            path.append(state.actions[chosen][1])
+            if score > best_score:
+                best_score, answer = (score, path[:])
+            if best_score == limit:
+                return answer
+    return answer
+
+class State:
+    _geometry_cache = None
+
+    def __init__(self, n, d, c, grid, target, stamp, order=None):
+        self.n, self.d, self.c = (n, d, c)
+        self.grid, self.target, self.stamp = (grid, target, stamp)
+        self.matches = sum((a == b for a, b in zip(grid, target)))
+        self.limit = color_bound(grid + stamp, target)
+        key = (n, d, c, tuple(target))
+        cached = State._geometry_cache
+        if cached is not None and cached[0] == key:
+            self.regions, self.actions, self.masks, self.cover = cached[1:]
+        else:
+            self.regions = []
+            self.actions = []
+            self.masks = []
+            self.cover = [[] for _ in grid]
+            rotations = []
+            for r in range(4):
+                offsets = []
+                for u in range(d):
+                    for v in range(d):
+                        p, q = ((u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u))[r]
+                        offsets.append(p * n + q)
+                rotations.append(offsets)
+            for x in range(n - d + 1):
+                for y in range(n - d + 1):
+                    base = x * n + y
+                    indices = tuple((base + o for o in rotations[0]))
+                    region = len(self.regions)
+                    self.regions.append(indices)
+                    for p in indices:
+                        self.cover[p].append(region)
+                    for r in range(4):
+                        indices = tuple((base + o for o in rotations[r]))
+                        self.actions.append((indices, (x, y, r)))
+                        self.masks.append(sum((1 << c * j + target[p] for j, p in enumerate(indices))))
+            State._geometry_cache = (key, self.regions, self.actions, self.masks, self.cover)
+        self.order = list(range(len(self.actions))) if order is None else order
+        self.counts = [sum((grid[p] == target[p] for p in indices)) for indices in self.regions]
+        self.stampmask = sum((1 << c * j + value for j, value in enumerate(stamp)))
+        self.size = d * d
+        self.all_actions = (1 << len(self.actions)) - 1
+        self.target_bits = [[0] * c for _ in stamp]
+        self.region_bits = [0] * len(self.regions)
+        for rank, action in enumerate(self.order):
+            bit = 1 << rank
+            self.region_bits[action >> 2] |= bit
+            for j, p in enumerate(self.actions[action][0]):
+                self.target_bits[j][target[p]] |= bit
+        self.old_planes = [0] * 4
+        for region, count in enumerate(self.counts):
+            value = self.size - count
+            for plane in range(4):
+                if value & 1 << plane:
+                    self.old_planes[plane] |= self.region_bits[region]
+
+    def gain(self, action):
+        return (self.stampmask & self.masks[action]).bit_count() - self.counts[action >> 2]
+
+    def apply(self, action):
+        indices, _ = self.actions[action]
+        grid, stamp, target = (self.grid, self.stamp, self.target)
+        counts, planes = (self.counts, self.old_planes)
+        cover = self.cover
+        cover_bits = getattr(self, '_runtime_cover_bits', None)
+        if cover_bits is None:
+            region_bits = self.region_bits
+            cover_bits = [sum((region_bits[r] for r in ids)) for ids in cover]
+            self._runtime_cover_bits = cover_bits
+        for j, p in enumerate(indices):
+            old, new = (grid[p], stamp[j])
+            stamp[j], grid[p] = (old, new)
+            delta = (new == target[p]) - (old == target[p])
+            self.matches += delta
+            if delta:
+                for region in cover[p]:
+                    counts[region] += delta
+                carry = cover_bits[p]
+                plane = 0
+                if delta > 0:
+                    while carry:
+                        previous = planes[plane]
+                        planes[plane] = previous ^ carry
+                        carry &= ~previous
+                        plane += 1
+                else:
+                    while carry:
+                        previous = planes[plane]
+                        planes[plane] = previous ^ carry
+                        carry &= previous
+                        plane += 1
+        c = self.c
+        self.stampmask = sum((1 << c * j + value for j, value in enumerate(stamp)))
+
+    def best_candidates(self):
+        planes = [0] * 5
+        for j, color in enumerate(self.stamp):
+            carry = self.target_bits[j][color]
+            plane = 0
+            while carry:
+                previous = planes[plane]
+                planes[plane] = previous ^ carry
+                carry &= previous
+                plane += 1
+        carry = 0
+        for plane in range(4):
+            a, b = (planes[plane], self.old_planes[plane])
+            different = a ^ b
+            planes[plane] = different ^ carry
+            carry = a & b | different & carry
+        planes[4] = carry
+        candidates, value = (self.all_actions, 0)
+        for plane in range(4, -1, -1):
+            hits = candidates & planes[plane]
+            if hits:
+                candidates = hits
+                value |= 1 << plane
+        return (value - self.size, candidates)
+
+    def best(self):
+        gain, candidates = self.best_candidates()
+        rank = (candidates & -candidates).bit_length() - 1
+        return (gain, self.order[rank])
+
+    def escape(self, rng, width=64):
+        mask, counts = (self.stampmask, self.counts)
+        candidates = [(mask & m).bit_count() - counts[i >> 2] for i, m in enumerate(self.masks)]
+        eligible = [i for i, g in enumerate(candidates) if g >= -2]
+        rng.shuffle(eligible)
+        top = heapq.nlargest(8, eligible, key=lambda i: candidates[i])
+        ordered = top + eligible
+        seen, tried = (set(), set())
+        best_total, pair = (0, None)
+        examined = 0
+        saved_counts = self.counts[:]
+        saved_planes = self.old_planes[:]
+        saved_matches = self.matches
+        for first in ordered:
+            if first in tried:
+                continue
+            tried.add(first)
+            indices, _ = self.actions[first]
+            outgoing = tuple((self.grid[p] for p in indices))
+            signature = (outgoing, candidates[first])
+            if signature in seen:
+                continue
+            seen.add(signature)
+            first_gain = candidates[first]
+            self.apply(first)
+            second_gain, second = self.best()
+            total = first_gain + second_gain
+            grid, stamp = (self.grid, self.stamp)
+            for j, p in enumerate(indices):
+                stamp[j], grid[p] = (grid[p], stamp[j])
+            self.counts[:] = saved_counts
+            self.old_planes[:] = saved_planes
+            self.matches = saved_matches
+            self.stampmask = mask
+            if total > best_total:
+                best_total, pair = (total, (first, second))
+            examined += 1
+            if examined >= width:
+                break
+        return pair
+
+def solve_lookahead(n, d, c, k, grid, target, stamp):
+    seed = n * 101 + d * 19 + c * 7 + k
+    for p in range(0, len(grid), 11):
+        seed = seed * 131 + grid[p] * 7 + target[p] & 4294967295
+    best_matches, best_operations = (-1, [])
+    for restart in range(8):
+        rng = random.Random(seed + restart * 87917)
+        order = list(range(4 * (n - d + 1) ** 2))
+        if restart:
+            rng.shuffle(order)
+        state = State(n, d, c, grid.copy(), target, stamp.copy(), order)
+        operations = []
+        while len(operations) < k and state.matches < state.limit:
+            gain, action = state.best()
+            if gain > 0:
+                state.apply(action)
+                operations.append(state.actions[action][1])
+            elif len(operations) + 2 <= k:
+                pair = state.escape(rng)
+                if pair is None:
+                    break
+                for action in pair:
+                    state.apply(action)
+                    operations.append(state.actions[action][1])
+            else:
+                break
+        matches = sum((a == t for a, t in zip(state.grid, target)))
+        if matches > best_matches:
+            best_matches, best_operations = (matches, operations)
+        if best_matches == state.limit:
+            break
+    return best_operations
+
+def construct(n, d, c, k, grid, target, stamp):
+    limit = color_bound(grid + stamp, target)
+    if sum((a == b for a, b in zip(grid, target))) == limit:
+        return []
+    indices, codes, operations, coverage, patches = build(n, d, target)
+    width = n - d + 1
+    best_matches = -1
+    best_ops = []
+    for search in (solve_plateau, solve_lookahead, solve_productive):
+        ops = search(n, d, c, k, grid[:], target, stamp[:])
+        final, buffer = (grid[:], stamp[:])
+        for x, y, r in ops:
+            action = (x * width + y) * 4 + r
+            transition(final, buffer, indices[action])
+        matches = sum((a == b for a, b in zip(final, target)))
+        if matches > best_matches:
+            best_matches, best_ops = (matches, ops)
+        if matches == limit:
+            break
+    return best_ops
+import random
+import sys
+
+class ProductiveState(State):
+
+    def escape(self, rng, width=64, min_gain=-2):
+        mask, counts = (self.stampmask, self.counts)
+        candidates = [(mask & m).bit_count() - counts[i >> 2] for i, m in enumerate(self.masks)]
+        eligible = [i for i, g in enumerate(candidates) if g >= min_gain]
+        rng.shuffle(eligible)
+        top = heapq.nlargest(8, eligible, key=lambda i: candidates[i])
+        ordered = top + eligible
+        seen, tried = (set(), set())
+        best_total, pair = (0, None)
+        examined = 0
+        saved_counts = self.counts[:]
+        saved_planes = self.old_planes[:]
+        saved_matches = self.matches
+        for first in ordered:
+            if first in tried:
+                continue
+            tried.add(first)
+            indices, _ = self.actions[first]
+            outgoing = tuple((self.grid[p] for p in indices))
+            signature = (outgoing, candidates[first])
+            if signature in seen:
+                continue
+            seen.add(signature)
+            first_gain = candidates[first]
+            self.apply(first)
+            second_gain, second = self.best()
+            total = first_gain + second_gain
+            grid, stamp = (self.grid, self.stamp)
+            for j, p in enumerate(indices):
+                stamp[j], grid[p] = (grid[p], stamp[j])
+            self.counts[:] = saved_counts
+            self.old_planes[:] = saved_planes
+            self.matches = saved_matches
+            self.stampmask = mask
+            if total > best_total:
+                best_total, pair = (total, (first, second))
+            examined += 1
+            if examined >= width:
+                break
+        return pair
+
+def solve_productive(n, d, c, k, grid, target, stamp):
+    state = ProductiveState(n, d, c, grid, target, stamp)
+    seed = n * 101 + d * 19 + c * 7 + k
+    for p in range(0, len(grid), 11):
+        seed = seed * 131 + grid[p] * 7 + target[p] & 4294967295
+    rng = random.Random(seed)
+    operations = []
+    while len(operations) < k and state.matches < state.limit:
+        gain, action = state.best()
+        if gain > 0:
+            if len(operations) + 2 <= k:
+                pair = state.escape(rng, width=8, min_gain=max(1, gain - 1))
+                if pair is not None:
+                    action = pair[0]
+            state.apply(action)
+            operations.append(state.actions[action][1])
+        elif len(operations) + 2 <= k:
+            pair = state.escape(rng)
+            if pair is None:
+                break
+            for action in pair:
+                state.apply(action)
+                operations.append(state.actions[action][1])
+        else:
+            break
+    return operations
+
+def _st(state, nn, indices):
+    for j, pos in enumerate(indices):
+        state[nn + j], state[pos] = (state[pos], state[nn + j])
+
+def best_action(state, wishes, actions, nn, dd, current=-1, allow_zero=False):
+    grid, wanted = (state[:nn], wishes[:nn])
+    losses = [value == goal for value, goal in zip(grid, wanted)]
+    rows = []
+    for j in range(dd):
+        carried, goal = (state[nn + j], wishes[nn + j])
+        fixed_loss = carried == goal
+        rows.append([(carried == desire) + (value == goal) - loss - fixed_loss for value, desire, loss in zip(grid, wanted, losses)])
+    best_id, best_gain = (-1, 0)
+    if current >= 0:
+        old = sum((rows[j][pos] for j, pos in enumerate(actions[current][0])))
+        if old >= 0:
+            best_id, best_gain = (current, old)
+    if dd == 4:
+        g0, g1, g2, g3 = rows
+        for aid, (p, _) in enumerate(actions):
+            gain = g0[p[0]] + g1[p[1]] + g2[p[2]] + g3[p[3]]
+            if gain > best_gain or (allow_zero and best_id < 0 and (gain == best_gain)):
+                best_id, best_gain = (aid, gain)
+    else:
+        g0, g1, g2, g3, g4, g5, g6, g7, g8 = rows
+        for aid, (p, _) in enumerate(actions):
+            gain = g0[p[0]] + g1[p[1]] + g2[p[2]] + g3[p[3]] + g4[p[4]] + g5[p[5]] + g6[p[6]] + g7[p[7]] + g8[p[8]]
+            if gain > best_gain or (allow_zero and best_id < 0 and (gain == best_gain)):
+                best_id, best_gain = (aid, gain)
+    return (best_id, best_gain)
+
+def greedy(n, d, k, grid, target, stamp, actions):
+    nn, dd = (n * n, d * d)
+    state, wishes = (grid + stamp, target + [-1] * dd)
+    sequence = []
+    for _ in range(k):
+        aid, gain = best_action(state, wishes, actions, nn, dd)
+        if gain <= 0:
+            break
+        _st(state, nn, actions[aid][0])
+        sequence.append(aid)
+    return sequence
+_REFINE_GEOMETRY = {}
+_REFINE_COVER_BITS = {}
+_REFINE_GOALS = {}
+
+class RefineState:
+
+    def __init__(self, n, d, initial, target, actions, order):
+        nn, dd = (n * n, d * d)
+        self.nn, self.dd = (nn, dd)
+        self.grid, self.stamp = (initial[:nn], initial[nn:])
+        self.wishes, self.wstamp = (target[:], [6] * dd)
+        self.actions, self.order = (actions, order)
+        size = len(actions)
+        self.all_bits = (1 << size) - 1
+        key = (n, d)
+        geometry = _REFINE_GEOMETRY.get(key)
+        if geometry is None:
+            positions = [[0] * nn for _ in range(dd)]
+            region_bits = [15 << 4 * r for r in range(size // 4)]
+            regions = [actions[i][0] for i in range(0, size, 4)]
+            cover = [[] for _ in range(nn)]
+            for r, patch in enumerate(regions):
+                for p in patch:
+                    cover[p].append(r)
+            for aid, (patch, _) in enumerate(actions):
+                bit = 1 << aid
+                for j, p in enumerate(patch):
+                    positions[j][p] |= bit
+            geometry = (positions, region_bits, regions, cover)
+            _REFINE_GEOMETRY[key] = geometry
+        self.positions, self.region_bits, self.regions, self.cover = geometry
+        cover_bits = _REFINE_COVER_BITS.get(key)
+        if cover_bits is None:
+            cover_bits = [sum((self.region_bits[r] for r in ids)) for ids in self.cover]
+            _REFINE_COVER_BITS[key] = cover_bits
+        self.cover_bits = cover_bits
+        self.values = [[0] * 7 for _ in range(dd)]
+        goal_key = (n, d, tuple(target))
+        cached_goals = _REFINE_GOALS.get(goal_key)
+        if cached_goals is None:
+            cached_goals = [[0] * 7 for _ in range(dd)]
+            for j in range(dd):
+                goals = cached_goals[j]
+                for p, mask in enumerate(self.positions[j]):
+                    goals[target[p]] |= mask
+            _REFINE_GOALS[goal_key] = cached_goals
+        self.goals = [row[:] for row in cached_goals]
+        for j in range(dd):
+            values = self.values[j]
+            for p, mask in enumerate(self.positions[j]):
+                values[self.grid[p]] |= mask
+        self.tie_masks = m2_tie_masks(order)
+        self.old_planes = [0] * 5
+        planes = self.old_planes
+        for p in range(nn):
+            if self.grid[p] != self.wishes[p]:
+                carry = cover_bits[p]
+                level = 0
+                while carry:
+                    before = planes[level]
+                    planes[level] = before ^ carry
+                    carry &= before
+                    level += 1
+        self.counts = None
+
+    def apply(self, action, wishes=False):
+        if wishes:
+            grid, stamp, bits, opposite = (self.wishes, self.wstamp, self.goals, self.grid)
+        else:
+            grid, stamp, bits, opposite = (self.grid, self.stamp, self.values, self.wishes)
+        positions = self.positions
+        planes, cover_bits = (self.old_planes, self.cover_bits)
+        for j, p in enumerate(self.actions[action][0]):
+            old, new = (grid[p], stamp[j])
+            if old != new:
+                for ref in range(self.dd):
+                    mask = positions[ref][p]
+                    bits[ref][old] ^= mask
+                    bits[ref][new] ^= mask
+                delta = (new == opposite[p]) - (old == opposite[p])
+                if delta:
+                    carry = cover_bits[p]
+                    plane = 0
+                    if delta > 0:
+                        while carry:
+                            previous = planes[plane]
+                            planes[plane] = previous ^ carry
+                            carry &= ~previous
+                            plane += 1
+                    else:
+                        while carry:
+                            previous = planes[plane]
+                            planes[plane] = previous ^ carry
+                            carry &= previous
+                            plane += 1
+                stamp[j], grid[p] = (old, new)
+
+    def best(self):
+        planes = [0] * 5
+        for j in range(self.dd):
+            for carry in (self.values[j][self.wstamp[j]], self.goals[j][self.stamp[j]]):
+                plane = 0
+                while carry:
+                    old = planes[plane]
+                    planes[plane] = old ^ carry
+                    carry &= old
+                    plane += 1
+        carry = 0
+        for plane in range(5):
+            a, b = (planes[plane], self.old_planes[plane])
+            different = a ^ b
+            planes[plane] = different ^ carry
+            carry = a & b | different & carry
+        candidates, value = (self.all_bits, 0)
+        for plane in range(4, -1, -1):
+            hits = candidates & planes[plane]
+            if hits:
+                candidates = hits
+                value |= 1 << plane
+        gain = value - self.dd - sum((a == b for a, b in zip(self.stamp, self.wstamp)))
+        if gain < 0:
+            return (-1, 0)
+        for mask in reversed(self.tie_masks):
+            if not candidates & candidates - 1:
+                break
+            preferred = candidates & ~mask
+            if preferred:
+                candidates = preferred
+        return ((candidates & -candidates).bit_length() - 1, gain)
+
+def refine(n, d, k, initial, target, actions, sequence, passes=8, offset=0, seed_offset=0):
+    nn, dd = (n * n, d * d)
+    limit = color_bound(initial, target)
+    seed = sum(((i + 1) * v for i, v in enumerate(initial))) + k * 131 + seed_offset
+    rng = random.Random(seed)
+    for _ in range(offset):
+        rng.shuffle(list(range(len(actions))))
+    for iteration in range(passes):
+        sequence = sequence + [-1] * min(8, k - len(sequence))
+        final = initial[:]
+        for action in sequence:
+            if action >= 0:
+                _st(final, nn, actions[action][0])
+        if sum((a == b for a, b in zip(final, target))) == limit:
+            return [action for action in sequence if action >= 0]
+        order = list(range(len(actions)))
+        rng.shuffle(order)
+        state = RefineState(n, d, final, target, actions, order)
+        for i in range(len(sequence) - 1, -1, -1):
+            old = sequence[i]
+            if old >= 0:
+                state.apply(old)
+            chosen, _ = state.best()
+            sequence[i] = chosen
+            if chosen >= 0:
+                state.apply(chosen, wishes=True)
+        sequence = [action for action in sequence if action >= 0]
+    return sequence
+
+class SequenceState:
+
+    def __init__(self, initial, target, actions, sequence, nn):
+        self.nn = nn
+        self.actions = actions
+        self.sequence = sequence[:]
+        self.prefix = [initial[:]]
+        for aid in sequence:
+            state = self.prefix[-1][:]
+            if aid >= 0:
+                _st(state, nn, actions[aid][0])
+            self.prefix.append(state)
+        self.wishes = [None] * (len(sequence) + 1)
+        self.wishes[-1] = target + [-1] * (len(initial) - nn)
+        for i in range(len(sequence) - 1, -1, -1):
+            wanted = self.wishes[i + 1][:]
+            if sequence[i] >= 0:
+                _st(wanted, nn, actions[sequence[i]][0])
+            self.wishes[i] = wanted
+        self.score = sum((x == y for x, y in zip(self.prefix[-1], target)))
+
+    def delta(self, i, replacements):
+        nn, actions = (self.nn, self.actions)
+        outgoing = self.prefix[i][:]
+        affected = set(range(nn, len(outgoing)))
+        for old, new in zip(self.sequence[i:i + len(replacements)], replacements):
+            if old >= 0:
+                affected.update(actions[old][0])
+            if new >= 0:
+                indices = actions[new][0]
+                affected.update(indices)
+                _st(outgoing, nn, indices)
+        previous = self.prefix[i + len(replacements)]
+        wishes = self.wishes[i + len(replacements)]
+        return sum(((outgoing[p] == wishes[p]) - (previous[p] == wishes[p]) for p in affected))
+
+    def accept(self, i, replacements, delta):
+        nn, actions = (self.nn, self.actions)
+        self.sequence[i:i + len(replacements)] = replacements
+        for j in range(i, len(self.sequence)):
+            state = self.prefix[j][:]
+            aid = self.sequence[j]
+            if aid >= 0:
+                _st(state, nn, actions[aid][0])
+            self.prefix[j + 1] = state
+        for j in range(i + len(replacements) - 1, -1, -1):
+            wanted = self.wishes[j + 1][:]
+            aid = self.sequence[j]
+            if aid >= 0:
+                _st(wanted, nn, actions[aid][0])
+            self.wishes[j] = wanted
+        self.score += delta
+
+def pair_repair(n, d, k, initial, target, actions, sequence, proposals=None):
+    if k < 2:
+        return sequence
+    nn, dd = (n * n, d * d)
+    state = SequenceState(initial, target, actions, sequence + [-1] * (k - len(sequence)), nn)
+    if state.score == color_bound(initial, target):
+        return sequence
+    rng = random.Random(sum(((i + 7) * v for i, v in enumerate(initial))) + k * 977 + 9167)
+    width = n - d + 1
+    if proposals is None:
+        proposals = min(2400, max(160, 450000 // nn))
+    for step in range(proposals):
+        i = rng.randrange(k - 1)
+        fixed_slot = step % 2
+        old = state.sequence[i + fixed_slot]
+        mode = rng.randrange(5)
+        if mode < 2 and old >= 0:
+            x, y, r = actions[old][1]
+            x = min(width - 1, max(0, x + rng.choice((-2, -1, 0, 0, 1, 2))))
+            y = min(width - 1, max(0, y + rng.choice((-2, -1, 0, 0, 1, 2))))
+            action = (x * width + y) * 4 + rng.randrange(4)
+        elif mode == 4:
+            action = -1
+        else:
+            action = rng.randrange(len(actions))
+        if fixed_slot == 0:
+            before = state.prefix[i][:]
+            if action >= 0:
+                _st(before, nn, actions[action][0])
+            second, _ = best_action(before, state.wishes[i + 2], actions, nn, dd, current=state.sequence[i + 1], allow_zero=True)
+            replacements = [action, second]
+        else:
+            wished = state.wishes[i + 2][:]
+            if action >= 0:
+                _st(wished, nn, actions[action][0])
+            first, _ = best_action(state.prefix[i], wished, actions, nn, dd, current=state.sequence[i], allow_zero=True)
+            replacements = [first, action]
+        if state.sequence[i:i + 2] == replacements:
+            continue
+        delta = state.delta(i, replacements)
+        if delta > 0 or (delta == 0 and rng.randrange(8) == 0):
+            state.accept(i, replacements, delta)
+            if state.score == color_bound(initial, target):
+                break
+    return [aid for aid in state.sequence if aid >= 0]
+
+def _og(state, action):
+    if action < 0:
+        return 0
+    gain = 0
+    for j, p in enumerate(state.actions[action][0]):
+        v, w = (state.stamp[j], state.grid[p])
+        a, b = (state.wishes[p], state.wstamp[j])
+        gain += (v == a) + (w == b) - (w == a) - (v == b)
+    return gain
+
+def refine_trial(state, action, wishes=False):
+    if action < 0:
+        return None
+    if wishes:
+        grid, stamp, bits = (state.wishes, state.wstamp, state.goals)
+    else:
+        grid, stamp, bits = (state.grid, state.stamp, state.values)
+    patch = state.actions[action][0]
+    undo = (wishes, patch, [grid[p] for p in patch], stamp[:], [row[:] for row in bits], state.counts[:] if state.counts is not None else None, state.old_planes[:])
+    state.apply(action, wishes=wishes)
+    return undo
+
+def refine_restore(state, undo):
+    if undo is None:
+        return
+    wishes, patch, colors, stamp, bits, counts, planes = undo
+    grid = state.wishes if wishes else state.grid
+    for p, color in zip(patch, colors):
+        grid[p] = color
+    if wishes:
+        state.wstamp, state.goals = (stamp, bits)
+    else:
+        state.stamp, state.values = (stamp, bits)
+    state.counts, state.old_planes = (counts, planes)
+
+def optimize_pair(state, first, second, candidates):
+    best = _og(state, first)
+    undo = refine_trial(state, first)
+    best += _og(state, second)
+    refine_restore(state, undo)
+    answer = (first, second)
+    if best < 0:
+        best, answer = (0, (-1, -1))
+    for fixed, side in candidates:
+        gain = _og(state, fixed)
+        undo = refine_trial(state, fixed, wishes=bool(side))
+        chosen, other = state.best()
+        refine_restore(state, undo)
+        total = gain + other
+        if total >= best:
+            best = total
+            answer = (chosen, fixed) if side else (fixed, chosen)
+    return answer
+
+def pair_sweep(n, d, k, initial, target, actions, sequence, passes=4, width=32):
+    nn = n * n
+    side_len = n - d + 1
+    rng = random.Random(sum(((i + 13) * v for i, v in enumerate(initial))) + k * 691 + 7147)
+    for iteration in range(passes):
+        sequence = sequence + [-1] * min(8, k - len(sequence))
+        final = initial[:]
+        for action in sequence:
+            if action >= 0:
+                _st(final, nn, actions[action][0])
+        if sum((a == b for a, b in zip(final, target))) == color_bound(initial, target):
+            return [action for action in sequence if action >= 0]
+        order = list(range(len(actions)))
+        rng.shuffle(order)
+        state = RefineState(n, d, final, target, actions, order)
+        i = len(sequence) - 1
+        if iteration % 2 and i >= 0:
+            old = sequence[i]
+            if old >= 0:
+                state.apply(old)
+            chosen, _ = state.best()
+            sequence[i] = chosen
+            if chosen >= 0:
+                state.apply(chosen, wishes=True)
+            i -= 1
+        while i >= 1:
+            first, second = (sequence[i - 1], sequence[i])
+            if second >= 0:
+                state.apply(second)
+            if first >= 0:
+                state.apply(first)
+            candidates = [(first, 0), (second, 1), (-1, 0), (-1, 1)]
+            for _ in range(width):
+                side = rng.randrange(2)
+                old = second if side else first
+                mode = rng.randrange(4)
+                if mode == 0 and old >= 0:
+                    x, y, r = actions[old][1]
+                    x = min(side_len - 1, max(0, x + rng.choice((-1, 0, 1))))
+                    y = min(side_len - 1, max(0, y + rng.choice((-1, 0, 1))))
+                    candidate = (x * side_len + y) * 4 + rng.randrange(4)
+                elif mode == 1:
+                    candidate = rng.choice(sequence)
+                else:
+                    candidate = rng.randrange(len(actions))
+                candidates.append((candidate, side))
+            first, second = optimize_pair(state, first, second, candidates)
+            sequence[i - 1], sequence[i] = (first, second)
+            if second >= 0:
+                state.apply(second, wishes=True)
+            if first >= 0:
+                state.apply(first, wishes=True)
+            i -= 2
+        if i == 0:
+            old = sequence[0]
+            if old >= 0:
+                state.apply(old)
+            sequence[0], _ = state.best()
+        sequence = [action for action in sequence if action >= 0]
+    return sequence
+
+def iterated_refine(n, d, k, initial, target, actions, sequence):
+    if n > 16:
+        return sequence
+    nn = n * n
+
+    def evaluate(path):
+        final = initial[:]
+        for action in path:
+            if action >= 0:
+                _st(final, nn, actions[action][0])
+        return sum((a == b for a, b in zip(final, target)))
+    best_score = evaluate(sequence)
+    limit = color_bound(initial, target)
+    if best_score == limit:
+        return sequence
+    rng = random.Random(sum(((i + 29) * v for i, v in enumerate(initial))) + k * 2281)
+    best = sequence[:]
+    width = n - d + 1
+    restarts = max(2, min(8, 9000 // (nn + 6 * k)))
+    for restart in range(restarts):
+        candidate = best + [-1] * min(8, k - len(best))
+        positions = rng.sample(range(len(candidate)), min(len(candidate), 2 + restart % 6))
+        for position in positions:
+            old = candidate[position]
+            mode = rng.randrange(4)
+            if old >= 0 and mode < 2:
+                x, y, r = actions[old][1]
+                x = max(0, min(width - 1, x + rng.choice((-2, -1, 0, 1, 2))))
+                y = max(0, min(width - 1, y + rng.choice((-2, -1, 0, 1, 2))))
+                candidate[position] = (x * width + y) * 4 + rng.randrange(4)
+            elif mode == 2:
+                candidate[position] = -1
+            else:
+                candidate[position] = rng.randrange(len(actions))
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=4, seed_offset=37307 * (restart + 1))
+        score = evaluate(candidate)
+        if score >= best_score:
+            best, best_score = (candidate, score)
+            if score == limit:
+                break
+    return best
+
+class WeightedState(State):
+
+    def __init__(self, n, d, c, grid, target, stamp, order=None):
+        super().__init__(n, d, c, grid, target, stamp, order)
+        self.weights = [2 if min(p // n, p % n, n - 1 - p // n, n - 1 - p % n) < d - 1 else 1 for p in range(n * n)]
+        self.size = 2 * d * d
+        self.heavy_bits = [[0] * c for _ in stamp]
+        for rank, action in enumerate(self.order):
+            bit = 1 << rank
+            for j, p in enumerate(self.actions[action][0]):
+                if self.weights[p] == 2:
+                    self.heavy_bits[j][target[p]] |= bit
+        self.counts = [sum((self.weights[p] for p in positions if grid[p] == target[p])) for positions in self.regions]
+        self.old_planes = [0] * 6
+        for region, count in enumerate(self.counts):
+            value = self.size - count
+            for plane in range(6):
+                if value & 1 << plane:
+                    self.old_planes[plane] |= self.region_bits[region]
+
+    def gain(self, action):
+        return sum((self.weights[p] for j, p in enumerate(self.actions[action][0]) if self.stamp[j] == self.target[p])) - self.counts[action >> 2]
+
+    def apply(self, action):
+        indices, _ = self.actions[action]
+        grid, stamp, target = (self.grid, self.stamp, self.target)
+        changed = {}
+        for j, p in enumerate(indices):
+            old, new = (grid[p], stamp[j])
+            stamp[j], grid[p] = (old, new)
+            delta = (new == target[p]) - (old == target[p])
+            self.matches += delta
+            if delta:
+                delta *= self.weights[p]
+                for region in self.cover[p]:
+                    changed[region] = changed.get(region, 0) + delta
+        counts, planes, region_bits = (self.counts, self.old_planes, self.region_bits)
+        size = self.size
+        for region, delta in changed.items():
+            if not delta:
+                continue
+            old = counts[region]
+            new = old + delta
+            counts[region] = new
+            changed_planes = size - old ^ size - new
+            bits = region_bits[region]
+            while changed_planes:
+                bit = changed_planes & -changed_planes
+                planes[bit.bit_length() - 1] ^= bits
+                changed_planes ^= bit
+        c = self.c
+        self.stampmask = sum((1 << c * j + value for j, value in enumerate(stamp)))
+
+    def best_candidates(self):
+        planes = [0] * 6
+        for j, color in enumerate(self.stamp):
+            heavy = self.heavy_bits[j][color]
+            for plane, carry in ((0, self.target_bits[j][color] ^ heavy), (1, heavy)):
+                while carry:
+                    previous = planes[plane]
+                    planes[plane] = previous ^ carry
+                    carry &= previous
+                    plane += 1
+        carry = 0
+        for plane in range(6):
+            a, b = (planes[plane], self.old_planes[plane])
+            different = a ^ b
+            planes[plane] = different ^ carry
+            carry = a & b | different & carry
+        candidates, value = (self.all_actions, 0)
+        for plane in range(5, -1, -1):
+            hits = candidates & planes[plane]
+            if hits:
+                candidates = hits
+                value |= 1 << plane
+        return (value - self.size, candidates)
+
+def solve_weighted(n, d, c, k, initial, target, start_stamp):
+    seed = 7418729
+    for value in initial + target + start_stamp:
+        seed = (seed ^ value) * 1000003 & 4294967295
+    rng = random.Random(seed)
+    order = list(range(4 * (n - d + 1) ** 2))
+    _is = sum((a == b for a, b in zip(initial, target)))
+    best_score, answer = (_is, [])
+    limit = color_bound(initial + start_stamp, target)
+    if best_score == limit:
+        return answer
+    for restart in range(4):
+        if restart:
+            rng.shuffle(order)
+        state = WeightedState(n, d, c, initial[:], target, start_stamp[:], order[:])
+        path, seen, score = ([], set(), _is)
+        for _ in range(k):
+            seen.add(tuple(state.stamp))
+            gain, candidates = state.best_candidates()
+            if gain < 0:
+                break
+            chosen = -1
+            while candidates:
+                bit = candidates & -candidates
+                action = state.order[bit.bit_length() - 1]
+                if gain > 0 or tuple((state.grid[p] for p in state.actions[action][0])) not in seen:
+                    chosen = action
+                    break
+                candidates ^= bit
+            if chosen < 0:
+                break
+            if gain > 0:
+                seen.clear()
+            score += sum(((state.stamp[j] == target[p]) - (state.grid[p] == target[p]) for j, p in enumerate(state.actions[chosen][0])))
+            state.apply(chosen)
+            path.append(state.actions[chosen][1])
+            if score > best_score:
+                best_score, answer = (score, path[:])
+            if best_score == limit:
+                return answer
+    return answer
+
+def construct_pool(n, d, c, k, grid, target, stamp):
+    limit = color_bound(grid + stamp, target)
+    _is = sum((a == b for a, b in zip(grid, target)))
+    if _is == limit:
+        return [(limit, [])]
+    indices, codes, operations, coverage, patches = build(n, d, target)
+    width = n - d + 1
+    candidates = []
+    for search in (solve_plateau, solve_lookahead, solve_productive, solve_weighted):
+        ops = search(n, d, c, k, grid[:], target, stamp[:])
+        final, buffer = (grid[:], stamp[:])
+        for x, y, r in ops:
+            action = (x * width + y) * 4 + r
+            transition(final, buffer, indices[action])
+        matches = sum((a == b for a, b in zip(final, target)))
+        candidates.append((matches, ops))
+        if matches == limit:
+            break
+    candidates.sort(key=lambda row: row[0], reverse=True)
+    return candidates
+
+def solve_parent(n, d, c, k, grid, target, stamp):
+    pool = construct_pool(n, d, c, k, grid[:], target, stamp[:])
+    if pool[0][0] == color_bound(grid + stamp, target):
+        return pool[0][1]
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    width = n - d + 1
+    initial = grid + stamp
+    best_score, _bs = (-1, [])
+    for _, operations in pool[:4]:
+        sequence = [(x * width + y) * 4 + r for x, y, r in operations]
+        sequence = refine(n, d, k, initial, target, actions, sequence, passes=2)
+        state = initial[:]
+        for aid in sequence:
+            _st(state, n * n, actions[aid][0])
+        score = sum((a == b for a, b in zip(state, target)))
+        if score > best_score:
+            best_score, _bs = (score, sequence)
+    sequence = refine(n, d, k, initial, target, actions, _bs, passes=6, offset=2)
+    sequence = pair_sweep(n, d, k, initial, target, actions, sequence)
+    sequence = pair_repair(n, d, k, initial, target, actions, sequence)
+    sequence = refine(n, d, k, initial, target, actions, sequence, passes=2)
+    sequence = iterated_refine(n, d, k, initial, target, actions, sequence)
+    return [actions[aid][1] for aid in sequence]
+
+def clone_state(state):
+    child = object.__new__(State)
+    child.__dict__ = state.__dict__.copy()
+    child.grid = state.grid[:]
+    child.stamp = state.stamp[:]
+    child.counts = state.counts[:]
+    child.old_planes = state.old_planes[:]
+    return child
+
+def beam_actions(state, rng):
+    mask, counts = (state.stampmask, state.counts)
+    gains = [(mask & m).bit_count() - counts[i >> 2] for i, m in enumerate(state.masks)]
+    best = max(gains)
+    groups = [[], [], []]
+    for action, gain in enumerate(gains):
+        distance = best - gain
+        if distance < 3:
+            groups[distance].append(action)
+    selected = []
+    for group, limit in zip(groups, (4, 3, 1)):
+        rng.shuffle(group)
+        seen = {}
+        for action in group:
+            outgoing = tuple((state.grid[p] for p in state.actions[action][0]))
+            if seen.get(outgoing, 0) >= 2:
+                continue
+            seen[outgoing] = seen.get(outgoing, 0) + 1
+            selected.append((action, gains[action]))
+            limit -= 1
+            if limit == 0:
+                break
+    return selected
+
+def finite_beam(n, d, c, k, grid, target, stamp, width=24):
+    initial = State(n, d, c, grid[:], target, stamp[:])
+    base_score = sum((a == b for a, b in zip(grid, target)))
+    supply = [0] * c
+    wanted = [0] * c
+    for color in grid + stamp:
+        supply[color] += 1
+    for color in target:
+        wanted[color] += 1
+    upper_gain = sum((min(a, b) for a, b in zip(supply, wanted))) - base_score
+    if upper_gain <= 0:
+        return []
+    seed = 47893 + k * 1009 + n * 79 + d * 13 + c
+    for value in grid + stamp:
+        seed = seed * 131 + value & 4294967295
+    rng = random.Random(seed)
+    beam = [(initial, 0, [])]
+    best_gain, best_path = (0, [])
+    for depth in range(k):
+        children = []
+        seen_states = set()
+        for state, gain, path in beam:
+            for action, delta in beam_actions(state, rng):
+                if path and action == path[-1]:
+                    continue
+                child = clone_state(state)
+                child.apply(action)
+                signature = bytes(child.grid) + bytes(child.stamp)
+                if signature in seen_states:
+                    continue
+                seen_states.add(signature)
+                total = gain + delta
+                new_path = path + [action]
+                if total > best_gain:
+                    best_gain, best_path = (total, new_path)
+                    if best_gain == upper_gain:
+                        return [initial.actions[aid][1] for aid in best_path]
+                future = max(0, child.best()[0]) if depth + 1 < k else 0
+                priority = total * 2 + future
+                children.append((priority, total, child, new_path))
+        if not children:
+            break
+        children.sort(key=lambda item: (item[0], item[1]), reverse=True)
+        beam = []
+        carried_counts = {}
+        deferred = []
+        for priority, gain, state, path in children:
+            key = tuple(state.stamp)
+            if carried_counts.get(key, 0) >= 3:
+                deferred.append((state, gain, path))
+                continue
+            carried_counts[key] = carried_counts.get(key, 0) + 1
+            beam.append((state, gain, path))
+            if len(beam) == width:
+                break
+        if len(beam) < width:
+            beam.extend(deferred[:width - len(beam)])
+    return [initial.actions[aid][1] for aid in best_path]
+
+def exact_two(n, d, c, k, grid, target, stamp):
+    state = State(n, d, c, grid[:], target, stamp[:])
+    gain, action = state.best()
+    best_gain, best_path = (max(0, gain), [action] if gain > 0 else [])
+    if k == 1:
+        return [state.actions[aid][1] for aid in best_path]
+    ranked = [(state.gain(aid), aid) for aid in range(len(state.actions))]
+    ranked.sort(reverse=True)
+    for first_gain, first in ranked:
+        if first_gain + d * d <= best_gain:
+            break
+        state.apply(first)
+        second_gain, second = state.best()
+        total = first_gain + second_gain
+        state.apply(first)
+        if total > best_gain:
+            best_gain, best_path = (total, [first, second])
+    return [state.actions[aid][1] for aid in best_path]
+
+def construct_all(n, d, c, k, grid, target, stamp):
+    if k <= 2:
+        return exact_two(n, d, c, k, grid, target, stamp)
+    reference = solve_parent(n, d, c, k, grid[:], target, stamp[:])
+    if k > 24:
+        return reference
+    candidate = finite_beam(n, d, c, k, grid, target, stamp, width=24 if k <= 12 else 12)
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    width = n - d + 1
+    sequence = [(x * width + y) * 4 + r for x, y, r in candidate]
+    sequence = refine(n, d, k, grid + stamp, target, actions, sequence)
+    candidate = [actions[aid][1] for aid in sequence]
+    best_score, best_ops = (-1, [])
+    for operations in (reference, candidate):
+        final, buffer = (grid[:], stamp[:])
+        for x, y, r in operations:
+            transition(final, buffer, indices[(x * width + y) * 4 + r])
+        score = sum((a == b for a, b in zip(final, target)))
+        if score > best_score:
+            best_score, best_ops = (score, operations)
+    return best_ops
+
+def optimize_triple(state, first, middle, last, left, right):
+    best = _og(state, first)
+    outer = refine_trial(state, first)
+    best += _og(state, middle)
+    inner = refine_trial(state, middle)
+    best += _og(state, last)
+    refine_restore(state, inner)
+    refine_restore(state, outer)
+    answer = (first, middle, last)
+    for first in left:
+        base = _og(state, first)
+        outer = refine_trial(state, first)
+        for last in right:
+            extra = _og(state, last)
+            inner = refine_trial(state, last, wishes=True)
+            middle, gain = state.best()
+            refine_restore(state, inner)
+            total = base + extra + gain
+            if total >= best:
+                best = total
+                answer = (first, middle, last)
+        refine_restore(state, outer)
+    return answer
+
+def triple_refine(n, d, k, initial, target, actions, sequence, passes=2):
+    if k < 3:
+        return sequence
+    nn = n * n
+    limit = color_bound(initial, target)
+    size = n - d + 1
+    rng = random.Random(sum(((i + 17) * v for i, v in enumerate(initial))) + k * 1777 + 71983)
+    for iteration in range(passes):
+        sequence = sequence + [-1] * min(6, k - len(sequence))
+        final = initial[:]
+        for aid in sequence:
+            if aid >= 0:
+                _st(final, nn, actions[aid][0])
+        if sum((a == b for a, b in zip(final, target))) == limit:
+            return [aid for aid in sequence if aid >= 0]
+        order = list(range(len(actions)))
+        rng.shuffle(order)
+        state = RefineState(n, d, final, target, actions, order)
+        i = len(sequence) - 1
+        for _ in range(iteration % 3):
+            if i < 0:
+                break
+            old = sequence[i]
+            if old >= 0:
+                state.apply(old)
+            chosen, _ = state.best()
+            sequence[i] = chosen
+            if chosen >= 0:
+                state.apply(chosen, wishes=True)
+            i -= 1
+        while i >= 2:
+            first, middle, last = sequence[i - 2:i + 1]
+            for aid in (last, middle, first):
+                if aid >= 0:
+                    state.apply(aid)
+            preferred, _ = state.best()
+            pools = []
+            for old in (first, last):
+                mode = rng.randrange(3)
+                if mode == 0 and old >= 0:
+                    x, y, r = actions[old][1]
+                    x = min(size - 1, max(0, x + rng.choice((-1, 0, 1))))
+                    y = min(size - 1, max(0, y + rng.choice((-1, 0, 1))))
+                    trial = (x * size + y) * 4 + rng.randrange(4)
+                elif mode == 1:
+                    p = rng.randrange(nn)
+                    for _ in range(10):
+                        p = rng.randrange(nn)
+                        if state.wishes[p] < 6 and state.grid[p] != state.wishes[p]:
+                            break
+                    x = min(size - 1, max(0, p // n - rng.randrange(d)))
+                    y = min(size - 1, max(0, p % n - rng.randrange(d)))
+                    trial = (x * size + y) * 4 + rng.randrange(4)
+                else:
+                    trial = rng.randrange(len(actions))
+                pools.append(list(dict.fromkeys((old, -1, preferred, trial))))
+            for ending in pools[1]:
+                undo = refine_trial(state, ending, wishes=True)
+                starting, _ = state.best()
+                refine_restore(state, undo)
+                if starting not in pools[0]:
+                    pools[0].append(starting)
+            first, middle, last = optimize_triple(state, first, middle, last, *pools)
+            sequence[i - 2:i + 1] = (first, middle, last)
+            for aid in (last, middle, first):
+                if aid >= 0:
+                    state.apply(aid, wishes=True)
+            i -= 3
+        while i >= 0:
+            old = sequence[i]
+            if old >= 0:
+                state.apply(old)
+            chosen, _ = state.best()
+            sequence[i] = chosen
+            if chosen >= 0:
+                state.apply(chosen, wishes=True)
+            i -= 1
+        sequence = [aid for aid in sequence if aid >= 0]
+    return sequence
+
+def solve_original_iterated(n, d, c, k, grid, target, stamp):
+    operations = construct_all(n, d, c, k, grid[:], target, stamp[:])
+    if k <= 2:
+        return operations
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    side = n - d + 1
+    sequence = [(x * side + y) * 4 + r for x, y, r in operations]
+    sequence = triple_refine(n, d, k, grid + stamp, target, actions, sequence)
+    sequence = refine(n, d, k, grid + stamp, target, actions, sequence, passes=2)
+    return [actions[aid][1] for aid in sequence]
+
+def solve_retained_iterated(n, d, c, k, grid, target, stamp):
+    if n > 16 or k <= 2:
+        return solve_original_iterated(n, d, c, k, grid, target, stamp)
+    initial = grid + stamp
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    width = n - d + 1
+
+    def evaluate(sequence):
+        final = initial[:]
+        for aid in sequence:
+            _st(final, n * n, indices[aid])
+        return sum((a == b for a, b in zip(final, target)))
+    operations = construct(n, d, c, k, grid[:], target, stamp[:])
+    base = [(x * width + y) * 4 + r for x, y, r in operations]
+    base = refine(n, d, k, initial, target, actions, base)
+    base = pair_sweep(n, d, k, initial, target, actions, base)
+    base = pair_repair(n, d, k, initial, target, actions, base)
+    base = refine(n, d, k, initial, target, actions, base, passes=2)
+    perturbed = iterated_refine(n, d, k, initial, target, actions, base)
+    if k <= 24:
+        beam = finite_beam(n, d, c, k, grid, target, stamp, width=24 if k <= 12 else 12)
+        beam = [(x * width + y) * 4 + r for x, y, r in beam]
+        beam = refine(n, d, k, initial, target, actions, beam)
+        beam_score = evaluate(beam)
+        if beam_score > evaluate(base):
+            base = beam
+        if beam_score > evaluate(perturbed):
+            perturbed = beam
+    choices = [base]
+    if perturbed != base:
+        choices.append(perturbed)
+    best_score, best = (-1, None)
+    for candidate in choices:
+        candidate = triple_refine(n, d, k, initial, target, actions, candidate)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=2)
+        candidate = anneal_walk(n, d, k, initial, target, actions, candidate)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=2)
+        score = evaluate(candidate)
+        if score > best_score:
+            best_score, best = (score, candidate)
+    return [ops[aid] for aid in best]
+
+def solve_before_pair_annealing(n, d, c, k, grid, target, stamp):
+    reference = solve_retained_iterated(n, d, c, k, grid, target, stamp)
+    if n > 6 or k <= 24:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    width = n - d + 1
+
+    def evaluate(operations):
+        final, buffer = (grid[:], stamp[:])
+        for x, y, r in operations:
+            transition(final, buffer, indices[(x * width + y) * 4 + r])
+        return sum((a == b for a, b in zip(final, target)))
+    reference_score = evaluate(reference)
+    if reference_score == color_bound(grid + stamp, target):
+        return reference
+    candidate = finite_beam(n, d, c, min(k, 60), grid, target, stamp, width=96)
+    sequence = [(x * width + y) * 4 + r for x, y, r in candidate]
+    sequence = refine(n, d, k, grid + stamp, target, actions, sequence)
+    sequence = anneal_walk(n, d, k, grid + stamp, target, actions, sequence)
+    sequence = refine(n, d, k, grid + stamp, target, actions, sequence, passes=2)
+    candidate = [actions[aid][1] for aid in sequence]
+    return candidate if evaluate(candidate) > reference_score else reference
+
+class PairWalker:
+
+    def __init__(self, n, d, initial, target, actions, sequence, order):
+        self.sequence = sequence[:]
+        self.actions = actions
+        self.position = 0
+        self.state = RefineState(n, d, initial, target, actions, order)
+        final = initial[:]
+        for aid in sequence:
+            if aid >= 0:
+                _st(final, n * n, actions[aid][0])
+        self.score = sum((a == b for a, b in zip(final, target)))
+        for aid in reversed(sequence[2:]):
+            if aid >= 0:
+                self.state.apply(aid, wishes=True)
+        self.boundary_score = sum((x == y for x, y in zip(self.state.grid + self.state.stamp, self.state.wishes + self.state.wstamp)))
+
+    def move(self, position):
+        if position > self.position:
+            steps = range(self.position, position)
+        else:
+            steps = range(self.position - 1, position - 1, -1)
+        for i in steps:
+            a, b = (self.sequence[i], self.sequence[i + 2])
+            if a >= 0:
+                self.boundary_score += _og(self.state, a)
+                self.state.apply(a)
+            if b >= 0:
+                self.boundary_score += _og(self.state, b)
+                self.state.apply(b, wishes=True)
+        self.position = position
+
+    def propose(self, fixed, side):
+        state = self.state
+        old = self.score - self.boundary_score
+        gain = _og(state, fixed)
+        undo = refine_trial(state, fixed, wishes=bool(side))
+        other, extra = state.best()
+        refine_restore(state, undo)
+        pair = (other, fixed) if side else (fixed, other)
+        return (pair, gain + extra - old)
+
+    def accept(self, pair, delta):
+        self.sequence[self.position:self.position + 2] = pair
+        self.score += delta
+
+def anneal_walk(n, d, k, initial, target, actions, sequence, proposals=None):
+    import math
+    if k < 3:
+        return sequence
+    limit = color_bound(initial, target)
+    final = initial[:]
+    for aid in sequence:
+        if aid >= 0:
+            _st(final, n * n, actions[aid][0])
+    if sum((a == b for a, b in zip(final, target))) == limit:
+        return [aid for aid in sequence if aid >= 0]
+    rng = random.Random(sum(((i + 23) * v for i, v in enumerate(initial))) + k * 1357 + 7751)
+    order = list(range(len(actions)))
+    rng.shuffle(order)
+    sequence = sequence + [-1] * (k - len(sequence))
+    walker = PairWalker(n, d, initial, target, actions, sequence, order)
+    if walker.score == limit:
+        return [aid for aid in sequence if aid >= 0]
+    if proposals is None:
+        proposals = min(4000, max(300, 900000 // (n * n)))
+    best_score, best = (walker.score, walker.sequence[:])
+    period = max(1, proposals // 4)
+    position = rng.randrange(k - 1)
+    walker.move(position)
+    direction = 1
+    size = n - d + 1
+    for step in range(proposals):
+        if step and step % period == 0:
+            rng.shuffle(order)
+            walker = PairWalker(n, d, initial, target, actions, best, order)
+            position = rng.randrange(k - 1)
+            walker.move(position)
+        side = step % 2
+        old = walker.sequence[position + side]
+        mode = rng.randrange(5)
+        if mode == 0 and old >= 0:
+            x, y, r = actions[old][1]
+            x = min(size - 1, max(0, x + rng.choice((-2, -1, 0, 0, 1, 2))))
+            y = min(size - 1, max(0, y + rng.choice((-2, -1, 0, 0, 1, 2))))
+            fixed = (x * size + y) * 4 + rng.randrange(4)
+        elif mode == 1:
+            fixed = walker.state.best()[0]
+        elif mode == 4:
+            fixed = -1
+        else:
+            fixed = rng.randrange(len(actions))
+        pair, delta = walker.propose(fixed, side)
+        temperature = 0.4 * (1 - step % period / period) ** 2 + 0.04
+        if delta >= 0 or rng.random() < math.exp(delta / temperature):
+            walker.accept(pair, delta)
+            if walker.score >= best_score:
+                best_score, best = (walker.score, walker.sequence[:])
+                if best_score == limit:
+                    break
+        if rng.randrange(16) == 0:
+            direction = -direction
+        if not 0 <= position + direction < k - 1:
+            direction = -direction
+        position += direction
+        walker.move(position)
+    return [aid for aid in best if aid >= 0]
+
+def solve_without_binary(n, d, c, k, grid, target, stamp):
+    operations = solve_before_pair_annealing(n, d, c, k, grid[:], target, stamp[:])
+    if k <= 2 or n <= 16:
+        return operations
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    size = n - d + 1
+    sequence = [(x * size + y) * 4 + r for x, y, r in operations]
+    sequence = anneal_walk(n, d, k, grid + stamp, target, actions, sequence)
+    sequence = refine(n, d, k, grid + stamp, target, actions, sequence, passes=2)
+    return [actions[aid][1] for aid in sequence]
+
+def binary_transitions():
+    rotations = []
+    for r in range(4):
+        table = []
+        for value in range(512):
+            result = 0
+            for u in range(3):
+                for v in range(3):
+                    x, y = ((u, v), (v, 2 - u), (2 - u, 2 - v), (2 - v, u))[r]
+                    result |= (value >> u * 3 + v & 1) << x * 3 + y
+            table.append(result)
+        rotations.append(table)
+    patches = []
+    for x in range(2):
+        for y in range(2):
+            base = 4 * x + y
+            scatter = [(v & 7) << base | (v & 56) << base + 1 | (v & 448) << base + 2 for v in range(512)]
+            paint = [[scatter[v] for v in rotations[r]] for r in range(4)]
+            patches.append((base, 65535 ^ scatter[511], paint))
+
+    def expand(state):
+        board, stamp = (state & 65535, state >> 16)
+        for position, (base, mask, paint) in enumerate(patches):
+            patch = board >> base & 7 | board >> base + 1 & 56 | board >> base + 2 & 448
+            retained = board & mask
+            for rotation in range(4):
+                child = retained | paint[rotation][stamp] | rotations[-rotation & 3][patch] << 16
+                yield (position * 4 + rotation, child)
+    return expand
+
+def binary_bfs(grid, target, stamp, k):
+    initial = sum((v << i for i, v in enumerate(grid + stamp)))
+    wanted = sum((v << i for i, v in enumerate(target)))
+    if initial & 65535 == wanted:
+        return []
+    required = initial.bit_count() - wanted.bit_count()
+    if not 0 <= required <= 9:
+        return None
+    expand = binary_transitions()
+    forward = {initial: (None, None)}
+    frontier = [initial]
+    first_depth = min(3, k)
+
+    def prefix(state):
+        path = []
+        while forward[state][0] is not None:
+            state, action = forward[state]
+            path.append(action)
+        return path[::-1]
+    for _ in range(first_depth):
+        next_layer = []
+        for state in frontier:
+            for action, child in expand(state):
+                if child in forward:
+                    continue
+                forward[child] = (state, action)
+                if child & 65535 == wanted:
+                    return prefix(child)
+                next_layer.append(child)
+        frontier = next_layer
+    goals = [wanted | v << 16 for v in range(512) if v.bit_count() == required]
+    backward = {state: (None, None) for state in goals}
+    frontier = goals
+    for _ in range(min(2, k - first_depth)):
+        next_layer = []
+        for state in frontier:
+            for action, child in expand(state):
+                if child in backward:
+                    continue
+                backward[child] = (state, action)
+                if child in forward:
+                    answer = prefix(child)
+                    while backward[child][0] is not None:
+                        child, action = backward[child]
+                        answer.append(action)
+                    return answer
+                next_layer.append(child)
+        frontier = next_layer
+    return None
+
+def solve_weighted_parent(n, d, c, k, grid, target, stamp):
+    if n == 4 and d == 3 and (c == 2):
+        path = binary_bfs(grid, target, stamp, k)
+        if path is not None:
+            return [(aid // 8, aid // 4 % 2, aid % 4) for aid in path]
+    return solve_without_binary(n, d, c, k, grid, target, stamp)
+
+class WeightedRefineState:
+
+    def __init__(self, n, d, initial, target, weights, actions, order):
+        nn, dd = (n * n, d * d)
+        self.nn, self.dd = (nn, dd)
+        self.grid, self.stamp = (initial[:nn], initial[nn:])
+        self.wishes, self.wstamp = (target[:], [6] * dd)
+        self.weights, self.wstamp_weights = (weights[:], [0] * dd)
+        self.actions, self.order = (actions, order)
+        self.all_bits = (1 << len(actions)) - 1
+        key = (n, d)
+        geometry = _REFINE_GEOMETRY.get(key)
+        if geometry is None:
+            positions = [[0] * nn for _ in range(dd)]
+            region_bits = [15 << 4 * r for r in range(len(actions) // 4)]
+            regions = [actions[i][0] for i in range(0, len(actions), 4)]
+            cover = [[] for _ in range(nn)]
+            for region, patch in enumerate(regions):
+                for p in patch:
+                    cover[p].append(region)
+            for aid, (patch, _) in enumerate(actions):
+                bit = 1 << aid
+                for j, p in enumerate(patch):
+                    positions[j][p] |= bit
+            geometry = (positions, region_bits, regions, cover)
+            _REFINE_GEOMETRY[key] = geometry
+        self.positions, self.region_bits, self.regions, self.cover = geometry
+        self.values = [[0] * 7 for _ in range(dd)]
+        self.goals = [[0] * 7 for _ in range(dd)]
+        self.weight_bits = [[0] * 3 for _ in range(dd)]
+        for j in range(dd):
+            values, goals, importance = (self.values[j], self.goals[j], self.weight_bits[j])
+            for p, mask in enumerate(self.positions[j]):
+                values[self.grid[p]] |= mask
+                goals[self.wishes[p]] |= mask
+                importance[self.weights[p]] |= mask
+        self.tie_masks = [0] * len(actions).bit_length()
+        for rank, aid in enumerate(order):
+            bit = 1 << aid
+            while rank:
+                low = rank & -rank
+                self.tie_masks[low.bit_length() - 1] |= bit
+                rank ^= low
+        self.counts = [sum((self.weights[p] * (self.grid[p] == self.wishes[p]) for p in positions)) for positions in self.regions]
+        self.old_planes = [0] * 6
+        for region, count in enumerate(self.counts):
+            value = 2 * dd - count
+            for plane in range(5):
+                if value & 1 << plane:
+                    self.old_planes[plane] |= self.region_bits[region]
+
+    def apply(self, action, wishes=False):
+        changed = {}
+        positions, cover, counts = (self.positions, self.cover, self.counts)
+        if wishes:
+            grid, stamp = (self.wishes, self.wstamp)
+            weights, stamp_weights = (self.weights, self.wstamp_weights)
+            for j, p in enumerate(self.actions[action][0]):
+                old, new = (grid[p], stamp[j])
+                old_weight, new_weight = (weights[p], stamp_weights[j])
+                if old != new:
+                    for ref in range(self.dd):
+                        mask = positions[ref][p]
+                        self.goals[ref][old] ^= mask
+                        self.goals[ref][new] ^= mask
+                if old_weight != new_weight:
+                    for ref in range(self.dd):
+                        mask = positions[ref][p]
+                        self.weight_bits[ref][old_weight] ^= mask
+                        self.weight_bits[ref][new_weight] ^= mask
+                actual = self.grid[p]
+                delta = new_weight * (actual == new) - old_weight * (actual == old)
+                if delta:
+                    for region in cover[p]:
+                        changed[region] = changed.get(region, 0) + delta
+                stamp[j], grid[p] = (old, new)
+                stamp_weights[j], weights[p] = (old_weight, new_weight)
+        else:
+            grid, stamp = (self.grid, self.stamp)
+            for j, p in enumerate(self.actions[action][0]):
+                old, new = (grid[p], stamp[j])
+                if old == new:
+                    continue
+                for ref in range(self.dd):
+                    mask = positions[ref][p]
+                    self.values[ref][old] ^= mask
+                    self.values[ref][new] ^= mask
+                delta = self.weights[p] * ((new == self.wishes[p]) - (old == self.wishes[p]))
+                if delta:
+                    for region in cover[p]:
+                        changed[region] = changed.get(region, 0) + delta
+                stamp[j], grid[p] = (old, new)
+        for region, delta in changed.items():
+            if not delta:
+                continue
+            previous = counts[region]
+            counts[region] += delta
+            change = 2 * self.dd - previous ^ 2 * self.dd - counts[region]
+            while change:
+                bit = change & -change
+                self.old_planes[bit.bit_length() - 1] ^= self.region_bits[region]
+                change ^= bit
+
+    def best(self):
+        planes = [0] * 6
+        for j in range(self.dd):
+            match = self.goals[j][self.stamp[j]]
+            parts = [(match & self.weight_bits[j][1], 0), (match & self.weight_bits[j][2], 1)]
+            weight = self.wstamp_weights[j]
+            if weight:
+                parts.append((self.values[j][self.wstamp[j]], weight - 1))
+            for carry, plane in parts:
+                while carry:
+                    old = planes[plane]
+                    planes[plane] = old ^ carry
+                    carry &= old
+                    plane += 1
+        carry = 0
+        for plane in range(6):
+            a, b = (planes[plane], self.old_planes[plane])
+            different = a ^ b
+            planes[plane] = different ^ carry
+            carry = a & b | different & carry
+        candidates, value = (self.all_bits, 0)
+        for plane in range(5, -1, -1):
+            hits = candidates & planes[plane]
+            if hits:
+                candidates = hits
+                value |= 1 << plane
+        stamp_loss = sum((w * (a == b) for w, a, b in zip(self.wstamp_weights, self.stamp, self.wstamp)))
+        gain = value - 2 * self.dd - stamp_loss
+        if gain < 0:
+            return (-1, 0)
+        for mask in reversed(self.tie_masks):
+            if not candidates & candidates - 1:
+                break
+            preferred = candidates & ~mask
+            if preferred:
+                candidates = preferred
+        return ((candidates & -candidates).bit_length() - 1, gain)
+
+def weighted_refine(n, d, k, initial, target, weights, actions, sequence, passes=1):
+    nn, dd = (n * n, d * d)
+    seed = sum(((i + 1) * v for i, v in enumerate(initial))) + k * 131
+    seed += sum(((i + 7) * weight for i, weight in enumerate(weights))) * 17
+    rng = random.Random(seed)
+    for iteration in range(passes):
+        sequence = sequence + [-1] * min(8, k - len(sequence))
+        final = initial[:]
+        for action in sequence:
+            if action >= 0:
+                _st(final, nn, actions[action][0])
+        if all((a == b for a, b in zip(final, target))):
+            return [action for action in sequence if action >= 0]
+        order = list(range(len(actions)))
+        rng.shuffle(order)
+        state = WeightedRefineState(n, d, final, target, weights, actions, order)
+        for i in range(len(sequence) - 1, -1, -1):
+            old = sequence[i]
+            if old >= 0:
+                state.apply(old)
+            chosen, _ = state.best()
+            sequence[i] = chosen
+            if chosen >= 0:
+                state.apply(chosen, wishes=True)
+        sequence = [action for action in sequence if action >= 0]
+    return sequence
+
+def solve_before_triple_walking(n, d, c, k, grid, target, stamp):
+    reference = solve_weighted_parent(n, d, c, k, grid[:], target, stamp[:])
+    if k <= 2:
+        return reference
+    nn, dd = (n * n, d * d)
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    side = n - d + 1
+    sequence = [(x * side + y) * 4 + r for x, y, r in reference]
+    initial, final = (grid + stamp, grid + stamp)
+    for aid in sequence:
+        _st(final, nn, indices[aid])
+    best_score = sum((a == b for a, b in zip(final, target)))
+    _bs = sequence
+    supply, wanted = ([0] * c, [0] * c)
+    for color in initial:
+        supply[color] += 1
+    for color in target:
+        wanted[color] += 1
+    upper = sum((min(a, b) for a, b in zip(supply, wanted)))
+    if best_score == upper:
+        return reference
+    coverage = [min(p, n - d) - max(0, p - d + 1) + 1 for p in range(n)]
+    maximum = max(coverage) ** 2
+    boundary = [1 + (coverage[row] * coverage[col] < maximum) for row in range(n) for col in range(n)]
+    unresolved = [1 + (a != b) for a, b in zip(final, target)]
+    seen_weights = set()
+    for weights in (unresolved, boundary):
+        signature = tuple(weights)
+        if min(weights) == max(weights) or signature in seen_weights:
+            continue
+        seen_weights.add(signature)
+        candidate = weighted_refine(n, d, k, initial, target, weights, actions, sequence)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=2)
+        final = initial[:]
+        for aid in candidate:
+            _st(final, nn, indices[aid])
+        score = sum((a == b for a, b in zip(final, target)))
+        if score > best_score:
+            best_score, _bs = (score, candidate)
+            if score == upper:
+                break
+    return [ops[aid] for aid in _bs]
+
+class TripleWalker:
+
+    def __init__(self, n, d, initial, target, actions, sequence, order):
+        self.sequence = sequence[:]
+        self.actions = actions
+        self.position = 0
+        self.state = RefineState(n, d, initial, target, actions, order)
+        final = initial[:]
+        for aid in sequence:
+            if aid >= 0:
+                _st(final, n * n, actions[aid][0])
+        self.score = sum((a == b for a, b in zip(final, target)))
+        for aid in reversed(sequence[3:]):
+            if aid >= 0:
+                self.state.apply(aid, wishes=True)
+        self.boundary_score = sum((x == y for x, y in zip(self.state.grid + self.state.stamp, self.state.wishes + self.state.wstamp)))
+
+    def move(self, position):
+        if position > self.position:
+            steps = range(self.position, position)
+        else:
+            steps = range(self.position - 1, position - 1, -1)
+        for i in steps:
+            a, b = (self.sequence[i], self.sequence[i + 3])
+            if a >= 0:
+                self.boundary_score += _og(self.state, a)
+                self.state.apply(a)
+            if b >= 0:
+                self.boundary_score += _og(self.state, b)
+                self.state.apply(b, wishes=True)
+        self.position = position
+
+    def informed(self, side):
+        state = self.state
+        opposite = self.sequence[self.position if side else self.position + 2]
+        wishes = not bool(side)
+        undo = refine_trial(state, opposite, wishes=wishes)
+        fixed, _ = state.best()
+        refine_restore(state, undo)
+        return fixed
+
+    def propose(self, first, last):
+        state = self.state
+        old = self.score - self.boundary_score
+        gain = _og(state, first)
+        outer = refine_trial(state, first)
+        gain += _og(state, last)
+        inner = refine_trial(state, last, wishes=True)
+        middle, extra = state.best()
+        refine_restore(state, inner)
+        refine_restore(state, outer)
+        return ((first, middle, last), gain + extra - old)
+
+    def accept(self, triple, delta):
+        self.sequence[self.position:self.position + 3] = triple
+        self.score += delta
+
+def anneal_triples(n, d, k, initial, target, actions, sequence, proposals=None):
+    import math
+    if k < 3:
+        return sequence
+    limit = color_bound(initial, target)
+    final = initial[:]
+    for aid in sequence:
+        if aid >= 0:
+            _st(final, n * n, actions[aid][0])
+    if sum((a == b for a, b in zip(final, target))) == limit:
+        return [aid for aid in sequence if aid >= 0]
+    rng = random.Random(sum(((i + 31) * v for i, v in enumerate(initial))) + k * 1123 + 19271)
+    order = list(range(len(actions)))
+    rng.shuffle(order)
+    sequence = sequence + [-1] * (k - len(sequence))
+    walker = TripleWalker(n, d, initial, target, actions, sequence, order)
+    if proposals is None:
+        proposals = min(6000, max(600, 1350000 // (n * n)))
+    best_score, best = (walker.score, walker.sequence[:])
+    period = max(1, proposals // 3)
+    position = rng.randrange(k - 2)
+    walker.move(position)
+    direction = 1
+    size = n - d + 1
+    for step in range(proposals):
+        if step and step % period == 0:
+            rng.shuffle(order)
+            walker = TripleWalker(n, d, initial, target, actions, best, order)
+            position = rng.randrange(k - 2)
+            walker.move(position)
+        first, last = (walker.sequence[position], walker.sequence[position + 2])
+        side = step % 2
+        old = last if side else first
+        mode = rng.randrange(5)
+        if mode == 0 and old >= 0:
+            x, y, r = actions[old][1]
+            x = min(size - 1, max(0, x + rng.choice((-2, -1, 0, 0, 1, 2))))
+            y = min(size - 1, max(0, y + rng.choice((-2, -1, 0, 0, 1, 2))))
+            fixed = (x * size + y) * 4 + rng.randrange(4)
+        elif mode == 1:
+            fixed = walker.informed(side)
+        elif mode == 4:
+            fixed = -1
+        else:
+            fixed = rng.randrange(len(actions))
+        if side:
+            last = fixed
+        else:
+            first = fixed
+        triple, delta = walker.propose(first, last)
+        temperature = 0.4 * (1 - step % period / period) ** 2 + 0.04
+        if delta >= 0 or rng.random() < math.exp(delta / temperature):
+            walker.accept(triple, delta)
+            if walker.score >= best_score:
+                best_score, best = (walker.score, walker.sequence[:])
+                if best_score == limit:
+                    break
+        if k > 3:
+            if rng.randrange(16) == 0:
+                direction = -direction
+            if not 0 <= position + direction < k - 2:
+                direction = -direction
+            position += direction
+            walker.move(position)
+    return [aid for aid in best if aid >= 0]
+
+def solve_without_wildcard(n, d, c, k, grid, target, stamp):
+    operations = solve_before_triple_walking(n, d, c, k, grid[:], target, stamp[:])
+    if k <= 2:
+        return operations
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    size = n - d + 1
+    sequence = [(x * size + y) * 4 + r for x, y, r in operations]
+    sequence = anneal_triples(n, d, k, grid + stamp, target, actions, sequence)
+    sequence = refine(n, d, k, grid + stamp, target, actions, sequence, passes=2)
+    return [actions[aid][1] for aid in sequence]
+
+def packed_transitions():
+    rotations = []
+    for r in range(4):
+        rows = []
+        for u in range(3):
+            table = []
+            for value in range(512):
+                result = 0
+                for v in range(3):
+                    x, y = ((u, v), (v, 2 - u), (2 - u, 2 - v), (2 - v, u))[r]
+                    result |= (value >> 3 * v & 7) << 3 * (x * 3 + y)
+                table.append(result)
+            rows.append(table)
+        rotations.append(rows)
+    board_mask = (1 << 48) - 1
+    patches = []
+    for x in range(2):
+        for y in range(2):
+            shift = 3 * (4 * x + y)
+            mask = board_mask ^ (511 | 511 << 12 | 511 << 24) << shift
+            patches.append((shift, mask))
+
+    def rotate(value, r):
+        tables = rotations[r]
+        return tables[0][value & 511] | tables[1][value >> 9 & 511] | tables[2][value >> 18]
+
+    def expand(state):
+        board, stamp = (state & board_mask, state >> 48)
+        rotated = [rotate(stamp, r) for r in range(4)]
+        scatter = [v & 511 | (v & 261632) << 3 | (v & 133955584) << 6 for v in rotated]
+        for p, (shift, mask) in enumerate(patches):
+            shifted = board >> shift
+            patch = shifted & 511 | shifted >> 3 & 261632 | shifted >> 6 & 133955584
+            retained = board & mask
+            for r in range(4):
+                child = retained | scatter[r] << shift | rotate(patch, -r & 3) << 48
+                yield (p * 4 + r, child)
+    return expand
+_PACKED_EXPAND = None
+_WILDCARD_BACKWARD = None
+
+def wildcard_backward_records(expand, wanted):
+    goal = wanted | (1 << 27) - 1 << 48
+    backward = {goal: b''}
+    frontier = [goal]
+    for depth in range(1, 5):
+        next_layer = []
+        for state in frontier:
+            path = backward[state]
+            for aid, child in expand(state):
+                if child in backward:
+                    continue
+                new_path = path + bytes((aid,))
+                backward[child] = new_path
+                next_layer.append(child)
+                wishes = child
+                constraints = bytearray()
+                for position in range(25):
+                    color = wishes & 7
+                    wishes >>= 3
+                    if color != 7:
+                        constraints.append(position * 6 + color)
+                yield (depth, new_path, bytes(constraints))
+        frontier = next_layer
+
+def wildcard_finish(grid, target, stamp, k, depth=8):
+    global _PACKED_EXPAND, _WILDCARD_BACKWARD
+    if grid == target:
+        return []
+    if color_bound(grid + stamp, target) < 16:
+        return None
+    if _PACKED_EXPAND is None:
+        _PACKED_EXPAND = packed_transitions()
+    expand = _PACKED_EXPAND
+    initial = sum((v << 3 * i for i, v in enumerate(grid + stamp)))
+    wanted = sum((v << 3 * i for i, v in enumerate(target)))
+    board_mask = (1 << 48) - 1
+    forward = {initial: b''}
+    frontier = [initial]
+    forward_depth = min(4, k, depth)
+    for _ in range(forward_depth):
+        next_layer = []
+        for state in frontier:
+            path = forward[state]
+            for aid, child in expand(state):
+                if child in forward:
+                    continue
+                new_path = path + bytes((aid,))
+                forward[child] = new_path
+                if child & board_mask == wanted:
+                    return list(new_path)
+                next_layer.append(child)
+        frontier = next_layer
+    backward_depth = min(4, k - forward_depth, depth - forward_depth)
+    if backward_depth <= 0:
+        return None
+    states = list(forward)
+    byte_count = (len(states) + 7) // 8
+    buffers = [[bytearray(byte_count) for _ in range(6)] for _ in range(25)]
+    for index, state in enumerate(states):
+        offset, bit = (index >> 3, 1 << (index & 7))
+        for row in buffers:
+            row[state & 7][offset] |= bit
+            state >>= 3
+    indexes = [int.from_bytes(buf, 'little') for row in buffers for buf in row]
+    counts = [bits.bit_count() for bits in indexes]
+    counts_get = counts.__getitem__
+    all_bits = (1 << len(states)) - 1
+    if _WILDCARD_BACKWARD is None or _WILDCARD_BACKWARD[0] != wanted:
+        _WILDCARD_BACKWARD = [wanted, [], wildcard_backward_records(expand, wanted)]
+    cache = _WILDCARD_BACKWARD
+    records = cache[1]
+    cursor = 0
+    while True:
+        if cursor == len(records):
+            if cache[2] is None:
+                break
+            record = next(cache[2], None)
+            if record is None:
+                cache[2] = None
+                break
+            records.append(record)
+        level, new_path, encoded = records[cursor]
+        if level > backward_depth:
+            break
+        cursor += 1
+        hits = all_bits
+        for identifier in sorted(encoded, key=counts_get):
+            hits &= indexes[identifier]
+            if not hits:
+                break
+        if hits:
+            match = states[(hits & -hits).bit_length() - 1]
+            return list(forward[match] + new_path[::-1])
+    return None
+
+def solve_without_suffix_finish(n, d, c, k, grid, target, stamp):
+    reference = solve_without_wildcard(n, d, c, k, grid, target, stamp)
+    if n != 4 or d != 3 or len(reference) >= k:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    board, buffer = (grid[:], stamp[:])
+    for x, y, r in reference:
+        transition(board, buffer, indices[(x * 2 + y) * 4 + r])
+    tail = wildcard_finish(board, target, buffer, k - len(reference))
+    return reference + [ops[aid] for aid in tail] if tail is not None else reference
+
+def solve_forward_parent(n, d, c, k, grid, target, stamp):
+    reference = solve_without_suffix_finish(n, d, c, k, grid, target, stamp)
+    if n != 4 or d != 3 or k < 6 or (color_bound(grid + stamp, target) < 16):
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    board, buffer = (grid[:], stamp[:])
+    for x, y, r in reference:
+        transition(board, buffer, indices[(x * 2 + y) * 4 + r])
+    if board == target:
+        return reference
+    tried = set()
+    for remove in (2, 4, 8, 12):
+        length = max(0, len(reference) - remove)
+        if length in tried:
+            continue
+        tried.add(length)
+        board, buffer = (grid[:], stamp[:])
+        for x, y, r in reference[:length]:
+            transition(board, buffer, indices[(x * 2 + y) * 4 + r])
+        tail = wildcard_finish(board, target, buffer, k - length)
+        if tail is not None:
+            return reference[:length] + [ops[aid] for aid in tail]
+    return reference
+
+def forward_sweep(n, d, initial, target, actions, sequence, order):
+    nn = n * n
+    wishes = target + [6] * (d * d)
+    for old in reversed(sequence):
+        if old >= 0:
+            _st(wishes, nn, actions[old][0])
+    state = RefineState(n, d, initial, wishes[:nn], actions, order)
+    state.wstamp = wishes[nn:]
+    result = sequence[:]
+    for i, old in enumerate(sequence):
+        if old >= 0:
+            state.apply(old, wishes=True)
+        chosen, _ = state.best()
+        result[i] = chosen
+        if chosen >= 0:
+            state.apply(chosen)
+    return result
+
+def forward_refine(n, d, k, initial, target, actions, sequence, passes=1, seed_offset=0):
+    nn = n * n
+    limit = color_bound(initial, target)
+    seed = sum(((i + 1) * v for i, v in enumerate(initial))) + k * 131 + 1000003 + seed_offset
+    rng = random.Random(seed)
+    sequence = [aid for aid in sequence if aid >= 0]
+    for iteration in range(passes):
+        final = initial[:]
+        for aid in sequence:
+            _st(final, nn, actions[aid][0])
+        if sum((a == b for a, b in zip(final, target))) == limit:
+            return sequence
+        padded = sequence + [-1] * min(8, k - len(sequence))
+        order = list(range(len(actions)))
+        rng.shuffle(order)
+        sequence = forward_sweep(n, d, initial, target, actions, padded, order)
+        sequence = [aid for aid in sequence if aid >= 0]
+    return sequence
+
+def solve_without_late_beam(n, d, c, k, grid, target, stamp):
+    reference = solve_forward_parent(n, d, c, k, grid[:], target, stamp[:])
+    if k <= 2:
+        return reference
+    nn = n * n
+    initial = grid + stamp
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    side = n - d + 1
+    candidate = [(x * side + y) * 4 + r for x, y, r in reference]
+    final = initial[:]
+    for aid in candidate:
+        _st(final, nn, indices[aid])
+    best_score = sum((a == b for a, b in zip(final, target)))
+    limit = color_bound(initial, target)
+    if best_score == limit:
+        return reference
+    _bs = candidate
+    for iteration in range(2):
+        candidate = forward_refine(n, d, k, initial, target, actions, candidate, seed_offset=iteration * 104729)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=1, seed_offset=3301 + iteration * 7919)
+        final = initial[:]
+        for aid in candidate:
+            _st(final, nn, indices[aid])
+        score = sum((a == b for a, b in zip(final, target)))
+        if score > best_score:
+            best_score, _bs = (score, candidate)
+            if score == limit:
+                break
+    return [ops[aid] for aid in _bs]
+
+def packed3_transitions(n):
+    rotations = []
+    for r in range(4):
+        tables = []
+        for u in range(3):
+            row = []
+            for value in range(512):
+                output = 0
+                for v in range(3):
+                    x, y = ((u, v), (v, 2 - u), (2 - u, 2 - v), (2 - v, u))[r]
+                    output |= (value >> 3 * v & 7) << 3 * (3 * x + y)
+                row.append(output)
+            tables.append(row)
+        rotations.append(tables)
+    shift_stamp = 3 * n * n
+    board_mask = (1 << shift_stamp) - 1
+    stride = 3 * n
+    patches = []
+    for x in range(n - 2):
+        for y in range(n - 2):
+            shift = 3 * (n * x + y)
+            mask = board_mask ^ (511 | 511 << stride | 511 << 2 * stride) << shift
+            patches.append((shift, mask))
+
+    def rotate(value, r):
+        tables = rotations[r]
+        return tables[0][value & 511] | tables[1][value >> 9 & 511] | tables[2][value >> 18]
+
+    def expand(state):
+        board, stamp = (state & board_mask, state >> shift_stamp)
+        rotated = [rotate(stamp, r) for r in range(4)]
+        scatter = [v & 511 | (v >> 9 & 511) << stride | v >> 18 << 2 * stride for v in rotated]
+        for p, (shift, mask) in enumerate(patches):
+            shifted = board >> shift
+            patch = shifted & 511 | (shifted >> stride & 511) << 9 | (shifted >> 2 * stride & 511) << 18
+            retained = board & mask
+            for r in range(4):
+                yield (4 * p + r, retained | scatter[r] << shift | rotate(patch, -r & 3) << shift_stamp)
+    return expand
+
+def late_beam_finish(n, grid, target, stamp, k):
+    if k <= 0:
+        return None
+    nn = n * n
+    _is = sum((a == b for a, b in zip(grid, target)))
+    if _is == color_bound(grid + stamp, target):
+        return None
+    expand = packed3_transitions(n)
+    initial = sum((v << 3 * i for i, v in enumerate(grid + stamp)))
+    wanted = sum((v << 3 * i for i, v in enumerate(target)))
+    comparison_mask = sum((1 << 3 * i for i in range(nn)))
+    rng = random.Random(initial + k * 997)
+    import heapq
+    frontier = [(initial, b'')]
+    visited = {initial}
+    for depth in range(min(6, k)):
+        candidates = {}
+        for state, path in frontier:
+            for aid, child in expand(state):
+                if child in visited or child in candidates:
+                    continue
+                new_path = path + bytes((aid,))
+                diff = child ^ wanted
+                score = nn - ((diff | diff >> 1 | diff >> 2) & comparison_mask).bit_count()
+                if score > _is:
+                    return list(new_path)
+                candidates[child] = (score, rng.getrandbits(32), new_path)
+        if not candidates:
+            break
+        selected = heapq.nlargest(256, candidates, key=candidates.get)
+        frontier = [(state, candidates[state][2]) for state in selected]
+        visited.update(selected)
+    return None
+
+def solve_without_hot_restart(n, d, c, k, grid, target, stamp):
+    reference = solve_without_late_beam(n, d, c, k, grid, target, stamp)
+    if 5 <= n <= 9 and d == 3:
+        early = runtime_early_bound(n, d, k, grid, target, stamp, reference)
+        if early is not None:
+            return early
+    if not 5 <= n <= 9 or d != 3 or len(reference) >= k:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    board, buffer = (grid[:], stamp[:])
+    width = n - d + 1
+    for x, y, r in reference:
+        transition(board, buffer, indices[(x * width + y) * 4 + r])
+    missing = sum((a != b for a, b in zip(board, target)))
+    if not 1 <= missing <= 8:
+        return reference
+    candidate = reference[:]
+    for _ in range(4):
+        tail = late_beam_finish(n, board, target, buffer, k - len(candidate))
+        if tail is None:
+            break
+        for aid in tail:
+            transition(board, buffer, indices[aid])
+            candidate.append(ops[aid])
+    return candidate
+
+def anneal_hot_triples(n, d, k, initial, target, actions, sequence, proposals=None):
+    import math
+    if k < 3:
+        return sequence
+    limit = color_bound(initial, target)
+    final = initial[:]
+    for aid in sequence:
+        if aid >= 0:
+            _st(final, n * n, actions[aid][0])
+    if sum((a == b for a, b in zip(final, target))) == limit:
+        return [aid for aid in sequence if aid >= 0]
+    rng = random.Random(sum(((i + 67) * v for i, v in enumerate(initial))) + k * 1559 + 925713)
+    order = list(range(len(actions)))
+    rng.shuffle(order)
+    sequence = sequence + [-1] * (k - len(sequence))
+    walker = TripleWalker(n, d, initial, target, actions, sequence, order)
+    if proposals is None:
+        proposals = min(3000, max(300, 675000 // (n * n)))
+    best_score, best = (walker.score, walker.sequence[:])
+    period = max(1, proposals // 3)
+    position = rng.randrange(k - 2)
+    walker.move(position)
+    direction = 1
+    size = n - d + 1
+    for step in range(proposals):
+        if step and step % period == 0:
+            rng.shuffle(order)
+            walker = TripleWalker(n, d, initial, target, actions, best, order)
+            position = rng.randrange(k - 2)
+            walker.move(position)
+        first, last = (walker.sequence[position], walker.sequence[position + 2])
+        side = step % 2
+        old = last if side else first
+        mode = rng.randrange(5)
+        if mode == 0 and old >= 0:
+            x, y, r = actions[old][1]
+            x = min(size - 1, max(0, x + rng.choice((-2, -1, 0, 0, 1, 2))))
+            y = min(size - 1, max(0, y + rng.choice((-2, -1, 0, 0, 1, 2))))
+            fixed = (x * size + y) * 4 + rng.randrange(4)
+        elif mode == 1:
+            fixed = walker.informed(side)
+        elif mode == 4:
+            fixed = -1
+        else:
+            fixed = rng.randrange(len(actions))
+        if side:
+            last = fixed
+        else:
+            first = fixed
+        triple, delta = walker.propose(first, last)
+        temperature = 0.86 * (1 - step % period / period) ** 2 + 0.04
+        if delta >= 0 or rng.random() < math.exp(delta / temperature):
+            walker.accept(triple, delta)
+            if walker.score >= best_score:
+                best_score, best = (walker.score, walker.sequence[:])
+                if best_score == limit:
+                    break
+        if k > 3:
+            if rng.randrange(16) == 0:
+                direction = -direction
+            if not 0 <= position + direction < k - 2:
+                direction = -direction
+            position += direction
+            walker.move(position)
+    return [aid for aid in best if aid >= 0]
+
+def hot_triple_repair(n, d, k, initial, target, actions, sequence, proposals=None):
+    if k < 3:
+        return sequence
+    final = initial[:]
+    for aid in sequence:
+        if aid >= 0:
+            _st(final, n * n, actions[aid][0])
+    parent_score = sum((a == b for a, b in zip(final, target)))
+    if parent_score == color_bound(initial, target):
+        return sequence
+    candidate = anneal_hot_triples(n, d, k, initial, target, actions, sequence, proposals)
+    candidate = refine(n, d, k, initial, target, actions, candidate, passes=2)
+    final = initial[:]
+    for aid in candidate:
+        if aid >= 0:
+            _st(final, n * n, actions[aid][0])
+    if sum((a == b for a, b in zip(final, target))) > parent_score:
+        return candidate
+    return sequence
+
+def solve_without_commutator(n, d, c, k, grid, target, stamp):
+    reference = solve_without_hot_restart(n, d, c, k, grid[:], target, stamp[:])
+    if k < 3:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    width = n - d + 1
+    sequence = [(x * width + y) * 4 + r for x, y, r in reference]
+    found = hot_triple_repair(n, d, k, grid + stamp, target, actions, sequence)
+    if found == sequence:
+        return reference
+    return [ops[aid] for aid in found if aid >= 0]
+
+def commutator_word_gain(grid, target, stamp, indices, word, touched):
+    before = sum((grid[p] == target[p] for p in touched))
+    for aid in word:
+        transition(grid, stamp, indices[aid])
+    after = sum((grid[p] == target[p] for p in touched))
+    for aid in reversed(word):
+        transition(grid, stamp, indices[aid])
+    return after - before
+
+def commutator_tail(n, d, grid, target, stamp, indices, seed, pair_limit=20000):
+    if pair_limit <= 0:
+        return None
+    width = n - d + 1
+    missing = [p for p in range(n * n) if grid[p] != target[p]]
+    if not missing:
+        return None
+    initial = n * n - len(missing)
+    possible = color_bound(grid + stamp, target) - initial
+    if possible <= 0:
+        return None
+    focused = set()
+    for p in missing:
+        x, y = divmod(p, n)
+        for row in range(max(0, x - d + 1), min(x, width - 1) + 1):
+            for col in range(max(0, y - d + 1), min(y, width - 1) + 1):
+                base = (row * width + col) * 4
+                focused.update(range(base, base + 4))
+    firsts = sorted(focused)
+    rng = random.Random(seed)
+    rng.shuffle(firsts)
+    best_gain = 0
+    best_word = None
+    examined = 0
+    seen = set()
+    touched_cache = {}
+    for first in firsts:
+        row, col = divmod(first // 4, width)
+        seconds = [(x * width + y) * 4 + r for x in range(max(0, row - d + 1), min(width, row + d)) for y in range(max(0, col - d + 1), min(width, col + d)) for r in range(4)]
+        rng.shuffle(seconds)
+        for second in seconds:
+            if first == second:
+                continue
+            pair = (min(first, second), max(first, second))
+            if pair in seen:
+                continue
+            if examined >= pair_limit:
+                return best_word
+            seen.add(pair)
+            examined += 1
+            regions = (min(first // 4, second // 4), max(first // 4, second // 4))
+            touched = touched_cache.get(regions)
+            if touched is None:
+                touched = tuple(sorted(set(indices[first]) | set(indices[second])))
+                touched_cache[regions] = touched
+            for left, right in ((first, second), (second, first)):
+                word = (left, right, left, right)
+                gain = commutator_word_gain(grid, target, stamp, indices, word, touched)
+                if gain > best_gain:
+                    best_gain, best_word = (gain, word)
+                    if best_gain == possible:
+                        return best_word
+    return best_word
+
+def solve_four_parent(n, d, c, k, grid, target, stamp):
+    reference = solve_without_commutator(n, d, c, k, grid, target, stamp)
+    if n > 16 or k - len(reference) < 4:
+        return reference
+    indices, _, operations, _, _ = build(n, d, target)
+    width = n - d + 1
+    board, buffer = (grid[:], stamp[:])
+    for x, y, r in reference:
+        transition(board, buffer, indices[(x * width + y) * 4 + r])
+    matches = sum((a == b for a, b in zip(board, target)))
+    if not 1 <= n * n - matches <= 12 or matches >= color_bound(grid + stamp, target):
+        return reference
+    seed = sum(((i + 41) * v for i, v in enumerate(grid + target + stamp))) + n * 1009 + d * 9176 + k * 131
+    word = commutator_tail(n, d, board, target, buffer, indices, seed)
+    if word is None:
+        return reference
+    return reference + [operations[aid] for aid in word]
+
+class FourWindowWalker:
+
+    def __init__(self, n, d, initial, target, actions, sequence, order):
+        self.sequence = sequence[:]
+        self.actions = actions
+        self.position = 0
+        nn = n * n
+        final = initial[:]
+        for aid in sequence:
+            if aid >= 0:
+                _st(final, nn, actions[aid][0])
+        self.score = sum((a == b for a, b in zip(final, target)))
+        wishes = target + [6] * (d * d)
+        for aid in reversed(sequence[4:]):
+            if aid >= 0:
+                _st(wishes, nn, actions[aid][0])
+        self.state = RefineState(n, d, initial, wishes[:nn], actions, order)
+        self.state.wstamp = wishes[nn:]
+        self.boundary_score = sum((a == b for a, b in zip(initial, wishes)))
+
+    def move(self, position):
+        if position > self.position:
+            steps = range(self.position, position)
+        else:
+            steps = range(self.position - 1, position - 1, -1)
+        for i in steps:
+            a, b = (self.sequence[i], self.sequence[i + 4])
+            if a >= 0:
+                self.boundary_score += _og(self.state, a)
+                self.state.apply(a)
+            if b >= 0:
+                self.boundary_score += _og(self.state, b)
+                self.state.apply(b, wishes=True)
+        self.position = position
+
+    def propose(self, first, last, candidates):
+        state = self.state
+        old = self.score - self.boundary_score
+        gain = _og(state, first)
+        outer = refine_trial(state, first)
+        gain += _og(state, last)
+        inner = refine_trial(state, last, wishes=True)
+        second, third = optimize_pair(state, self.sequence[self.position + 1], self.sequence[self.position + 2], candidates)
+        gain += _og(state, second)
+        middle = refine_trial(state, second)
+        gain += _og(state, third)
+        refine_restore(state, middle)
+        refine_restore(state, inner)
+        refine_restore(state, outer)
+        return ((first, second, third, last), gain - old)
+
+    def accept(self, window, delta):
+        self.sequence[self.position:self.position + 4] = window
+        self.score += delta
+
+def repair_four_windows(n, d, k, initial, target, actions, sequence, proposals=None):
+    import math
+    if k < 4:
+        return sequence
+    padded = sequence + [-1] * min(8, k - len(sequence))
+    rng = random.Random(sum(((i + 43) * v for i, v in enumerate(initial))) + k * 1733 + 74821)
+    order = list(range(len(actions)))
+    rng.shuffle(order)
+    walker = FourWindowWalker(n, d, initial, target, actions, padded, order)
+    limit = color_bound(initial, target)
+    if walker.score == limit:
+        return sequence
+    if proposals is None:
+        proposals = min(1800, max(120, 180000 // (n * n)))
+    best_score, best = (walker.score, walker.sequence[:])
+    size = n - d + 1
+    length = len(padded)
+    position = rng.randrange(length - 3)
+    walker.move(position)
+    direction = 1
+    for step in range(proposals):
+        first, last = (walker.sequence[position], walker.sequence[position + 3])
+        side = step % 2
+        old = last if side else first
+        mode = rng.randrange(5)
+        if mode == 0 and old >= 0:
+            x, y, r = actions[old][1]
+            x = min(size - 1, max(0, x + rng.choice((-1, 0, 1))))
+            y = min(size - 1, max(0, y + rng.choice((-1, 0, 1))))
+            fixed = (x * size + y) * 4 + rng.randrange(4)
+        elif mode == 1:
+            state = walker.state
+            p = rng.randrange(n * n)
+            for _ in range(10):
+                p = rng.randrange(n * n)
+                if state.wishes[p] < 6 and state.grid[p] != state.wishes[p]:
+                    break
+            x = min(size - 1, max(0, p // n - rng.randrange(d)))
+            y = min(size - 1, max(0, p % n - rng.randrange(d)))
+            fixed = (x * size + y) * 4 + rng.randrange(4)
+        elif mode == 4:
+            fixed = -1
+        else:
+            fixed = rng.randrange(len(actions))
+        if side:
+            last = fixed
+        else:
+            first = fixed
+        if step % 11 == 10:
+            if side:
+                first = rng.randrange(len(actions))
+            else:
+                last = rng.randrange(len(actions))
+        candidates = [(walker.sequence[position + 1], 0), (walker.sequence[position + 2], 1), (-1, 0), (-1, 1), (rng.randrange(len(actions)), rng.randrange(2))]
+        window, delta = walker.propose(first, last, candidates)
+        temperature = 0.04 + 0.76 * (1 - step / max(1, proposals - 1)) ** 2
+        if delta >= 0 or rng.random() < math.exp(delta / temperature):
+            walker.accept(window, delta)
+            if walker.score >= best_score:
+                best_score, best = (walker.score, walker.sequence[:])
+                if best_score == limit:
+                    break
+        if length > 4:
+            if rng.randrange(16) == 0:
+                direction = -direction
+            if not 0 <= position + direction < length - 3:
+                direction = -direction
+            position += direction
+            walker.move(position)
+    return [aid for aid in best if aid >= 0]
+
+def solve_without_deeper_beam(n, d, c, k, grid, target, stamp):
+    reference = solve_four_parent(n, d, c, k, grid[:], target, stamp[:])
+    if k < 4:
+        return reference
+    nn = n * n
+    initial = grid + stamp
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    width = n - d + 1
+    sequence = [(x * width + y) * 4 + r for x, y, r in reference]
+    final = initial[:]
+    for aid in sequence:
+        _st(final, nn, indices[aid])
+    baseline = sum((a == b for a, b in zip(final, target)))
+    if baseline == color_bound(initial, target):
+        return reference
+    candidate = repair_four_windows(n, d, k, initial, target, actions, sequence)
+    if candidate == sequence:
+        return reference
+    candidate = refine(n, d, k, initial, target, actions, candidate, passes=1, seed_offset=2947)
+    final = initial[:]
+    for aid in candidate:
+        _st(final, nn, indices[aid])
+    if sum((a == b for a, b in zip(final, target))) <= baseline:
+        return reference
+    return [ops[aid] for aid in candidate]
+
+def deeper_beam_finish(n, grid, target, stamp, k):
+    if k <= 0:
+        return None
+    nn = n * n
+    _is = sum((a == b for a, b in zip(grid, target)))
+    if _is == color_bound(grid + stamp, target):
+        return None
+    expand = packed3_transitions(n)
+    initial = sum((v << 3 * i for i, v in enumerate(grid + stamp)))
+    wanted = sum((v << 3 * i for i, v in enumerate(target)))
+    comparison_mask = sum((1 << 3 * i for i in range(nn)))
+    rng = random.Random(initial + k * 997)
+    import heapq
+    frontier = [(initial, b'')]
+    visited = {initial}
+    for depth in range(min(8, k)):
+        candidates = {}
+        for state, path in frontier:
+            for aid, child in expand(state):
+                if child in visited or child in candidates:
+                    continue
+                new_path = path + bytes((aid,))
+                diff = child ^ wanted
+                score = nn - ((diff | diff >> 1 | diff >> 2) & comparison_mask).bit_count()
+                if score > _is:
+                    return list(new_path)
+                candidates[child] = (score, rng.getrandbits(32), new_path)
+        if not candidates:
+            break
+        selected = heapq.nlargest(512, candidates, key=candidates.get)
+        frontier = [(state, candidates[state][2]) for state in selected]
+        visited.update(selected)
+    return None
+
+def solve_route_parent(n, d, c, k, grid, target, stamp):
+    reference = solve_without_deeper_beam(n, d, c, k, grid, target, stamp)
+    if not 5 <= n <= 9 or d != 3 or k - len(reference) < 3:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    board, buffer = (grid[:], stamp[:])
+    width = n - d + 1
+    for x, y, r in reference:
+        transition(board, buffer, indices[(x * width + y) * 4 + r])
+    missing = sum((a != b for a, b in zip(board, target)))
+    if not 1 <= missing <= 8:
+        return reference
+    tail = deeper_beam_finish(n, board, target, buffer, k - len(reference))
+    if tail is None:
+        return reference
+    for aid in tail:
+        transition(board, buffer, indices[aid])
+    if sum((a == b for a, b in zip(board, target))) <= n * n - missing:
+        return reference
+    return reference + [ops[aid] for aid in tail]
+
+def route_patterns(n, d, repeats=(3,)):
+    patterns = []
+    offsets = [[(u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u)] for u in range(d) for v in range(d)]
+    for dx in range(d):
+        for dy in range(1 if dx == 0 else 1 - d, d):
+            for r in range(4):
+                left = [xy[r] for xy in offsets]
+                for s in range(4):
+                    right = [(dx + xy[s][0], dy + xy[s][1]) for xy in offsets]
+                    cells = set(left + right)
+                    initial = {p: p for p in cells}
+                    initial.update({j: j for j in range(d * d)})
+                    for backward in range(2):
+                        a, b = (right, left) if backward else (left, right)
+                        state = initial.copy()
+                        for count in range(1, max(repeats) + 1):
+                            for patch in (a, b):
+                                for j, p in enumerate(patch):
+                                    state[j], state[p] = (state[p], state[j])
+                            if count not in repeats:
+                                continue
+                            mapping = []
+                            for p in sorted(cells):
+                                q = state[p]
+                                if q == p:
+                                    continue
+                                src = n * n + q if isinstance(q, int) else q[0] * n + q[1]
+                                mapping.append((p[0] * n + p[1], src, isinstance(q, int)))
+                            if mapping:
+                                patterns.append((dx, dy, r, s, backward, count, mapping))
+    return patterns
+
+def route_tail(n, d, grid, target, stamp, k, repeats=(3,), rounds=3):
+    if k < 6:
+        return []
+    active = tuple((x for x in repeats if 2 * x <= k))
+    if not active:
+        return []
+    patterns = route_patterns(n, d, active)
+    width = n - d + 1
+    state = grid + stamp
+    wanted = [0] * 6
+    for p, color in enumerate(target):
+        wanted[color] |= 1 << p
+
+    def shift(bits, offset):
+        return bits >> offset if offset >= 0 else bits << -offset
+    offsets = {p for *_, mapping in patterns for p, _, _ in mapping}
+    sources = {q for *_, mapping in patterns for _, q, buffer in mapping if not buffer}
+    wishes = {p: tuple((shift(bits, p) for bits in wanted)) for p in offsets}
+    legal = {}
+    for dx, dy, *_ in patterns:
+        key = (dx, dy)
+        if key in legal:
+            continue
+        left, right = (max(0, -dy), min(width, width - dy))
+        if left >= right or dx >= width:
+            legal[key] = 0
+        else:
+            row = (1 << right - left) - 1 << left
+            legal[key] = sum((row << x * n for x in range(width - dx)))
+    rotations = [[p * n + q for u in range(d) for v in range(d) for p, q in [((u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u))[r]]] for r in range(4)]
+    answer = []
+    for _ in range(rounds):
+        have = [0] * 6
+        agreement = 0
+        for p, color in enumerate(state[:n * n]):
+            have[color] |= 1 << p
+            if color == target[p]:
+                agreement |= 1 << p
+        if agreement == (1 << n * n) - 1:
+            break
+        values = {q: tuple((shift(bits, q) for bits in have)) for q in sources}
+        old = {p: shift(agreement, p) for p in offsets}
+        matches = {}
+        best_gain = 0
+        best = None
+        for dx, dy, r, s, backward, count, mapping in patterns:
+            if len(answer) + 2 * count > k:
+                continue
+            anchors = legal[dx, dy]
+            if not anchors:
+                continue
+            planes = [0] * (2 * len(mapping) + 1).bit_length()
+            for p, q, buffer in mapping:
+                if buffer:
+                    new = wishes[p][state[q]]
+                else:
+                    key = (p, q)
+                    new = matches.get(key)
+                    if new is None:
+                        new = 0
+                        for want, value in zip(wishes[p], values[q]):
+                            new |= want & value
+                        matches[key] = new
+                for carry in (new & anchors, anchors & ~old[p]):
+                    level = 0
+                    while carry:
+                        before = planes[level]
+                        planes[level] = before ^ carry
+                        carry &= before
+                        level += 1
+            candidates, value = (anchors, 0)
+            for level in range(len(planes) - 1, -1, -1):
+                hits = candidates & planes[level]
+                if hits:
+                    candidates = hits
+                    value |= 1 << level
+            gain = value - len(mapping)
+            if gain > best_gain:
+                best_gain = gain
+                base = (candidates & -candidates).bit_length() - 1
+                x, y = divmod(base, n)
+                left, right = ((x, y, r), (x + dx, y + dy, s))
+                best = ([right, left] if backward else [left, right]) * count
+        if best is None:
+            break
+        answer.extend(best)
+        for x, y, r in best:
+            base = x * n + y
+            for j, offset in enumerate(rotations[r]):
+                p = base + offset
+                state[n * n + j], state[p] = (state[p], state[n * n + j])
+    return answer
+
+def cancel_inverse_pairs(sequence):
+    compact = []
+    for aid in sequence:
+        if compact and compact[-1] == aid:
+            compact.pop()
+        else:
+            compact.append(aid)
+    return compact
+
+def best_insertion(n, d, initial, target, actions, sequence, seed=0):
+    final = initial[:]
+    for aid in sequence:
+        _st(final, n * n, actions[aid][0])
+    order = list(range(len(actions)))
+    random.Random(seed).shuffle(order)
+    state = RefineState(n, d, final, target, actions, [])
+    ranks = [0] * len(actions)
+    for rank, aid in enumerate(order):
+        ranks[aid] = rank
+    best = (0, -1, -1)
+    for pos in range(len(sequence), -1, -1):
+        aid, gain = temporal_best(state, ranks, best[0])
+        if gain > best[0]:
+            best = (gain, pos, aid)
+        if pos:
+            old = sequence[pos - 1]
+            temporal_boundary(state, old)
+    return best
+
+def deletion_deltas(n, d, initial, target, actions, sequence):
+    final = initial[:]
+    for aid in sequence:
+        _st(final, n * n, actions[aid][0])
+    state = RefineState(n, d, final, target, actions, [])
+    deltas = [0] * len(sequence)
+    for pos in range(len(sequence) - 1, -1, -1):
+        old = sequence[pos]
+        deltas[pos] = _og(state, old)
+        temporal_boundary(state, old)
+    return deltas
+
+def temporal_repair(n, d, k, initial, target, actions, sequence, rounds=1, removals=0):
+    nn = n * n
+    sequence = sequence[:]
+    final = initial[:]
+    for aid in sequence:
+        _st(final, nn, actions[aid][0])
+    score = sum((a == b for a, b in zip(final, target)))
+    upper = color_bound(initial, target)
+    for iteration in range(rounds):
+        if score == upper:
+            break
+        seed = sum(((p + 11) * v for p, v in enumerate(initial))) + iteration * 10891
+        best_gain, _bs = (0, sequence)
+        if len(sequence) < k:
+            gain, pos, aid = best_insertion(n, d, initial, target, actions, sequence, seed)
+            if gain:
+                best_gain, _bs = (gain, sequence[:pos] + [aid] + sequence[pos:])
+        if removals and sequence:
+            deltas = deletion_deltas(n, d, initial, target, actions, sequence)
+            order = sorted(range(len(sequence)), key=lambda p: (deltas[p], -p), reverse=True)
+            for remove in order[:removals]:
+                child = sequence[:remove] + sequence[remove + 1:]
+                gain, pos, aid = best_insertion(n, d, initial, target, actions, child, seed + remove)
+                gain += deltas[remove]
+                if gain > best_gain:
+                    best_gain, _bs = (gain, child[:pos] + [aid] + child[pos:] if aid >= 0 else child)
+        if best_gain <= 0:
+            break
+        sequence = _bs
+        score += best_gain
+    return sequence
+
+def solve(n, d, c, k, grid, target, stamp):
+    reference = solve_route_parent(n, d, c, k, grid[:], target, stamp[:])
+    if k <= 2:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    side = n - d + 1
+    sequence = cancel_inverse_pairs([(x * side + y) * 4 + r for x, y, r in reference])
+    initial = grid + stamp
+    sequence = temporal_repair(n, d, k, initial, target, list(zip(indices, ops)), sequence, 5, 5)
+    final = initial[:]
+    for aid in sequence:
+        _st(final, n * n, indices[aid])
+    candidate = [ops[aid] for aid in sequence]
+    if sum((a == b for a, b in zip(final, target))) >= color_bound(initial, target):
+        return candidate
+    rounds = 30
+    for powers, cap in [((3,), rounds)] + [(tuple([power]), 1) for power in [6, 6, 9, 5, 12, 3, 6, 9, 12]]:
+        if k - len(candidate) < 2 * min(powers):
+            continue
+        tail = route_tail(n, d, final[:n * n], target, final[n * n:], k - len(candidate), powers, cap)
+        candidate.extend(tail)
+        for x, y, r in tail:
+            _st(final, n * n, indices[(x * side + y) * 4 + r])
+    return candidate
+
+def runtime_early_bound(n, d, k, grid, target, stamp, reference):
+    indices, _, ops, _, _ = build(n, d, target)
+    side = n - d + 1
+    sequence = cancel_inverse_pairs([(x * side + y) * 4 + r for x, y, r in reference])
+    if k - len(sequence) < 6:
+        return None
+    final = grid + stamp
+    for aid in sequence:
+        _st(final, n * n, indices[aid])
+    upper = color_bound(grid + stamp, target)
+    candidate = [ops[aid] for aid in sequence]
+    if sum((a == b for a, b in zip(final, target))) == upper:
+        return candidate
+    for powers, cap in [((3,), 30)] + [((power,), 1) for power in (6, 6, 9, 5, 12, 3, 6, 9, 12)]:
+        if k - len(candidate) < 2 * min(powers):
+            continue
+        tail = route_tail(n, d, final[:n * n], target, final[n * n:], k - len(candidate), powers, cap)
+        candidate.extend(tail)
+        for x, y, r in tail:
+            _st(final, n * n, indices[(x * side + y) * 4 + r])
+        if sum((a == b for a, b in zip(final, target))) == upper:
+            return candidate
+    return None
+
+def temporal_best(self, ranks, minimum):
+    planes = [0] * 5
+    for j in range(self.dd):
+        for carry in (self.values[j][self.wstamp[j]], self.goals[j][self.stamp[j]]):
+            plane = 0
+            while carry:
+                old = planes[plane]
+                planes[plane] = old ^ carry
+                carry &= old
+                plane += 1
+    carry = 0
+    for plane in range(5):
+        a, b = (planes[plane], self.old_planes[plane])
+        different = a ^ b
+        planes[plane] = different ^ carry
+        carry = a & b | different & carry
+    candidates, value = (self.all_bits, 0)
+    for plane in range(4, -1, -1):
+        hits = candidates & planes[plane]
+        if hits:
+            candidates = hits
+            value |= 1 << plane
+    gain = value - self.dd - sum((a == b for a, b in zip(self.stamp, self.wstamp)))
+    if gain < 0:
+        return (-1, 0)
+    if gain <= minimum:
+        return (-1, gain)
+    chosen = (candidates & -candidates).bit_length() - 1
+    rank = ranks[chosen]
+    candidates &= candidates - 1
+    while candidates and rank:
+        aid = (candidates & -candidates).bit_length() - 1
+        if ranks[aid] < rank:
+            chosen, rank = (aid, ranks[aid])
+        candidates &= candidates - 1
+    return (chosen, gain)
+
+def temporal_boundary(state, action):
+    grid, stamp = (state.grid, state.stamp)
+    wanted, carried = (state.wishes, state.wstamp)
+    positions, values, goals = (state.positions, state.values, state.goals)
+    planes, cover_bits = (state.old_planes, state.cover_bits)
+    for j, p in enumerate(state.actions[action][0]):
+        old, new = (grid[p], stamp[j])
+        old_goal, new_goal = (wanted[p], carried[j])
+        changed_value = old != new
+        changed_goal = old_goal != new_goal
+        if not changed_value and (not changed_goal):
+            continue
+        if changed_value and changed_goal:
+            for positions_row, value_row, goal_row in zip(positions, values, goals):
+                mask = positions_row[p]
+                value_row[old] ^= mask
+                value_row[new] ^= mask
+                goal_row[old_goal] ^= mask
+                goal_row[new_goal] ^= mask
+        elif changed_value:
+            for positions_row, row in zip(positions, values):
+                mask = positions_row[p]
+                row[old] ^= mask
+                row[new] ^= mask
+        else:
+            for positions_row, row in zip(positions, goals):
+                mask = positions_row[p]
+                row[old_goal] ^= mask
+                row[new_goal] ^= mask
+        delta = (new == new_goal) - (old == old_goal)
+        if delta:
+            carry = cover_bits[p]
+            plane = 0
+            if delta > 0:
+                while carry:
+                    previous = planes[plane]
+                    planes[plane] = previous ^ carry
+                    carry &= ~previous
+                    plane += 1
+            else:
+                while carry:
+                    previous = planes[plane]
+                    planes[plane] = previous ^ carry
+                    carry &= previous
+                    plane += 1
+        grid[p], stamp[j] = (new, old)
+        wanted[p], carried[j] = (new_goal, old_goal)
+
+def i1_packed_expand(n, d):
+    rowbits = 3 * d
+    rowmask = (1 << rowbits) - 1
+    rotations = []
+    for r in range(4):
+        tables = []
+        for u in range(d):
+            table = []
+            for value in range(1 << rowbits):
+                out = 0
+                for v in range(d):
+                    x, y = ((u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u))[r]
+                    out |= (value >> 3 * v & 7) << 3 * (d * x + y)
+                table.append(out)
+            tables.append(table)
+        rotations.append(tables)
+    stamp_shift = 3 * n * n
+    board_mask = (1 << stamp_shift) - 1
+    stride = 3 * n
+    if d == 2:
+
+        def rotate(value, r):
+            t = rotations[r]
+            return t[0][value & 63] | t[1][value >> 6]
+
+        def gather(value):
+            return value & 63 | (value >> stride & 63) << 6
+
+        def scatter(value):
+            return value & 63 | value >> 6 << stride
+    else:
+
+        def rotate(value, r):
+            t = rotations[r]
+            return t[0][value & 511] | t[1][value >> 9 & 511] | t[2][value >> 18]
+
+        def gather(value):
+            return value & 511 | (value >> stride & 511) << 9 | (value >> 2 * stride & 511) << 18
+
+        def scatter(value):
+            return value & 511 | (value >> 9 & 511) << stride | value >> 18 << 2 * stride
+    patch_mask = sum((rowmask << stride * u for u in range(d)))
+    patches = []
+    for x in range(n - d + 1):
+        for y in range(n - d + 1):
+            shift = 3 * (n * x + y)
+            patches.append((shift, board_mask ^ patch_mask << shift))
+
+    def apply(state, aid):
+        p, r = divmod(aid, 4)
+        shift, mask = patches[p]
+        board, stamp = (state & board_mask, state >> stamp_shift)
+        patch = gather(board >> shift)
+        return board & mask | scatter(rotate(stamp, r)) << shift | rotate(patch, -r & 3) << stamp_shift
+
+    def expand(state):
+        board, stamp = (state & board_mask, state >> stamp_shift)
+        paints = [scatter(rotate(stamp, r)) for r in range(4)]
+        for p, (shift, mask) in enumerate(patches):
+            patch = gather(board >> shift)
+            retained = board & mask
+            for r in range(4):
+                yield (4 * p + r, retained | paints[r] << shift | rotate(patch, -r & 3) << stamp_shift)
+    expand.apply = apply
+    return expand
+
+def i1_search_block(n, d, initial, wanted, depth, width=8, node_budget=160000, seed=0, expand=None, reference=()):
+    import heapq, random, itertools
+    if expand is None:
+        expand = i1_packed_expand(n, d)
+    packed = sum((v << 3 * i for i, v in enumerate(initial)))
+    goal = sum((v << 3 * i for i, v in enumerate(wanted)))
+    mask = sum((1 << 3 * i for i, v in enumerate(wanted) if v != 6))
+    scored = mask.bit_count()
+
+    def score(state):
+        diff = state ^ goal
+        return scored - ((diff | diff >> 1 | diff >> 2) & mask).bit_count()
+    best_score = score(packed)
+    best = []
+    upper = sum((min(initial.count(v), wanted.count(v)) for v in range(6)))
+    frontier = [(packed, ())]
+    visited = {packed}
+    rng = random.Random(seed)
+    used = 0
+    reference = tuple(reference[:depth])
+    refstate = packed
+    for level in range(max(0, depth)):
+        if used >= node_budget or best_score == upper:
+            break
+        candidates = {}
+        refnode = None
+        if level < len(reference):
+            aid = reference[level]
+            if level and aid == reference[level - 1]:
+                reference = reference[:level]
+            else:
+                refstate = expand.apply(refstate, aid)
+                used += 1
+                refnode = (refstate, reference[:level + 1])
+                value = score(refstate)
+                if value > best_score:
+                    best_score, best = (value, list(refnode[1]))
+                    if value == upper:
+                        return (best, best_score, used)
+        for parent, (state, path) in enumerate(frontier):
+            for aid, child in itertools.islice(expand(state), max(0, node_budget - used)):
+                used += 1
+                if path and aid == path[-1] or child in visited or child in candidates:
+                    continue
+                value = score(child)
+                candidates[child] = (value, rng.getrandbits(32), parent, aid)
+                if value > best_score:
+                    best_score, best = (value, list(path) + [aid])
+                    if value == upper:
+                        return (best, best_score, used)
+            if used >= node_budget:
+                break
+        chosen = heapq.nlargest(max(1, width), candidates, key=candidates.get)
+        next_frontier = []
+        for state in chosen:
+            _, _, parent, aid = candidates[state]
+            next_frontier.append((state, frontier[parent][1] + (aid,)))
+        if refnode is not None and refnode[0] not in chosen:
+            if len(next_frontier) >= max(1, width):
+                next_frontier.pop()
+            next_frontier.append(refnode)
+        if not next_frontier:
+            break
+        frontier = next_frontier
+        visited.update((state for state, _ in frontier))
+    return (best, best_score, used)
+
+def i1_block_repair(n, d, c, k, initial, target, actions, sequence, rounds=4, width=8, node_budget=160000):
+    import random
+    nn, dd = (n * n, d * d)
+    final_wanted = list(target) + [6] * dd
+
+    def swap(state, aid):
+        for j, p in enumerate(actions[aid][0]):
+            state[p], state[nn + j] = (state[nn + j], state[p])
+
+    def snapshots(path):
+        state = list(initial)
+        forward = [state[:]]
+        for aid in path:
+            swap(state, aid)
+            forward.append(state[:])
+        wishes = final_wanted[:]
+        reverse = [None] * (len(path) + 1)
+        reverse[-1] = wishes[:]
+        for j in range(len(path) - 1, -1, -1):
+            swap(wishes, path[j])
+            reverse[j] = wishes[:]
+        return (forward, reverse)
+    best = []
+    for aid in sequence:
+        if aid >= 0:
+            if best and best[-1] == aid:
+                best.pop()
+            else:
+                best.append(aid)
+    forward, reverse = snapshots(best)
+    best_score = sum((a == b for a, b in zip(forward[-1], final_wanted)))
+    upper = sum((min(initial.count(v), target.count(v)) for v in range(c)))
+    q = len(actions)
+    minimum = q * (1 + max(1, width) * max(0, min(4, k) - 1)) + min(4, k)
+    rounds = min(max(0, rounds), max(1, node_budget // max(1, minimum)))
+    if not rounds or k <= 0 or best_score == upper:
+        return best
+    seed = sum(((i + 43) * v for i, v in enumerate(initial))) + k * 8161 + n * 319 + d
+    rng = random.Random(seed)
+    expand = i1_packed_expand(n, d)
+    for trial in range(rounds):
+        allowance = node_budget // (rounds - trial)
+        affordable = max(0, 1 + (allowance - q - 32) // (max(1, width) * q))
+        requested = (4, 8, 16, 32)[trial % 4]
+        length = max((v for v in (4, 8, 16, 32) if v <= min(requested, affordable)), default=min(requested, affordable))
+        length = min(k, length)
+        if length <= 0:
+            break
+        span = min(length, len(best))
+        left = len(best) - span if trial % 4 in (0, 3) else rng.randrange(len(best) - span + 1)
+        right = left + span
+        depth = min(length, k - len(best) + span)
+        block, value, used = i1_search_block(n, d, forward[left], reverse[right], depth, width, allowance, seed + trial * 104729, expand, best[left:right])
+        node_budget -= used
+        if value > best_score:
+            candidate = best[:left] + block + best[right:]
+            ahead, behind = snapshots(candidate)
+            actual = sum((a == b for a, b in zip(ahead[-1], final_wanted)))
+            if len(candidate) <= k and actual > best_score:
+                best, best_score = (candidate, actual)
+                forward, reverse = (ahead, behind)
+        if best_score == upper:
+            break
+    return best
+_i1_parent = solve
+
+def solve(n, d, c, k, grid, target, stamp):
+    reference = _i1_parent(n, d, c, k, grid[:], target, stamp[:])
+    if k < 4:
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    span = n - d + 1
+    sequence = [(x * span + y) * 4 + r for x, y, r in reference]
+    candidate = i1_block_repair(n, d, c, k, grid + stamp, target, list(zip(indices, ops)), sequence, rounds=8, width=8, node_budget=160000)
+    return [ops[aid] for aid in candidate]
+
+def session_suffix(n, d, c, k, grid, target, stamp, reference, width=4, depth=10, budget=120000):
+    if k < 4:
+        return reference
+    nn = n * n
+    initial = grid + stamp
+    indices, _, ops, _, _ = build(n, d, target)
+    span = n - d + 1
+    sequence = [(x * span + y) * 4 + r for x, y, r in reference]
+    cut = max(0, len(sequence) - depth)
+    start = initial[:]
+    for aid in sequence[:cut]:
+        _st(start, nn, indices[aid])
+    final = start[:]
+    for aid in sequence[cut:]:
+        _st(final, nn, indices[aid])
+    value = sum((a == b for a, b in zip(final, target)))
+    if value == color_bound(initial, target):
+        return reference
+    block, score, _ = i1_search_block(n, d, start, target + [6] * (d * d), min(depth, k - cut), width, budget, sum(((i + 59) * v for i, v in enumerate(initial))), reference=sequence[cut:])
+    return reference[:cut] + [ops[aid] for aid in block] if score > value else reference
+_session_parent = solve
+
+def solve(n, d, c, k, grid, target, stamp):
+    if n == d:
+        return exact_two(n, d, c, min(k, 2), grid, target, stamp)
+    reference = _session_parent(n, d, c, k, grid[:], target, stamp[:])
+    reference = session_suffix(n, d, c, k, grid, target, stamp, reference)
+    indices, _, ops, _, _ = build(n, d, target)
+    side = n - d + 1
+    sequence = [(x * side + y) * 4 + r for x, y, r in reference]
+    sequence = segment_rotations(n, d, grid + stamp, target, list(zip(indices, ops)), sequence)
+    return [ops[aid] for aid in sequence]
+
+def segment_rotations(n, d, initial, target, actions, sequence):
+    nn, dd = (n * n, d * d)
+    state = SequenceState(initial, target, actions, sequence, nn)
+    if state.score == color_bound(initial, target):
+        return sequence
+    rotations = [[p * d + q for u in range(d) for v in range(d) for p, q in [((u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u))[r]]] for r in range(4)]
+    best = (0, 0, 0, 0)
+    for left in range(len(sequence)):
+        before = state.prefix[left]
+        for rotation in (1, 2, 3):
+            changed = {nn + j: before[nn + p] for j, p in enumerate(rotations[-rotation]) if before[nn + j] != before[nn + p]}
+            for right in range(left, len(sequence)):
+                for j, p in enumerate(actions[sequence[right]][0]):
+                    old = changed.pop(nn + j, None)
+                    new = changed.pop(p, None)
+                    if old is not None:
+                        changed[p] = old
+                    if new is not None:
+                        changed[nn + j] = new
+                base = state.prefix[right + 1]
+                wishes = state.wishes[right + 1]
+                gain = sum(((v == wishes[p]) - (base[p] == wishes[p]) for p, v in changed.items() if p < nn))
+                for j, p in enumerate(rotations[rotation]):
+                    gain += (changed.get(nn + p, base[nn + p]) == wishes[nn + j]) - (base[nn + j] == wishes[nn + j])
+                if gain > best[0]:
+                    best = (gain, left, right + 1, rotation)
+    gain, left, right, rotation = best
+    if gain:
+        candidate = sequence[:]
+        candidate[left:right] = [aid // 4 * 4 + (aid + rotation) % 4 for aid in sequence[left:right]]
+        actual = state.delta(left, candidate[left:right])
+        if actual == gain:
+            return candidate
+    return sequence
+'Long-horizon, bit-parallel beam candidate construction.'
+import random
+
+def million_choices(state, rng, branch=6):
+    planes = [0] * 5
+    for j, color in enumerate(state.stamp):
+        carry = state.target_bits[j][color]
+        plane = 0
+        while carry:
+            old = planes[plane]
+            planes[plane] = old ^ carry
+            carry &= old
+            plane += 1
+    carry = 0
+    for plane in range(4):
+        a, b = (planes[plane], state.old_planes[plane])
+        different = a ^ b
+        planes[plane] = different ^ carry
+        carry = a & b | different & carry
+    planes[4] = carry
+    remaining = state.all_actions
+    out = []
+    count = len(state.actions)
+    seen = {}
+    while len(out) < branch and remaining:
+        candidates, value = (remaining, 0)
+        for plane in range(4, -1, -1):
+            hits = candidates & planes[plane]
+            if hits:
+                candidates = hits
+                value |= 1 << plane
+        remaining ^= candidates
+        take = min(branch - len(out), 4)
+        while candidates and take:
+            offset = rng.randrange(count)
+            after = candidates >> offset
+            rank = (after & -after).bit_length() - 1 + offset if after else (candidates & -candidates).bit_length() - 1
+            candidates ^= 1 << rank
+            aid = state.order[rank]
+            outgoing = tuple((state.grid[p] for p in state.actions[aid][0]))
+            if seen.get(outgoing, 0) >= 2:
+                continue
+            seen[outgoing] = seen.get(outgoing, 0) + 1
+            out.append((aid, value - state.size))
+            take -= 1
+        if out and value - state.size < out[0][1] - 1:
+            break
+    return out
+
+def million_beam(n, d, c, k, grid, target, stamp, reference, width=12, branch=6, future_weight=4, enhance=False):
+    if k < 3 or n == d:
+        return reference
+    base = sum((a == b for a, b in zip(grid, target)))
+    upper = color_bound(grid + stamp, target)
+    indices, _, operations, _, _ = build(n, d, target)
+    actions = list(zip(indices, operations))
+    side = n - d + 1
+    initial = grid + stamp
+
+    def score(path):
+        state = initial[:]
+        for aid in path:
+            _st(state, n * n, indices[aid])
+        return sum((a == b for a, b in zip(state, target)))
+    best = [(x * side + y) * 4 + r for x, y, r in reference]
+    best_score = score(best)
+    if best_score == upper:
+        return reference
+    state = State(n, d, c, grid[:], target, stamp[:])
+    rng = random.Random(sum(((i + 51) * v for i, v in enumerate(grid + stamp))) + k * 917)
+    beam = [(state, [])]
+    beam_best, beam_score = ([], base)
+    for depth in range(k):
+        candidates = []
+        seen = set()
+        for state, path in beam:
+            for aid, gain in million_choices(state, rng, branch):
+                if path and aid == path[-1]:
+                    continue
+                child = clone_state(state)
+                child.apply(aid)
+                key = bytes(child.grid + child.stamp)
+                if key in seen:
+                    continue
+                seen.add(key)
+                path2 = path + [aid]
+                if child.matches > beam_score:
+                    beam_best, beam_score = (path2, child.matches)
+                if beam_score == upper:
+                    return [operations[x] for x in beam_best]
+                future = max(0, child.best()[0]) if depth + 1 < k else 0
+                priority = child.matches * 8 + future_weight * future
+                candidates.append((priority, rng.random(), child, path2))
+        if not candidates:
+            break
+        candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
+        beam = []
+        stamp_counts = {}
+        deferred = []
+        for _, _, state, path in candidates:
+            sig = tuple(state.stamp)
+            if stamp_counts.get(sig, 0) >= max(2, width // 4):
+                deferred.append((state, path))
+                continue
+            stamp_counts[sig] = stamp_counts.get(sig, 0) + 1
+            beam.append((state, path))
+            if len(beam) >= width:
+                break
+        if len(beam) < width:
+            beam.extend(deferred[:width - len(beam)])
+    candidate = refine(n, d, k, initial, target, actions, beam_best, passes=6)
+    candidate = pair_sweep(n, d, k, initial, target, actions, candidate, passes=2, width=24)
+    if enhance:
+        candidate = anneal_walk(n, d, k, initial, target, actions, candidate)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=2)
+        candidate = triple_refine(n, d, k, initial, target, actions, candidate, passes=2)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=2)
+    value = score(candidate)
+    if value > best_score:
+        best = candidate
+    return [operations[x] for x in best]
+import heapq
+import random
+
+def quotient_expander(n, d):
+    rowbits = 3 * d
+    rowmask = (1 << rowbits) - 1
+    rotations = []
+    for r in range(4):
+        tables = []
+        for u in range(d):
+            table = []
+            for value in range(1 << rowbits):
+                out = 0
+                for v in range(d):
+                    x, y = ((u, v), (v, d - 1 - u), (d - 1 - u, d - 1 - v), (d - 1 - v, u))[r]
+                    out |= (value >> 3 * v & 7) << 3 * (d * x + y)
+                table.append(out)
+            tables.append(table)
+        rotations.append(tables)
+    stamp_shift = 3 * n * n
+    board_mask = (1 << stamp_shift) - 1
+    stride = 3 * n
+    if d == 2:
+
+        def rotate(value, r):
+            t = rotations[r]
+            return t[0][value & 63] | t[1][value >> 6]
+
+        def gather(value):
+            return value & 63 | (value >> stride & 63) << 6
+
+        def scatter(value):
+            return value & 63 | value >> 6 << stride
+    else:
+
+        def rotate(value, r):
+            t = rotations[r]
+            return t[0][value & 511] | t[1][value >> 9 & 511] | t[2][value >> 18]
+
+        def gather(value):
+            return value & 511 | (value >> stride & 511) << 9 | (value >> 2 * stride & 511) << 18
+
+        def scatter(value):
+            return value & 511 | (value >> 9 & 511) << stride | value >> 18 << 2 * stride
+    patch_mask = sum((rowmask << stride * u for u in range(d)))
+    patches = [(3 * (n * x + y), board_mask ^ patch_mask << 3 * (n * x + y)) for x in range(n - d + 1) for y in range(n - d + 1)]
+    norms = {}
+
+    def normal(stamp):
+        if stamp not in norms:
+            variants = [rotate(stamp, r) for r in range(4)]
+            value = min(variants)
+            turn = variants.index(value)
+            for r, variant in enumerate(variants):
+                if variant not in norms:
+                    norms[variant] = (value, turn - r & 3)
+        return norms[stamp]
+
+    def expand(state):
+        board, stamp = (state & board_mask, state >> stamp_shift)
+        paints = [scatter(rotate(stamp, r)) for r in range(4)]
+        for p, (shift, mask) in enumerate(patches):
+            patch = gather(board >> shift)
+            picked, turn = normal(patch)
+            retained = board & mask | picked << stamp_shift
+            for r in range(4):
+                yield (4 * p + r, retained | paints[r] << shift, turn + r & 3)
+    expand.normal = normal
+    return expand
+
+def fast_quotient_beam(n, d, initial, target, depth, width=512, budget=800000, seed=941, weight=1):
+    nn = n * n
+    pack = lambda a: sum((v << 3 * i for i, v in enumerate(a)))
+    expand = quotient_expander(n, d)
+    buf, phase = expand.normal(pack(initial[nn:]))
+    first = pack(initial[:nn]) | buf << 3 * nn
+    goal = pack(target)
+    mask = sum((1 << 3 * i for i in range(nn)))
+    rng = random.Random(seed)
+    selectedmask = sum((1 << 3 * i for i in range(nn) if rng.randrange(4) == 0)) if weight else 0
+
+    def matches(state):
+        diff = state ^ goal
+        return nn - ((diff | diff >> 1 | diff >> 2) & mask).bit_count()
+    bestscore = matches(first)
+    best = []
+    upper = color_bound(initial, target)
+    front = [(first, (), phase)]
+    seen = {first}
+    used = 0
+    for level in range(depth):
+        candidates = {}
+        for state, path, phase in front:
+            for aid, child, turn in expand(state):
+                used += 1
+                if used > budget:
+                    return (best, bestscore, used)
+                if child in seen or child in candidates:
+                    continue
+                diff = child ^ goal
+                wrong = (diff | diff >> 1 | diff >> 2) & mask
+                score = nn - wrong.bit_count()
+                actual = aid // 4 * 4 + (aid + phase) % 4
+                if score > bestscore:
+                    bestscore, best = (score, list(path) + [actual])
+                    if score == upper:
+                        return (best, bestscore, used)
+                rank = score * 8 - (wrong & selectedmask).bit_count() * weight
+                candidates[child] = (rank, rng.getrandbits(32), path + (actual,), phase + turn & 3)
+        if not candidates:
+            break
+        chosen = heapq.nlargest(width, candidates, key=candidates.get)
+        front = [(state, candidates[state][2], candidates[state][3]) for state in chosen]
+        seen.update(chosen)
+    return (best, bestscore, used)
+
+def small_beam_stage(n, d, c, k, grid, target, stamp, reference):
+    if not (4 <= n <= 12 and 4 <= k <= 16):
+        return reference
+    indices, _, ops, _, _ = build(n, d, target)
+    span = n - d + 1
+    final = grid + stamp
+    for x, y, r in reference:
+        _st(final, n * n, indices[(x * span + y) * 4 + r])
+    value = sum((a == b for a, b in zip(final, target)))
+    if value == color_bound(grid + stamp, target):
+        return reference
+    width = 2048 if d == 3 and n <= 6 else 512
+    path, score, _ = fast_quotient_beam(n, d, grid + stamp, target, k, width, 600000 if k>8 else 1000000, 941, 1)
+    if score > value:
+        candidate = [ops[aid] for aid in path]
+        return candidate
+    return reference
+
+def macro_prefix(n, d, c, k, grid, target, stamp, reference, cuts=(0.25, 0.5, 0.75), mixed=False):
+    nn = n * n
+    indices, _, ops, _, _ = build(n, d, target)
+    width = n - d + 1
+    initial = grid + stamp
+    final = initial[:]
+    snapshots = [final[:]]
+    for x, y, r in reference:
+        _st(final, nn, indices[(x * width + y) * 4 + r])
+        snapshots.append(final[:])
+    score = sum((a == b for a, b in zip(final, target)))
+    upper = color_bound(initial, target)
+    if score == upper or k < 12:
+        return reference
+    best = reference
+    for fraction in cuts:
+        cut = int(len(reference) * fraction)
+        state = snapshots[cut]
+        if sum((a == b for a, b in zip(state, target))) + (2 if d == 3 else 1) * (k - cut) <= score:
+            continue
+        candidate = reference[:cut]
+        tail = route_tail(n, d, state[:nn], target, state[nn:], k - cut, (3,), 30)
+        candidate = candidate + tail
+        state = state[:]
+        for x, y, r in tail:
+            _st(state, nn, indices[(x * width + y) * 4 + r])
+        if mixed:
+            for power in (6, 9, 5, 12, 3, 6, 9):
+                tail = route_tail(n, d, state[:nn], target, state[nn:], k - len(candidate), (power,), 2)
+                candidate += tail
+                for x, y, r in tail:
+                    _st(state, nn, indices[(x * width + y) * 4 + r])
+        value = sum((a == b for a, b in zip(state, target)))
+        if value > score:
+            score, best = (value, candidate)
+        if value == upper:
+            break
+    return best
+
+def objective_walk(n, d, c, k, initial, target, indices, sequence, refine, weighted_refine, actions, trials=12, mode=0, passes=3):
+    if k < 4:
+        return sequence
+    nn = n * n
+    upper = sum((min(initial.count(v), target.count(v)) for v in range(c)))
+
+    def evaluate(path):
+        row = initial[:]
+        for aid in path:
+            for j, p in enumerate(indices[aid]):
+                row[p], row[nn + j] = (row[nn + j], row[p])
+        return (sum((a == b for a, b in zip(row, target))), row)
+    best = sequence[:]
+    best_score, final = evaluate(best)
+    if best_score == upper:
+        return best
+    current = best[:]
+    rng = random.Random(sum(((i + 101) * v for i, v in enumerate(initial))) + k * 2381)
+    for trial in range(trials):
+        rate = (0.08, 0.15, 0.3, 0.5)[trial % 4]
+        weights = [1 + (rng.random() < rate) for _ in range(nn)]
+        candidate = weighted_refine(n, d, k, initial, target, weights, actions, current, passes=1)
+        candidate = refine(n, d, k, initial, target, actions, candidate, passes=passes, seed_offset=trial * 17981 + 80311)
+        value, row = evaluate(candidate)
+        if value >= best_score:
+            best, best_score, final = (candidate[:], value, row)
+            if value == upper:
+                break
+        current = candidate if value >= best_score - 1 else best[:]
+        if trial % 4 == 3:
+            current = best[:]
+    return best
+_million_parent = solve
+
+def solve(n,d,c,k,grid,target,stamp):
+ large=n>=24 and d==3 and k>=120
+ reference=(_i1_parent if n>=20 and d==3 and k>=100 else _million_parent)(n,d,c,k,grid[:],target,stamp[:])
+ indices,_,ops,_,_=build(n,d,target)
+ side=n-d+1
+ final=grid+stamp
+ for x,y,r in reference:
+  _st(final,n*n,indices[(x*side+y)*4+r])
+ near=d==3 and k>=100 and n<=16 and 100*sum(a==b for a,b in zip(final,target))>=88*color_bound(grid+stamp,target)
+ if not near:
+  reference=million_beam(n,d,c,k,grid,target,stamp,reference,width=16 if large else 24)
+ reference=small_beam_stage(n,d,c,k,grid,target,stamp,reference)
+ reference=macro_prefix(n,d,c,k,grid,target,stamp,reference,cuts=(0,.25,.5,.75,.9),mixed=True)
+ if not large and not near:
+  sequence=[(x*side+y)*4+r for x,y,r in reference]
+  sequence=objective_walk(n,d,c,k,grid+stamp,target,indices,sequence,refine,weighted_refine,list(zip(indices,ops)),trials=8,mode=0,passes=3)
+  reference=[ops[aid]for aid in sequence]
+ return reference
+
+"""Bit-parallel backward construction with static pickup-match masks."""
+import random
+
+def addmask(planes, carry, increment):
+    level = 0
+    if increment:
+        while carry:
+            old = planes[level]
+            planes[level] = old ^ carry
+            carry &= old
+            level += 1
+    else:
+        while carry:
+            old = planes[level]
+            planes[level] = old ^ carry
+            carry &= ~old
+            level += 1
+
+class FastBack:
+
+    def __init__(self, n, d, grid, target, stamp, indices):
+        dd = d * d
+        nn = n * n
+        size = len(indices)
+        self.indices = indices
+        self.grid = grid
+        self.stamp = stamp
+        self.dd = dd
+        self.columns = [[0] * 7 for _ in range(dd)]
+        self.pickup = [[0] * 7 for _ in range(nn)]
+        self.cover = [0] * nn
+        self.allbits = (1 << size) - 1
+        planes = [0] * 5
+        for aid, patch in enumerate(indices):
+            bit = 1 << aid
+            value = dd
+            for j, p in enumerate(patch):
+                self.columns[j][grid[p]] |= bit
+                self.pickup[p][stamp[j]] |= bit
+                self.cover[p] |= bit
+                value += (target[p] == stamp[j]) - (target[p] == grid[p])
+            for level in range(5):
+                if value >> level & 1:
+                    planes[level] |= bit
+        self.first = (bytearray(target), bytearray([6]) * dd, planes)
+
+    def apply(self, state, aid):
+        board, stamp, planes = state
+        board = board[:]
+        stamp = stamp[:]
+        planes = planes[:]
+        for j, p in enumerate(self.indices[aid]):
+            old, new = (board[p], stamp[j])
+            if old != new:
+                om, nm = (self.pickup[p][old], self.pickup[p][new])
+                addmask(planes, nm & ~om, True)
+                addmask(planes, om & ~nm, False)
+                delta = (new == self.grid[p]) - (old == self.grid[p])
+                if delta:
+                    addmask(planes, self.cover[p], delta < 0)
+                board[p] = new
+            stamp[j] = old
+        return (board, stamp, planes)
+
+    def scoreplanes(self, state):
+        planes = state[2][:]
+        for j, color in enumerate(state[1]):
+            addmask(planes, self.columns[j][color], True)
+        return planes
+
+    def best(self, state):
+        planes = self.scoreplanes(state)
+        candidates, value = (self.allbits, 0)
+        for level in range(4, -1, -1):
+            hits = candidates & planes[level]
+            if hits:
+                candidates = hits
+                value |= 1 << level
+        return value - self.dd - sum((a == b for a, b in zip(state[1], self.stamp)))
+
+    def choices(self, state, rng, branch=6):
+        planes = self.scoreplanes(state)
+        remaining = self.allbits
+        out = []
+        subtract = self.dd + sum((a == b for a, b in zip(state[1], self.stamp)))
+        count = len(self.indices)
+        while remaining and len(out) < branch:
+            candidates, value = (remaining, 0)
+            for level in range(4, -1, -1):
+                hits = candidates & planes[level]
+                if hits:
+                    candidates = hits
+                    value |= 1 << level
+            remaining ^= candidates
+            for _ in range(min(branch - len(out), 4)):
+                if not candidates:
+                    break
+                offset = rng.randrange(count)
+                after = candidates >> offset
+                aid = (after & -after).bit_length() - 1 + offset if after else (candidates & -candidates).bit_length() - 1
+                candidates ^= 1 << aid
+                out.append((aid, value - subtract))
+            if out and value - subtract < out[0][1] - 1:
+                break
+        return out
+
+def seven_backward_construct(n, d, c, k, grid, target, stamp, width=24, branch=6, future_weight=3, mixed=0):
+    nn = n * n
+    indices, _, ops, _, _ = build(n, d, target)
+    actions = list(zip(indices, ops))
+    initial = grid + stamp
+    engine = FastBack(n, d, grid, target, stamp, indices)
+    base = sum((a == b for a, b in zip(grid, target)))
+    upper = color_bound(initial, target)
+    beam = [(engine.first, [], base)]
+    best, bestscore = ([], base)
+    rng = random.Random(sum(((i + 83) * v for i, v in enumerate(initial))) + k * 1709)
+    for depth in range(k):
+        candidates = []
+        seen = set()
+        for state, path, score in beam:
+            for aid, gain in engine.choices(state, rng, branch):
+                if path and aid == path[-1]:
+                    continue
+                child = engine.apply(state, aid)
+                key = bytes(child[0] + child[1])
+                if key in seen:
+                    continue
+                seen.add(key)
+                path2 = path + [aid]
+                value = score + gain
+                if value > bestscore:
+                    best, bestscore = (path2, value)
+                if value == upper:
+                    return [ops[x] for x in reversed(best)]
+                future = max(0, engine.best(child)) if future_weight and depth + 1 < k else 0
+                candidates.append((value * 8 + future_weight * future, rng.random(), child, path2, value))
+        if not candidates:
+            break
+        candidates.sort(key=lambda row: row[:2], reverse=True)
+        beam = [(child, path, value) for _, _, child, path, value in candidates[:width]]
+    path = list(reversed(best))
+    path = refine(n, d, k, initial, target, actions, path, passes=6)
+    path = pair_sweep(n, d, k, initial, target, actions, path, passes=2, width=24)
+    return [ops[x] for x in path]
+
+_seven_original_retained=solve_retained_iterated
+def solve_retained_iterated(n,d,c,k,grid,target,stamp):
+    if n<10 or k<12:
+        return _seven_original_retained(n,d,c,k,grid,target,stamp)
+    base=sum(a==b for a,b in zip(grid,target))
+    if 100*base>=88*color_bound(grid+stamp,target):
+        return _seven_original_retained(n,d,c,k,grid,target,stamp)
+    patterns=set()
+    for x in range(n-d+1):
+        for y in range(n-d+1):
+            patterns.add(tuple(target[(x+i)*n+y+j]for i in range(d)for j in range(d)))
+            if len(patterns)>4*c:
+                return _seven_original_retained(n,d,c,k,grid,target,stamp)
+    return seven_backward_construct(n,d,c,k,grid,target,stamp,width=48)
+
+"""Frozen width16 residual-cluster beam; retains the supplied reference floor."""
+import random
+
+
+"""Private beam state: mutable score planes, immutable unused count metadata."""
+
+class ClusterState(State):
+    def __init__(self,n,d,c,grid,target,stamp):
+        super().__init__(n,d,c,grid,target,stamp)
+        self.grid=bytearray(self.grid)
+        self.stamp=bytearray(self.stamp)
+        region_bits=self.region_bits
+        self._runtime_cover_bits=[sum(region_bits[r]for r in ids)for ids in self.cover]
+
+    def apply(self,action):
+        grid,stamp,target=self.grid,self.stamp,self.target
+        planes=self.old_planes
+        cover_bits=self._runtime_cover_bits
+        for j,p in enumerate(self.actions[action][0]):
+            old,new=grid[p],stamp[j]
+            stamp[j],grid[p]=old,new
+            delta=(new==target[p])-(old==target[p])
+            self.matches+=delta
+            if delta:
+                carry=cover_bits[p];plane=0
+                if delta>0:
+                    while carry:
+                        previous=planes[plane]
+                        planes[plane]=previous^carry
+                        carry&=~previous;plane+=1
+                else:
+                    while carry:
+                        previous=planes[plane]
+                        planes[plane]=previous^carry
+                        carry&=previous;plane+=1
+
+
+def clone_cluster_state(state):
+    child=object.__new__(ClusterState)
+    child.__dict__=state.__dict__.copy()
+    child.grid=state.grid[:]
+    child.stamp=state.stamp[:]
+    child.old_planes=state.old_planes[:]
+    return child
+
+
+def cluster_improve(n,d,c,k,grid,target,stamp,reference,width=16):
+    if k<3 or n==d:return reference
+    indices,_,ops,_,_=build(n,d,target)
+    side=n-d+1;initial_grid=grid+stamp
+    best=[(x*side+y)*4+r for x,y,r in reference]
+    state_grid=initial_grid[:]
+    for aid in best:_st(state_grid,n*n,indices[aid])
+    best_score=sum(a==b for a,b in zip(state_grid,target))
+    upper=color_bound(initial_grid,target)
+    if best_score==upper:return reference
+    initial=ClusterState(n,d,c,grid[:],target,stamp[:])
+    state_seed=sum((i+51)*v for i,v in enumerate(grid+stamp))+k*917
+    rng=random.Random(state_seed)
+    neighbors=[]
+    for p in range(n*n):
+        neighbors.append(((1<<(p-1)) if p%n else 0)|
+                         ((1<<(p-n)) if p//n else 0)|
+                         ((1<<(p+1)) if p%n<n-1 else 0)|
+                         ((1<<(p+n)) if p//n<n-1 else 0))
+    initial._cluster_wrong=sum(1<<p for p in range(n*n) if grid[p]!=target[p])
+    auxiliary=sum(grid[a]!=target[a] and grid[b]!=target[b]
+                  for a in range(n*n) for b in (a+1,a+n)
+                  if b<n*n and (b==a+n or a//n==b//n))
+    beam=[(initial,[],auxiliary)]
+    beam_best=[];beam_score=initial.matches
+    for depth in range(k):
+        candidates=[];seen=set()
+        for state,path,auxiliary in beam:
+            for aid,gain in million_choices(state,rng,8):
+                if path and aid==path[-1]:continue
+                child=clone_cluster_state(state);child.apply(aid)
+                key=bytes(child.grid+child.stamp)
+                if key in seen:continue
+                seen.add(key)
+                wrong=state._cluster_wrong;change=0
+                for p in indices[aid]:
+                    if (state.grid[p]==target[p]) != (child.grid[p]==target[p]):
+                        bit=1<<p;degree=(wrong&neighbors[p]).bit_count()
+                        change+=-degree if wrong&bit else degree
+                        wrong^=bit
+                child._cluster_wrong=wrong
+                new_auxiliary=auxiliary+change
+                path2=path+[aid]
+                if child.matches>beam_score:beam_best,beam_score=path2,child.matches
+                if beam_score==upper:return [ops[aid] for aid in beam_best]
+                future=max(0,child.best()[0]) if depth+1<k else 0
+                priority=child.matches+0.5*future+0.15*new_auxiliary
+                candidates.append((priority,rng.random(),child,path2,new_auxiliary))
+        if not candidates:break
+        candidates.sort(key=lambda row:(row[0],row[1]),reverse=True)
+        beam=[];stamp_counts={};deferred=[]
+        for _,_,state,path,auxiliary in candidates:
+            sig=tuple(state.stamp)
+            if stamp_counts.get(sig,0)>=max(2,width//4):
+                deferred.append((state,path,auxiliary));continue
+            stamp_counts[sig]=stamp_counts.get(sig,0)+1
+            beam.append((state,path,auxiliary))
+            if len(beam)>=width:break
+        if len(beam)<width:beam.extend(deferred[:width-len(beam)])
+    actions=list(zip(indices,ops))
+    candidate=refine(n,d,k,initial_grid,target,actions,beam_best,passes=6)
+    candidate=pair_sweep(n,d,k,initial_grid,target,actions,candidate,passes=2,width=24)
+    state_grid=initial_grid[:]
+    for aid in candidate:_st(state_grid,n*n,indices[aid])
+    value=sum(a==b for a,b in zip(state_grid,target))
+    return [ops[aid] for aid in candidate] if value>best_score else reference
+
+
+_cluster_domain_cache=None
+
+def cluster_domain(n,d,c,k,grid,target,stamp):
+    if n<=16 or d!=3 or k<=10:return False
+    global _cluster_domain_cache
+    key=(n,d,c,k,tuple(grid),tuple(target),tuple(stamp))
+    if _cluster_domain_cache is not None and _cluster_domain_cache[0]==key:
+        return _cluster_domain_cache[1]
+    reverse_eligible=(n>=10 and k>=12 and
+                      100*sum(a==b for a,b in zip(grid,target))<88*color_bound(grid+stamp,target))
+    if reverse_eligible:
+        patterns=set()
+        for x in range(n-d+1):
+            for y in range(n-d+1):
+                patterns.add(tuple(target[(x+i)*n+y+j]for i in range(d)for j in range(d)))
+                if len(patterns)>4*c:
+                    reverse_eligible=False
+                    break
+            if not reverse_eligible:break
+    result=not reverse_eligible
+    _cluster_domain_cache=(key,result)
+    return result
+
+_cluster_original_construct_all=construct_all
+_cluster_original_million_beam=million_beam
+
+def construct_all(n,d,c,k,grid,target,stamp):
+    reference=_cluster_original_construct_all(n,d,c,k,grid,target,stamp)
+    if cluster_domain(n,d,c,k,grid,target,stamp):
+        return cluster_improve(n,d,c,k,grid,target,stamp,reference,width=16)
+    return reference
+
+def million_beam(n,d,c,k,grid,target,stamp,reference,width=12,branch=6,future_weight=4,enhance=False):
+    if cluster_domain(n,d,c,k,grid,target,stamp):return reference
+    return _cluster_original_million_beam(n,d,c,k,grid,target,stamp,reference,width,branch,future_weight,enhance)
+
+
+"""Exact rank-mask transpose using packed 16-bit ranks and cached gathers."""
+import struct
+
+_M2_RANK_GATHERS = {}
+
+
+def m2_tie_masks(order):
+    size = len(order)
+    ranks = [0] * size
+    for rank, aid in enumerate(order):
+        ranks[aid] = rank
+    packed = int.from_bytes(struct.pack('<%dH' % size, *ranks), 'little')
+    geometry = _M2_RANK_GATHERS.get(size)
+    if geometry is None:
+        span = 1 << (size - 1).bit_length()
+        full = (1 << (16 * span)) - 1
+        collect = full // 65535
+        joins = []
+        block = 1
+        while block < span:
+            joins.append((15 * block, full // ((1 << (32 * block)) - 1) * ((1 << (2 * block)) - 1)))
+            block *= 2
+        geometry = collect, joins
+        _M2_RANK_GATHERS[size] = geometry
+    collect, joins = geometry
+    result = []
+    for bit in range(size.bit_length()):
+        value = (packed >> bit) & collect
+        for shift, mask in joins:
+            value = (value | (value >> shift)) & mask
+        result.append(value)
+    return result
+
+def main():
+    data = list(map(int, sys.stdin.buffer.read().split()))
+    n, d, c, k = data[:4]
+    nn = n * n
+    operations = solve(n, d, c, k, data[4:4 + nn], data[4 + nn:4 + 2 * nn], data[4 + 2 * nn:])
+    print(len(operations))
+    for operation in operations:
+        print(*operation)
+"""Exact packed spatial gathers for refinement-state initialization."""
+
+_M2_SPATIAL={}
+_M2_COLOR_TABLES=[bytes(1 if value==color else 0 for value in range(256)) for color in range(7)]
+_M2_COLOR_TABLES_HIGH=[bytes(16 if value==color else 0 for value in range(256)) for color in range(7)]
+
+
+def m2_pack_colors(grid):
+    data=bytes(grid);even,odd=data[::2],data[1::2]
+    return [int.from_bytes(even.translate(table),'little')|int.from_bytes(odd.translate(high),'little')
+            for table,high in zip(_M2_COLOR_TABLES,_M2_COLOR_TABLES_HIGH)]
+
+
+def m2_spatial(n,d):
+    key=n,d
+    geometry=_M2_SPATIAL.get(key)
+    if geometry is not None:return geometry
+    side=n-d+1
+    span=1<<(side-1).bit_length()
+    full=(1<<(4*n*span))-1
+    joins=[];block=1
+    while block<span:
+        mask=full//((1<<(8*n*block))-1)*((1<<(4*side*block))-1)
+        joins.append((4*(d-1)*block,mask,mask<<(4*side*block)))
+        block*=2
+    anchors=sum(1<<(4*(x*n+y)) for x in range(side) for y in range(side))
+    low=sum(1<<(4*p) for p in range(side*side))
+    shifts=[4*(u*n+v) for u in range(d) for v in range(d)]
+    rotations=[]
+    for u in range(d):
+        for v in range(d):
+            rotations.append([u*d+v,v*d+d-1-u,(d-1-u)*d+d-1-v,(d-1-v)*d+u])
+    geometry=anchors,low,joins,shifts,rotations
+    _M2_SPATIAL[key]=geometry
+    return geometry
+
+
+def m2_compact(value,anchors,joins):
+    value&=anchors
+    for shift,lower,upper in joins:value=(value&lower)|((value>>shift)&upper)
+    return value
+
+
+def m2_value_bits(n,d,grid):
+    anchors,low,joins,shifts,rotations=m2_spatial(n,d)
+    packed=m2_pack_colors(grid)
+    compacts=[]
+    for shift in shifts:
+        compacts.append([m2_compact(value>>shift,anchors,joins) if value else 0 for value in packed])
+    values=[]
+    for a,b,c,e in rotations:
+        aa,bb,cc,ee=compacts[a],compacts[b],compacts[c],compacts[e]
+        values.append([aa[color]|bb[color]<<1|cc[color]<<2|ee[color]<<3 for color in range(7)])
+    return values
+
+
+def m2_old_planes(n,d,grid,wishes):
+    anchors,low,joins,shifts,rotations=m2_spatial(n,d)
+    a,b=m2_pack_colors(grid),m2_pack_colors(wishes)
+    mismatch=0
+    for value,want in zip(a,b):mismatch|=value&~want
+    counts=sum(m2_compact(mismatch>>shift,anchors,joins) for shift in shifts)
+    return [((counts>>plane)&low)*15 for plane in range(4)]+[0]
+
+
+def m2_refine_init(self,n,d,initial,target,actions,order):
+    nn,dd=n*n,d*d
+    self.nn,self.dd=nn,dd
+    self.grid,self.stamp=initial[:nn],initial[nn:]
+    self.wishes,self.wstamp=target[:],[6]*dd
+    self.actions,self.order=actions,order
+    size=len(actions);self.all_bits=(1<<size)-1
+    key=n,d
+    geometry=_REFINE_GEOMETRY.get(key)
+    if geometry is None:
+        positions=[[0]*nn for _ in range(dd)]
+        region_bits=[15<<4*r for r in range(size//4)]
+        regions=[actions[i][0] for i in range(0,size,4)]
+        cover=[[] for _ in range(nn)]
+        for r,patch in enumerate(regions):
+            for p in patch:cover[p].append(r)
+        for aid,(patch,_) in enumerate(actions):
+            bit=1<<aid
+            for j,p in enumerate(patch):positions[j][p]|=bit
+        geometry=positions,region_bits,regions,cover
+        _REFINE_GEOMETRY[key]=geometry
+    self.positions,self.region_bits,self.regions,self.cover=geometry
+    cover_bits=_REFINE_COVER_BITS.get(key)
+    if cover_bits is None:
+        cover_bits=[sum(self.region_bits[r] for r in ids) for ids in self.cover]
+        _REFINE_COVER_BITS[key]=cover_bits
+    self.cover_bits=cover_bits
+    self.values=m2_value_bits(n,d,self.grid)
+    goal_key=n,d,tuple(target)
+    cached_goals=_REFINE_GOALS.get(goal_key)
+    if cached_goals is None:
+        cached_goals=m2_value_bits(n,d,target)
+        _REFINE_GOALS[goal_key]=cached_goals
+    self.goals=[row[:] for row in cached_goals]
+    self.tie_masks=m2_tie_masks(order) if order else [0]*size.bit_length()
+    self.old_planes=m2_old_planes(n,d,self.grid,self.wishes)
+    self.counts=None
+"""Bit-parallel replacement for the scalar best_action scan."""
+
+
+def m2_best_action(state,wishes,actions,nn,dd,current=-1,allow_zero=False):
+    n=int(nn**0.5);d=2 if dd==4 else 3
+    grid=state[:nn];wanted=[x if x>=0 else 6 for x in wishes[:nn]]
+    stamp=state[nn:];wstamp=[x if x>=0 else 6 for x in wishes[nn:]]
+    values=m2_value_bits(n,d,grid);goals=m2_value_bits(n,d,wanted)
+    old_planes=m2_old_planes(n,d,grid,wanted)
+    planes=[0]*5
+    for j in range(dd):
+        for carry in (values[j][wstamp[j]],goals[j][stamp[j]]):
+            plane=0
+            while carry:
+                old=planes[plane];planes[plane]=old^carry;carry&=old;plane+=1
+    carry=0
+    for plane in range(5):
+        a,b=planes[plane],old_planes[plane]
+        different=a^b;planes[plane]=different^carry;carry=a&b|different&carry
+    candidates=(1<<len(actions))-1;value=0
+    for plane in range(4,-1,-1):
+        hits=candidates&planes[plane]
+        if hits:candidates=hits;value|=1<<plane
+    gain=value-dd-sum(a==b for a,b in zip(stamp,wstamp))
+    if gain<0:return -1,0
+    if current>=0 and candidates&(1<<current):return current,gain
+    if not gain and not allow_zero:return -1,0
+    return (candidates&-candidates).bit_length()-1,gain
+
+_m2_original_refine_init=RefineState.__init__
+def m2_refine_init_gated(self,n,d,initial,target,actions,order):
+    return (m2_refine_init if n>=12 else _m2_original_refine_init)(self,n,d,initial,target,actions,order)
+RefineState.__init__=m2_refine_init_gated
+_m2_original_best_action=best_action
+def best_action(state,wishes,actions,nn,dd,current=-1,allow_zero=False):
+    return (m2_best_action if nn>=256 else _m2_original_best_action)(state,wishes,actions,nn,dd,current,allow_zero)
+
+def m2_csa_best(self):
+    if self.dd==4:
+        values,goals,stamp,wstamp=self.values,self.goals,self.stamp,self.wstamp
+        a0,a1=values[0][wstamp[0]],goals[0][stamp[0]]
+        a2,a3=values[1][wstamp[1]],goals[1][stamp[1]]
+        a4,a5=values[2][wstamp[2]],goals[2][stamp[2]]
+        a6,a7=values[3][wstamp[3]],goals[3][stamp[3]]
+        s1=a0^a1;c1=(a0&a1)|(s1&a2);s1^=a2
+        s2=a3^a4;c2=(a3&a4)|(s2&a5);s2^=a5
+        s3=a6^a7;c3=(a6&a7)|(s3&s1);s3^=s1
+        s4=s2^s3;c4=s2&s3
+        s5=c1^c2;c5=(c1&c2)|(s5&c3);s5^=c3
+        s6=c4^s5;c6=c4&s5
+        s7=c5^c6;c7=c5&c6
+        planes=[s4,s6,s7,c7,0]
+    else:
+        values,goals,stamp,wstamp=self.values,self.goals,self.stamp,self.wstamp
+        a0,a1=values[0][wstamp[0]],goals[0][stamp[0]]
+        a2,a3=values[1][wstamp[1]],goals[1][stamp[1]]
+        a4,a5=values[2][wstamp[2]],goals[2][stamp[2]]
+        a6,a7=values[3][wstamp[3]],goals[3][stamp[3]]
+        a8,a9=values[4][wstamp[4]],goals[4][stamp[4]]
+        a10,a11=values[5][wstamp[5]],goals[5][stamp[5]]
+        a12,a13=values[6][wstamp[6]],goals[6][stamp[6]]
+        a14,a15=values[7][wstamp[7]],goals[7][stamp[7]]
+        a16,a17=values[8][wstamp[8]],goals[8][stamp[8]]
+        s1=a0^a1;c1=(a0&a1)|(s1&a2);s1^=a2
+        s2=a3^a4;c2=(a3&a4)|(s2&a5);s2^=a5
+        s3=a6^a7;c3=(a6&a7)|(s3&a8);s3^=a8
+        s4=a9^a10;c4=(a9&a10)|(s4&a11);s4^=a11
+        s5=a12^a13;c5=(a12&a13)|(s5&a14);s5^=a14
+        s6=a15^a16;c6=(a15&a16)|(s6&a17);s6^=a17
+        s7=s1^s2;c7=(s1&s2)|(s7&s3);s7^=s3
+        s8=s4^s5;c8=(s4&s5)|(s8&s6);s8^=s6
+        s9=s7^s8;c9=s7&s8
+        s10=c1^c2;c10=(c1&c2)|(s10&c3);s10^=c3
+        s11=c4^c5;c11=(c4&c5)|(s11&c6);s11^=c6
+        s12=c7^c8;c12=(c7&c8)|(s12&c9);s12^=c9
+        s13=s10^s11;c13=(s10&s11)|(s13&s12);s13^=s12
+        s14=c10^c11;c14=(c10&c11)|(s14&c12);s14^=c12
+        s15=c13^s14;c15=c13&s14
+        s16=c14^c15;c16=c14&c15
+        planes=[s9,s13,s15,s16,c16]
+    carry = 0
+    for plane in range(5):
+        a, b = (planes[plane], self.old_planes[plane])
+        different = a ^ b
+        planes[plane] = different ^ carry
+        carry = a & b | different & carry
+    candidates, value = (self.all_bits, 0)
+    for plane in range(4, -1, -1):
+        hits = candidates & planes[plane]
+        if hits:
+            candidates = hits
+            value |= 1 << plane
+    gain = value - self.dd - sum((a == b for a, b in zip(self.stamp, self.wstamp)))
+    if gain < 0:
+        return (-1, 0)
+    for mask in reversed(self.tie_masks):
+        if not candidates & candidates - 1:
+            break
+        preferred = candidates & ~mask
+        if preferred:
+            candidates = preferred
+    return ((candidates & -candidates).bit_length() - 1, gain)
+
+RefineState.best=m2_csa_best
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,33 @@
+         6954913 function calls (6954880 primitive calls) in 6.290 seconds
+
+   Ordered by: cumulative time
+   List reduced from 407 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    6.290    6.290 <frozen runpy>:262(run_path)
+      5/2    0.000    0.000    6.214    3.107 {built-in method builtins.exec}
+        1    0.000    0.000    6.214    6.214 <frozen runpy>:91(_run_module_code)
+        1    0.000    0.000    6.214    6.214 <frozen runpy>:65(_run_code)
+        1    0.000    0.000    6.213    6.213 seven_construct_fast_bytearray_readable.py:1(<module>)
+        1    0.002    0.002    6.204    6.204 seven_construct_fast_bytearray_readable.py:3868(main)
+        1    0.003    0.003    6.202    6.202 seven_construct_fast_bytearray_readable.py:3537(solve)
+        1    0.002    0.002    5.987    5.987 seven_construct_fast_bytearray_readable.py:2799(solve)
+        1    0.001    0.001    5.870    5.870 seven_construct_fast_bytearray_readable.py:2580(solve_route_parent)
+        1    0.001    0.001    5.869    5.869 seven_construct_fast_bytearray_readable.py:2519(solve_without_deeper_beam)
+        1    0.001    0.001    5.741    5.741 seven_construct_fast_bytearray_readable.py:2375(solve_four_parent)
+        1    0.001    0.001    5.740    5.740 seven_construct_fast_bytearray_readable.py:2299(solve_without_commutator)
+        1    0.001    0.001    5.469    5.469 seven_construct_fast_bytearray_readable.py:2187(solve_without_hot_restart)
+        1    0.002    0.002    5.468    5.468 seven_construct_fast_bytearray_readable.py:2082(solve_without_late_beam)
+        1    0.000    0.000    5.319    5.319 seven_construct_fast_bytearray_readable.py:2021(solve_forward_parent)
+        1    0.001    0.001    5.319    5.319 seven_construct_fast_bytearray_readable.py:2010(solve_without_suffix_finish)
+        1    0.003    0.003    5.317    5.317 seven_construct_fast_bytearray_readable.py:1862(solve_without_wildcard)
+        1    0.001    0.001    4.935    4.935 seven_construct_fast_bytearray_readable.py:1695(solve_before_triple_walking)
+        1    0.002    0.002    4.685    4.685 seven_construct_fast_bytearray_readable.py:1520(solve_weighted_parent)
+        1    0.001    0.001    4.683    4.683 seven_construct_fast_bytearray_readable.py:1428(solve_without_binary)
+        1    0.000    0.000    4.374    4.374 seven_construct_fast_bytearray_readable.py:1296(solve_before_pair_annealing)
+        1    0.000    0.000    4.374    4.374 seven_construct_fast_bytearray_readable.py:3703(solve_retained_iterated)
+        1    0.002    0.002    4.374    4.374 seven_construct_fast_bytearray_readable.py:1253(solve_retained_iterated)
+        1    0.001    0.001    4.372    4.372 seven_construct_fast_bytearray_readable.py:1241(solve_original_iterated)
+        1    0.001    0.001    4.142    4.142 seven_construct_fast_bytearray_readable.py:3857(construct_all)
+
+

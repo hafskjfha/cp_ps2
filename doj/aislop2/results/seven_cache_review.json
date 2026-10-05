@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scope": "Static-only review; no candidate execution, transition checks, or timing",
+  "findings": [],
+  "candidate": "solvers/experiments/seven_construct_cached_readable.py",
+  "candidate_sha256": "6e3efd529718250132771919b6ecefa37cd66b214c9db68f8c38ceb11de8770d",
+  "parent": "solvers/experiments/seven_construct_fast_bytearray_readable.py",
+  "parent_sha256": "db33ee57d94a85e7ddbceb916e1cd7e23b12aeda8fe050b80fc9c5f44326f9d4",
+  "cache_limit": 8192,
+  "reviewed_properties": [
+    "cache key complete within one fixed-geometry cluster search",
+    "immutable tuple entries and fresh combined-plane lists",
+    "mutable board, stamp, and wrong-cell planes isolated by clone",
+    "shared memoization clearing does not affect result values",
+    "miss-before-insert clearing preserves the 8192-entry bound",
+    "zero limit disables insertion for ablation",
+    "original action selection and RNG calls retained",
+    "five score planes suffice for maximum combined count 18"
+  ],
+  "integration_status": "Rejected by parent after separate timing probe; no speed claim in this review",
+  "notes": "notes/seven_cache_review.md"
+}

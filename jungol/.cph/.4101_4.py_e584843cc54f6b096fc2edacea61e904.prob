@@ -1,0 +1,1 @@
+{"name":"Local: 4101_4","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\4101_4.py","tests":[{"id":1782277552265,"input":"6\naabbba","output":"aaba"},{"id":1782278022953,"input":"5\nbbacc","output":"bac"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\4101_4.py","group":"local","local":true}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "shared_machine_diagnostic": true,
+  "rows": [
+    {
+      "n": 15,
+      "d": 3,
+      "timings": {
+        "runtime_route_early_bound": 0.04673459997866303,
+        "runtime_init_fast": 0.043771900003775954
+      },
+      "ratio": 1.0676849753981779
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "timings": {
+        "runtime_route_early_bound": 0.25080260005779564,
+        "runtime_init_fast": 0.18952359992545098
+      },
+      "ratio": 1.323331765312862
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "timings": {
+        "runtime_route_early_bound": 0.35848129994701594,
+        "runtime_init_fast": 0.2629565999377519
+      },
+      "ratio": 1.3632717339358549
+    }
+  ]
+}

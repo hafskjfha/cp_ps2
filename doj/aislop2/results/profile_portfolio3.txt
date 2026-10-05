@@ -1,0 +1,33 @@
+         19250122 function calls (19250096 primitive calls) in 10.692 seconds
+
+   Ordered by: cumulative time
+   List reduced from 236 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   10.692   10.692 <frozen runpy>:262(run_path)
+      4/2    0.000    0.000   10.682    5.341 {built-in method builtins.exec}
+        1    0.000    0.000   10.682   10.682 <frozen runpy>:91(_run_module_code)
+        1    0.000    0.000   10.682   10.682 <frozen runpy>:65(_run_code)
+        1    0.000    0.000   10.682   10.682 portfolio3.py:1(<module>)
+        1    0.001    0.001   10.676   10.676 portfolio3.py:362(main)
+        1    0.004    0.004   10.674   10.674 portfolio3.py:219(solve)
+        1    2.687    2.687    4.451    4.451 portfolio3.py:37(solve_plateau)
+ 17106880    3.743    0.000    3.743    0.000 {method 'bit_count' of 'int' objects}
+        1    0.010    0.010    3.741    3.741 portfolio3.py:185(solve_lookahead)
+     1867    1.981    0.001    3.189    0.002 portfolio3.py:142(best)
+        1    0.005    0.005    2.445    2.445 portfolio3.py:334(solve_productive)
+       37    0.059    0.002    2.306    0.062 portfolio3.py:151(escape)
+      169    0.192    0.001    2.133    0.013 portfolio3.py:300(escape)
+     1274    1.177    0.001    1.931    0.002 portfolio3.py:291(best)
+   135987    0.226    0.000    0.415    0.000 {built-in method builtins.sum}
+     3086    0.068    0.000    0.268    0.000 portfolio3.py:128(apply)
+     2390    0.040    0.000    0.172    0.000 portfolio3.py:277(apply)
+        4    0.070    0.017    0.163    0.041 portfolio3.py:94(__init__)
+   566170    0.077    0.000    0.077    0.000 portfolio3.py:138(<genexpr>)
+      220    0.019    0.000    0.072    0.000 random.py:350(shuffle)
+        2    0.027    0.013    0.064    0.032 portfolio3.py:9(build)
+    53977    0.031    0.000    0.053    0.000 random.py:242(_randbelow_with_getrandbits)
+   436530    0.051    0.000    0.051    0.000 portfolio3.py:287(<genexpr>)
+        1    0.015    0.015    0.036    0.036 portfolio3.py:244(__init__)
+
+

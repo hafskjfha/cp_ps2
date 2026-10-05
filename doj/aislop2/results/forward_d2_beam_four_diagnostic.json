@@ -1,0 +1,48 @@
+{
+  "solver": "solvers\\experiments\\forward_d2_beam_four.py",
+  "solver_sha256": "ab197289fa10e9495c83d116cfaa23bd09b35770b78478ffa7857fa3ef9582b2",
+  "description": "All eligible N<=12,D2 cases with K>2, spare budget and remaining inventory gap.",
+  "results": [
+    {
+      "id": "case_057",
+      "family": "near_target",
+      "n": 10,
+      "d": 2,
+      "c": 6,
+      "k": 40,
+      "valid": true,
+      "score": 960000,
+      "matches": 96,
+      "total_cells": 100,
+      "input_sha256": "2f59adfe797d428d3d87d9629d75ee1b7d6879c0ac8e67ad63e5380e326694bb",
+      "runtime_sec": 1.302596400026232,
+      "operations": 31,
+      "output_bytes": 221,
+      "output_sha256": "41f79e3882c9893d5103b160242b565aae5d4f340489f09b872b95446613fe5e",
+      "parent_score": 960000,
+      "delta": 0,
+      "same_output": true
+    },
+    {
+      "id": "case_148",
+      "family": "reachable",
+      "n": 5,
+      "d": 2,
+      "c": 6,
+      "k": 13,
+      "valid": true,
+      "score": 920000,
+      "matches": 23,
+      "total_cells": 25,
+      "input_sha256": "dd3095e1f167de158f5bf28ea3a6c085c5a1ecd5bafdc607f6b0b089bf24a090",
+      "runtime_sec": 0.594700500019826,
+      "operations": 10,
+      "output_bytes": 74,
+      "output_sha256": "aa72506417238a72770caac9a45180947f3d845b72b7e5d9cb26dc2b4e9a752e",
+      "parent_score": 920000,
+      "delta": 0,
+      "same_output": true
+    }
+  ],
+  "delta": 0
+}

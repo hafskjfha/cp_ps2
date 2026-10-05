@@ -1,0 +1,36 @@
+         8109854 function calls (8109848 primitive calls) in 9.906 seconds
+
+   Ordered by: cumulative time
+   List reduced from 319 to 28 due to restriction <28>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.002    0.002    9.906    9.906 algebra39_cycles_source.py:5052(solve)
+        1    0.000    0.000    9.645    9.645 algebra39_cycles_source.py:4837(solve_route_parent)
+        1    0.000    0.000    6.242    6.242 algebra39_cycles_source.py:4743(solve_without_deeper_beam)
+        4    0.038    0.009    5.801    1.450 <stdin>:9(capture)
+        1    0.000    0.000    5.525    5.525 algebra39_cycles_source.py:4594(solve_four_parent)
+        1    0.000    0.000    5.281    5.281 algebra39_cycles_source.py:4511(solve_without_commutator)
+        1    0.000    0.000    4.842    4.842 algebra39_cycles_source.py:4374(solve_without_hot_restart)
+        1    1.597    1.597    3.377    3.377 algebra39_cycles_source.py:4771(deeper_beam_finish)
+        1    0.000    0.000    2.438    2.438 algebra39_cycles_source.py:4160(solve_without_late_beam)
+        1    0.000    0.000    2.418    2.418 algebra39_cycles_source.py:4032(solve_forward_parent)
+        1    0.000    0.000    2.418    2.418 algebra39_cycles_source.py:4008(solve_without_suffix_finish)
+        1    0.000    0.000    2.418    2.418 algebra39_cycles_source.py:3798(solve_without_wildcard)
+        3    1.125    0.375    2.386    0.795 algebra39_cycles_source.py:4304(late_beam_finish)
+        1    0.000    0.000    1.637    1.637 algebra39_cycles_source.py:3450(solve_before_triple_walking)
+  1141720    1.166    0.000    1.599    0.000 algebra39_cycles_source.py:4278(expand)
+        1    0.000    0.000    1.590    1.590 algebra39_cycles_source.py:3090(solve_weighted_parent)
+        1    0.000    0.000    1.590    1.590 algebra39_cycles_source.py:2904(solve_without_binary)
+        1    0.000    0.000    1.590    1.590 algebra39_cycles_source.py:2632(solve_before_pair_annealing)
+        1    0.001    0.001    1.590    1.590 algebra39_cycles_source.py:2546(solve_retained_iterated)
+    76423    1.323    0.000    1.323    0.000 algebra39_cycles_source.py:978(apply)
+    37409    0.646    0.000    0.795    0.000 algebra39_cycles_source.py:1012(best)
+    48063    0.120    0.000    0.783    0.000 algebra39_cycles_source.py:1370(refine_trial)
+        1    0.038    0.038    0.770    0.770 algebra39_cycles_source.py:3664(anneal_triples)
+        1    0.025    0.025    0.708    0.708 algebra39_cycles_source.py:4670(repair_four_windows)
+     1978    0.040    0.000    0.702    0.000 algebra39_cycles_source.py:1430(optimize_pair)
+       21    0.285    0.014    0.666    0.032 heapq.py:523(nlargest)
+     9000    0.033    0.000    0.612    0.000 algebra39_cycles_source.py:3628(propose)
+     1800    0.011    0.000    0.565    0.000 algebra39_cycles_source.py:4648(propose)
+
+

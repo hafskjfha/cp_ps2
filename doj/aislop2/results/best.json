@@ -1,0 +1,18 @@
+{
+  "id": 56,
+  "total_score": 255006286,
+  "avg_score": 796894.64375,
+  "runtime_sec": 375.8343114982126,
+  "max_runtime_sec": 4.069666099967435,
+  "description": "Early quotient forward beam with clustered candidate and generalized cycle repair; exact packed refinement kernels; stable +353857 over055; 36 changed outputs reproduced and max-size holdouts passed",
+  "file": "submissions/best_056_255006286.py",
+  "solver_sha256": "f75fbfbb57fa2b63670ac07f5b9e23f04606839a26b87f1c7b08be6df637fc44",
+  "manifest_sha256": "bd30204d28266a4d8c69f0dc028eec2ca8ac605d8e9f3f198fd1176f0ff506ac",
+  "benchmark": "results/checkpoints/best_056_255006286.benchmark.json",
+  "readiness": "results/checkpoints/best_056_255006286.readiness.json",
+  "stress": "results/checkpoints/best_056_255006286.stress.json",
+  "reproduction": "results/checkpoints/best_056_255006286.reproduction.json",
+  "independent_review": "results/checkpoints/best_056_255006286.independent_review.json",
+  "source_bytes": 33304,
+  "worst_verified_runtime_sec": 4.394890600000508
+}

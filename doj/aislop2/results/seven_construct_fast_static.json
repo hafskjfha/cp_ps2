@@ -1,0 +1,13 @@
+{
+  "parent": "solvers\\experiments\\seven_construct_combined_readable.py",
+  "parent_sha256": "b43cff8984091c59d0371831acf7ece385db68dcff9ece774e56fd75f47938de",
+  "output": "solvers\\experiments\\seven_construct_fast_readable.py",
+  "output_sha256": "7ea3212ba79e2c09f3b4b39b77e26d52533df450d1e3e054c3c33f338997a3be",
+  "bytes": 162874,
+  "only_replaced_calls": [
+    "State -> ClusterState in cluster_improve",
+    "clone_state -> clone_cluster_state in cluster_improve"
+  ],
+  "unchanged_definitions": 103,
+  "heuristic_logic_unchanged": true
+}

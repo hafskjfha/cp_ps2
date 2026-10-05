@@ -1,0 +1,126 @@
+{
+  "parent_score": 251765631,
+  "eligible": [
+    {
+      "id": "case_029",
+      "n": 11,
+      "d": 3,
+      "c": 6,
+      "k": 104,
+      "operations": 68,
+      "matches": 112,
+      "limit": 121,
+      "family": "local_adversarial"
+    },
+    {
+      "id": "case_056",
+      "n": 6,
+      "d": 3,
+      "c": 6,
+      "k": 68,
+      "operations": 58,
+      "matches": 33,
+      "limit": 36,
+      "family": "reachable"
+    },
+    {
+      "id": "case_057",
+      "n": 10,
+      "d": 2,
+      "c": 6,
+      "k": 40,
+      "operations": 31,
+      "matches": 96,
+      "limit": 98,
+      "family": "near_target"
+    },
+    {
+      "id": "case_089",
+      "n": 11,
+      "d": 3,
+      "c": 5,
+      "k": 85,
+      "operations": 62,
+      "matches": 115,
+      "limit": 119,
+      "family": "local_adversarial"
+    },
+    {
+      "id": "case_152",
+      "n": 5,
+      "d": 3,
+      "c": 6,
+      "k": 37,
+      "operations": 30,
+      "matches": 22,
+      "limit": 23,
+      "family": "local_adversarial"
+    },
+    {
+      "id": "case_168",
+      "n": 6,
+      "d": 3,
+      "c": 6,
+      "k": 48,
+      "operations": 24,
+      "matches": 35,
+      "limit": 36,
+      "family": "near_target"
+    },
+    {
+      "id": "case_173",
+      "n": 13,
+      "d": 3,
+      "c": 3,
+      "k": 159,
+      "operations": 133,
+      "matches": 160,
+      "limit": 168,
+      "family": "repeated_stamp"
+    },
+    {
+      "id": "case_185",
+      "n": 11,
+      "d": 3,
+      "c": 4,
+      "k": 82,
+      "operations": 52,
+      "matches": 117,
+      "limit": 121,
+      "family": "local_adversarial"
+    },
+    {
+      "id": "case_221",
+      "n": 13,
+      "d": 3,
+      "c": 4,
+      "k": 170,
+      "operations": 112,
+      "matches": 167,
+      "limit": 169,
+      "family": "near_target"
+    },
+    {
+      "id": "case_265",
+      "n": 9,
+      "d": 3,
+      "c": 3,
+      "k": 90,
+      "operations": 77,
+      "matches": 77,
+      "limit": 78,
+      "family": "repeated_stamp"
+    },
+    {
+      "id": "case_317",
+      "n": 8,
+      "d": 3,
+      "c": 4,
+      "k": 105,
+      "operations": 98,
+      "matches": 61,
+      "limit": 64,
+      "family": "reachable"
+    }
+  ]
+}

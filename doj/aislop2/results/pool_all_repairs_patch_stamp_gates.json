@@ -1,0 +1,16 @@
+{
+  "solver": "solvers\\experiments\\pool_all_repairs_patch_stamp.py",
+  "solver_sha256": "83150fbf9b981f6118493cf479d4fcc0108c56b84f44d449bc328be783d578da",
+  "parent_score": 251862073,
+  "smoke_cases": 20,
+  "smoke_delta": 0,
+  "smoke_output_hash_changes": [],
+  "dev_cases": 100,
+  "dev_delta": 0,
+  "dev_output_hash_changes": [],
+  "dev_max_runtime_sec": 3.4409533001016825,
+  "targeted_delta": 18262,
+  "targeted_max_runtime_sec": 4.162445700028911,
+  "passed": true,
+  "full_run_owner": "generator complete composite, not this intermediate"
+}

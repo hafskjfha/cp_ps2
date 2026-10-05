@@ -1,0 +1,647 @@
+{
+  "random_cases": 80,
+  "runtime": 7.386832199990749,
+  "solver_sha256": "f57e5d03bd8595a3a8bfaea51cfa526e90c79755b4b8003c706539c061853dd6",
+  "results": [
+    {
+      "n": 5,
+      "c": 2,
+      "k": 12,
+      "operations": 0,
+      "matches": 24,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 14,
+      "operations": 12,
+      "matches": 15,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 4,
+      "k": 16,
+      "operations": 14,
+      "matches": 48,
+      "states": 675
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 18,
+      "operations": 12,
+      "matches": 34,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 6,
+      "k": 20,
+      "operations": 0,
+      "matches": 121,
+      "states": 87995
+    },
+    {
+      "n": 13,
+      "c": 2,
+      "k": 22,
+      "operations": 12,
+      "matches": 136,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 3,
+      "k": 24,
+      "operations": 0,
+      "matches": 324,
+      "states": 104323
+    },
+    {
+      "n": 30,
+      "c": 4,
+      "k": 26,
+      "operations": 12,
+      "matches": 843,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 28,
+      "operations": 14,
+      "matches": 23,
+      "states": 120
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 30,
+      "operations": 12,
+      "matches": 18,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 2,
+      "k": 32,
+      "operations": 0,
+      "matches": 49,
+      "states": 50815
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 34,
+      "operations": 12,
+      "matches": 41,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 4,
+      "k": 12,
+      "operations": 0,
+      "matches": 120,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 5,
+      "k": 14,
+      "operations": 12,
+      "matches": 126,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 6,
+      "k": 16,
+      "operations": 12,
+      "matches": 322,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 2,
+      "k": 18,
+      "operations": 12,
+      "matches": 867,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 20,
+      "operations": 16,
+      "matches": 25,
+      "states": 600
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 22,
+      "operations": 12,
+      "matches": 14,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 5,
+      "k": 24,
+      "operations": 14,
+      "matches": 49,
+      "states": 1950
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 26,
+      "operations": 12,
+      "matches": 20,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 2,
+      "k": 28,
+      "operations": 12,
+      "matches": 121,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 3,
+      "k": 30,
+      "operations": 12,
+      "matches": 137,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 4,
+      "k": 32,
+      "operations": 0,
+      "matches": 323,
+      "states": 104323
+    },
+    {
+      "n": 30,
+      "c": 5,
+      "k": 34,
+      "operations": 12,
+      "matches": 838,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 12,
+      "operations": 0,
+      "matches": 25,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 14,
+      "operations": 12,
+      "matches": 23,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 3,
+      "k": 16,
+      "operations": 12,
+      "matches": 49,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 18,
+      "operations": 12,
+      "matches": 49,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 5,
+      "k": 20,
+      "operations": 14,
+      "matches": 121,
+      "states": 20904
+    },
+    {
+      "n": 13,
+      "c": 6,
+      "k": 22,
+      "operations": 12,
+      "matches": 118,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 2,
+      "k": 24,
+      "operations": 12,
+      "matches": 324,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 3,
+      "k": 26,
+      "operations": 12,
+      "matches": 851,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 28,
+      "operations": 18,
+      "matches": 25,
+      "states": 2550
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 30,
+      "operations": 12,
+      "matches": 10,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 6,
+      "k": 32,
+      "operations": 0,
+      "matches": 47,
+      "states": 50815
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 34,
+      "operations": 12,
+      "matches": 45,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 3,
+      "k": 12,
+      "operations": 12,
+      "matches": 121,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 4,
+      "k": 14,
+      "operations": 12,
+      "matches": 120,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 5,
+      "k": 16,
+      "operations": 12,
+      "matches": 323,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 6,
+      "k": 18,
+      "operations": 12,
+      "matches": 839,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 2,
+      "k": 20,
+      "operations": 16,
+      "matches": 25,
+      "states": 465
+    },
+    {
+      "n": 6,
+      "c": 3,
+      "k": 22,
+      "operations": 12,
+      "matches": 17,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 4,
+      "k": 24,
+      "operations": 14,
+      "matches": 49,
+      "states": 1779
+    },
+    {
+      "n": 8,
+      "c": 5,
+      "k": 26,
+      "operations": 12,
+      "matches": 32,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 6,
+      "k": 28,
+      "operations": 12,
+      "matches": 119,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 2,
+      "k": 30,
+      "operations": 12,
+      "matches": 134,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 3,
+      "k": 32,
+      "operations": 12,
+      "matches": 324,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 4,
+      "k": 34,
+      "operations": 12,
+      "matches": 851,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 5,
+      "k": 12,
+      "operations": 12,
+      "matches": 25,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 6,
+      "k": 14,
+      "operations": 12,
+      "matches": 16,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 2,
+      "k": 16,
+      "operations": 14,
+      "matches": 49,
+      "states": 417
+    },
+    {
+      "n": 8,
+      "c": 3,
+      "k": 18,
+      "operations": 12,
+      "matches": 28,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 4,
+      "k": 20,
+      "operations": 12,
+      "matches": 121,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 5,
+      "k": 22,
+      "operations": 12,
+      "matches": 128,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 6,
+      "k": 24,
+      "operations": 12,
+      "matches": 324,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 2,
+      "k": 26,
+      "operations": 12,
+      "matches": 859,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 3,
+      "k": 28,
+      "operations": 16,
+      "matches": 24,
+      "states": 391
+    },
+    {
+      "n": 6,
+      "c": 4,
+      "k": 30,
+      "operations": 12,
+      "matches": 19,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 5,
+      "k": 32,
+      "operations": 14,
+      "matches": 48,
+      "states": 586
+    },
+    {
+      "n": 8,
+      "c": 6,
+      "k": 34,
+      "operations": 12,
+      "matches": 32,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 2,
+      "k": 12,
+      "operations": 12,
+      "matches": 121,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 3,
+      "k": 14,
+      "operations": 12,
+      "matches": 123,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 4,
+      "k": 16,
+      "operations": 12,
+      "matches": 322,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 5,
+      "k": 18,
+      "operations": 12,
+      "matches": 845,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 6,
+      "k": 20,
+      "operations": 16,
+      "matches": 24,
+      "states": 905
+    },
+    {
+      "n": 6,
+      "c": 2,
+      "k": 22,
+      "operations": 12,
+      "matches": 22,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 3,
+      "k": 24,
+      "operations": 0,
+      "matches": 49,
+      "states": 50815
+    },
+    {
+      "n": 8,
+      "c": 4,
+      "k": 26,
+      "operations": 12,
+      "matches": 35,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 5,
+      "k": 28,
+      "operations": 14,
+      "matches": 119,
+      "states": 7252
+    },
+    {
+      "n": 13,
+      "c": 6,
+      "k": 30,
+      "operations": 12,
+      "matches": 133,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 2,
+      "k": 32,
+      "operations": 12,
+      "matches": 324,
+      "states": 3136
+    },
+    {
+      "n": 30,
+      "c": 3,
+      "k": 34,
+      "operations": 12,
+      "matches": 849,
+      "states": 10816
+    },
+    {
+      "n": 5,
+      "c": 4,
+      "k": 12,
+      "operations": 0,
+      "matches": 24,
+      "states": 16
+    },
+    {
+      "n": 6,
+      "c": 5,
+      "k": 14,
+      "operations": 12,
+      "matches": 17,
+      "states": 64
+    },
+    {
+      "n": 7,
+      "c": 6,
+      "k": 16,
+      "operations": 12,
+      "matches": 47,
+      "states": 144
+    },
+    {
+      "n": 8,
+      "c": 2,
+      "k": 18,
+      "operations": 12,
+      "matches": 46,
+      "states": 256
+    },
+    {
+      "n": 11,
+      "c": 3,
+      "k": 20,
+      "operations": 12,
+      "matches": 120,
+      "states": 784
+    },
+    {
+      "n": 13,
+      "c": 4,
+      "k": 22,
+      "operations": 12,
+      "matches": 132,
+      "states": 1296
+    },
+    {
+      "n": 18,
+      "c": 5,
+      "k": 24,
+      "operations": 14,
+      "matches": 324,
+      "states": 20804
+    },
+    {
+      "n": 30,
+      "c": 6,
+      "k": 26,
+      "operations": 12,
+      "matches": 842,
+      "states": 10816
+    }
+  ]
+}

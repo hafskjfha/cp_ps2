@@ -1,0 +1,1 @@
+{"name":"Local: 581","url":"c:\\dev\\ps\\doj\\581.cpp","tests":[{"id":1790554397749,"input":"3\n3 100\n120 85 140\n2 1\n5 2\n1 5\n1","output":""},{"id":1790554409942,"input":"2\n2 500000000\n500000000 500000000\n2 100\n60 54","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\581.cpp","group":"local","local":true}

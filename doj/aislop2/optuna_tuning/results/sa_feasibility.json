@@ -1,0 +1,535 @@
+{
+  "suite": "smoke",
+  "manifest_seed": 20260925,
+  "seed": 0,
+  "params": {
+    "iterations": 3000,
+    "start_temp": 2.0,
+    "end_temp": 0.05,
+    "replace_weight": 4.0,
+    "insert_weight": 1.0,
+    "delete_weight": 1.0,
+    "swap_weight": 1.0,
+    "local_probability": 0.75,
+    "local_radius": 2,
+    "tail_bias": 2.0
+  },
+  "cases": [
+    {
+      "id": "case_000",
+      "n": 3,
+      "d": 2,
+      "c": 2,
+      "k": 1,
+      "family": "random",
+      "greedy": {
+        "matches": 7,
+        "score": 777777,
+        "operations": 1,
+        "runtime_sec": 0.00014590006321668625
+      },
+      "sa": {
+        "matches": 7,
+        "score": 777777,
+        "operations": 1,
+        "runtime_sec": 0.012283299933187664
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_001",
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "family": "random",
+      "greedy": {
+        "matches": 594,
+        "score": 660000,
+        "operations": 127,
+        "runtime_sec": 0.28063700010534376
+      },
+      "sa": {
+        "matches": 594,
+        "score": 660000,
+        "operations": 127,
+        "runtime_sec": 0.48926900001242757
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_002",
+      "n": 3,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "family": "reachable",
+      "greedy": {
+        "matches": 1,
+        "score": 111111,
+        "operations": 0,
+        "runtime_sec": 0.0001512001035735011
+      },
+      "sa": {
+        "matches": 9,
+        "score": 1000000,
+        "operations": 2,
+        "runtime_sec": 0.0002332000294700265
+      },
+      "score_delta": 888889
+    },
+    {
+      "id": "case_003",
+      "n": 30,
+      "d": 2,
+      "c": 2,
+      "k": 1,
+      "family": "near_target",
+      "greedy": {
+        "matches": 723,
+        "score": 803333,
+        "operations": 1,
+        "runtime_sec": 0.0065261999843642116
+      },
+      "sa": {
+        "matches": 723,
+        "score": 803333,
+        "operations": 1,
+        "runtime_sec": 0.017901899991557002
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_004",
+      "n": 9,
+      "d": 2,
+      "c": 2,
+      "k": 60,
+      "family": "checkerboard",
+      "greedy": {
+        "matches": 65,
+        "score": 802469,
+        "operations": 10,
+        "runtime_sec": 0.0026769000105559826
+      },
+      "sa": {
+        "matches": 74,
+        "score": 913580,
+        "operations": 28,
+        "runtime_sec": 0.04916900000534952
+      },
+      "score_delta": 111111
+    },
+    {
+      "id": "case_005",
+      "n": 15,
+      "d": 3,
+      "c": 5,
+      "k": 100,
+      "family": "checkerboard",
+      "greedy": {
+        "matches": 109,
+        "score": 484444,
+        "operations": 22,
+        "runtime_sec": 0.013994400040246546
+      },
+      "sa": {
+        "matches": 109,
+        "score": 484444,
+        "operations": 22,
+        "runtime_sec": 0.03585039998870343
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_006",
+      "n": 17,
+      "d": 2,
+      "c": 3,
+      "k": 90,
+      "family": "stripes",
+      "greedy": {
+        "matches": 201,
+        "score": 695501,
+        "operations": 44,
+        "runtime_sec": 0.014341800007969141
+      },
+      "sa": {
+        "matches": 201,
+        "score": 695501,
+        "operations": 44,
+        "runtime_sec": 0.08477170008700341
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_007",
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "family": "stripes",
+      "greedy": {
+        "matches": 472,
+        "score": 524444,
+        "operations": 104,
+        "runtime_sec": 0.22673940006643534
+      },
+      "sa": {
+        "matches": 472,
+        "score": 524444,
+        "operations": 104,
+        "runtime_sec": 0.4014327999902889
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_008",
+      "n": 12,
+      "d": 2,
+      "c": 6,
+      "k": 80,
+      "family": "repeated_stamp",
+      "greedy": {
+        "matches": 94,
+        "score": 652777,
+        "operations": 27,
+        "runtime_sec": 0.004861599998548627
+      },
+      "sa": {
+        "matches": 94,
+        "score": 652777,
+        "operations": 27,
+        "runtime_sec": 0.04660100000910461
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_009",
+      "n": 20,
+      "d": 3,
+      "c": 2,
+      "k": 140,
+      "family": "repeated_stamp",
+      "greedy": {
+        "matches": 361,
+        "score": 902500,
+        "operations": 43,
+        "runtime_sec": 0.0491520999930799
+      },
+      "sa": {
+        "matches": 361,
+        "score": 902500,
+        "operations": 43,
+        "runtime_sec": 0.11251260002609342
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_010",
+      "n": 7,
+      "d": 2,
+      "c": 4,
+      "k": 40,
+      "family": "nearly_uniform",
+      "greedy": {
+        "matches": 45,
+        "score": 918367,
+        "operations": 3,
+        "runtime_sec": 0.0009859000565484166
+      },
+      "sa": {
+        "matches": 47,
+        "score": 959183,
+        "operations": 8,
+        "runtime_sec": 0.0439665000885725
+      },
+      "score_delta": 40816
+    },
+    {
+      "id": "case_011",
+      "n": 24,
+      "d": 3,
+      "c": 5,
+      "k": 120,
+      "family": "nearly_uniform",
+      "greedy": {
+        "matches": 521,
+        "score": 904513,
+        "operations": 16,
+        "runtime_sec": 0.03205610008444637
+      },
+      "sa": {
+        "matches": 521,
+        "score": 904513,
+        "operations": 16,
+        "runtime_sec": 0.09861159999854863
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_012",
+      "n": 11,
+      "d": 2,
+      "c": 4,
+      "k": 70,
+      "family": "local_adversarial",
+      "greedy": {
+        "matches": 109,
+        "score": 900826,
+        "operations": 2,
+        "runtime_sec": 0.0010670999763533473
+      },
+      "sa": {
+        "matches": 109,
+        "score": 900826,
+        "operations": 2,
+        "runtime_sec": 0.018442100030370057
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_013",
+      "n": 28,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "family": "local_adversarial",
+      "greedy": {
+        "matches": 735,
+        "score": 937500,
+        "operations": 0,
+        "runtime_sec": 0.010825500008650124
+      },
+      "sa": {
+        "matches": 735,
+        "score": 937500,
+        "operations": 0,
+        "runtime_sec": 0.016532900044694543
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_014",
+      "n": 16,
+      "d": 2,
+      "c": 5,
+      "k": 120,
+      "family": "reachable",
+      "greedy": {
+        "matches": 237,
+        "score": 925781,
+        "operations": 51,
+        "runtime_sec": 0.02881429996341467
+      },
+      "sa": {
+        "matches": 237,
+        "score": 925781,
+        "operations": 51,
+        "runtime_sec": 0.07029509998392314
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_015",
+      "n": 25,
+      "d": 3,
+      "c": 3,
+      "k": 160,
+      "family": "reachable",
+      "greedy": {
+        "matches": 540,
+        "score": 864000,
+        "operations": 80,
+        "runtime_sec": 0.11542919999919832
+      },
+      "sa": {
+        "matches": 540,
+        "score": 864000,
+        "operations": 80,
+        "runtime_sec": 0.24639440001919866
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_016",
+      "n": 8,
+      "d": 3,
+      "c": 6,
+      "k": 10,
+      "family": "near_target",
+      "greedy": {
+        "matches": 63,
+        "score": 984375,
+        "operations": 0,
+        "runtime_sec": 0.000367900007404387
+      },
+      "sa": {
+        "matches": 63,
+        "score": 984375,
+        "operations": 0,
+        "runtime_sec": 0.011171200079843402
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_017",
+      "n": 23,
+      "d": 2,
+      "c": 3,
+      "k": 150,
+      "family": "near_target",
+      "greedy": {
+        "matches": 510,
+        "score": 964083,
+        "operations": 2,
+        "runtime_sec": 0.006145799998193979
+      },
+      "sa": {
+        "matches": 510,
+        "score": 964083,
+        "operations": 2,
+        "runtime_sec": 0.028924999991431832
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_018",
+      "n": 30,
+      "d": 2,
+      "c": 6,
+      "k": 180,
+      "family": "random",
+      "greedy": {
+        "matches": 687,
+        "score": 763333,
+        "operations": 180,
+        "runtime_sec": 0.4250115000177175
+      },
+      "sa": {
+        "matches": 687,
+        "score": 763333,
+        "operations": 180,
+        "runtime_sec": 0.5444886999903247
+      },
+      "score_delta": 0
+    },
+    {
+      "id": "case_019",
+      "n": 4,
+      "d": 3,
+      "c": 2,
+      "k": 5,
+      "family": "random",
+      "greedy": {
+        "matches": 12,
+        "score": 750000,
+        "operations": 1,
+        "runtime_sec": 0.0001607999438419938
+      },
+      "sa": {
+        "matches": 14,
+        "score": 875000,
+        "operations": 3,
+        "runtime_sec": 0.017848200048319995
+      },
+      "score_delta": 125000
+    }
+  ],
+  "summary": {
+    "greedy": {
+      "total_score": 15327134,
+      "average_score": 766356.7,
+      "total_runtime_sec": 1.2200906004291028,
+      "max_runtime_sec": 0.4250115000177175
+    },
+    "sa": {
+      "total_score": 16492950,
+      "average_score": 824647.5,
+      "total_runtime_sec": 2.346700600348413,
+      "max_runtime_sec": 0.5444886999903247
+    },
+    "score_delta": 1165816,
+    "improved_cases": 4,
+    "worse_cases": 0
+  },
+  "max_constraint_probes": [
+    {
+      "n": 30,
+      "d": 2,
+      "c": 2,
+      "k": 180,
+      "case_seed": 450,
+      "3000": {
+        "runtime_sec": 0.4496764000505209,
+        "matches": 883,
+        "score": 981111,
+        "operations": 180
+      },
+      "8000": {
+        "runtime_sec": 0.8391829000320286,
+        "matches": 883,
+        "score": 981111,
+        "operations": 180
+      }
+    },
+    {
+      "n": 30,
+      "d": 2,
+      "c": 6,
+      "k": 180,
+      "case_seed": 450,
+      "3000": {
+        "runtime_sec": 0.4138184000039473,
+        "matches": 687,
+        "score": 763333,
+        "operations": 180
+      },
+      "8000": {
+        "runtime_sec": 0.682475799927488,
+        "matches": 687,
+        "score": 763333,
+        "operations": 180
+      }
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 2,
+      "k": 180,
+      "case_seed": 450,
+      "3000": {
+        "runtime_sec": 0.43043649999890476,
+        "matches": 865,
+        "score": 961111,
+        "operations": 126
+      },
+      "8000": {
+        "runtime_sec": 0.7324399999342859,
+        "matches": 865,
+        "score": 961111,
+        "operations": 126
+      }
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "case_seed": 450,
+      "3000": {
+        "runtime_sec": 0.6868643999332562,
+        "matches": 618,
+        "score": 686666,
+        "operations": 145
+      },
+      "8000": {
+        "runtime_sec": 0.8876386999618262,
+        "matches": 618,
+        "score": 686666,
+        "operations": 145
+      }
+    }
+  ],
+  "timing_scope": "In-process Python solve() wall time on local interpreter; tuning uses per-instance subprocess deadlines, and judge runtime may differ."
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "tests_run": 3,
+  "runtime_sec": 0.3226752000628039,
+  "failures": [],
+  "measurements": {
+    "canonical_argmax": {
+      "fixtures": 16,
+      "complete_permutation_sequences": 8992
+    },
+    "full_carry": {
+      "fixtures": 2,
+      "mapping_lengths": [
+        16,
+        16
+      ],
+      "negative_offset_exercised": true
+    }
+  }
+}

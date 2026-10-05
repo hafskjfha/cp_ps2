@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"c:\\dev\\ps\\contest\\skh2026p\\b.py","tests":[{"id":1789735312344,"input":"4\n0.456\n0.000000\n0.998244353\n0.4\n","output":""},{"id":1789735322999,"input":"1\n0.9999999","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\contest\\skh2026p\\b.py","group":"local","local":true}

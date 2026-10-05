@@ -1,0 +1,42 @@
+         7123159 function calls in 6.103 seconds
+
+   Ordered by: cumulative time
+   List reduced from 181 to 34 due to restriction <34>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    6.103    6.103 runtime_route_early_bound.py:2660(solve)
+        1    0.001    0.001    5.738    5.738 runtime_route_early_bound.py:2449(solve_route_parent)
+        1    0.001    0.001    5.737    5.737 runtime_route_early_bound.py:2390(solve_without_deeper_beam)
+        1    0.001    0.001    5.610    5.610 runtime_route_early_bound.py:2253(solve_four_parent)
+        1    0.001    0.001    5.609    5.609 runtime_route_early_bound.py:2180(solve_without_commutator)
+        1    0.002    0.002    5.278    5.278 runtime_route_early_bound.py:2072(solve_without_hot_restart)
+        1    0.002    0.002    5.276    5.276 runtime_route_early_bound.py:1972(solve_without_late_beam)
+        1    0.000    0.000    5.064    5.064 runtime_route_early_bound.py:1914(solve_forward_parent)
+        1    0.003    0.003    5.064    5.064 runtime_route_early_bound.py:1904(solve_without_suffix_finish)
+        1    0.002    0.002    5.061    5.061 runtime_route_early_bound.py:1762(solve_without_wildcard)
+        1    0.002    0.002    4.606    4.606 runtime_route_early_bound.py:1603(solve_before_triple_walking)
+        1    0.001    0.001    4.361    4.361 runtime_route_early_bound.py:1434(solve_weighted_parent)
+        1    0.001    0.001    4.360    4.360 runtime_route_early_bound.py:1347(solve_without_binary)
+        1    0.000    0.000    4.065    4.065 runtime_route_early_bound.py:1223(solve_before_pair_annealing)
+        1    0.001    0.001    4.065    4.065 runtime_route_early_bound.py:1182(solve_retained_iterated)
+        1    0.001    0.001    4.064    4.064 runtime_route_early_bound.py:1171(solve_original_iterated)
+        1    0.001    0.001    3.804    3.804 runtime_route_early_bound.py:1047(construct_all)
+        1    0.004    0.004    3.803    3.803 runtime_route_early_bound.py:916(solve_parent)
+        1    0.001    0.001    2.005    2.005 runtime_route_early_bound.py:896(construct_pool)
+    50219    1.097    0.000    1.097    0.000 runtime_route_early_bound.py:448(apply)
+        1    0.012    0.012    1.056    1.056 runtime_route_early_bound.py:231(solve_lookahead)
+       14    0.018    0.001    0.973    0.070 runtime_route_early_bound.py:511(refine)
+       61    0.631    0.010    0.961    0.016 runtime_route_early_bound.py:396(__init__)
+      142    0.233    0.002    0.884    0.006 runtime_route_early_bound.py:191(escape)
+        1    0.020    0.020    0.804    0.804 runtime_route_early_bound.py:683(pair_sweep)
+      558    0.024    0.000    0.660    0.001 runtime_route_early_bound.py:665(optimize_pair)
+    13684    0.404    0.000    0.660    0.000 runtime_route_early_bound.py:135(apply)
+    27873    0.461    0.000    0.537    0.000 runtime_route_early_bound.py:479(best)
+    24280    0.050    0.000    0.519    0.000 runtime_route_early_bound.py:642(refine_trial)
+        1    0.009    0.009    0.488    0.488 runtime_route_early_bound.py:588(pair_repair)
+      500    0.458    0.001    0.461    0.001 runtime_route_early_bound.py:356(best_action)
+   152107    0.250    0.000    0.458    0.000 {built-in method builtins.sum}
+        1    0.005    0.005    0.401    0.401 runtime_route_early_bound.py:327(solve_productive)
+  1911388    0.381    0.000    0.381    0.000 {method 'bit_length' of 'int' objects}
+
+

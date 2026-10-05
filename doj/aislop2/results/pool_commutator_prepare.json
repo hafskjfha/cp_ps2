@@ -1,0 +1,30 @@
+{
+  "parent": "solvers\\experiments\\late_beam_four_fast.py",
+  "parent_sha256": "516e709b120ffae1500da6a645d801335f81c497b377a92d10befc165b4177ca",
+  "solver": "solvers\\experiments\\pool_commutator_append.py",
+  "solver_sha256": "0f98fc940dc3283dd15ab0b8a8bb0f3f7955285354dbc9fc1ec1e9688aa6d68a",
+  "hypothesis": "One exact best positive four-move commutator append over at most20000 deterministic overlapping action pairs, restricted to N<=16,1..12 remaining mismatches,>=4 spare moves, and below conserved-color bound.",
+  "benchmark_status": "held for root isolated timing window",
+  "tests": {
+    "passed": true,
+    "test_methods": 5,
+    "exact_union_deltas_and_restorations": 576,
+    "repeated_tail_cases": 16,
+    "positive_completion_fixture": true,
+    "pair_cap_verified": true
+  },
+  "parent_named_units_unchanged": true,
+  "static": {
+    "valid": true,
+    "errors": [],
+    "review_flags": [],
+    "imports": [
+      "heapq",
+      "math",
+      "random",
+      "sys"
+    ],
+    "sha256": "0f98fc940dc3283dd15ab0b8a8bb0f3f7955285354dbc9fc1ec1e9688aa6d68a",
+    "reads_stdin": true
+  }
+}

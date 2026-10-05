@@ -1,0 +1,1 @@
+{"name":"Local: 416","url":"c:\\dev\\ps\\doj\\416.cpp","tests":[{"id":1788449095041,"input":"7\n3 4 2 1 5 7 6","output":"3"},{"id":1788449098851,"input":"10\n5 9 8 10 3 4 2 1 6 7","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\416.cpp","group":"local","local":true}

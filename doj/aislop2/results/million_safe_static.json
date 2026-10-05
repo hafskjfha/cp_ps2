@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "errors": [],
+  "review_flags": [],
+  "imports": [
+    "heapq",
+    "itertools",
+    "math",
+    "random",
+    "sys"
+  ],
+  "sha256": "dd865b4ea01fe859fe7c820a9a1b5201b7213cd3da29ba186cea4bc9ebf318ac",
+  "source_bytes": 99261,
+  "reads_stdin": true,
+  "reverse_ast_equal": true
+}

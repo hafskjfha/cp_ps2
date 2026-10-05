@@ -1,0 +1,14 @@
+{
+  "smoke": {
+    "cases": 20,
+    "exact_parent_output_hashes": 20,
+    "score": 17962810,
+    "max_runtime_sec": 3.191450700047426
+  },
+  "dev": {
+    "cases": 100,
+    "exact_parent_output_hashes": 100,
+    "score": 80314429,
+    "max_runtime_sec": 3.307337599922903
+  }
+}

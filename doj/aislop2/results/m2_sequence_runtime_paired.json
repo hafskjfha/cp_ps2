@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case_001",
+    "m2_runtime_readable": 3.7262733000097796,
+    "m2_sequence_runtime_fast": 3.2807682000566274
+  },
+  {
+    "id": "case_007",
+    "m2_runtime_readable": 3.41991020005662,
+    "m2_sequence_runtime_fast": 3.5281740999780595
+  },
+  {
+    "id": "case_041",
+    "m2_runtime_readable": 2.575900200055912,
+    "m2_sequence_runtime_fast": 2.498589799972251
+  },
+  {
+    "id": "case_075",
+    "m2_runtime_readable": 2.7951230000471696,
+    "m2_sequence_runtime_fast": 2.408385399961844
+  },
+  {
+    "id": "case_137",
+    "m2_runtime_readable": 2.314333099988289,
+    "m2_sequence_runtime_fast": 2.3288714999798685
+  },
+  {
+    "id": "case_173",
+    "m2_runtime_readable": 3.733365699998103,
+    "m2_sequence_runtime_fast": 3.779123099986464
+  }
+]

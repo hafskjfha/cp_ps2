@@ -1,0 +1,13 @@
+{
+  "source_bytes": 101191,
+  "bytes": 99738,
+  "rename": {
+    "seq_transition": "_st",
+    "operation_gain": "_og",
+    "initial_score": "_is",
+    "best_sequence": "_bs"
+  },
+  "docstrings_removed": 6,
+  "reversible_ast_verified": true,
+  "sha256": "a3b32accc115fa0dc91143b6bbaaeb25226651d8e8557c70bbcd6f3b1a7a5442"
+}

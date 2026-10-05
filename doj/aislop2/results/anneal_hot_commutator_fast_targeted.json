@@ -1,0 +1,27 @@
+{
+  "solver": "solvers\\experiments\\anneal_hot_commutator_fast.py",
+  "solver_sha256": "9855190845d15a2584f7d86fad6c38401a0dccb4c55ea9a25dc36d0c98eba947",
+  "case": {
+    "valid": true,
+    "n": 13,
+    "d": 3,
+    "c": 3,
+    "k": 159,
+    "runtime_sec": 2.7957615999039263,
+    "returncode": 0,
+    "output_bytes": 1000,
+    "stderr": "",
+    "operations": 137,
+    "matches": 161,
+    "score": 952662,
+    "id": "case_173",
+    "input_sha256": "3602c82396bb1599d9bf7d231c975bfafcac740cc5440758e4f767921d591fc2",
+    "output_sha256": "815cd02018328390b7f1ffb3c545c03dd76b245c773ab783abf85cf43ba78c30",
+    "hot_score": 946745,
+    "commutator_score": 952662,
+    "delta_over_hot": 5917,
+    "delta_over_per_case_max": 0
+  },
+  "dev_exact_hot_output_hashes": 100,
+  "per_case_max_hypothesis": 251807645
+}

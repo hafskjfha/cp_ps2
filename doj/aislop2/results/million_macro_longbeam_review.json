@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "configurations": 100,
+  "states": 1200,
+  "canonical_transitions": 6075,
+  "random_seed": 461908,
+  "scope": "choices exact gain, first-choice maximum, clone isolation, board/stamp transition, match and patch-count consistency, best gain consistency",
+  "runtime_sec": 2.897081100032665
+}

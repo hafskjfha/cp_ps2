@@ -1,0 +1,8 @@
+{
+  "initializations": 56,
+  "transition_and_best_checks": 3360,
+  "canonical_forward_checks": 2240,
+  "best_action_comparisons": 336,
+  "runtime_sec": 0.918884800048545,
+  "source_sha256": "2a69875f9a49f1180eac82f2abb22fc9f04259489c6375d706e4fee7805c42e8"
+}

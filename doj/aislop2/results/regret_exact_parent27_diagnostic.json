@@ -1,0 +1,131 @@
+{
+  "results": [
+    {
+      "id": "case_016",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.33448749990202487,
+      "tail": []
+    },
+    {
+      "id": "case_056",
+      "spare": 6,
+      "delta": 0,
+      "runtime": 0.07598249998409301,
+      "tail": []
+    },
+    {
+      "id": "case_064",
+      "spare": 1,
+      "delta": 0,
+      "runtime": 0.00015750003512948751,
+      "tail": []
+    },
+    {
+      "id": "case_081",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.30710799992084503,
+      "tail": []
+    },
+    {
+      "id": "case_085",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.3613022000063211,
+      "tail": []
+    },
+    {
+      "id": "case_112",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.00034330005291849375,
+      "tail": []
+    },
+    {
+      "id": "case_144",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.09514640003908426,
+      "tail": []
+    },
+    {
+      "id": "case_148",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.05017180007416755,
+      "tail": []
+    },
+    {
+      "id": "case_152",
+      "spare": 13,
+      "delta": 0,
+      "runtime": 0.019293699995614588,
+      "tail": []
+    },
+    {
+      "id": "case_156",
+      "spare": 47,
+      "delta": 0,
+      "runtime": 0.003054699976928532,
+      "tail": []
+    },
+    {
+      "id": "case_168",
+      "spare": 20,
+      "delta": 0,
+      "runtime": 0.0709121999097988,
+      "tail": []
+    },
+    {
+      "id": "case_180",
+      "spare": 4,
+      "delta": 0,
+      "runtime": 0.002789700054563582,
+      "tail": []
+    },
+    {
+      "id": "case_192",
+      "spare": 1,
+      "delta": 0,
+      "runtime": 0.00011229992378503084,
+      "tail": []
+    },
+    {
+      "id": "case_212",
+      "spare": 2,
+      "delta": 0,
+      "runtime": 0.133166000014171,
+      "tail": []
+    },
+    {
+      "id": "case_233",
+      "spare": 8,
+      "delta": 0,
+      "runtime": 0.3741199999349192,
+      "tail": []
+    },
+    {
+      "id": "case_272",
+      "spare": 1,
+      "delta": 0,
+      "runtime": 0.00025669997557997704,
+      "tail": []
+    },
+    {
+      "id": "case_296",
+      "spare": 10,
+      "delta": 0,
+      "runtime": 0.0033131000818684697,
+      "tail": []
+    },
+    {
+      "id": "case_317",
+      "spare": 32,
+      "delta": 0,
+      "runtime": 0.3757750999648124,
+      "tail": []
+    }
+  ],
+  "total_delta": 0
+}

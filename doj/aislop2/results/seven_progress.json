@@ -1,0 +1,12 @@
+{
+  "baseline": 254103898,
+  "target": 261103898,
+  "dev_cases": 100,
+  "dev_gain": 229486,
+  "dev_wins": 10,
+  "dev_losses": 1,
+  "invalid": 0,
+  "max_runtime_sec": 4.596170100034215,
+  "solver_sha256": "b70211712e8844d506849640aa2d1f25e0ab41861d373be35b0ab3bfd9090f54",
+  "status": "Full stable and submission qualification pending"
+}

@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "mixed_transitions": 1280,
+  "nested_trials_and_restores": 640,
+  "exact_refine_sweeps": 12,
+  "complete_reachable_case": {
+    "output_identical": true,
+    "matches": 722,
+    "runtime_sec": 4.53297709999606,
+    "operations": 180
+  },
+  "candidate_sha256": "75c583fe30e67dff2943040fea83c480e43678a0090274ae9129d531f0077e15",
+  "apply_microbenchmark": {
+    "updates_per_trial": 8000,
+    "trials_per_version": 3,
+    "old_median_sec": 0.1795179999899119,
+    "new_median_sec": 0.20466789999045432,
+    "speedup": 0.8771184929257818,
+    "rows": [
+      {
+        "name": "old",
+        "repeat": 0,
+        "seconds": 0.1795179999899119
+      },
+      {
+        "name": "new",
+        "repeat": 0,
+        "seconds": 0.27278670005034655
+      },
+      {
+        "name": "old",
+        "repeat": 1,
+        "seconds": 0.21204340003896505
+      },
+      {
+        "name": "new",
+        "repeat": 1,
+        "seconds": 0.20466789999045432
+      },
+      {
+        "name": "old",
+        "repeat": 2,
+        "seconds": 0.16390200005844235
+      },
+      {
+        "name": "new",
+        "repeat": 2,
+        "seconds": 0.15084200003184378
+      }
+    ]
+  }
+}

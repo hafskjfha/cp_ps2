@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checkpoints": 53,
+  "frozen_cases": 320,
+  "solver": "submissions/best_052_252937025.py",
+  "solver_sha256": "a3b32accc115fa0dc91143b6bbaaeb25226651d8e8557c70bbcd6f3b1a7a5442",
+  "source_bytes": 99738,
+  "stable_total": 252937025,
+  "readiness_cases": 38,
+  "maximum_size_cases": 36,
+  "reproduced_wins": 11,
+  "max_observed_runtime_sec": 4.351145799970254
+}

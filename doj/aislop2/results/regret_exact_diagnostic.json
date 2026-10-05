@@ -1,0 +1,94 @@
+{
+  "solver": "solvers\\experiments\\regret_exact.py",
+  "solver_sha256": "0734ef375c2b13a40be0376abaec72b7ee17b6b609740c6022dac1145e0401c0",
+  "manifest_sha256": "32fccaaac6b70d1fb82b2e8cc3f37b77460b568b38ae6d8d55a3691226ae5bd7",
+  "suite": "stable",
+  "timeout_sec": 5.0,
+  "jobs": 1,
+  "python": "3.12.12 (main, Oct 10 2025, 12:42:57)  [GCC UCRT 15.2.0 64 bit (AMD64)]",
+  "wall_runtime_sec": 0.8685709999408573,
+  "cases": 1,
+  "total_score": 920000,
+  "avg_score": 920000.0,
+  "invalid": 0,
+  "runtime_sec": 0.8608576999977231,
+  "avg_runtime_sec": 0.8608576999977231,
+  "max_runtime_sec": 0.8608576999977231,
+  "breakdown": {
+    "d": {
+      "2": {
+        "cases": 1,
+        "total_score": 920000,
+        "avg_score": 920000.0,
+        "invalid": 0,
+        "runtime_sec": 0.8608576999977231,
+        "avg_runtime_sec": 0.8608576999977231,
+        "max_runtime_sec": 0.8608576999977231
+      }
+    },
+    "c": {
+      "6": {
+        "cases": 1,
+        "total_score": 920000,
+        "avg_score": 920000.0,
+        "invalid": 0,
+        "runtime_sec": 0.8608576999977231,
+        "avg_runtime_sec": 0.8608576999977231,
+        "max_runtime_sec": 0.8608576999977231
+      }
+    },
+    "n_bucket": {
+      "3-9": {
+        "cases": 1,
+        "total_score": 920000,
+        "avg_score": 920000.0,
+        "invalid": 0,
+        "runtime_sec": 0.8608576999977231,
+        "avg_runtime_sec": 0.8608576999977231,
+        "max_runtime_sec": 0.8608576999977231
+      }
+    },
+    "k_bucket": {
+      "11-60": {
+        "cases": 1,
+        "total_score": 920000,
+        "avg_score": 920000.0,
+        "invalid": 0,
+        "runtime_sec": 0.8608576999977231,
+        "avg_runtime_sec": 0.8608576999977231,
+        "max_runtime_sec": 0.8608576999977231
+      }
+    },
+    "family": {
+      "reachable": {
+        "cases": 1,
+        "total_score": 920000,
+        "avg_score": 920000.0,
+        "invalid": 0,
+        "runtime_sec": 0.8608576999977231,
+        "avg_runtime_sec": 0.8608576999977231,
+        "max_runtime_sec": 0.8608576999977231
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "case_148",
+      "family": "reachable",
+      "n": 5,
+      "d": 2,
+      "c": 6,
+      "k": 13,
+      "valid": true,
+      "score": 920000,
+      "matches": 23,
+      "total_cells": 25,
+      "input_sha256": "dd3095e1f167de158f5bf28ea3a6c085c5a1ecd5bafdc607f6b0b089bf24a090",
+      "runtime_sec": 0.8608576999977231,
+      "operations": 10,
+      "output_bytes": 74,
+      "output_sha256": "aa72506417238a72770caac9a45180947f3d845b72b7e5d9cb26dc2b4e9a752e"
+    }
+  ],
+  "result_sha256": "4d287acb8d1d1eac6e6c6bdb41b24ee5275ca22d99ae23ccd6e62375fd40e8b5"
+}

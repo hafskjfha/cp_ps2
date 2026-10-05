@@ -1,0 +1,45 @@
+{
+  "source": "C:\\dev\\ps\\doj\\aislop2\\solvers\\experiments\\runtime_combined_v1.py",
+  "solver_sha256": "ddd0c6175fa02665f2926993e8ac106f96eb70ed9fc07f1bbc02a704835011bf",
+  "case": {
+    "id": "reachable_d3_c6",
+    "n": 30,
+    "d": 3,
+    "c": 6,
+    "k": 180,
+    "family": "reachable",
+    "seed": 916403757
+  },
+  "rows": [
+    {
+      "valid": true,
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "runtime_sec": 3.430965300067328,
+      "returncode": 0,
+      "output_bytes": 1496,
+      "stderr": "",
+      "operations": 180,
+      "matches": 722,
+      "score": 802222,
+      "output_sha256": "28d3eb27170c1d4ee62e3a4b446c323c48b074bf4fc18ffeb90a0d6fc0d2250b"
+    },
+    {
+      "valid": true,
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "runtime_sec": 3.4056982999900356,
+      "returncode": 0,
+      "output_bytes": 1496,
+      "stderr": "",
+      "operations": 180,
+      "matches": 722,
+      "score": 802222,
+      "output_sha256": "28d3eb27170c1d4ee62e3a4b446c323c48b074bf4fc18ffeb90a0d6fc0d2250b"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "parent": "late_beam_four_fast.py",
+  "cases": [
+    {
+      "id": "case_000",
+      "family": "random",
+      "n": 3,
+      "c": 2,
+      "k": 1,
+      "spare": 0,
+      "missing": 2,
+      "gap": 1,
+      "suites": [
+        "smoke",
+        "dev",
+        "stable"
+      ]
+    },
+    {
+      "id": "case_037",
+      "family": "random",
+      "n": 8,
+      "c": 6,
+      "k": 8,
+      "spare": 0,
+      "missing": 31,
+      "gap": 24,
+      "suites": [
+        "dev",
+        "stable"
+      ]
+    },
+    {
+      "id": "case_057",
+      "family": "near_target",
+      "n": 10,
+      "c": 6,
+      "k": 40,
+      "spare": 9,
+      "missing": 4,
+      "gap": 2,
+      "suites": [
+        "dev",
+        "stable"
+      ]
+    },
+    {
+      "id": "case_129",
+      "family": "checkerboard",
+      "n": 10,
+      "c": 5,
+      "k": 2,
+      "spare": 0,
+      "missing": 77,
+      "gap": 17,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_148",
+      "family": "reachable",
+      "n": 5,
+      "c": 6,
+      "k": 13,
+      "spare": 3,
+      "missing": 2,
+      "gap": 2,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_229",
+      "family": "repeated_stamp",
+      "n": 11,
+      "c": 6,
+      "k": 20,
+      "spare": 0,
+      "missing": 46,
+      "gap": 37,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_241",
+      "family": "checkerboard",
+      "n": 12,
+      "c": 2,
+      "k": 5,
+      "spare": 0,
+      "missing": 55,
+      "gap": 55,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_257",
+      "family": "stripes",
+      "n": 8,
+      "c": 4,
+      "k": 2,
+      "spare": 0,
+      "missing": 33,
+      "gap": 27,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_272",
+      "family": "local_adversarial",
+      "n": 3,
+      "c": 4,
+      "k": 2,
+      "spare": 1,
+      "missing": 3,
+      "gap": 2,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_288",
+      "family": "random",
+      "n": 6,
+      "c": 2,
+      "k": 3,
+      "spare": 0,
+      "missing": 11,
+      "gap": 5,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_289",
+      "family": "random",
+      "n": 11,
+      "c": 3,
+      "k": 4,
+      "spare": 0,
+      "missing": 56,
+      "gap": 38,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_304",
+      "family": "stripes",
+      "n": 4,
+      "c": 2,
+      "k": 1,
+      "spare": 0,
+      "missing": 6,
+      "gap": 6,
+      "suites": [
+        "stable"
+      ]
+    },
+    {
+      "id": "case_305",
+      "family": "stripes",
+      "n": 10,
+      "c": 6,
+      "k": 2,
+      "spare": 0,
+      "missing": 67,
+      "gap": 55,
+      "suites": [
+        "stable"
+      ]
+    }
+  ]
+}

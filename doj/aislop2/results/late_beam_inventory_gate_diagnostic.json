@@ -1,0 +1,25 @@
+{
+  "diagnostic_only": true,
+  "solver_sha256": "eebda55106576bc2d92a3cf2e0d2efc18683f6bd7f73746a02445fb6a4abe976",
+  "results": [
+    {
+      "id": "case_233",
+      "family": "stripes",
+      "n": 8,
+      "d": 3,
+      "c": 5,
+      "k": 50,
+      "valid": true,
+      "score": 734375,
+      "matches": 47,
+      "total_cells": 64,
+      "input_sha256": "0f5a58ffed7d56f821443b1ba134c437644c3431098e4a6c90f74ecfad130b04",
+      "runtime_sec": 1.825021900003776,
+      "operations": 43,
+      "output_bytes": 305,
+      "output_sha256": "8764525eb68bf576fd1d0ebb1eb3bd33f48bfd702165ab1553891b49447abb26",
+      "delta": 0,
+      "same_output": true
+    }
+  ]
+}

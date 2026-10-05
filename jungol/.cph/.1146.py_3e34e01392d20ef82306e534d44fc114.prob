@@ -1,0 +1,1 @@
+{"name":"Local: 1146","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\1146.py","tests":[{"id":1784050514630,"input":"5\n6 4 8 3 1","output":"1 4 8 3 6\n1 3 8 4 6\n1 3 4 8 6\n1 3 4 6 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\1146.py","group":"local","local":true}

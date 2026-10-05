@@ -1,0 +1,65 @@
+[
+  {
+    "id": "case_032",
+    "parent": 27,
+    "candidate": 27,
+    "seconds": 0.04559320001862943,
+    "path": null
+  },
+  {
+    "id": "case_080",
+    "parent": 36,
+    "candidate": 36,
+    "seconds": 0.08443579997401685,
+    "path": null
+  },
+  {
+    "id": "case_112",
+    "parent": 3,
+    "candidate": 3,
+    "seconds": 0.008913600002415478,
+    "path": null
+  },
+  {
+    "id": "case_144",
+    "parent": 35,
+    "candidate": 35,
+    "seconds": 0.21612110000569373,
+    "path": null
+  },
+  {
+    "id": "case_160",
+    "parent": 13,
+    "candidate": 13,
+    "seconds": 0.00923930003773421,
+    "path": null
+  },
+  {
+    "id": "case_176",
+    "parent": 2,
+    "candidate": 2,
+    "seconds": 0.005866800085641444,
+    "path": null
+  },
+  {
+    "id": "case_192",
+    "parent": 4,
+    "candidate": 4,
+    "seconds": 0.005975899985060096,
+    "path": null
+  },
+  {
+    "id": "case_240",
+    "parent": 16,
+    "candidate": 16,
+    "seconds": 0.0005087000317871571,
+    "path": null
+  },
+  {
+    "id": "case_288",
+    "parent": 25,
+    "candidate": 25,
+    "seconds": 0.046897599939256907,
+    "path": null
+  }
+]

@@ -1,0 +1,50 @@
+_REFINE_GEOMETRY = {}
+
+
+class RefineState:
+    def __init__(self,n,d,initial,target,actions,order):
+        nn,dd=n*n,d*d
+        self.nn,self.dd=nn,dd
+        self.grid,self.stamp=initial[:nn],initial[nn:]
+        self.wishes,self.wstamp=target[:],[6]*dd
+        self.actions,self.order=actions,order
+        size=len(actions)
+        self.all_bits=(1<<size)-1
+        key=(n,d)
+        geometry=_REFINE_GEOMETRY.get(key)
+        if geometry is None:
+            positions=[[0]*nn for _ in range(dd)]
+            region_bits=[15<<(4*r) for r in range(size//4)]
+            regions=[actions[i][0] for i in range(0,size,4)]
+            cover=[[] for _ in range(nn)]
+            for r,patch in enumerate(regions):
+                for p in patch:
+                    cover[p].append(r)
+            for aid,(patch,_) in enumerate(actions):
+                bit=1<<aid
+                for j,p in enumerate(patch):
+                    positions[j][p]|=bit
+            geometry=positions,region_bits,regions,cover
+            _REFINE_GEOMETRY[key]=geometry
+        self.positions,self.region_bits,self.regions,self.cover=geometry
+        self.values=[[0]*7 for _ in range(dd)]
+        self.goals=[[0]*7 for _ in range(dd)]
+        for j in range(dd):
+            values,goals=self.values[j],self.goals[j]
+            for p,mask in enumerate(self.positions[j]):
+                values[self.grid[p]]|=mask
+                goals[self.wishes[p]]|=mask
+        self.tie_masks=[0]*size.bit_length()
+        for rank,aid in enumerate(order):
+            bit=1<<aid
+            while rank:
+                low=rank&-rank
+                self.tie_masks[low.bit_length()-1]|=bit
+                rank^=low
+        self.counts=[sum(self.grid[p]==self.wishes[p] for p in patch) for patch in self.regions]
+        self.old_planes=[0]*5
+        for r,count in enumerate(self.counts):
+            value=dd-count
+            for plane in range(4):
+                if value&(1<<plane):
+                    self.old_planes[plane]|=self.region_bits[r]

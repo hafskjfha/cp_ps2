@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "id": "case_041",
+      "matches": 117,
+      "runtime_sec": 3.87523699994199,
+      "stdout_sha256": "1e4b426ec51447095bb39ff8f27597e7972a20a13caee6cd6ab244496d82a802"
+    },
+    {
+      "id": "case_277",
+      "matches": 84,
+      "runtime_sec": 3.153477399959229,
+      "stdout_sha256": "b1e38922a6ec4ca268cdc27f7175e3c7d6208c4a858cc9c71deee6aed42fa390"
+    }
+  ],
+  "all_operations_equal": true,
+  "source_sha256": "e1b65239563a980f6a6e07c41ffdff37e3ed40b7003eef63b5534362e47e857a",
+  "wrapper_sha256": "f54f2c714ab2c9ce2c8d2e17000423b2d200be53d3bf63b3901681915f12b369"
+}

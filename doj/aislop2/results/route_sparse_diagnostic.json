@@ -1,0 +1,138 @@
+[
+  {
+    "id": "case_029",
+    "n": 11,
+    "d": 3,
+    "gain": 4,
+    "operations": 18,
+    "runtime": 0.11377830000128597
+  },
+  {
+    "id": "case_041",
+    "n": 11,
+    "d": 3,
+    "gain": 3,
+    "operations": 6,
+    "runtime": 0.029488999978639185
+  },
+  {
+    "id": "case_057",
+    "n": 10,
+    "d": 2,
+    "gain": 0,
+    "operations": 0,
+    "runtime": 0.00612210005056113
+  },
+  {
+    "id": "case_062",
+    "n": 18,
+    "d": 3,
+    "gain": 6,
+    "operations": 30,
+    "runtime": 0.42605340003501624
+  },
+  {
+    "id": "case_078",
+    "n": 19,
+    "d": 3,
+    "gain": 4,
+    "operations": 18,
+    "runtime": 0.24593129998538643
+  },
+  {
+    "id": "case_089",
+    "n": 11,
+    "d": 3,
+    "gain": 2,
+    "operations": 18,
+    "runtime": 0.08611519995611161
+  },
+  {
+    "id": "case_106",
+    "n": 18,
+    "d": 3,
+    "gain": 2,
+    "operations": 6,
+    "runtime": 0.0787279000505805
+  },
+  {
+    "id": "case_152",
+    "n": 5,
+    "d": 3,
+    "gain": 0,
+    "operations": 0,
+    "runtime": 0.007311200024560094
+  },
+  {
+    "id": "case_158",
+    "n": 16,
+    "d": 3,
+    "gain": 8,
+    "operations": 18,
+    "runtime": 0.32910999993328005
+  },
+  {
+    "id": "case_168",
+    "n": 6,
+    "d": 3,
+    "gain": 0,
+    "operations": 0,
+    "runtime": 0.013290099916048348
+  },
+  {
+    "id": "case_173",
+    "n": 13,
+    "d": 3,
+    "gain": 2,
+    "operations": 18,
+    "runtime": 0.09887520002666861
+  },
+  {
+    "id": "case_185",
+    "n": 11,
+    "d": 3,
+    "gain": 2,
+    "operations": 18,
+    "runtime": 0.11307329998817295
+  },
+  {
+    "id": "case_205",
+    "n": 15,
+    "d": 3,
+    "gain": 2,
+    "operations": 6,
+    "runtime": 0.06883450003806502
+  },
+  {
+    "id": "case_221",
+    "n": 13,
+    "d": 3,
+    "gain": 1,
+    "operations": 6,
+    "runtime": 0.09465849993284792
+  },
+  {
+    "id": "case_233",
+    "n": 8,
+    "d": 3,
+    "gain": 0,
+    "operations": 0,
+    "runtime": 0.016964200069196522
+  },
+  {
+    "id": "case_265",
+    "n": 9,
+    "d": 3,
+    "gain": 1,
+    "operations": 12,
+    "runtime": 0.036305999965406954
+  },
+  {
+    "id": "case_298",
+    "n": 18,
+    "d": 3,
+    "gain": 2,
+    "operations": 18,
+    "runtime": 0.16889510001055896
+  }
+]

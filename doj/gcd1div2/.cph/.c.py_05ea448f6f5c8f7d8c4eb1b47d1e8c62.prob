@@ -1,0 +1,1 @@
+{"name":"Local: c","url":"c:\\dev\\ps\\doj\\gcd1div2\\c.py","tests":[{"id":1790785822343,"input":"3 5\n0 100\n4 6\n5 7","output":"34"},{"id":1790785929453,"input":"4 3\n2 10\n5 6\n3 4\n8 20","output":"32"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\gcd1div2\\c.py","group":"local","local":true}

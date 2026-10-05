@@ -1,0 +1,25 @@
+{
+  "solver": "solvers\\experiments\\forward_wide_beam_four.py",
+  "solver_sha256": "50d057df86691863087d387e190632a18ccf003d057e84f0694877d5258cfae2",
+  "description": "The sole eligible stable-only case; all three eligible development cases already measured.",
+  "result": {
+    "id": "case_185",
+    "family": "local_adversarial",
+    "n": 11,
+    "d": 3,
+    "c": 4,
+    "k": 82,
+    "valid": true,
+    "score": 966942,
+    "matches": 117,
+    "total_cells": 121,
+    "input_sha256": "33a1e7b6d230cd47a93a79995250787344a4c039437a2248629a01e72c4958fb",
+    "runtime_sec": 2.1572445000056177,
+    "operations": 52,
+    "output_bytes": 368,
+    "output_sha256": "aa2dcdae5e080fb020150482091ddf5cc369610441a8cf63b4911482c144e817"
+  },
+  "parent_score": 966942,
+  "delta": 0,
+  "same_output": true
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "solvers\\experiments\\anneal_late_snapshot.py",
+  "parent_sha256": "16546ee2bbd2c318292962ae11abc3d442e9511293fa1d4486a12099deecdcf8",
+  "fragment": "solvers\\experiments\\pool_wildcard_cache_fragment.py",
+  "fragment_sha256": "5ea9f977694bf4de2afd11dfa883091cef936a30bfc6c067b45e1378c3539e9c",
+  "candidate": "solvers\\experiments\\pool_all_fast.py",
+  "solver_sha256": "87341a360f3fa1eb151c42c2611a99f914fe3649af2856af69056a7cd24c6c57",
+  "changed_named_definitions": [
+    "wildcard_finish"
+  ],
+  "added_named_definitions": [
+    "wildcard_backward_records"
+  ],
+  "qualified_wildcard_ast_equal": true,
+  "all_other_parent_named_definitions_unchanged": true,
+  "canonical_nested_snapshot_cases": 16,
+  "canonical_wildcard_paths": 5,
+  "smoke_output_hash_parity": 20,
+  "smoke_score": 17962810,
+  "smoke_max_runtime_sec": 3.2819124000379816,
+  "parent_full320_output_parity_verified": true
+}

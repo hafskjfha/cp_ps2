@@ -1,0 +1,135 @@
+{
+  "config": {
+    "cases": "005,006,007,047,154,186,283",
+    "width": 48,
+    "output": "results/m2_sequence_packed_back_parity48.json"
+  },
+  "rows": [
+    {
+      "id": "case_005",
+      "n": 15,
+      "d": 3,
+      "c": 5,
+      "k": 100,
+      "width": 48,
+      "original": {
+        "matches": 185,
+        "runtime_sec": 0.534734999993816,
+        "cpu_sec": 0.53125
+      },
+      "packed": {
+        "matches": 185,
+        "runtime_sec": 0.2967240000143647,
+        "cpu_sec": 0.265625
+      }
+    },
+    {
+      "id": "case_006",
+      "n": 17,
+      "d": 2,
+      "c": 3,
+      "k": 90,
+      "width": 48,
+      "original": {
+        "matches": 269,
+        "runtime_sec": 0.3068144000135362,
+        "cpu_sec": 0.265625
+      },
+      "packed": {
+        "matches": 269,
+        "runtime_sec": 0.2549810000928119,
+        "cpu_sec": 0.234375
+      }
+    },
+    {
+      "id": "case_007",
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "width": 48,
+      "original": {
+        "matches": 648,
+        "runtime_sec": 1.6976436999393627,
+        "cpu_sec": 1.609375
+      },
+      "packed": {
+        "matches": 648,
+        "runtime_sec": 1.4346405999967828,
+        "cpu_sec": 1.421875
+      }
+    },
+    {
+      "id": "case_047",
+      "n": 24,
+      "d": 3,
+      "c": 3,
+      "k": 158,
+      "width": 48,
+      "original": {
+        "matches": 519,
+        "runtime_sec": 1.0890017999336123,
+        "cpu_sec": 0.96875
+      },
+      "packed": {
+        "matches": 519,
+        "runtime_sec": 0.7863684999756515,
+        "cpu_sec": 0.734375
+      }
+    },
+    {
+      "id": "case_154",
+      "n": 21,
+      "d": 3,
+      "c": 5,
+      "k": 45,
+      "width": 48,
+      "original": {
+        "matches": 251,
+        "runtime_sec": 0.4040349000133574,
+        "cpu_sec": 0.34375
+      },
+      "packed": {
+        "matches": 251,
+        "runtime_sec": 0.27332299994304776,
+        "cpu_sec": 0.21875
+      }
+    },
+    {
+      "id": "case_186",
+      "n": 19,
+      "d": 3,
+      "c": 6,
+      "k": 84,
+      "width": 48,
+      "original": {
+        "matches": 256,
+        "runtime_sec": 0.6118473000824451,
+        "cpu_sec": 0.53125
+      },
+      "packed": {
+        "matches": 256,
+        "runtime_sec": 0.4052875000052154,
+        "cpu_sec": 0.375
+      }
+    },
+    {
+      "id": "case_283",
+      "n": 27,
+      "d": 3,
+      "c": 3,
+      "k": 93,
+      "width": 48,
+      "original": {
+        "matches": 578,
+        "runtime_sec": 0.8873494999716058,
+        "cpu_sec": 0.828125
+      },
+      "packed": {
+        "matches": 578,
+        "runtime_sec": 0.6556601000484079,
+        "cpu_sec": 0.59375
+      }
+    }
+  ]
+}

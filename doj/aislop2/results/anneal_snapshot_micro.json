@@ -1,0 +1,40 @@
+{
+  "seed": 916448,
+  "n": 30,
+  "d": 3,
+  "c": 6,
+  "k": 180,
+  "proposals": 1000,
+  "movement": "reflected sweep",
+  "acceptance": "unconditional",
+  "results": {
+    "PairWalker": {
+      "runs": [
+        {
+          "variant": "old",
+          "seconds": 0.13087519991677254
+        },
+        {
+          "variant": "snapshot",
+          "seconds": 0.13288539997301996
+        }
+      ],
+      "speedup": 0.9848726793413306,
+      "identical_final": true
+    },
+    "TripleWalker": {
+      "runs": [
+        {
+          "variant": "old",
+          "seconds": 0.16456770000513643
+        },
+        {
+          "variant": "snapshot",
+          "seconds": 0.14684329996816814
+        }
+      ],
+      "speedup": 1.1207028174987248,
+      "identical_final": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "seed": 916448,
+  "n": 30,
+  "d": 3,
+  "c": 6,
+  "k": 180,
+  "proposals": 1000,
+  "movement": "deterministic reflected sweep",
+  "acceptance": "accept every proposal",
+  "results": {
+    "PairWalker": {
+      "runs": [
+        {
+          "variant": "old",
+          "seconds": 0.1904964999994263
+        },
+        {
+          "variant": "cached",
+          "seconds": 0.14535630005411804
+        }
+      ],
+      "speedup": 1.3105486306991991,
+      "identical_final": true
+    },
+    "TripleWalker": {
+      "runs": [
+        {
+          "variant": "old",
+          "seconds": 0.27507029997650534
+        },
+        {
+          "variant": "cached",
+          "seconds": 0.17759159998968244
+        }
+      ],
+      "speedup": 1.5488925151442192,
+      "identical_final": true
+    }
+  }
+}

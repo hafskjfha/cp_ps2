@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "solver_sha256": "7ea3212ba79e2c09f3b4b39b77e26d52533df450d1e3e054c3c33f338997a3be",
+  "configurations": 16,
+  "canonical_transitions": 960,
+  "rotation_values": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "best_equivalence": 960,
+  "choice_equivalence": 960,
+  "clone_independence": true,
+  "unused_counts_and_stampmask_immutable": true,
+  "runtime_sec": 0.23890170000959188
+}

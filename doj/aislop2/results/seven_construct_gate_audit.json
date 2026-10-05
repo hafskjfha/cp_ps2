@@ -1,0 +1,2978 @@
+{
+  "cases": 320,
+  "changed": [
+    {
+      "id": "case_143",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 6,
+      "all_rotations_patterns": 24,
+      "measured_delta": null
+    },
+    {
+      "id": "case_154",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 10,
+      "all_rotations_patterns": 40,
+      "measured_delta": null
+    },
+    {
+      "id": "case_186",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 12,
+      "all_rotations_patterns": 48,
+      "measured_delta": null
+    },
+    {
+      "id": "case_247",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 15,
+      "all_rotations_patterns": 45,
+      "measured_delta": null
+    },
+    {
+      "id": "case_270",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 8,
+      "all_rotations_patterns": 32,
+      "measured_delta": null
+    },
+    {
+      "id": "case_294",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 20,
+      "all_rotations_patterns": 80,
+      "measured_delta": null
+    }
+  ],
+  "old_dev": [
+    "case_001",
+    "case_009",
+    "case_011",
+    "case_013",
+    "case_015",
+    "case_022",
+    "case_023",
+    "case_026",
+    "case_039",
+    "case_042",
+    "case_043",
+    "case_046",
+    "case_055",
+    "case_062",
+    "case_075",
+    "case_078"
+  ],
+  "new_dev": [
+    "case_001",
+    "case_009",
+    "case_011",
+    "case_013",
+    "case_015",
+    "case_022",
+    "case_023",
+    "case_026",
+    "case_039",
+    "case_042",
+    "case_043",
+    "case_046",
+    "case_055",
+    "case_062",
+    "case_075",
+    "case_078"
+  ],
+  "retained_measured_delta": 43209,
+  "rows": [
+    {
+      "id": "case_000",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_001",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 784,
+      "all_rotations_patterns": 3134,
+      "measured_delta": 17778
+    },
+    {
+      "id": "case_002",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_003",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_004",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_005",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_006",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_007",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 6,
+      "all_rotations_patterns": 24,
+      "measured_delta": null
+    },
+    {
+      "id": "case_008",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_009",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 236,
+      "all_rotations_patterns": 467,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_010",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_011",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 123,
+      "all_rotations_patterns": 315,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_012",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_013",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 676,
+      "all_rotations_patterns": 2702,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_014",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_015",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 522,
+      "all_rotations_patterns": 2024,
+      "measured_delta": 4800
+    },
+    {
+      "id": "case_016",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_017",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_018",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_019",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_020",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_021",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_022",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 361,
+      "all_rotations_patterns": 1442,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_023",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 575,
+      "all_rotations_patterns": 2290,
+      "measured_delta": 1479
+    },
+    {
+      "id": "case_024",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_025",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_026",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 220,
+      "all_rotations_patterns": 434,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_027",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_028",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_029",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_030",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_031",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_032",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_033",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_034",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_035",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_036",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_037",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_038",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_039",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 484,
+      "all_rotations_patterns": 1932,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_040",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_041",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_042",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 289,
+      "all_rotations_patterns": 1156,
+      "measured_delta": 2770
+    },
+    {
+      "id": "case_043",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 575,
+      "all_rotations_patterns": 2286,
+      "measured_delta": 0
+    },
+    {
+      "id": "case_044",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_045",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_046",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 441,
+      "all_rotations_patterns": 1708,
+      "measured_delta": 17013
+    },
+    {
+      "id": "case_047",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 3,
+      "all_rotations_patterns": 12,
+      "measured_delta": null
+    },
+    {
+      "id": "case_048",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_049",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_050",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_051",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_052",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_053",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_054",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_055",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 483,
+      "all_rotations_patterns": 1924,
+      "measured_delta": 3473
+    },
+    {
+      "id": "case_056",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_057",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_058",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_059",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_060",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_061",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_062",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 254,
+      "all_rotations_patterns": 970,
+      "measured_delta": -6172
+    },
+    {
+      "id": "case_063",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_064",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_065",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_066",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_067",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_068",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_069",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_070",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_071",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_072",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_073",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_074",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_075",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 314,
+      "all_rotations_patterns": 483,
+      "measured_delta": -3472
+    },
+    {
+      "id": "case_076",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_077",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_078",
+      "dev": true,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 284,
+      "all_rotations_patterns": 1100,
+      "measured_delta": 5540
+    },
+    {
+      "id": "case_079",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_080",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_081",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_082",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_083",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_084",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_085",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_086",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_087",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_088",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_089",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_090",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_091",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_092",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_093",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_094",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_095",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_096",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_097",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_098",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_099",
+      "dev": true,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_100",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_101",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_102",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_103",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_104",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_105",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_106",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 255,
+      "all_rotations_patterns": 994,
+      "measured_delta": null
+    },
+    {
+      "id": "case_107",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_108",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_109",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_110",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 36,
+      "all_rotations_patterns": 54,
+      "measured_delta": null
+    },
+    {
+      "id": "case_111",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_112",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_113",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_114",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_115",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_116",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_117",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_118",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_119",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_120",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_121",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_122",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 225,
+      "all_rotations_patterns": 892,
+      "measured_delta": null
+    },
+    {
+      "id": "case_123",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_124",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_125",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_126",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 260,
+      "all_rotations_patterns": 473,
+      "measured_delta": null
+    },
+    {
+      "id": "case_127",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 526,
+      "all_rotations_patterns": 1993,
+      "measured_delta": null
+    },
+    {
+      "id": "case_128",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_129",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_130",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_131",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_132",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_133",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_134",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 179,
+      "all_rotations_patterns": 396,
+      "measured_delta": null
+    },
+    {
+      "id": "case_135",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_136",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_137",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_138",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_139",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 625,
+      "all_rotations_patterns": 2488,
+      "measured_delta": null
+    },
+    {
+      "id": "case_140",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_141",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_142",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 54,
+      "all_rotations_patterns": 150,
+      "measured_delta": null
+    },
+    {
+      "id": "case_143",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 6,
+      "all_rotations_patterns": 24,
+      "measured_delta": null
+    },
+    {
+      "id": "case_144",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_145",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_146",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_147",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_148",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_149",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_150",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_151",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_152",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_153",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_154",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 10,
+      "all_rotations_patterns": 40,
+      "measured_delta": null
+    },
+    {
+      "id": "case_155",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_156",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_157",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_158",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_159",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 569,
+      "all_rotations_patterns": 2148,
+      "measured_delta": null
+    },
+    {
+      "id": "case_160",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_161",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_162",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_163",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_164",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_165",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_166",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_167",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 484,
+      "all_rotations_patterns": 1932,
+      "measured_delta": null
+    },
+    {
+      "id": "case_168",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_169",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_170",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_171",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 106,
+      "all_rotations_patterns": 201,
+      "measured_delta": null
+    },
+    {
+      "id": "case_172",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_173",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_174",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 324,
+      "all_rotations_patterns": 1294,
+      "measured_delta": null
+    },
+    {
+      "id": "case_175",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 576,
+      "all_rotations_patterns": 2300,
+      "measured_delta": null
+    },
+    {
+      "id": "case_176",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_177",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_178",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_179",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_180",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_181",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_182",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_183",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 479,
+      "all_rotations_patterns": 1850,
+      "measured_delta": null
+    },
+    {
+      "id": "case_184",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_185",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_186",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 12,
+      "all_rotations_patterns": 48,
+      "measured_delta": null
+    },
+    {
+      "id": "case_187",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 389,
+      "all_rotations_patterns": 504,
+      "measured_delta": null
+    },
+    {
+      "id": "case_188",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_189",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_190",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 199,
+      "all_rotations_patterns": 425,
+      "measured_delta": null
+    },
+    {
+      "id": "case_191",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_192",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_193",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_194",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_195",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_196",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_197",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_198",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_199",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_200",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_201",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_202",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_203",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 674,
+      "all_rotations_patterns": 2682,
+      "measured_delta": null
+    },
+    {
+      "id": "case_204",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_205",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_206",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 395,
+      "all_rotations_patterns": 1536,
+      "measured_delta": null
+    },
+    {
+      "id": "case_207",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_208",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_209",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_210",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_211",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_212",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_213",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_214",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_215",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_216",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_217",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_218",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_219",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 2,
+      "all_rotations_patterns": 2,
+      "measured_delta": null
+    },
+    {
+      "id": "case_220",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_221",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_222",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 50,
+      "all_rotations_patterns": 90,
+      "measured_delta": null
+    },
+    {
+      "id": "case_223",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_224",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_225",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_226",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_227",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_228",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_229",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_230",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_231",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 185,
+      "all_rotations_patterns": 462,
+      "measured_delta": null
+    },
+    {
+      "id": "case_232",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_233",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_234",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_235",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_236",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_237",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_238",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_239",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_240",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_241",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_242",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_243",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_244",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_245",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_246",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 2,
+      "all_rotations_patterns": 4,
+      "measured_delta": null
+    },
+    {
+      "id": "case_247",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 15,
+      "all_rotations_patterns": 45,
+      "measured_delta": null
+    },
+    {
+      "id": "case_248",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_249",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_250",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_251",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_252",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_253",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_254",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_255",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 483,
+      "all_rotations_patterns": 1924,
+      "measured_delta": null
+    },
+    {
+      "id": "case_256",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_257",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_258",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_259",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_260",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_261",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_262",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 320,
+      "all_rotations_patterns": 1249,
+      "measured_delta": null
+    },
+    {
+      "id": "case_263",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_264",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_265",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_266",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_267",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_268",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_269",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_270",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 8,
+      "all_rotations_patterns": 32,
+      "measured_delta": null
+    },
+    {
+      "id": "case_271",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_272",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_273",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_274",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_275",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_276",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_277",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_278",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_279",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_280",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_281",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_282",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_283",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 3,
+      "all_rotations_patterns": 12,
+      "measured_delta": null
+    },
+    {
+      "id": "case_284",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_285",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_286",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_287",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 619,
+      "all_rotations_patterns": 2368,
+      "measured_delta": null
+    },
+    {
+      "id": "case_288",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_289",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_290",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_291",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_292",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_293",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_294",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": false,
+      "unrotated_patterns": 20,
+      "all_rotations_patterns": 80,
+      "measured_delta": null
+    },
+    {
+      "id": "case_295",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_296",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_297",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_298",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 256,
+      "all_rotations_patterns": 1024,
+      "measured_delta": null
+    },
+    {
+      "id": "case_299",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 484,
+      "all_rotations_patterns": 1918,
+      "measured_delta": null
+    },
+    {
+      "id": "case_300",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_301",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_302",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 18,
+      "all_rotations_patterns": 18,
+      "measured_delta": null
+    },
+    {
+      "id": "case_303",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_304",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_305",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_306",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_307",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_308",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_309",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_310",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_311",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_312",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_313",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_314",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_315",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 296,
+      "all_rotations_patterns": 486,
+      "measured_delta": null
+    },
+    {
+      "id": "case_316",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_317",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_318",
+      "dev": false,
+      "prior_domain": false,
+      "actual_domain": false,
+      "unrotated_patterns": 0,
+      "all_rotations_patterns": 0,
+      "measured_delta": null
+    },
+    {
+      "id": "case_319",
+      "dev": false,
+      "prior_domain": true,
+      "actual_domain": true,
+      "unrotated_patterns": 665,
+      "all_rotations_patterns": 2508,
+      "measured_delta": null
+    }
+  ]
+}

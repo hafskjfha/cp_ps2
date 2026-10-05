@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "selected": "submissions/runtime_053_254103898.py",
+  "score": 254103898,
+  "gain_over_start": 1166873,
+  "previous_failed_boundary": "results/million_final_boundary.json",
+  "previous_failed_runtime_benchmark": "results/million_runtime_stable.json",
+  "final_evidence": {
+    "benchmark": "results/checkpoints/runtime_053_254103898.benchmark.json",
+    "readiness": "results/checkpoints/runtime_053_254103898.readiness.json",
+    "smoke": "results/checkpoints/runtime_053_254103898.smoke.json",
+    "stress": "results/checkpoints/runtime_053_254103898.stress.json",
+    "boundary": "results/checkpoints/runtime_053_254103898.boundary.json",
+    "reproduction": "results/checkpoints/runtime_053_254103898.reproduction.json",
+    "review": "results/checkpoints/runtime_053_254103898.review.json"
+  }
+}

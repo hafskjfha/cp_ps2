@@ -1,0 +1,34 @@
+{
+  "solver": "solvers\\experiments\\refine_planes_only.py",
+  "solver_sha256": "50f9bd828766ae17b933322029af05077d7dfd5f6fc04868cafea68dde477b0c",
+  "parent": "solvers\\experiments\\late_beam_four_fast.py",
+  "parent_sha256": "516e709b120ffae1500da6a645d801335f81c497b377a92d10befc165b4177ca",
+  "changed_named_definitions": [
+    "RefineState",
+    "refine_trial"
+  ],
+  "weighted_refine_state_ast_unchanged": true,
+  "findings": [],
+  "counts_use_audit": {
+    "ordinary_refine_state": "counts becomes None after its planes are initialized; best/apply consume planes only.",
+    "snapshot_helpers": "refine_trial copies counts only when non-None; refine_restore restores the same None sentinel and copied planes.",
+    "clone_state_and_beam_actions": "Only reached from finite_beam, which creates State; those counts remain lists.",
+    "state_productive_weighted_constructors": "These use State/WeightedState count lists and do not inherit RefineState.",
+    "weighted_refinement": "Separate unchanged WeightedRefineState retains list counts and its own six-plane weighted encoding; shared geometry tuple is unchanged.",
+    "forward_sweep": "Changing wstamp after initialization does not alter grid-versus-wishes deficit planes; best uses the new stamp directly."
+  },
+  "plane_arithmetic_proof": "Each bit position is an independent action lane storing dd minus current region matches. delta>0 subtracts one with borrow; every covered region contains the formerly mismatched cell, so its deficit is at least1. delta<0 adds one with carry; each region previously matched that cell, so deficit is at mostdd-1. Therefore all updated values remain0..dd, fit four bits, and cannot overflow the five-plane buffer. Carry masks remain inside finite cover_bits even when using Python bitwise complement.",
+  "light_oracle_tests": {
+    "passed": true,
+    "test_methods": 3,
+    "extreme_initial_states": 21,
+    "mixed_actual_wish_transitions": 168,
+    "independent_scalar_best_checks": 120,
+    "nested_trial_restore_pairs": 16,
+    "weighted_cache_orders": 8,
+    "weighted_transition_comparisons": 96,
+    "cover_mask_comparisons": 724,
+    "runtime_sec": 0.702
+  },
+  "performance_review": "No new asymptotic concern found. Extra cover bitsets are bounded by one board geometry in a contest process; weighted state remains unchanged. No timing claim added by this read-only review."
+}

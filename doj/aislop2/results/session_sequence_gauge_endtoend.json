@@ -1,0 +1,17 @@
+{
+  "id": "case_007",
+  "family": "stripes",
+  "n": 30,
+  "d": 3,
+  "c": 6,
+  "k": 180,
+  "valid": true,
+  "score": 654444,
+  "matches": 589,
+  "total_cells": 900,
+  "input_sha256": "7c1a5498d5de05df77a702bcc2e6e2154898ff4d6a40afb72caac8d9e3591491",
+  "runtime_sec": 4.729390499996953,
+  "operations": 180,
+  "output_bytes": 1498,
+  "output_sha256": "cafb8f4c0bd44c08728653bf96d4db2ee7ecf846b694dc23e0277ab6ab1bcdac"
+}

@@ -1,0 +1,8 @@
+[
+    {
+        "key": "ctrl+f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Python with Input",
+        "when": "editorLangId == python"
+    }
+]

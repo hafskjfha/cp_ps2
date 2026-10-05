@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "tests_run": 4,
+  "runtime_sec": 0.6080548000754789,
+  "failures": [],
+  "measurements": {
+    "canonical_early_success": {
+      "reachable_targets": 15,
+      "deficient_inventory_score": 78
+    },
+    "guard_integration": {
+      "fallback_parity_fixtures": 5,
+      "exact_optimum_skips_beam": true
+    },
+    "failed_probe_purity": {
+      "cases": 12,
+      "failed_probes": 12
+    },
+    "source_sha256": "4ae88477908948eac3ca8e8163bf2a7d08d0981d806a753e2d73022657f5a91d",
+    "static": {
+      "valid": true,
+      "errors": [],
+      "review_flags": [],
+      "imports": [
+        "heapq",
+        "math",
+        "random",
+        "sys"
+      ],
+      "sha256": "4ae88477908948eac3ca8e8163bf2a7d08d0981d806a753e2d73022657f5a91d",
+      "source_bytes": 91846,
+      "reads_stdin": true
+    }
+  }
+}

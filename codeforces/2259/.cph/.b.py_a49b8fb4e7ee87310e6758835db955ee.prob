@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"c:\\dev\\ps\\codeforces\\2259\\b.py","tests":[{"id":1788618514245,"input":"5\n2\n1 3\n4\n1 1 1 2\n3\n6 7 8\n4\n2 2 2 2\n5\n1 10 100 1000 100000\n","output":"2\n3\n1\n4\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\codeforces\\2259\\b.py","group":"local","local":true}

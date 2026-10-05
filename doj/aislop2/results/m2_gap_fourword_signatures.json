@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "n": 5,
+      "states": 1179,
+      "min_support": 9,
+      "bestword": [
+        4,
+        2,
+        4,
+        2
+      ],
+      "small_counts": {},
+      "examples": [],
+      "runtime": 0.6649297999683768
+    },
+    {
+      "n": 6,
+      "states": 3888,
+      "min_support": 9,
+      "bestword": [
+        4,
+        2,
+        4,
+        2
+      ],
+      "small_counts": {},
+      "examples": [],
+      "runtime": 6.8039551000110805
+    }
+  ]
+}

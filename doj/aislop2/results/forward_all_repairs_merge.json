@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "base": "All functions/classes including main preserved except solve rename",
+  "four": "All three appended nodes preserved except solve rename",
+  "deeper": "Both functions preserved exactly",
+  "canonical_tests": "6 groups passed including counts=None restoration",
+  "sha256": {
+    "base": "9855190845d15a2584f7d86fad6c38401a0dccb4c55ea9a25dc36d0c98eba947",
+    "four": "2d10d10f8dc30cb390f6d12163b8a3ed737b832b0466ad223175850c7333dfda",
+    "deeper": "ef29ca9321e4b1e2ab686d7dc333e826c5cda45ff909314651ebed8401c1d7b3",
+    "merged": "8494b5931955f69e0e7f9a7fa0a882788eba681820e755c574e3cf1e81c3e9eb"
+  }
+}

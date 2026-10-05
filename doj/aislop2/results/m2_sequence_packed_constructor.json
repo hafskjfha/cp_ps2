@@ -1,0 +1,82 @@
+{
+  "config": {
+    "cases": "041,117,201,261",
+    "width": 128,
+    "five": false,
+    "output": "results/m2_sequence_packed_constructor.json"
+  },
+  "rows": [
+    {
+      "id": "case_041",
+      "n": 11,
+      "d": 3,
+      "c": 4,
+      "k": 73,
+      "width": 128,
+      "original": {
+        "matches": 115,
+        "runtime_sec": 0.8856199999572709,
+        "cpu_sec": 0.890625
+      },
+      "packed": {
+        "matches": 115,
+        "runtime_sec": 0.5762124999891967,
+        "cpu_sec": 0.5625
+      }
+    },
+    {
+      "id": "case_117",
+      "n": 13,
+      "d": 3,
+      "c": 5,
+      "k": 30,
+      "width": 128,
+      "original": {
+        "matches": 122,
+        "runtime_sec": 0.4352125999284908,
+        "cpu_sec": 0.4375
+      },
+      "packed": {
+        "matches": 122,
+        "runtime_sec": 0.2793987999903038,
+        "cpu_sec": 0.25
+      }
+    },
+    {
+      "id": "case_201",
+      "n": 12,
+      "d": 3,
+      "c": 6,
+      "k": 56,
+      "width": 128,
+      "original": {
+        "matches": 115,
+        "runtime_sec": 0.7332405999768525,
+        "cpu_sec": 0.734375
+      },
+      "packed": {
+        "matches": 115,
+        "runtime_sec": 0.4890596999321133,
+        "cpu_sec": 0.484375
+      }
+    },
+    {
+      "id": "case_261",
+      "n": 14,
+      "d": 3,
+      "c": 5,
+      "k": 31,
+      "width": 128,
+      "original": {
+        "matches": 169,
+        "runtime_sec": 0.42733550001867115,
+        "cpu_sec": 0.421875
+      },
+      "packed": {
+        "matches": 169,
+        "runtime_sec": 0.30603229999542236,
+        "cpu_sec": 0.3125
+      }
+    }
+  ]
+}

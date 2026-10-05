@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\contest\\ucpc2023p\\a.py","tests":[{"id":1782450234737,"input":"1\n2\n3\n1\n2\n3\n1\n2\n3\n1","output":"W"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\contest\\ucpc2023p\\a.py","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: 441","url":"c:\\dev\\ps\\doj\\441.cpp","tests":[{"id":1786901873911,"input":"2\n1\n??\n1\nMM","output":"4\n-1"},{"id":1786901953229,"input":"1\n4\n????????","output":"46"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\441.cpp","group":"local","local":true}

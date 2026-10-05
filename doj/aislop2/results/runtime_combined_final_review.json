@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "audit": "Read-only AST integration audit; no solver or microbenchmark executed.",
+  "artifact": "solvers/experiments/runtime_combined_final.py",
+  "artifact_bytes": 91944,
+  "artifact_sha256": "3330e36b6f33ca8fe42b976ef11319b5536c2dcd137ba1b5c505b1e6079ca068",
+  "checks": {
+    "state_apply_exact_reviewed": true,
+    "weighted_state_unchanged_v1": true,
+    "weighted_state_unchanged_early_bound": true,
+    "refine_init_exact_reviewed": true,
+    "temporal_best_exact_reviewed": true,
+    "temporal_boundary_exact_reviewed": true,
+    "best_insertion_exact_reviewed": true,
+    "deletion_deltas_exact_reviewed": true,
+    "early_bound_helper_unchanged": true,
+    "early_bound_call_guard_unchanged": true,
+    "refine_goals_cache_exact_reviewed": true,
+    "only_state_apply_changed_from_v1": true,
+    "source_under_100000_bytes": true
+  },
+  "component_files": {
+    "runtime_combined_final.py": {
+      "bytes": 91944,
+      "sha256": "3330e36b6f33ca8fe42b976ef11319b5536c2dcd137ba1b5c505b1e6079ca068"
+    },
+    "runtime_combined_v1.py": {
+      "bytes": 91813,
+      "sha256": "ddd0c6175fa02665f2926993e8ac106f96eb70ed9fc07f1bbc02a704835011bf"
+    },
+    "runtime_state_fast.py": {
+      "bytes": 89288,
+      "sha256": "eb8820a354256d2ccc50383abfb2fa90feccc3ecd4c27c4ff6931f62cda5a485"
+    },
+    "runtime_init_fast.py": {
+      "bytes": 89380,
+      "sha256": "674565aad7735ac486d385a68272383ee1c5daef253edbc609f9423ce0daf2fa"
+    },
+    "runtime_temporal_fast.py": {
+      "bytes": 94622,
+      "sha256": "f8628e6595ca54e902e4bdf285cb75199d11522312b9b07797f2d85b9b464abf"
+    },
+    "runtime_route_early_bound.py": {
+      "bytes": 91846,
+      "sha256": "4ae88477908948eac3ca8e8163bf2a7d08d0981d806a753e2d73022657f5a91d"
+    }
+  },
+  "limits": "Runtime and benchmark score are independently qualified by the root task."
+}

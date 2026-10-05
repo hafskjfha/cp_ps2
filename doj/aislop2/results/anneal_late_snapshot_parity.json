@@ -1,0 +1,11 @@
+{
+  "parent": "results/late_beam_forward_stable.json",
+  "candidate": "results/anneal_late_snapshot_stable.json",
+  "cases": 320,
+  "changed_outputs": [],
+  "total_score": 251734381,
+  "runtime_sec": 295.2483734980924,
+  "max_runtime_sec": 3.875671499990858,
+  "parent_runtime_sec": 317.4235733994283,
+  "parent_max_runtime_sec": 3.730668499949388
+}

@@ -1,0 +1,96 @@
+{
+  "parent": "solvers\\experiments\\session_suffix.py",
+  "candidate": "solvers\\experiments\\session_combined.py",
+  "delta": 27271,
+  "wins": [
+    {
+      "id": "case_007",
+      "n": 30,
+      "d": 3,
+      "k": 180,
+      "matches_delta": 1,
+      "score_delta": 1111
+    },
+    {
+      "id": "case_043",
+      "n": 26,
+      "d": 3,
+      "k": 88,
+      "matches_delta": 2,
+      "score_delta": 2959
+    },
+    {
+      "id": "case_063",
+      "n": 27,
+      "d": 2,
+      "k": 145,
+      "matches_delta": 1,
+      "score_delta": 1372
+    },
+    {
+      "id": "case_142",
+      "n": 21,
+      "d": 3,
+      "k": 112,
+      "matches_delta": 1,
+      "score_delta": 2267
+    },
+    {
+      "id": "case_154",
+      "n": 21,
+      "d": 3,
+      "k": 45,
+      "matches_delta": 1,
+      "score_delta": 2268
+    },
+    {
+      "id": "case_186",
+      "n": 19,
+      "d": 3,
+      "k": 84,
+      "matches_delta": 1,
+      "score_delta": 2770
+    },
+    {
+      "id": "case_203",
+      "n": 28,
+      "d": 3,
+      "k": 57,
+      "matches_delta": 1,
+      "score_delta": 1276
+    },
+    {
+      "id": "case_229",
+      "n": 11,
+      "d": 2,
+      "k": 20,
+      "matches_delta": 1,
+      "score_delta": 8265
+    },
+    {
+      "id": "case_231",
+      "n": 30,
+      "d": 3,
+      "k": 14,
+      "matches_delta": 1,
+      "score_delta": 1111
+    },
+    {
+      "id": "case_270",
+      "n": 20,
+      "d": 3,
+      "k": 127,
+      "matches_delta": 1,
+      "score_delta": 2500
+    },
+    {
+      "id": "case_283",
+      "n": 27,
+      "d": 3,
+      "k": 93,
+      "matches_delta": 1,
+      "score_delta": 1372
+    }
+  ],
+  "losses": []
+}

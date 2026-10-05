@@ -1,0 +1,1 @@
+{"name":"Local: 312","url":"c:\\dev\\ps\\doj\\312.py","tests":[{"id":1791187287853,"input":"7 9\n1 2\n2 3\n3 1\n3 4\n4 5\n5 4\n5 6\n6 7\n7 7\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\312.py","group":"local","local":true}

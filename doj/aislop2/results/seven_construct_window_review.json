@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "random_instances": 24,
+  "canonical_suffix_and_incremental_gain_checks": 1179,
+  "full_reconstructed_window_checks": 24,
+  "includes_nonwildcard_desired_stamp": true,
+  "includes_strict_and_neutral": true,
+  "runtime_sec": 0.0522736000129953
+}

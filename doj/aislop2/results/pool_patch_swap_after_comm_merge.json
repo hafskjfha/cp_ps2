@@ -1,0 +1,22 @@
+{
+  "solver": "solvers\\experiments\\pool_patch_swap_after_comm.py",
+  "solver_sha256": "69871376e245b0d259249fb6c9d7dba6224f10e5d0c42db02972a27924d2f9d6",
+  "parent": "submissions\\best_036_251771548.py",
+  "parent_sha256": "0f98fc940dc3283dd15ab0b8a8bb0f3f7955285354dbc9fc1ec1e9688aa6d68a",
+  "append_source": "solvers/experiments/late_patch_swap_append.py",
+  "all_parent_named_definitions_unchanged": true,
+  "canonical_word_and_restoration_checks": 36,
+  "static": {
+    "valid": true,
+    "errors": [],
+    "review_flags": [],
+    "imports": [
+      "heapq",
+      "math",
+      "random",
+      "sys"
+    ],
+    "sha256": "69871376e245b0d259249fb6c9d7dba6224f10e5d0c42db02972a27924d2f9d6",
+    "reads_stdin": true
+  }
+}

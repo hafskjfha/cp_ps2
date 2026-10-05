@@ -1,0 +1,276 @@
+{
+  "purpose": "exploratory ablation on previously improved cases; not a benchmark score",
+  "solver_sha256": "76db4a25982b0f6cbafb4d80c4150481404ff0bf7efaab65994bfb8c42de2c1b",
+  "results": [
+    {
+      "id": "case_015",
+      "n": 25,
+      "d": 3,
+      "k": 160,
+      "parent_matches": 586,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            578,
+            586,
+            586
+          ],
+          "runtime_sec": 0.07779579993803054
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            586,
+            586,
+            587
+          ],
+          "runtime_sec": 0.07361939991824329
+        }
+      ]
+    },
+    {
+      "id": "case_021",
+      "n": 15,
+      "d": 2,
+      "k": 24,
+      "parent_matches": 158,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            153,
+            157,
+            157
+          ],
+          "runtime_sec": 0.009024000028148293
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            156,
+            159,
+            159
+          ],
+          "runtime_sec": 0.008063999935984612
+        }
+      ]
+    },
+    {
+      "id": "case_059",
+      "n": 25,
+      "d": 2,
+      "k": 40,
+      "parent_matches": 593,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            589,
+            591,
+            591
+          ],
+          "runtime_sec": 0.025110499933362007
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            593,
+            594,
+            594
+          ],
+          "runtime_sec": 0.029468099935911596
+        }
+      ]
+    },
+    {
+      "id": "case_062",
+      "n": 18,
+      "d": 3,
+      "k": 131,
+      "parent_matches": 297,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            297,
+            299,
+            299
+          ],
+          "runtime_sec": 0.04648549994453788
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            297,
+            297,
+            297
+          ],
+          "runtime_sec": 0.04598629998508841
+        }
+      ]
+    },
+    {
+      "id": "case_073",
+      "n": 13,
+      "d": 2,
+      "k": 54,
+      "parent_matches": 165,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            165,
+            166,
+            166
+          ],
+          "runtime_sec": 0.010008699959143996
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            165,
+            165,
+            165
+          ],
+          "runtime_sec": 0.007528199930675328
+        }
+      ]
+    },
+    {
+      "id": "case_219",
+      "n": 26,
+      "d": 3,
+      "k": 49,
+      "parent_matches": 266,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            248,
+            263,
+            264
+          ],
+          "runtime_sec": 0.06398069998249412
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            258,
+            266,
+            267
+          ],
+          "runtime_sec": 0.06100739992689341
+        }
+      ]
+    },
+    {
+      "id": "case_238",
+      "n": 17,
+      "d": 2,
+      "k": 107,
+      "parent_matches": 275,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            273,
+            274,
+            274
+          ],
+          "runtime_sec": 0.019790699938312173
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            276,
+            276,
+            276
+          ],
+          "runtime_sec": 0.005598200019448996
+        }
+      ]
+    },
+    {
+      "id": "case_253",
+      "n": 12,
+      "d": 2,
+      "k": 162,
+      "parent_matches": 140,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            139,
+            140,
+            141
+          ],
+          "runtime_sec": 0.02424790000077337
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            140,
+            141,
+            141
+          ],
+          "runtime_sec": 0.013690399937331676
+        }
+      ]
+    },
+    {
+      "id": "case_265",
+      "n": 9,
+      "d": 3,
+      "k": 90,
+      "parent_matches": 73,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            71,
+            72,
+            72
+          ],
+          "runtime_sec": 0.02563170006033033
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            72,
+            73,
+            75
+          ],
+          "runtime_sec": 0.016314700013026595
+        }
+      ]
+    },
+    {
+      "id": "case_287",
+      "n": 27,
+      "d": 3,
+      "k": 112,
+      "parent_matches": 633,
+      "schemes": [
+        {
+          "name": "unresolved",
+          "weighted_and_ordinary0_1_2_matches": [
+            609,
+            615,
+            622
+          ],
+          "runtime_sec": 0.11749169998802245
+        },
+        {
+          "name": "boundary",
+          "weighted_and_ordinary0_1_2_matches": [
+            632,
+            633,
+            634
+          ],
+          "runtime_sec": 0.10294839995913208
+        }
+      ]
+    }
+  ]
+}

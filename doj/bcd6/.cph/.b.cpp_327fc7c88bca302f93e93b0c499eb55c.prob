@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"c:\\dev\\ps\\doj\\bcd6\\b.cpp","tests":[{"id":1788606828898,"input":"3\n1 3\ndas\n2 3\ndas\ndas\n1 3\ndad","output":"YES\n1\n1 1 1 3\nYES\n2\n1 1 1 3\n2 1 2 3\nNO"},{"id":1788606838811,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\bcd6\\b.cpp","group":"local","local":true}

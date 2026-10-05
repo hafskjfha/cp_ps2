@@ -1,0 +1,149 @@
+{
+  "kind": "fixed_parameter_boundary_runtime_holdout",
+  "configs": [
+    {
+      "n": 4,
+      "d": 3,
+      "c": 2,
+      "k": 16,
+      "seed": 91732002,
+      "family": "random"
+    },
+    {
+      "n": 4,
+      "d": 3,
+      "c": 6,
+      "k": 16,
+      "seed": 91732006,
+      "family": "random"
+    },
+    {
+      "n": 6,
+      "d": 3,
+      "c": 2,
+      "k": 16,
+      "seed": 91732129,
+      "family": "random"
+    },
+    {
+      "n": 6,
+      "d": 3,
+      "c": 6,
+      "k": 16,
+      "seed": 91732133,
+      "family": "random"
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 2,
+      "k": 16,
+      "seed": 91732256,
+      "family": "random"
+    },
+    {
+      "n": 12,
+      "d": 2,
+      "c": 6,
+      "k": 16,
+      "seed": 91732260,
+      "family": "random"
+    },
+    {
+      "n": 12,
+      "d": 3,
+      "c": 2,
+      "k": 16,
+      "seed": 91732383,
+      "family": "random"
+    },
+    {
+      "n": 12,
+      "d": 3,
+      "c": 6,
+      "k": 16,
+      "seed": 91732387,
+      "family": "random"
+    },
+    {
+      "n": 16,
+      "d": 3,
+      "c": 2,
+      "k": 180,
+      "seed": 91732510,
+      "family": "random"
+    },
+    {
+      "n": 16,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "seed": 91732514,
+      "family": "random"
+    },
+    {
+      "n": 23,
+      "d": 3,
+      "c": 2,
+      "k": 180,
+      "seed": 91732637,
+      "family": "random"
+    },
+    {
+      "n": 23,
+      "d": 3,
+      "c": 6,
+      "k": 180,
+      "seed": 91732641,
+      "family": "random"
+    },
+    {
+      "n": 24,
+      "d": 3,
+      "c": 2,
+      "k": 119,
+      "seed": 91732764,
+      "family": "random"
+    },
+    {
+      "n": 24,
+      "d": 3,
+      "c": 6,
+      "k": 119,
+      "seed": 91732768,
+      "family": "random"
+    },
+    {
+      "n": 24,
+      "d": 3,
+      "c": 2,
+      "k": 120,
+      "seed": 91732891,
+      "family": "random"
+    },
+    {
+      "n": 24,
+      "d": 3,
+      "c": 6,
+      "k": 120,
+      "seed": 91732895,
+      "family": "random"
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 2,
+      "k": 119,
+      "seed": 91733018,
+      "family": "random"
+    },
+    {
+      "n": 30,
+      "d": 3,
+      "c": 6,
+      "k": 119,
+      "seed": 91733022,
+      "family": "random"
+    }
+  ]
+}

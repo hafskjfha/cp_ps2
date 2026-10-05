@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "selected": "submissions/runtime_053_254103898.py",
+  "score": 254103898,
+  "gain": 1166873,
+  "source_bytes": 99261,
+  "solver_sha256": "dd865b4ea01fe859fe7c820a9a1b5201b7213cd3da29ba186cea4bc9ebf318ac",
+  "immutable_checkpoints_verified": 54,
+  "frozen_cases_verified": 320
+}

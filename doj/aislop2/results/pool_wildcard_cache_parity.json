@@ -1,0 +1,12 @@
+{
+  "parent": "submissions/best_032_251668850.py",
+  "candidate": "solvers/experiments/pool_wildcard_cache.py",
+  "solver_sha256": "9befeb3c50d815ef76402aaecc41d49c7b66cc759721ee25ab24107a92c1e86b",
+  "same_manifest": true,
+  "cases": 320,
+  "all_valid": true,
+  "output_hash_differences": [],
+  "total_score": 251668850,
+  "max_runtime_sec": 3.694954700069502,
+  "passed": true
+}

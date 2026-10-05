@@ -1,0 +1,122 @@
+[
+  {
+    "id": "case_000",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 4.75000124424696e-05
+  },
+  {
+    "id": "case_001",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.20991079998202622
+  },
+  {
+    "id": "case_002",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 2.850010059773922e-05
+  },
+  {
+    "id": "case_003",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.0001669001067057252
+  },
+  {
+    "id": "case_004",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 5.3999945521354675e-05
+  },
+  {
+    "id": "case_005",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.04667189996689558
+  },
+  {
+    "id": "case_006",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.028029699926264584
+  },
+  {
+    "id": "case_007",
+    "gain": 1111,
+    "matches_delta": 1,
+    "time": 0.21306370000820607
+  },
+  {
+    "id": "case_008",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.00027870002668350935
+  },
+  {
+    "id": "case_009",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.0006619000341743231
+  },
+  {
+    "id": "case_010",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 3.529991954565048e-05
+  },
+  {
+    "id": "case_011",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.0010191999608650804
+  },
+  {
+    "id": "case_012",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.00017570005729794502
+  },
+  {
+    "id": "case_013",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.2287105000577867
+  },
+  {
+    "id": "case_014",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.0011814000317826867
+  },
+  {
+    "id": "case_015",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.19097310001961887
+  },
+  {
+    "id": "case_016",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.0002525000600144267
+  },
+  {
+    "id": "case_017",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.00015259999781847
+  },
+  {
+    "id": "case_018",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 0.10553719999734312
+  },
+  {
+    "id": "case_019",
+    "gain": 0,
+    "matches_delta": 0,
+    "time": 3.6499928683042526e-05
+  }
+]

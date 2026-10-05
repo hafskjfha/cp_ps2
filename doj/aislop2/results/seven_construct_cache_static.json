@@ -1,0 +1,20 @@
+{
+  "parent": "solvers\\experiments\\seven_construct_fast_bytearray_readable.py",
+  "parent_sha256": "db33ee57d94a85e7ddbceb916e1cd7e23b12aeda8fe050b80fc9c5f44326f9d4",
+  "variants": [
+    {
+      "cache_limit": 8192,
+      "path": "solvers\\experiments\\seven_construct_cached_readable.py",
+      "sha256": "6e3efd529718250132771919b6ecefa37cd66b214c9db68f8c38ceb11de8770d",
+      "original_ast_nodes_preserved": true,
+      "action_selection_tail_identical": true
+    },
+    {
+      "cache_limit": 0,
+      "path": "solvers\\experiments\\seven_construct_uncached_readable.py",
+      "sha256": "cfdfa7df4b8a4ebb131d767ac70cbd9109e16311c1727e947f1734fc7bf73767",
+      "original_ast_nodes_preserved": true,
+      "action_selection_tail_identical": true
+    }
+  ]
+}

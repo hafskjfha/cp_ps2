@@ -1,0 +1,41 @@
+{
+  "parent": "solvers\\experiments\\forward_all_repairs.py",
+  "parent_sha256": "8494b5931955f69e0e7f9a7fa0a882788eba681820e755c574e3cf1e81c3e9eb",
+  "intermediate": "solvers\\experiments\\pool_all_repairs_patch_swap.py",
+  "intermediate_sha256": "2d3c9a2e4e00b57736a27c77dd542aad3ceb04b948a694f7d61dbac6fd0498b1",
+  "solver": "solvers\\experiments\\pool_all_repairs_patch_stamp.py",
+  "solver_sha256": "83150fbf9b981f6118493cf479d4fcc0108c56b84f44d449bc328be783d578da",
+  "parent_named_definitions_unchanged": true,
+  "append_order": [
+    "all_qualified_repairs",
+    "one_global_PQP_append",
+    "one_stamp_aware_beam_append"
+  ],
+  "qualified_fragments": [
+    "solvers/experiments/late_patch_swap_append.py",
+    "solvers/experiments/late_stamp_beam.py"
+  ],
+  "tests": {
+    "end_to_end_PQP_completion": true,
+    "PQP_K_guard": true,
+    "canonical_nonempty_prefix_stamp_floor_cases": 4
+  },
+  "static": {
+    "valid": true,
+    "errors": [],
+    "review_flags": [],
+    "imports": [
+      "heapq",
+      "math",
+      "random",
+      "sys"
+    ],
+    "sha256": "83150fbf9b981f6118493cf479d4fcc0108c56b84f44d449bc328be783d578da",
+    "reads_stdin": true
+  },
+  "benchmark_status": "parent qualified; holding heavy gates for root exclusive timing window",
+  "parent_qualified": true,
+  "parent_stable_score": 251862073,
+  "parent_readiness_passed": true,
+  "parent_readiness_max_runtime_sec": 2.9381036000559106
+}

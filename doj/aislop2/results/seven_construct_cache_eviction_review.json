@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cache_limits": [
+    1,
+    2,
+    8192
+  ],
+  "canonical_incremental_rng_clone_and_grid_reuse_checks": 246,
+  "cached_planes_immutable": true,
+  "old_planes_always_fresh": true,
+  "runtime_sec": 0.04220010002609342
+}

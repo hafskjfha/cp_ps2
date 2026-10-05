@@ -1,0 +1,40 @@
+{
+  "suite": "dev",
+  "parent_total": 80286651,
+  "candidate_total": 80293248,
+  "delta": 6597,
+  "changed_cases": [
+    {
+      "id": "case_027",
+      "n": 28,
+      "d": 2,
+      "c": 2,
+      "k": 60,
+      "family": "stripes",
+      "score": 760204,
+      "matches": 596,
+      "runtime_sec": 1.1570568999741226,
+      "delta": 3827,
+      "match_delta": 3,
+      "parent_runtime_sec": 1.0713682000059634
+    },
+    {
+      "id": "case_042",
+      "n": 19,
+      "d": 3,
+      "c": 6,
+      "k": 98,
+      "family": "repeated_stamp",
+      "score": 736842,
+      "matches": 266,
+      "runtime_sec": 2.3394579999148846,
+      "delta": 2770,
+      "match_delta": 1,
+      "parent_runtime_sec": 2.3746817000210285
+    }
+  ],
+  "wins": 2,
+  "losses": 0,
+  "max_runtime_sec": 3.7615496999351308,
+  "runtime_sec": 93.6908393993508
+}

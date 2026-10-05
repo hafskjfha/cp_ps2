@@ -1,0 +1,47 @@
+{
+  "solver": "solvers\\experiments\\anneal_all_repairs_complete.py",
+  "solver_sha256": "e6e70f3990f80540f45ae1c3df8b30587cfada22ccb9735708b9a112d47ffd0e",
+  "smoke_exact_parent_hashes": 20,
+  "cases": [
+    {
+      "valid": true,
+      "n": 18,
+      "d": 3,
+      "c": 3,
+      "k": 7,
+      "runtime_sec": 2.6521225000033155,
+      "returncode": 0,
+      "output_bytes": 62,
+      "stderr": "",
+      "operations": 7,
+      "matches": 150,
+      "score": 462962,
+      "id": "case_182",
+      "input_sha256": "10019a345c190600ee090fc4ddcefa7fa549ed4c8897b5388dd4dc3a0462b83c",
+      "output_sha256": "bb4f84505934ae5ed8221d47351caa6950156b883ae8fa2edcea133683356705",
+      "parent_score": 459876,
+      "score_delta": 3086
+    },
+    {
+      "valid": true,
+      "n": 16,
+      "d": 2,
+      "c": 3,
+      "k": 6,
+      "runtime_sec": 1.4085536999627948,
+      "returncode": 0,
+      "output_bytes": 46,
+      "stderr": "",
+      "operations": 6,
+      "matches": 256,
+      "score": 1000000,
+      "id": "case_310",
+      "input_sha256": "24cbff6f25ceb786bba0cfe418d40d42d44e92b08354408d4f09269780a79d14",
+      "output_sha256": "38fbc75be155e266afb98689e3dfc7a85fcf1415eaed180c9e9e5587b5c51de3",
+      "parent_score": 996093,
+      "score_delta": 3907
+    }
+  ],
+  "valid": true,
+  "score_delta": 6993
+}

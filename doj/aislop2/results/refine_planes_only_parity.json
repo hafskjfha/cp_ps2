@@ -1,0 +1,7 @@
+{
+  "parent": "solvers\\experiments\\late_beam_four_fast.py",
+  "candidate": "solvers\\experiments\\refine_planes_only.py",
+  "source_sha256": "50f9bd828766ae17b933322029af05077d7dfd5f6fc04868cafea68dde477b0c",
+  "exact_output_hashes": 320,
+  "changed": []
+}

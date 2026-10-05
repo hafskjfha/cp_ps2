@@ -1,0 +1,44 @@
+{
+  "diagnostic_only": true,
+  "solver_sha256": "7348dc1f2b2c783fb8496f6d8e3be1a831b5c22aa4e4153750b9e6f3d298c71f",
+  "results": [
+    {
+      "id": "case_056",
+      "family": "reachable",
+      "n": 6,
+      "d": 3,
+      "c": 6,
+      "k": 68,
+      "valid": true,
+      "score": 944444,
+      "matches": 34,
+      "total_cells": 36,
+      "input_sha256": "1d78beab3e3dfe83067249f2d5404f75ecdebdd51d7d14d0aa61a27fd706267f",
+      "runtime_sec": 2.469495699973777,
+      "operations": 66,
+      "output_bytes": 466,
+      "output_sha256": "111e40d29b9c104478f15af14b4a0c25beebe78e2ee388a077096099de606b1c",
+      "delta": 0,
+      "same_output": true
+    },
+    {
+      "id": "case_317",
+      "family": "reachable",
+      "n": 8,
+      "d": 3,
+      "c": 4,
+      "k": 105,
+      "valid": true,
+      "score": 968750,
+      "matches": 62,
+      "total_cells": 64,
+      "input_sha256": "268d9ca2db500a01c0930eb74c5be8b4e7f709ce82c28dc52c917e7f5da0cae3",
+      "runtime_sec": 2.6552385999821126,
+      "operations": 102,
+      "output_bytes": 719,
+      "output_sha256": "deb3b7c52632b4f9b22c5d4180f0b62a0797ad4ae00fe4e2a45e0adee530e431",
+      "delta": 0,
+      "same_output": true
+    }
+  ]
+}

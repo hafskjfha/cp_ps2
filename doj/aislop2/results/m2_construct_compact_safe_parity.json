@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "id": "case_041",
+      "matches": 119,
+      "runtime_sec": 3.7492537999060005,
+      "stdout_sha256": "fc710689c43cb617c99e076175c594d4d22e99e79e375da005a3bf11831f8ad4"
+    },
+    {
+      "id": "case_117",
+      "matches": 126,
+      "runtime_sec": 3.5485474000452086,
+      "stdout_sha256": "0f483c33c237a83c05b4bb5514a7a8f91921c5f7b59d8ff810312d3724546596"
+    },
+    {
+      "id": "case_201",
+      "matches": 118,
+      "runtime_sec": 3.483173699933104,
+      "stdout_sha256": "d1e4dc813d29d135a0ce9026fcc24e3ca766eaa3b8bc61392ce6edc2c501cb4d"
+    },
+    {
+      "id": "case_261",
+      "matches": 172,
+      "runtime_sec": 3.7427428000373766,
+      "stdout_sha256": "6a099cae8e77155eb7d6371235e228cde734e3c7f8b8cc01d0d589c8e6261d35"
+    },
+    {
+      "id": "case_277",
+      "matches": 85,
+      "runtime_sec": 3.1188227999955416,
+      "stdout_sha256": "7f106c433e976f6365f1973f6857b4fcb58e899377a3d75deff08f0a7e132e2b"
+    },
+    {
+      "id": "case_309",
+      "matches": 87,
+      "runtime_sec": 3.2585932000074536,
+      "stdout_sha256": "31f3aaffa489e6bbc95a57e9e5aae35d28b7565083ba199af8977dab57eaac46"
+    }
+  ],
+  "all_operations_equal": true,
+  "max_runtime_sec": 3.7492537999060005,
+  "wrapper_sha256": "410f4b5d96f147499d8fc345715a912d4569068a35b0849d32b33995e7557e73"
+}

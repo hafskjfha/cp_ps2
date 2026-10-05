@@ -1,0 +1,7 @@
+module Hello
+
+import IO/Console
+
+routine start()
+  show("Hello from RazorForge!")
+  return

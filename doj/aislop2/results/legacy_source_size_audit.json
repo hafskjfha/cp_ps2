@@ -1,0 +1,205 @@
+{
+  "note": "User corrected source limit to100000 bytes during round4. Historical source and scores retained.",
+  "checkpoints": [
+    {
+      "file": "submissions/best_000_initial.py",
+      "bytes": 1617,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_001_240756242.py",
+      "bytes": 3662,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_002_240849239.py",
+      "bytes": 4885,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_003_242249708.py",
+      "bytes": 3696,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_004_243391996.py",
+      "bytes": 5510,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_005_244316245.py",
+      "bytes": 9528,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_006_245343012.py",
+      "bytes": 14473,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_007_245544191.py",
+      "bytes": 12913,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_008_246335486.py",
+      "bytes": 17858,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_009_246786935.py",
+      "bytes": 17067,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_010_246874186.py",
+      "bytes": 16456,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_011_247272076.py",
+      "bytes": 18562,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_012_248036769.py",
+      "bytes": 23193,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_013_248753972.py",
+      "bytes": 24305,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_014_249115734.py",
+      "bytes": 27806,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_015_249389357.py",
+      "bytes": 32978,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_016_249547073.py",
+      "bytes": 33004,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_017_249880999.py",
+      "bytes": 37688,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_018_250064691.py",
+      "bytes": 40309,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_019_250384135.py",
+      "bytes": 41244,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_020_250559222.py",
+      "bytes": 42546,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_021_250867386.py",
+      "bytes": 47507,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_022_250872488.py",
+      "bytes": 47962,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_023_250921331.py",
+      "bytes": 55687,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_024_250934988.py",
+      "bytes": 52431,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_025_250983831.py",
+      "bytes": 58939,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_026_251149505.py",
+      "bytes": 49247,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_027_251280679.py",
+      "bytes": 59005,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_028_251305191.py",
+      "bytes": 68370,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_029_251345195.py",
+      "bytes": 73196,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_030_251481350.py",
+      "bytes": 73738,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_031_251606350.py",
+      "bytes": 78268,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_032_251668850.py",
+      "bytes": 79993,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_033_251678439.py",
+      "bytes": 82720,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_034_251734381.py",
+      "bytes": 86327,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_035_251765631.py",
+      "bytes": 91982,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_036_251771548.py",
+      "bytes": 90681,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_037_251801728.py",
+      "bytes": 95756,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_038_251809034.py",
+      "bytes": 89648,
+      "within_100000": true
+    },
+    {
+      "file": "submissions/best_039_251862073.py",
+      "bytes": 107628,
+      "within_100000": false
+    }
+  ]
+}

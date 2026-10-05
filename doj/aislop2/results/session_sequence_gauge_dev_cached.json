@@ -1,0 +1,608 @@
+{
+  "cases": 100,
+  "gain": 5442,
+  "max_sec": 0.21754390001296997,
+  "sum_sec": 2.118751900154166,
+  "rows": [
+    {
+      "id": "case_000",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 4.780001472681761e-05
+    },
+    {
+      "id": "case_001",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.20964050001930445
+    },
+    {
+      "id": "case_002",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.329994458705187e-05
+    },
+    {
+      "id": "case_003",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0001097000204026699
+    },
+    {
+      "id": "case_004",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 5.080003757029772e-05
+    },
+    {
+      "id": "case_005",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.05325310002081096
+    },
+    {
+      "id": "case_006",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.029322699992917478
+    },
+    {
+      "id": "case_007",
+      "gain": 1111,
+      "matches_delta": 1,
+      "time": 0.21754390001296997
+    },
+    {
+      "id": "case_008",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.000192799954675138
+    },
+    {
+      "id": "case_009",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0005734999431297183
+    },
+    {
+      "id": "case_010",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.7300091460347176e-05
+    },
+    {
+      "id": "case_011",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0007373999105766416
+    },
+    {
+      "id": "case_012",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0001596999354660511
+    },
+    {
+      "id": "case_013",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.21286119997967035
+    },
+    {
+      "id": "case_014",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0004678999539464712
+    },
+    {
+      "id": "case_015",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.16413659998215735
+    },
+    {
+      "id": "case_016",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00015209999401122332
+    },
+    {
+      "id": "case_017",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0001674999948590994
+    },
+    {
+      "id": "case_018",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.12047520000487566
+    },
+    {
+      "id": "case_019",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 3.390002530068159e-05
+    },
+    {
+      "id": "case_020",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 1.4699995517730713e-05
+    },
+    {
+      "id": "case_021",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0016534000169485807
+    },
+    {
+      "id": "case_022",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0030322999227792025
+    },
+    {
+      "id": "case_023",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.01090009999461472
+    },
+    {
+      "id": "case_024",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 7.579999510198832e-05
+    },
+    {
+      "id": "case_025",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00012099999003112316
+    },
+    {
+      "id": "case_026",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.013419299968518317
+    },
+    {
+      "id": "case_027",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.015381900011561811
+    },
+    {
+      "id": "case_028",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 3.490003291517496e-05
+    },
+    {
+      "id": "case_029",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.008278600056655705
+    },
+    {
+      "id": "case_030",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00028959999326616526
+    },
+    {
+      "id": "case_031",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00025559996720403433
+    },
+    {
+      "id": "case_032",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 8.719996549189091e-05
+    },
+    {
+      "id": "case_033",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 6.009999196976423e-05
+    },
+    {
+      "id": "case_034",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00011969998013228178
+    },
+    {
+      "id": "case_035",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00017040001694113016
+    },
+    {
+      "id": "case_036",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 1.9999919459223747e-05
+    },
+    {
+      "id": "case_037",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.000202000024728477
+    },
+    {
+      "id": "case_038",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0034564000088721514
+    },
+    {
+      "id": "case_039",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0001118999207392335
+    },
+    {
+      "id": "case_040",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.8099981136620045e-05
+    },
+    {
+      "id": "case_041",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.023623300017789006
+    },
+    {
+      "id": "case_042",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.05820319999475032
+    },
+    {
+      "id": "case_043",
+      "gain": 2959,
+      "matches_delta": 2,
+      "time": 0.05078890000004321
+    },
+    {
+      "id": "case_044",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 5.570007488131523e-05
+    },
+    {
+      "id": "case_045",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 6.170000415295362e-05
+    },
+    {
+      "id": "case_046",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.14929319999646395
+    },
+    {
+      "id": "case_047",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.15955149999354035
+    },
+    {
+      "id": "case_048",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00014780007768422365
+    },
+    {
+      "id": "case_049",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.6300083845853806e-05
+    },
+    {
+      "id": "case_050",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00014969997573643923
+    },
+    {
+      "id": "case_051",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00012069998774677515
+    },
+    {
+      "id": "case_052",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 3.0199997127056122e-05
+    },
+    {
+      "id": "case_053",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00037129991687834263
+    },
+    {
+      "id": "case_054",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.000709200045093894
+    },
+    {
+      "id": "case_055",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.005356600042432547
+    },
+    {
+      "id": "case_056",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.020343399955891073
+    },
+    {
+      "id": "case_057",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.003091100021265447
+    },
+    {
+      "id": "case_058",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.01691870007198304
+    },
+    {
+      "id": "case_059",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.004714199923910201
+    },
+    {
+      "id": "case_060",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 9.229988791048527e-05
+    },
+    {
+      "id": "case_061",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 9.250000584870577e-05
+    },
+    {
+      "id": "case_062",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.1119314000243321
+    },
+    {
+      "id": "case_063",
+      "gain": 1372,
+      "matches_delta": 1,
+      "time": 0.08259139989968389
+    },
+    {
+      "id": "case_064",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 3.300001844763756e-05
+    },
+    {
+      "id": "case_065",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 5.380006041377783e-05
+    },
+    {
+      "id": "case_066",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00011600006837397814
+    },
+    {
+      "id": "case_067",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00016249995678663254
+    },
+    {
+      "id": "case_068",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 1.2100092135369778e-05
+    },
+    {
+      "id": "case_069",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 1.71000137925148e-05
+    },
+    {
+      "id": "case_070",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0005083000287413597
+    },
+    {
+      "id": "case_071",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0023300000466406345
+    },
+    {
+      "id": "case_072",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 5.4999953135848045e-05
+    },
+    {
+      "id": "case_073",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00010850001126527786
+    },
+    {
+      "id": "case_074",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.025432299938984215
+    },
+    {
+      "id": "case_075",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.05820630001835525
+    },
+    {
+      "id": "case_076",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 8.080003317445517e-05
+    },
+    {
+      "id": "case_077",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 5.779997445642948e-05
+    },
+    {
+      "id": "case_078",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.08434679999481887
+    },
+    {
+      "id": "case_079",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.09230300004128367
+    },
+    {
+      "id": "case_080",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 9.61000332608819e-05
+    },
+    {
+      "id": "case_081",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.429995220154524e-05
+    },
+    {
+      "id": "case_082",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 9.670003782957792e-05
+    },
+    {
+      "id": "case_083",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 7.020006887614727e-05
+    },
+    {
+      "id": "case_084",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 1.850002445280552e-05
+    },
+    {
+      "id": "case_085",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.550007775425911e-05
+    },
+    {
+      "id": "case_086",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.002049700007773936
+    },
+    {
+      "id": "case_087",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.003569600055925548
+    },
+    {
+      "id": "case_088",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 2.0000035874545574e-05
+    },
+    {
+      "id": "case_089",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.0007061000214889646
+    },
+    {
+      "id": "case_090",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.012245199992321432
+    },
+    {
+      "id": "case_091",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.028553000069223344
+    },
+    {
+      "id": "case_092",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 4.009995609521866e-05
+    },
+    {
+      "id": "case_093",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 3.0800001695752144e-05
+    },
+    {
+      "id": "case_094",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 9.129999671131372e-05
+    },
+    {
+      "id": "case_095",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.05089589999988675
+    },
+    {
+      "id": "case_096",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 7.179996464401484e-05
+    },
+    {
+      "id": "case_097",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 6.999995093792677e-05
+    },
+    {
+      "id": "case_098",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 7.499998901039362e-05
+    },
+    {
+      "id": "case_099",
+      "gain": 0,
+      "matches_delta": 0,
+      "time": 0.00022460008040070534
+    }
+  ]
+}

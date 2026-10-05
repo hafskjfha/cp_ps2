@@ -1,0 +1,1 @@
+{"name":"Local: e","url":"c:\\dev\\ps\\doj\\bcd8\\e.cpp","tests":[{"id":1789916010126,"input":"1\n4\n1 3 2 4","output":""},{"id":1789916029141,"input":"1\n4\n1 4 3 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\bcd8\\e.cpp","group":"local","local":true}

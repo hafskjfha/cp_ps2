@@ -1,0 +1,7 @@
+{
+  "transitions": 384,
+  "binary_replacement_parity": 30,
+  "reachable_and_packed_parity": 8,
+  "escape_dedup_parity": 32,
+  "bytes": 9989
+}

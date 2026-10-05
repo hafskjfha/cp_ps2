@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "tests_run": 10,
+  "runtime_sec": 6.998149999999441,
+  "failures": [],
+  "measurements": {
+    "cancellation": {
+      "cases": 48,
+      "pairs_injected": 1200
+    },
+    "deletion_reinsertion": {
+      "cases": 48,
+      "checked_removals": 180
+    },
+    "insertion": {
+      "cases": 70,
+      "exhaustive_candidate_sequences": 6832
+    },
+    "iterated_repair": {
+      "cases": 38,
+      "calls": 722,
+      "includes_maximum_n_and_k": true
+    },
+    "builder": {
+      "source_ast_reproduced": true,
+      "decoded_reproduced": true,
+      "fragments_snapshotted_from_reviewed_source": true,
+      "exact_packed_bytes_equal": true,
+      "rebuilt_bytes": 9548
+    },
+    "artifact_mapping": {
+      "valid": true,
+      "errors": [],
+      "review_flags": [],
+      "imports": [
+        "math",
+        "random",
+        "sys"
+      ],
+      "sha256": "8a0663f0f8da051bb027e71d59cbecbb230d5c7c0845c67c2e055411a6ea5864",
+      "source_bytes": 9548,
+      "packed_source": {
+        "codec": "lzma/latin1",
+        "decoded_bytes": 30273,
+        "decoded_sha256": "66e189314e0d92cd17d61ce417a8e44c424880f99dced3cb99a307fc33733572"
+      },
+      "reads_stdin": true
+    },
+    "malformed_wrappers": {
+      "rejected": 16,
+      "valid_latin1_control": true
+    },
+    "isolated_execution": [
+      {
+        "n": 3,
+        "d": 2,
+        "c": 2,
+        "k": 1,
+        "output_sha256": "477a63d78c2f707e57f85bc62ffd75ac11e490650f54cb083b656bcaf7aef482"
+      },
+      {
+        "n": 3,
+        "d": 3,
+        "c": 6,
+        "k": 180,
+        "output_sha256": "66f76c19fb71eea16b39a71418ded903ea3edd717bd9dff2a9a541ed25228b90"
+      },
+      {
+        "n": 4,
+        "d": 3,
+        "c": 4,
+        "k": 9,
+        "output_sha256": "29d8d98104e5ba295d24cdefeecbc14fbfb115a939d736ea673ce8b26b05d257"
+      },
+      {
+        "n": 5,
+        "d": 2,
+        "c": 6,
+        "k": 18,
+        "output_sha256": "6747f3e5775f800a4f754f54ef3a880030dc82c25dd4913fcd254f27a5add309"
+      }
+    ]
+  }
+}

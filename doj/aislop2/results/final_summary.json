@@ -1,0 +1,26 @@
+{
+  "best": {
+    "id": 10,
+    "total_score": 246874186,
+    "avg_score": 771481.83125,
+    "runtime_sec": 108.44220539962407,
+    "max_runtime_sec": 2.8329798999475315,
+    "description": "Bit-sliced plateau and lookahead search with eight exact backward refinement sweeps",
+    "file": "submissions/best_010_246874186.py",
+    "solver_sha256": "8fef24c1460d1793d1423a503c69bce77ac4c47a8142e635f57c58af01515967",
+    "manifest_sha256": "bd30204d28266a4d8c69f0dc028eec2ca8ac605d8e9f3f198fd1176f0ff506ac",
+    "benchmark": "results/checkpoints/best_010_246874186.benchmark.json",
+    "readiness": "results/checkpoints/best_010_246874186.readiness.json"
+  },
+  "tests_passed": 60,
+  "stable_total": 246874186,
+  "stable_average": 771481.83125,
+  "stable_cases": 320,
+  "stable_result_sha256": "e19fe7bc2e9875f4c6a77267e9bbf0086813a3eab4d0f6f44bc1fd99fdcdba0e",
+  "stable_reproduction_max_sec": 2.7108841000590473,
+  "readiness_cases": 38,
+  "stress_cases": 36,
+  "stress_max_sec": 3.5594656999455765,
+  "stress_p95_sec": 2.8636968000791967,
+  "stress_avg_sec": 1.6547332138870843
+}
