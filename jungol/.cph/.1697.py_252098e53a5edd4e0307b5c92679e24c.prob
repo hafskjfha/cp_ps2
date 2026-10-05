@@ -1,1 +1,0 @@
-{"name":"Local: 1697","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\1697.py","tests":[{"id":1784051423914,"input":"7\ni 7\ni 5\nc\no\no\no\nc","output":"2\n7\n5\nempty\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\1697.py","group":"local","local":true}

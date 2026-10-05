@@ -1,1 +1,0 @@
-{"name":"Local: 483","url":"c:\\dev\\ps\\doj\\483.cpp","tests":[{"id":1788018932075,"input":"3\n3 6\n2 5 7\n4 14\n3 3 10 10\n1 10\n10","output":"2\n4\n10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\483.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: d","url":"c:\\dev\\ps\\doj\\bcd10\\d.py","tests":[{"id":1790861283800,"input":"3\n(()","output":""},{"id":1790868890668,"input":"6\n(((())","output":""},{"id":1790868902415,"input":"4\n((()","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\bcd10\\d.py","group":"local","local":true}

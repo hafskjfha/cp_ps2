@@ -1,1 +1,0 @@
-{"name":"Local: 1946","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\1946.cpp","tests":[{"id":1786600169203,"input":"6 3\n3 1 4 3\n4 6 2 5 4\n2 2 3","output":"6\n2\n1\n5\n4\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\jungol\\1946.cpp","group":"local","local":true}

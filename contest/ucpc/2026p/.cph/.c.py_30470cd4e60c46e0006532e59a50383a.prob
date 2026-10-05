@@ -1,1 +1,0 @@
-{"name":"Local: c","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\ucpc\\2026p\\c.py","tests":[{"id":1782537053906,"input":"assistant\n4\nRBBR","output":"BRBR"},{"id":1782537073329,"input":"magician\n4\nBRRB","output":"RBBR"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\ucpc\\2026p\\c.py","group":"local","local":true}

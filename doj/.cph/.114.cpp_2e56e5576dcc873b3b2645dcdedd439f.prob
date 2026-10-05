@@ -1,1 +1,0 @@
-{"name":"Local: 114","url":"c:\\dev\\ps\\doj\\114.cpp","tests":[{"id":1787806869333,"input":"4\na 4\nab 7\nabc 2\nb 10","output":"13"},{"id":1787806877015,"input":"5\nco 1\ncode 3\ncode 5\ncoder 4\ncoding 10","output":"13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\doj\\114.cpp","group":"local","local":true}

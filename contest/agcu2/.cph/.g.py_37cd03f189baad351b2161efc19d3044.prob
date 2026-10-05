@@ -1,1 +1,0 @@
-{"name":"Local: g","url":"c:\\Users\\jtw79\\Desktop\\work\\ps\\contest\\agcu2\\g.py","tests":[{"id":1786174291086,"input":"5 4\n1 2 3 4 5\n1 4 5 9\n2\n1 4 5 -9\n2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jtw79\\Desktop\\work\\ps\\contest\\agcu2\\g.py","group":"local","local":true}

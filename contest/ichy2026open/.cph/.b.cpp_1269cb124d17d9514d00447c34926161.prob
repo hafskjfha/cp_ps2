@@ -1,1 +1,0 @@
-{"name":"Local: b","url":"c:\\dev\\ps\\contest\\ichy2026open\\b.cpp","tests":[{"id":1788002762206,"input":"5 3 10\n1 2 8 9 5\n3 10 3 10 3","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\contest\\ichy2026open\\b.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: c","url":"c:\\dev\\ps\\codeforces\\2244\\c.py","tests":[{"id":1788943866330,"input":"4\n5 2 3\n5 4 3 2 1\n6 2 4\n2 1 4 3 6 5\n4 2 2\n1 2 3 4\n5 2 3\n1 2 3 5 4\n","output":"YES\nNO\nYES\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\ps\\codeforces\\2244\\c.py","group":"local","local":true}
