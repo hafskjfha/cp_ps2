@@ -1,1 +1,1 @@
-print(divmod(69,35))
+print((-3)%4)
