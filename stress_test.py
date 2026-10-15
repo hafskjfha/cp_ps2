@@ -7,14 +7,14 @@ import math
 temp=dict()
 
 def generate():
-    n = random.randint(1, 7)
+    n = random.randint(1, 10)
     l = random.randint(1,100)
-    a = [random.randint(1, 1) for _ in range(n)]
+    a = [random.randint(0, 1) for _ in range(n)]
 
     s=""
-    #s += "1\n"
-    s += f"{n} {l}\n"
-    s += " ".join(map(str, a)) + "\n"
+    s += "1\n"
+    #s += f"{s}\n"
+    s += "".join(map(str, a)) + "\n"
 
     return s
 

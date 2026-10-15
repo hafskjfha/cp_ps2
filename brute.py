@@ -3,24 +3,35 @@ from itertools import permutations
 
 input=sys.stdin.readline
 
+def com(ss):
+    temp=[]
+    l=ss[0]
+    for i in range(1,len(ss)):
+        if ss[i]!=l:
+            temp.append(l)
+            l=ss[i]
+    temp.append(l)
+    return "".join(temp)
 
 def solve():
-    n,l=map(int,input().split())
-    aa=sorted([tuple(map(int,input().split()))for _ in range(n)],key=lambda x:x[1])
+    s=input().strip()
     
-    ans=0
-    for a in permutations(aa,n):
-        templ=l
-        for x,y in a:
-            if y<=templ: templ+=y
-            elif x<templ<y: templ+=templ
-        ans=max(templ,ans)
-        # print(a)
-        # print(ans)
-    print(ans)
+    sl=list(s)
+    tt=set([com(sl)])
+    for i in range(1,len(s)-1):
+        if sl[i]=='1':
+            sl[i]='0'
+            tt.add(com(sl))
+            sl[i]='1'
+        else:
+            sl[i]='1'
+            tt.add(com(sl))
+            sl[i]='0'
+    #print(tt)
+    print(len(tt))
 
 def main():
-    t=1#int(input())
+    t=int(input())
     for _ in range(t):
         solve()
 main()
