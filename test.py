@@ -1,8 +1,19 @@
-def log(x):
-    r=1
-    t=0
-    while r*2<=x:
-        r*=2
-        t+=1
-    return t+1
-print(log(7),log(8))
+p=5
+arr=[p,1,1,1,1]+[0,0,0,0,0,0]
+x=2*10**9
+
+t=3
+
+for k in range(6,11):
+    si=0
+    for i in range(p):
+        temp=0
+        for j in range(k-i-1):
+            #print(i,j)
+            temp+=arr[j]
+        si+=temp**(p-i)
+        #print(temp**(p-i))
+    #print(f'! a{k}=',si)
+    arr[k]=si
+
+print(arr)
