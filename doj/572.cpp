@@ -49,7 +49,7 @@ void solve() {
 
     while (!pq.empty()) {
         int x=pq.top();pq.pop();
-        if(count[x]%2==0 && count[x+1]%2==1 && count[x+2]%2==1){
+        if(count[x]>0 && count[x+1]>0 && count[x+2]>0){
             cout<<-1<<'\n';
             return;
         }
