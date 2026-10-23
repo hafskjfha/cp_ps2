@@ -1,8 +1,16 @@
-n=4
+s="0011"
+k=3
+print(s,s.count("1"))
 
-target=[[-1]*(2*n+1),[-1]*(2*n+1)]
-print(target)
-for i in range(n):
-    target[0][2*i+1]=i+1
-    target[0][2*i+2]=i+1
-print(target)
+for _ in range(k):
+    arr=[]
+    arr.append(s[0])
+    for i in range(1,len(s)):
+        if arr[-1]=="1" or s[i]=="1":
+            arr.append("1")
+        else:
+            arr.append("0")
+        arr.append(s[i])
+    
+    s="".join(arr)
+    print(s,s.count("1"))
