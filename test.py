@@ -1,16 +1,16 @@
-s="0011"
-k=3
-print(s,s.count("1"))
+import sys
+input=sys.stdin.readline
 
-for _ in range(k):
-    arr=[]
-    arr.append(s[0])
-    for i in range(1,len(s)):
-        if arr[-1]=="1" or s[i]=="1":
-            arr.append("1")
-        else:
-            arr.append("0")
-        arr.append(s[i])
-    
-    s="".join(arr)
-    print(s,s.count("1"))
+def solve():
+    n=int(input())
+    arr=[input().strip()for _ in range(2)]
+    if n%2:
+        print(arr[0][-1]==arr[1][-1]=='f')
+    else:
+        print(0)
+
+def main():
+    t=int(input())
+    for _ in range(t):
+        solve()
+main()
