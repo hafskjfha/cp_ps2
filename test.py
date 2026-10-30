@@ -1,13 +1,18 @@
 import sys
 input=sys.stdin.readline
 
+def hanoi(n, start, end, via):
+    if n==0:
+        return
+
+    hanoi(n - 1, start, via, end)
+    print(start, end)
+    hanoi(n - 1, via, end, start)
+
 def solve():
     n=int(input())
-    arr=[input().strip()for _ in range(2)]
-    if n%2:
-        print(arr[0][-1]==arr[1][-1]=='f')
-    else:
-        print(0)
+    print(2**n-1)
+    hanoi(n,1,3,2)
 
 def main():
     t=int(input())
