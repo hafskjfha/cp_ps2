@@ -3,18 +3,21 @@ input=sys.stdin.readline
 
 def solve():
     n=int(input())
-    arr=sorted([*map(int,input().split())])
-    a,b=0,0
-    for i in range(n):
-        if a<=b:
-            a+=2**arr[i]
-        else:
-            b+=2**arr[i]
-    print(a,b)
+    arr=sorted([2**x for x in map(int,input().split())])
+    s=sum(arr)
+    a,b=0,s
+    #print(s,s//2)
+    for i in range(n-1,-1,-1):
+        if a+arr[i]>s//2:continue
+        a+=arr[i]
+        b-=arr[i]
+    
+        #print(a,b)
     print(a*b)
 
 def main():
     t=int(input())
     for _ in range(t):
         solve()
+        #print("======")
 main()
