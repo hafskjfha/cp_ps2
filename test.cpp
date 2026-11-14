@@ -22,9 +22,71 @@ vector<string> split(const string& s, char delim = ' '){ vector<string> res; for
 const int INF = 1e9;
 const ll LINF = 1e18;
 
+struct custom_hash {
+    static uint64_t splitmix64(uint64_t x) {
+        x += 0x9e3779b97f4a7c15;
+        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+        return x ^ (x >> 31);
+    }
+
+    template <typename T>
+    size_t operator()(T x) const {
+        static const uint64_t FIXED_RANDOM = std::chrono::steady_clock::now().time_since_epoch().count();
+        return static_cast<size_t>(splitmix64(static_cast<uint64_t>(x) + FIXED_RANDOM));
+    }
+
+    template <typename T, typename U>
+    size_t operator()(const std::pair<T, U>& p) const {
+        uint64_t h1 = operator()(p.first);
+        uint64_t h2 = operator()(p.second);
+        return static_cast<size_t>(splitmix64(h1 + 0x9e3779b97f4a7c15 + (h2 << 6) + (h2 >> 2)));
+    }
+};
 
 void solve() {
-    
+    int n,m;
+    cin>>n>>m;
+    vector<ll> counter(n+1);
+    vector<unordered_map<int, ll, custom_hash>> check(n+1);
+    for (int i = 0; i < m; i++) {
+        int a,b;
+        cin>>a>>b;
+        counter[a]++;
+        check[a][b]++;
+    }
+
+    int mv=max(counter);
+    pair<int,ll> fir,sec;
+    for (int i = 1; i <= n; i++) {
+        if(counter[i]==mv){
+            if (fir.first==0){
+                fir={i,mv};
+            }
+            else if(sec.first==0){
+                sec={i,mv};
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+    for (int i = 1; i <= n; i++) {
+        pair<int,ll> temp = fir.first != i ? fir : sec;
+       // temp.second+=check[i][temp.first];
+
+        for(auto& [k,v]:check[i]){
+            if(temp.second < counter[k]+v){
+                temp={k,counter[k]+v};
+            }
+            else if (temp.second == counter[k]+v && temp.first > k){
+                temp.first = k;
+            }
+        }
+        cout<<temp.first<<'\n';
+    }
+
 }
 
 int main() {
