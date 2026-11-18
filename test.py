@@ -1,19 +1,14 @@
-import random
-def temp():
-    check=[0]*64
+from math import floor
 
-    N=random.randint(1,10000)
+k=1
+prev=0
 
-    for i in range(1,N+1):
-        t=bin(i)[2:].zfill(64)[::-1]
-        #print(*t)
-        for j in range(len(t)):
-            if t[j]=='0':
-                check[j]+=1
+#c=set([x**2 for x in range(1,100)])
+c=set()
 
-    for i in range(64):
-        k=(1<<i)
-        assert check[i]==min(N,k-1+max(0,(N-k+1)//(k<<1)*k)+max(0,(N-k+1)%(k<<1)-k))
+for i in range(1,1000):
+    if i%floor(i**0.5)==0:
+        print(i)
+        c.add(i)
 
-for i in range(100):
-    temp()
+print(sorted(c))
