@@ -12,3 +12,5 @@ for i in range(1,1000):
         c.add(i)
 
 print(sorted(c))
+
+ceil = lambda a, b: (a + b - 1) // b
